@@ -30,14 +30,15 @@ const HeroSection = () => {
         
         <p className="text-white text-lg md:text-xl max-w-3xl mb-12 hero-text">
           A home is more than just shelter—it's a place of stability, privacy, and community. This 
-          initiative supports those creating their own homes in difficult circumstances by
+          initiative supports those creating their own homes in difficult circumstances by providing
+          a platform for sharing designs.
         </p>
         
         <div className="flex flex-wrap gap-6">
           <Link to="/learn-more" className="gradient-border-btn">
             LEARN MORE
           </Link>
-          <Link to="/designs" className="white-btn">
+          <Link to="/designs" className="gradient-border-btn">
             VIEW DESIGNS
           </Link>
         </div>

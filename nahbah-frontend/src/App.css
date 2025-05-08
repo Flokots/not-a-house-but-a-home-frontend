@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 /* Make sure this CSS file is being imported in App.tsx */
 
 /* Base styles */
@@ -20,7 +21,7 @@ body {
 }
 
 .hero-text {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Gradient text */
