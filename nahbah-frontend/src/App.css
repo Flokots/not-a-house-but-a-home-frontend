@@ -1,42 +1,101 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+/* Make sure this CSS file is being imported in App.tsx */
+
+/* Base styles */
+:root {
+  --gradient-start: #F9D90B;
+  --gradient-end: #98F90F;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  font-family: 'Fjalla One', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.font-fjalla {
+  font-family: 'Fjalla One', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.hero-text {
+  font-family: sans-serif;
 }
 
-.card {
-  padding: 2em;
+/* Gradient text */
+.gradient-text {
+  background: radial-gradient(100% 100% at 0% 0%, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.read-the-docs {
-  color: #888;
+/* Gradient line */
+.gradient-line {
+  background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  height: 2px;
+  width: 100%;
+}
+
+/* Button styles */
+.gradient-border-btn {
+  position: relative;
+  padding: 0.75rem 2rem;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.25rem;
+  color: #fff;
+  background: transparent;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#000, #000), 
+                    linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: all 0.3s ease;
+}
+
+.gradient-border-btn:hover {
+  transform: translateY(-2px);
+}
+
+.white-btn {
+  position: relative;
+  padding: 0.75rem 2rem;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.25rem;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.white-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Navigation styles */
+.nav-link {
+  font-family: 'Fjalla One', sans-serif;
+  color: #fff;
+  font-size: 1.125rem;
+  text-decoration: none;
+  padding-bottom: 0.25rem;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
 }
