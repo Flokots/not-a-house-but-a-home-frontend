@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "@/App.css";
-import homepageImage from "../assets/homepage.png";
+import homepageImage from "@/assets/homepage.png";
 
 const HeroSection = () => {
   return (
@@ -15,7 +15,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-32 sm:py-48 lg:py-64 h-full flex flex-col justify-center text-center">
-        <h1 className="text-white text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-fjalla mb-2">
+        <h1 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-fjalla mb-2">
           A GUIDE FOR <span className="gradient-text">CREATIVES</span>
         </h1>
 
@@ -32,7 +32,7 @@ const HeroSection = () => {
               <span className="text-white mx-1 md:mx-2 text-2xl sm:text-3xl md:text-4xl font-fjalla">
                 +
               </span>
-              <span className="text-white text-2xl sm:text-3xl md:text-4xl font-fjalla">
+              <span className="text-white text-1xl sm:text-2xl md:text-3xl lg:text-4xl font-fjalla">
                 CREATIVITY
               </span>
             </div>
@@ -42,7 +42,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <p className="text-white text-base sm:text-lg md:text-xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto mb-8 md:mb-12 hero-text text-center">
+        <p className="text-white text-sm md:text-base lg:text-lg max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto mb-8 md:mb-12 hero-text text-center">
           A home is more than just shelter—it's a place of stability, privacy,
           and community. This initiative supports those creating their own homes
           in difficult circumstances by providing a platform for sharing
