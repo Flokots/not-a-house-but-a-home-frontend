@@ -3,7 +3,7 @@ import '@/App.css';
 
 const Navbar = () => {
   return (
-    <nav className="absolute top-0 left-0 w-full z-20 py-6">
+    <nav className="absolute left-0 w-full z-20 py-6">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
         <div className="logo">
           <NavLink to="/" className="font-fjalla text-white text-2xl flex items-center">

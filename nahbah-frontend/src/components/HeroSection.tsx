@@ -14,7 +14,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black/70 z-10"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 py-16 md:py-0 h-full flex flex-col justify-center text-center mt-10">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 py-32 sm:py-48 lg:py-64 h-full flex flex-col justify-center text-center">
         <h1 className="text-white text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-fjalla mb-2">
           A GUIDE FOR <span className="gradient-text">CREATIVES</span>
         </h1>
