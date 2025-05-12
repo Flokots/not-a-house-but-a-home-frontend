@@ -76,11 +76,15 @@ body {
 /* Navigation styles */
 .nav-link {
   font-family: 'Fjalla One', sans-serif;
-  color: #fff;
   font-size: 1.125rem;
   text-decoration: none;
   padding-bottom: 0.25rem;
   position: relative;
+  color: #fff; /* Default color for dark mode */
+}
+
+.nav-link.text-black {
+  color: #000; /* Color for light mode */
 }
 
 .nav-link::after {
@@ -97,4 +101,29 @@ body {
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
+}
+
+/* Light mode gradient text for "BUT A HOME" */
+.gradient-text-light {
+  background: radial-gradient(circle at left, #FBD901 0%, #65AA03 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Light mode nav link styles */
+.nav-link.text-black::after {
+  background: radial-gradient(circle at left, #65AA03 0%, #508703 100%); /* Darker gradient */
+}
+
+/* Light mode active link underline with darker gradient */
+.nav-link.active-light::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Match the original -2px */
+  left: 0;
+  width: 100%;
+  height: 1px; /* Match the original 1px */
+  background: radial-gradient(circle at left, #65AA03 0%, #508703 100%); /* Darker green gradient for contrast */
 }
