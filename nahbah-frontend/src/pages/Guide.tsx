@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import buildingMaterialsImage from "@/assets/buildingmaterials.png";
 import safetyImage from "@/assets/lounge_area.png";
@@ -5,15 +6,15 @@ import architectImage from "@/assets/architect.png";
 import heroImage from "@/assets/entrance_night_view.png";
 
 const Guide = () => {
-  const [userType, setUserType] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLoaded(true);
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-50 relative overflow-hidden hero-text text-black">
+    <div className="min-h-screen bg-slate-50 relative overflow-hidden hero-text text-black px-10">
       {/* Hero Section with Background Text and Image */}
       <div className="max-w-7xl mx-auto px-4 pt-32 pb-20 flex flex-col md:flex-row gap-8 relative top-10">
         {/* Background "Guide" text */}
@@ -83,7 +84,11 @@ const Guide = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-slate-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:translate-y-[-5px] group cursor-pointer">
+            {/* First Card - Home Essentials & Materials */}
+            <div 
+              onClick={() => navigate('/essentials')}
+              className="bg-slate-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:translate-y-[-5px] group cursor-pointer"
+            >
               <div className="p-2">
                 <div className="h-48 rounded-lg overflow-hidden">
                   <img
@@ -95,25 +100,27 @@ const Guide = () => {
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-lime-700 transition-colors">
-                  Self-Builder or Ally
+                  Essentials & Materials
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Find practical tips to make self-built structures safer,
-                  healthier, and more comfortable.
+                  Discover what makes a shelter a home and explore useful materials you can find around you.
                 </p>
-                <button
-                  onClick={() => setUserType("unhoused")}
+                <div
                   className="text-lime-600 font-semibold hover:text-lime-800 flex items-center group cursor-pointer"
                 >
                   <span>Explore Resources</span>
                   <span className="transform translate-x-0 group-hover:translate-x-2 transition-transform ml-2">
                     →
                   </span>
-                </button>
+                </div>
               </div>
             </div>
 
-            <div className="bg-slate-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:translate-y-[-5px] group cursor-pointer">
+            {/* Second Card - Design Library */}
+            <div 
+              onClick={() => navigate('/designs')}
+              className="bg-slate-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:translate-y-[-5px] group cursor-pointer"
+            >
               <div className="p-2">
                 <div className="h-48 rounded-lg overflow-hidden">
                   <img
@@ -125,25 +132,27 @@ const Guide = () => {
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-lime-700 transition-colors">
-                  Architect or Student
+                  Design Library
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Discover how to contribute your expertise and learn about
-                  innovative approaches to housing.
+                  Browse, select, and download design plans to create your own customized building guide.
                 </p>
-                <button
-                  onClick={() => setUserType("architect")}
+                <div
                   className="text-lime-600 font-semibold hover:text-lime-800 flex items-center group cursor-pointer"
                 >
-                  <span>Join The Initiative</span>
+                  <span>Access Designs</span>
                   <span className="transform translate-x-0 group-hover:translate-x-2 transition-transform ml-2">
                     →
                   </span>
-                </button>
+                </div>
               </div>
             </div>
 
-            <div className="bg-slate-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:translate-y-[-5px] group cursor-pointer">
+            {/* Third Card - Contribute */}
+            <div 
+              onClick={() => navigate('/contribute')}
+              className="bg-slate-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:translate-y-[-5px] group cursor-pointer"
+            >
               <div className="p-2">
                 <div className="h-48 rounded-lg overflow-hidden">
                   <img
@@ -155,43 +164,24 @@ const Guide = () => {
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-lime-700 transition-colors">
-                  Resource Explorer
+                  Contribute Your Expertise
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Browse our complete library of materials, techniques, and case
-                  studies at your own pace.
+                  Share your knowledge, upload designs, or collaborate with our community to help others.
                 </p>
-                <button
-                  onClick={() => setUserType("browse")}
+                <div
                   className="text-lime-600 font-semibold hover:text-lime-800 flex items-center group cursor-pointer"
                 >
-                  <span>Access Library</span>
+                  <span>Join Our Efforts</span>
                   <span className="transform translate-x-0 group-hover:translate-x-2 transition-transform ml-2">
                     →
                   </span>
-                </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* User Path Content Sections */}
-      {userType && (
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <button
-            onClick={() => setUserType(null)}
-            className="mb-8 text-gray-600 hover:text-black flex items-center group cursor-pointer"
-          >
-            <span className="transform translate-x-0 group-hover:translate-x-[-2px] transition-transform mr-2">
-              ←
-            </span>
-            <span>Back to paths</span>
-          </button>
-
-          {/* Rest of your content based on userType */}
-        </div>
-      )}
     </div>
   );
 };

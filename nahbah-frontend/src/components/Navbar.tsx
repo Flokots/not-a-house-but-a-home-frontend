@@ -10,13 +10,22 @@ const Navbar = ({ lightMode = false }: NavbarProps) => {
   const textColor = lightMode ? "text-black" : "text-white";
   const gradientClass = lightMode ? "gradient-text-light" : "gradient-text";
 
+  // Helper function for NavLink classes
+  const getLinkClass = (isActive: boolean) => {
+    return isActive
+      ? lightMode
+        ? `nav-link ${textColor} active-light`
+        : `nav-link ${textColor} active`
+      : `nav-link ${textColor}`;
+  };
+
   return (
     <nav className="absolute left-0 w-full z-20 py-8">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-        <div className="logo">
+        <div>
           <NavLink
             to="/"
-            className={`font-fjalla ${textColor} text-2xl flex items-center`}
+            className={`font-fjalla ${textColor} text-xl flex items-center`}
           >
             NOT A HOUSE{" "}
             <span className={`${gradientClass} ml-2`}>BUT A HOME</span>
@@ -26,67 +35,39 @@ const Navbar = ({ lightMode = false }: NavbarProps) => {
         <div className="hidden md:flex space-x-8">
           <NavLink
             to="/"
-            className={({ isActive }) => {
-              // For active links in light mode, use active-light class, otherwise use active
-              if (isActive) {
-                return lightMode
-                  ? `nav-link ${textColor} active-light`
-                  : `nav-link ${textColor} active`;
-              }
-              // For non-active links, just apply the mode's text color
-              return `nav-link ${textColor}`;
-            }}
+            className={({ isActive }) => getLinkClass(isActive)}
           >
             HOME
           </NavLink>
-          {/* Apply the same pattern to other links */}
           <NavLink
             to="/about-us"
-            className={({ isActive }) => {
-              return isActive
-                ? lightMode
-                  ? `nav-link ${textColor} active-light`
-                  : `nav-link ${textColor} active`
-                : `nav-link ${textColor}`;
-            }}
+            className={({ isActive }) => getLinkClass(isActive)}
           >
             ABOUT US
           </NavLink>
           <NavLink
+            to="/guide"
+            className={({ isActive }) => getLinkClass(isActive)}
+          >
+            GUIDE
+          </NavLink>
+          <NavLink
+            to="/essentials"
+            className={({ isActive }) => getLinkClass(isActive)}
+          >
+            ESSENTIALS
+          </NavLink>
+          <NavLink
             to="/designs"
-            className={({ isActive }) => {
-              return isActive
-                ? lightMode
-                  ? `nav-link ${textColor} active-light`
-                  : `nav-link ${textColor} active`
-                : `nav-link ${textColor}`;
-            }}
+            className={({ isActive }) => getLinkClass(isActive)}
           >
             DESIGNS
           </NavLink>
           <NavLink
-            to="/materials"
-            className={({ isActive }) => {
-              return isActive
-                ? lightMode
-                  ? `nav-link ${textColor} active-light`
-                  : `nav-link ${textColor} active`
-                : `nav-link ${textColor}`;
-            }}
+            to="/contribute"
+            className={({ isActive }) => getLinkClass(isActive)}
           >
-            MATERIALS
-          </NavLink>
-          <NavLink
-            to="/guide"
-            className={({ isActive }) => {
-              return isActive
-                ? lightMode
-                  ? `nav-link ${textColor} active-light`
-                  : `nav-link ${textColor} active`
-                : `nav-link ${textColor}`;
-            }}
-          >
-            GUIDE
+            CONTRIBUTE
           </NavLink>
         </div>
 

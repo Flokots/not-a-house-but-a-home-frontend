@@ -5,17 +5,17 @@ const Layout = () => {
   const location = useLocation();
 
   // Define which routes should use light mode
-  const lightModeRoutes = ["/about-us", "/materials", "/designs", "/guide"];
+  const lightModeRoutes = ["/about-us", "/guide", "/designs", "/essentials"];
 
   // Check if current path should use light mode
   const useLightMode = lightModeRoutes.includes(location.pathname);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex">
       <Navbar lightMode={useLightMode} />
-      <main className="flex-grow">
+      <div className="flex-grow">
         <Outlet />
-      </main>
+      </div>
     </div>
   );
 };
