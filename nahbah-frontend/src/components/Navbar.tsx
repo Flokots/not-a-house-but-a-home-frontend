@@ -77,7 +77,7 @@ const Navbar = ({ lightMode = false }: NavbarProps) => {
             MATERIALS
           </NavLink>
           <NavLink
-            to="/upload"
+            to="/guide"
             className={({ isActive }) => {
               return isActive
                 ? lightMode
@@ -86,7 +86,7 @@ const Navbar = ({ lightMode = false }: NavbarProps) => {
                 : `nav-link ${textColor}`;
             }}
           >
-            UPLOAD
+            GUIDE
           </NavLink>
         </div>
 

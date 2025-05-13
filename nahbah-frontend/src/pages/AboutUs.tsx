@@ -12,11 +12,11 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-100 relative overflow-hidden hero-text">
+    <div className="min-h-screen bg-slate-100 relative overflow-hidden hero-text text-black">
       {/* Hero Section - Image Right */}
       <div className="max-w-7xl mx-auto px-4 pt-32 pb-20 flex flex-col md:flex-row gap-8 relative top-10">
         {/* Background "About" text */}
-        <div className="absolute top-20 left-0 text-black opacity-10 font-semibold text-9xl">
+        <div className="absolute top-20 left-0  opacity-10 font-semibold text-9xl">
           About
         </div>
         
@@ -26,23 +26,23 @@ const AboutUs = () => {
             loaded ? "opacity-100" : "opacity-0"
           }`}
         >
-          <h1 className="text-4xl font-bold text-black mb-8 mt-2 ml-24">
+          <h1 className="text-4xl font-bold  mb-8 mt-2 ml-24">
             Reimagining Home & Shelter
           </h1>
-          <p className="text-base font-semibold text-black mb-6 mt-12">
+          <p className="text-base font-semibold  mb-6 mt-12">
             Not a House, but a Home – We believe in the power of self-built
             spaces to create stability and dignity. Our goal is to support,
             inspire, and empower people to build homes that truly feel like
             home.
           </p>
-          <p className="text-base mb-6 text-black">
+          <p className="text-base mb-6 ">
             Housing is a fundamental right, yet many people are forced to create
             their own shelters outside traditional systems. This web application
             is a resource for those who build homes from found materials, as
             well as for advocates and architects working in solidarity with
             unhoused communities.
           </p>
-          <p className="text-base mb-8 text-black">
+          <p className="text-base mb-8 ">
             A home is more than a shelter—it's a place of stability, privacy,
             and connection. Through design knowledge, creativity, and shared
             solutions, we support self-built housing as a pathway to dignity and
@@ -54,7 +54,7 @@ const AboutUs = () => {
                 behavior: "smooth",
               });
             }}
-            className="px-8 py-3 bg-black inline-block transition-all duration-300 hover:bg-zinc-900 hover:shadow-lg hover:shadow-lime-300/20 hover:scale-105 hover:-translate-y-1"
+            className="px-8 py-3 bg-black inline-block transition-all duration-300 hover:bg-zinc-900 hover:shadow-lg hover:shadow-lime-300/20 hover:scale-105 hover:-translate-y-1 cursor-pointer"
           >
             <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold uppercase">
               Learn More
@@ -98,19 +98,19 @@ const AboutUs = () => {
             </div>
             
             <div className="md:w-3/5">
-              <h2 className="text-4xl font-bold text-black mb-6">Our Mission</h2>
-              <p className="mb-4 text-black">
+              <h2 className="text-4xl font-bold  mb-6">Our Mission</h2>
+              <p className="mb-4 ">
                 Housing is a fundamental right, yet many people are forced to create
                 their own shelters outside traditional systems. Through design knowledge, 
                 creativity, and shared solutions, we support self-built housing as a 
                 pathway to dignity and security.
               </p>
-              <p className="text-black mb-4">
+              <p className=" mb-4">
                 Not a House, but a Home – We believe in the power of self-built
                 spaces to create stability and dignity. Our goal is to support,
                 inspire, and empower people to build homes that truly feel like home.
               </p>
-              <p className="text-black">
+              <p className="">
                 Whether you're looking for inspiration, guidance, or a way
                 to contribute, this platform is here to help.
               </p>
@@ -120,25 +120,25 @@ const AboutUs = () => {
           <div className="grid md:grid-cols-2 gap-8 mt-12">
             <div className="bg-lime-200 p-6 rounded-lg transition-transform hover:scale-[1.02]">
               <h3 className="text-xl font-semibold mb-3 text-gray-800">Our Approach</h3>
-              <p className="mb-4 text-black">
+              <p className="mb-4 ">
                 We combine architectural expertise with community knowledge to create solutions 
                 that are practical, sustainable, and empowering. Our resources are developed 
                 in collaboration with people who have direct experience with self-built housing.
               </p>
-              <p className="text-black">
+              <p className="">
                 Every design, guide, and material suggestion on this platform is tested,
                 accessible, and adaptable to different circumstances and resource availability.
               </p>
             </div>
             
             <div className="bg-yellow-200 bg-opacity-30 p-6 rounded-lg transition-transform hover:scale-[1.02]">
-              <h3 className="text-xl font-semibold mb-3 text-black">Get Involved</h3>
-              <p className="mb-4 text-black">
+              <h3 className="text-xl font-semibold mb-3 ">Get Involved</h3>
+              <p className="mb-4 ">
                 Whether you're looking to improve your own shelter, support someone else's 
                 housing journey, or advocate for housing justice, there are many ways to 
                 participate in our community.
               </p>
-              <p className="text-black">
+              <p className="">
                 Browse our resource library, contribute design ideas, share success stories, or 
                 volunteer your skills. Together, we can transform the way we think about 
                 housing and create more pathways to dignified homes for all.
@@ -155,7 +155,7 @@ const AboutUs = () => {
     <div className="bg-white rounded-xl overflow-hidden shadow-lg relative z-10">
       {/* Header with gradient overlay */}
       <div className="h-24 flex items-center px-8">
-        <h2 className="text-4xl font-bold text-black">Our Impact</h2>
+        <h2 className="text-4xl font-bold ">Our Impact</h2>
       </div>
       
       {/* Main content */}
@@ -163,11 +163,11 @@ const AboutUs = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Left column - Text and stats */}
           <div>
-            <p className="mb-6 text-black">
+            <p className="mb-6 ">
               This web application is a resource for those who build homes from found materials,
               as well as for advocates and architects working in solidarity with unhoused communities.
             </p>
-            <p className="mb-8 text-black">
+            <p className="mb-8 ">
               A home is more than a shelter—it's a place of stability, privacy,
               and connection. Through our resources and community, we're helping people
               create dignified living spaces regardless of their circumstances.
@@ -219,12 +219,14 @@ const AboutUs = () => {
       {/* Call to action section */}
       <div className="max-w-7xl mx-auto px-4 py-12 mb-20 relative">
         <div className="rounded-2xl p-8 md:p-12 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Ready to Make a Difference?</h2>
-          <p className="text-lg mb-8 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold  mb-4">Ready to Make a Difference?</h2>
+          <p className="text-lg mb-8 max-w-3xl mx-auto ">
             Whether you're building your own home, supporting others, or advocating for housing justice,
             we invite you to join our community and be part of the solution.
           </p>
-          <button className="px-8 py-4 bg-black inline-block transition-all duration-300 hover:bg-zinc-900 hover:shadow-lg hover:shadow-lime-300/20 hover:scale-105 rounded-lg">
+          <button 
+          onClick={() => window.location.href = '/guide'}
+          className="px-8 py-4 bg-black inline-block transition-all duration-300 hover:bg-zinc-900 hover:shadow-lg hover:shadow-lime-300/20 hover:scale-105 cursor-pointer">
             <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold text-lg uppercase">
               Get Started Today
             </span>
