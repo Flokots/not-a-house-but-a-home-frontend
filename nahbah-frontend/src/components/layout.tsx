@@ -5,7 +5,7 @@ const Layout = () => {
   const location = useLocation();
 
   // Define which routes should use light mode
-  const lightModeRoutes = ["/about-us", "/guide", "/designs", "/essentials"];
+  const lightModeRoutes = ["/about-us", "/guide", "/essentials"];
 
   // Check if current path should use light mode
   const useLightMode = lightModeRoutes.includes(location.pathname);
