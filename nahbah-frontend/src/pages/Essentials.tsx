@@ -11,7 +11,7 @@ import doorLeavesHouseImage from "@/assets/door_leaves_house.png";
 import metalCansImage from "@/assets/metal_cans.png";
 import cardboardImage from "@/assets/cardboard.png";
 import styrofoamImage from "@/assets/styrofoam.png";
-import tentFabricImage from "@/assets/tent_fabric.png";
+import tentFabricImage from "@/assets/tentFabric.png";
 import woodCratesImage from "@/assets/wooden_crates.png";
 import pvcFlooring from "@/assets/pvc_flooring.png";
 import inflatableMattressMaterial from "@/assets/inflatable_mattress_material.png";
