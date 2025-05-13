@@ -51,7 +51,7 @@ const HeroSection = () => {
 
         <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
           <Link
-            to="/learn-more"
+            to="/about-us"
             className="lime-btn text-sm md:text-base gradient-text"
           >
             LEARN MORE

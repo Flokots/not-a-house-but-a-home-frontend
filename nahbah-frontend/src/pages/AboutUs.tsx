@@ -26,7 +26,7 @@ const AboutUs = () => {
             loaded ? "opacity-100" : "opacity-0"
           }`}
         >
-          <h1 className="text-4xl font-bold  mb-8 mt-2 ml-24">
+          <h1 className="text-4xl font-bold mb-8 mt-2 ml-24">
             Reimagining Home & Shelter
           </h1>
           <p className="text-base font-semibold  mb-6 mt-12">
