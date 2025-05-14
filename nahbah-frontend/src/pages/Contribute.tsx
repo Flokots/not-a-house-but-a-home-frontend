@@ -197,9 +197,12 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
   };
 
   return (
-    <div className="min-h-screen px-10 bg-black text-white hero-text">
+    <div className="min-h-screen bg-black text-white hero-text">
       <div className="pt-32 px-4 max-w-3xl mx-auto">
-        <h1 className="text-5xl mb-8">UPLOAD DESIGN</h1>
+        <div className="absolute top-20 mb-8 text-white/14 font-semibold text-9xl">
+          Upload
+        </div>
+        <h1 className="text-5xl mb-20 ml-26 font-semibold">Upload Design</h1>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-4">
@@ -333,7 +336,7 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
                 name="description"
                 value={formData.description}
                 onChange={handleInputChange}
-                rows={4}
+                rows={3}
                 maxLength={1500}
                 className={`w-full bg-transparent border-b ${
                   errors.description ? "border-red-500" : "border-white"
@@ -425,7 +428,7 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
           </div>
 
           {/* Submission note */}
-          <div className="mt-6 text-sm text-gray-400">
+          <div className="mt-6 mb-2 text-sm text-gray-400 pb-6">
             <p>
               All submissions will be reviewed by our team before being
               published.
