@@ -97,7 +97,7 @@ const DesignsLibrary = () => {
               <div className="h-px bg-lime-500 w-8"></div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               Sustainable Shelters
               <span className="block bg-gradient-to-r from-lime-400 to-yellow-300 bg-clip-text text-transparent">
                 Design Collection
