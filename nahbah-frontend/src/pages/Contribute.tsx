@@ -7,8 +7,13 @@ import React, {
 } from "react";
 import { getMaterials } from "@/api/materials";
 import { submitDesign } from "@/api/designs";
+import TermsAndConditions from "@/components/TermsAndConditions";
+import GDPRStatement from "@/components/GDPRStatement";
 
 const Contribute: React.FC = () => {
+  const [showTerms, setShowTerms] = useState(false);
+  const [showGDPR, setShowGDPR] = useState(false);
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -380,7 +385,7 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
               )}
             </div>
 
-            {/* Checkboxes */}
+            {/* Checkboxes - Updated with clickable links */}
             <div className="space-y-3 mt-6">
               <div className="flex items-start">
                 <input
@@ -392,7 +397,15 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
                   disabled={loading}
                 />
                 <label htmlFor="gdpr" className="ml-2">
-                  Accept GDPR Data Protection guidelines
+                  Accept{" "}
+                  <button
+                    type="button"
+                    onClick={() => setShowGDPR(true)}
+                    className="text-lime-400 hover:text-lime-300 transition-colors"
+                    disabled={loading}
+                  >
+                    GDPR Data Protection Guidelines
+                  </button>
                 </label>
               </div>
               {errors.gdpr && <p className="text-red-500">{errors.gdpr}</p>}
@@ -407,7 +420,15 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
                   disabled={loading}
                 />
                 <label htmlFor="terms" className="ml-2">
-                  Accept Terms and Conditions
+                  Accept{" "}
+                  <button
+                    type="button"
+                    onClick={() => setShowTerms(true)}
+                    className="text-lime-400 hover:text-lime-300 transition-colors"
+                    disabled={loading}
+                  >
+                    Terms and Conditions
+                  </button>
                 </label>
               </div>
               {errors.terms && <p className="text-red-500">{errors.terms}</p>}
@@ -442,6 +463,16 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
           </div>
         </form>
       </div>
+
+      {/* Modals */}
+      <TermsAndConditions 
+        isOpen={showTerms} 
+        onClose={() => setShowTerms(false)} 
+      />
+      <GDPRStatement 
+        isOpen={showGDPR} 
+        onClose={() => setShowGDPR(false)} 
+      />
     </div>
   );
 };
