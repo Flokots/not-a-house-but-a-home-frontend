@@ -34,7 +34,7 @@ const WeatherProtection: React.FC<WeatherProtectionProps> = ({ images }) => {
           <h2 className="text-4xl font-bold mb-10 text-black">
             HOW TO PROTECT FROM WEATHER
           </h2>
-          <p className="text-xl text-gray-700 mb-12 max-w-3xl leading-relaxed">
+          <p className="text-xl text-gray-700 mb-12 leading-relaxed">
             Weather protection is essential for turning a basic shelter
             into a safe, comfortable home. Learn how to protect against
             cold, moisture, wind, and rain using accessible materials.
