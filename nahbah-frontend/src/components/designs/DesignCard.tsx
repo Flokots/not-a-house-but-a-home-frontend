@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Dialog } from "@headlessui/react";
 import { type Design } from "@/types/designs";
 
@@ -10,7 +10,15 @@ interface DesignCardProps {
 
 const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<"info" | "details">("info");
+  const closeButtonRef = useRef(null);
   
+  // Function to open dialog and always reset to info tab
+  const openDialog = () => {
+    setActiveTab("info"); // Always reset to info tab when opening
+    setIsOpen(true);
+  };
+
   // Format the date to a readable format
   const formattedDate = new Date(design.submission_date).toLocaleDateString();
   
@@ -23,20 +31,17 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
             : 'hover:shadow-lg hover:-translate-y-1 border border-gray-100'
         }`}
       >
-        {/* Top accent bar */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-lime-500 to-yellow-400 z-20"></div>
-
         {/* Card content */}
         <div className="h-full flex flex-col bg-white">
           {/* Design image with overlay */}
           <div 
             className="relative h-48 overflow-hidden cursor-pointer" 
-            onClick={() => setIsOpen(true)}
+            onClick={openDialog} // Use the new function
           >
             <img
               src={design.preview_image || '/placeholder-design.jpg'}
               alt={design.title}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
             
             {/* Dark overlay for text contrast */}
@@ -57,7 +62,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
             </div>
             
             {/* Material badge */}
-            <div className="absolute top-3 right-3 px-3 py-1.5 bg-black/40 backdrop-blur-sm rounded-full text-xs font-medium border-l-2 border-lime-500">
+            <div className="absolute top-3 right-3 px-3 py-1.5 bg-black/50 backdrop-blur-sm rounded-full text-xs font-medium border-l-2">
               <span className="text-white drop-shadow-sm">{design.material.name}</span>
             </div>
           </div>
@@ -97,177 +102,210 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
             {/* View details button - overlays the entire card */}
             <button 
               className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" 
-              onClick={() => setIsOpen(true)}
+              onClick={openDialog} // Use the new function here too
               aria-label={`View details for ${design.title}`}
             />
           </div>
         </div>
       </div>
       
-      {/* Design detail modal */}
+      {/* Design detail modal - matching MaterialsSection dialog exactly */}
       <Dialog
         open={isOpen}
         onClose={() => setIsOpen(false)}
-        className="fixed inset-0 z-50 overflow-y-auto"
+        className="fixed inset-0 z-50 overflow-y-auto hero-text"
+        initialFocus={closeButtonRef}
       >
-        <div className="flex min-h-screen items-center justify-center p-4">
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" aria-hidden="true" />
-          
-          <div className="relative bg-white rounded-xl overflow-hidden max-w-5xl w-full mx-auto shadow-2xl">
-            {/* Close button */}
+        <div className="flex items-center justify-center min-h-screen p-4">
+          <div
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm"
+            aria-hidden="true"
+          />
+
+          <div className="relative bg-white rounded-xl shadow-2xl max-w-5xl w-full mx-auto z-10 overflow-hidden">
+            {/* Clearly visible close button - matching MaterialsSection */}
             <button
+              ref={closeButtonRef}
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 z-30 bg-white/90 backdrop-blur-sm w-9 h-9 rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-colors"
+              className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-100"
               aria-label="Close dialog"
             >
-              <svg className="w-5 h-5 text-gray-700" viewBox="0 0 24 24" fill="none">
-                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <svg
+                className="w-6 h-6 text-gray-700"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 6L6 18M6 6L18 18"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
             </button>
-            
-            <div className="flex flex-col md:flex-row max-h-[90vh]">
-              {/* Left column with image */}
-              <div className="md:w-5/12 relative bg-gray-900">
-                {/* Decorative top bar */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-lime-500 to-yellow-400 z-10"></div>
-                
-                <div className="relative h-64 md:h-full">
-                  <img 
-                    src={design.preview_image || '/placeholder-design.jpg'} 
-                    alt={design.title} 
+
+            <div className="flex flex-col md:flex-row">
+              {/* Design image */}
+              <div className="md:w-3/4 relative">
+                <div className="aspect-[3/4] md:h-full">
+                  <img
+                    src={design.preview_image || '/placeholder-design.jpg'}
+                    alt={design.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/30 to-transparent"></div>
-                
-                  {/* Bottom info */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="px-3 py-1 text-sm bg-white/20 backdrop-blur-sm rounded-full">
-                        {design.material.name}
-                      </span>
-                    </div>
-                    
-                    <h2 className="text-2xl md:text-3xl font-bold mb-2 drop-shadow-lg">{design.title}</h2>
-                    
-                    {design.contributor && (
-                      <p className="text-white/80 flex items-center">
-                        <svg className="w-4 h-4 mr-2 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                        Designed by {design.contributor.name}
-                      </p>
-                    )}
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-transparent"></div>
                 </div>
               </div>
-              
-              {/* Right column with content */}
-              <div className="md:w-7/12 p-6 md:p-8 md:overflow-y-auto">
-                <div className="max-w-2xl">
-                  {/* Heading with accent */}
-                  <div className="inline-flex items-center mb-4">
-                    <span className="h-px w-8 bg-lime-500"></span>
-                    <span className="mx-3 text-xs font-semibold tracking-widest uppercase text-lime-600">
-                      Sustainable Solution
-                    </span>
-                  </div>
-                  
-                  {/* Description */}
-                  <div className="mb-8">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4 md:hidden">{design.title}</h3>
-                    <p className="text-gray-700 leading-relaxed">{design.description}</p>
-                  </div>
-                  
-                  {/* Specifications */}
-                  <div className="mb-8">
-                    <h4 className="text-lg font-bold mb-4 text-gray-800 flex items-center">
-                      <svg className="w-5 h-5 mr-2 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                      </svg>
-                      Specifications
-                    </h4>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h5 className="text-sm font-medium text-gray-500 mb-1">Required Material</h5>
-                        <p className="text-gray-800 font-medium">{design.material.name}</p>
+
+              {/* Design details */}
+              <div className="md:w-3/5 p-8 md:p-12">
+                <div className="mb-8">
+                  <h3 className="text-3xl font-bold mb-2 text-black">
+                    {design.title}
+                  </h3>
+                  <p className="text-xl text-gray-600">
+                    {design.material.name} Design
+                  </p>
+                </div>
+
+                {/* Tab navigation */}
+                <div className="flex border-b border-gray-200 mb-6">
+                  <button
+                    className={`py-3 px-6 font-medium focus:outline-none ${
+                      activeTab === "info"
+                        ? "text-lime-600 border-b-2 border-lime-600"
+                        : "text-gray-500 hover:text-gray-700"
+                    }`}
+                    onClick={() => setActiveTab("info")}
+                  >
+                    Information
+                  </button>
+                  <button
+                    className={`py-3 px-6 font-medium focus:outline-none ${
+                      activeTab === "details"
+                        ? "text-lime-600 border-b-2 border-lime-600"
+                        : "text-gray-500 hover:text-gray-700"
+                    }`}
+                    onClick={() => setActiveTab("details")}
+                  >
+                    Details
+                  </button>
+                </div>
+
+                {activeTab === "info" && (
+                  <div className="space-y-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                      <div>
+                        <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-2">
+                          Material Required
+                        </h4>
+                        <p className="text-gray-900">
+                          {design.material.name}
+                        </p>
                       </div>
-                      
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h5 className="text-sm font-medium text-gray-500 mb-1">Date Added</h5>
-                        <p className="text-gray-800 font-medium">{formattedDate}</p>
+                      <div>
+                        <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-2">
+                          Date Added
+                        </h4>
+                        <p className="text-gray-900">
+                          {formattedDate}
+                        </p>
                       </div>
                     </div>
-                  </div>
-                  
-                  {/* Design file download */}
-                  {design.design_file && (
-                    <div className="mb-8">
-                      <h4 className="text-lg font-bold mb-4 text-gray-800 flex items-center">
-                        <svg className="w-5 h-5 mr-2 text-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                        </svg>
-                        Design Files
+
+                    <div>
+                      <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-2">
+                        Description
                       </h4>
-                      
-                      <a
-                        href={design.design_file}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full py-3 px-4 bg-black text-center rounded-lg group hover:bg-gray-900 transition-colors"
-                      >
-                        <span className="inline-flex items-center font-bold bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text text-transparent">
-                          <svg className="w-5 h-5 mr-2 text-lime-500" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
-                              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                          </svg>
-                          PREVIEW DESIGN FILE
-                        </span>
-                      </a>
+                      <p className="text-gray-900">{design.description}</p>
                     </div>
-                  )}
-                  
-                  {/* Pro tip */}
-                  <div className="mb-8 p-4 border border-lime-200 rounded-lg bg-gradient-to-br from-lime-50 to-yellow-50">
-                    <div className="flex">
-                      <div className="flex-shrink-0">
-                        <svg className="w-6 h-6 text-yellow-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
+
+                    {design.contributor && (
+                      <div>
+                        <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-2">
+                          Contributor
+                        </h4>
+                        <p className="text-gray-900">{design.contributor.name}</p>
                       </div>
-                      <div className="ml-3">
-                        <h5 className="text-sm font-semibold text-lime-700 mb-1">Pro Tip</h5>
-                        <p className="text-sm text-gray-600">
-                          This design works best when combined with other complementary shelter components. 
-                          Add it to your booklet to create a comprehensive shelter solution.
+                    )}
+
+                    {/* Added diagram/illustration - matching MaterialsSection */}
+                    <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                      <div className="flex items-center">
+                        <p className="text-gray-700 text-sm">
+                          This design can be constructed using common tools and 
+                          techniques. Download the design file for detailed instructions.
                         </p>
                       </div>
                     </div>
                   </div>
-                  
-                  {/* Action buttons */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                    <button
-                      onClick={() => setIsOpen(false)}
-                      className="py-3 px-6 border border-gray-200 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition-colors"
-                    >
-                      Close
-                    </button>
+                )}
+
+                {activeTab === "details" && (
+                  <div>
+                    <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-4">
+                      Design Specifications
+                    </h4>
                     
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        onToggleSelect();
-                      }}
-                      className={`py-3 px-6 rounded-lg font-medium transition-all ${
-                        isSelected
-                          ? 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                          : 'bg-gradient-to-r from-lime-500 to-lime-600 hover:from-lime-600 hover:to-lime-700 text-white shadow-sm hover:shadow'
-                      }`}
-                    >
-                      {isSelected ? 'Remove from Booklet' : 'Add to Booklet'}
-                    </button>
+                    {/* Design file download */}
+                    {design.design_file && (
+                      <div className="mb-6">
+                        <a
+                          href={design.design_file}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block w-full py-3 px-4 bg-black text-center rounded-lg group hover:bg-gray-900 transition-colors"
+                        >
+                          <span className="inline-flex items-center font-bold bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text text-transparent">
+                            PREVIEW DESIGN FILE
+                          </span>
+                        </a>
+                      </div>
+                    )}
+
+                    <div className="space-y-4">
+                      <div className="flex items-start">
+                        <p className="text-gray-900">
+                          This design provides a practical solution for shelter construction 
+                          using {design.material.name.toLowerCase()} materials.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Added visual enhancement - matching MaterialsSection */}
+                    <div className="mt-8 p-5 bg-gradient-to-r from-gray-50 to-white border border-gray-100 rounded-lg">
+                      <p className="text-gray-700 text-sm">
+                        For optimal results, ensure materials are clean and structurally sound. 
+                        Test construction techniques on a small scale before full implementation.
+                      </p>
+                    </div>
                   </div>
+                )}
+
+                {/* Action buttons */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="py-3 px-6 border border-gray-200 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition-colors"
+                  >
+                    Close
+                  </button>
+                  
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onToggleSelect();
+                    }}
+                    className={`py-3 px-6 rounded-lg font-medium transition-all ${
+                      isSelected
+                        ? 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        : 'bg-gradient-to-r from-lime-500 to-lime-600 hover:from-lime-600 hover:to-lime-700 text-white shadow-sm hover:shadow'
+                    }`}
+                  >
+                    {isSelected ? 'Remove from Booklet' : 'Add to Booklet'}
+                  </button>
                 </div>
               </div>
             </div>

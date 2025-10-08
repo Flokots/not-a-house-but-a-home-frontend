@@ -35,7 +35,7 @@ const Guide = () => {
             We've designed this guide to help anyone create safer, more durable
             living spaces using accessible materials and techniques. Whether
             you're building your own shelter, helping others, or just exploring
-            possibilities—we're here to support your journey.
+            possibilities, we're here to support your journey.
           </p>
           <div className="h-1 w-28 bg-gradient-to-r from-yellow-500 to-lime-600 mb-10"></div>
 
@@ -109,9 +109,6 @@ const Guide = () => {
                   className="text-lime-600 font-semibold hover:text-lime-800 flex items-center group cursor-pointer"
                 >
                   <span>Explore Resources</span>
-                  <span className="transform translate-x-0 group-hover:translate-x-2 transition-transform ml-2">
-                    →
-                  </span>
                 </div>
               </div>
             </div>
@@ -141,9 +138,6 @@ const Guide = () => {
                   className="text-lime-600 font-semibold hover:text-lime-800 flex items-center group cursor-pointer"
                 >
                   <span>Access Designs</span>
-                  <span className="transform translate-x-0 group-hover:translate-x-2 transition-transform ml-2">
-                    →
-                  </span>
                 </div>
               </div>
             </div>
@@ -173,9 +167,6 @@ const Guide = () => {
                   className="text-lime-600 font-semibold hover:text-lime-800 flex items-center group cursor-pointer"
                 >
                   <span>Join Our Efforts</span>
-                  <span className="transform translate-x-0 group-hover:translate-x-2 transition-transform ml-2">
-                    →
-                  </span>
                 </div>
               </div>
             </div>

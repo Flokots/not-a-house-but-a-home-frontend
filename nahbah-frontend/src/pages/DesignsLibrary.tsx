@@ -114,7 +114,7 @@ const DesignsLibrary = () => {
                 <span className="flex items-center justify-center bg-lime-500 text-white w-8 h-8 rounded-full font-bold">
                   {selectedDesigns.length}
                 </span>
-                <span className="text-white font-medium">designs selected for your booklet</span>
+                <span className="text-white font-medium">design(s) selected for your booklet</span>
               </div>
             )}
           </div>
