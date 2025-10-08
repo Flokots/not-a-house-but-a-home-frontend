@@ -32,7 +32,7 @@ const WarmthSection: React.FC<WarmthSectionProps> = ({ images }) => {
   ];
 
   return (
-    <section id="warmth" className="max-w-4xl mx-auto">
+    <section id="warmth" className="max-w-6xl mx-auto">
       {/* Simple header */}
       <div className="mb-8">
         <h3 className="text-2xl font-semibold mb-2">Warmth</h3>
@@ -55,7 +55,7 @@ const WarmthSection: React.FC<WarmthSectionProps> = ({ images }) => {
           <h4 className="font-medium mb-4">Key Tips</h4>
           <div className="space-y-3">
             {tips.map((tip, index) => (
-              <div key={index} className="border-l-4 border-blue-400 pl-4">
+              <div key={index} className="border-l-4 border-lime-400 pl-4">
                 <h5 className="font-medium">{tip.title}</h5>
                 <p className="text-gray-600 text-sm">{tip.description}</p>
               </div>
@@ -72,7 +72,7 @@ const WarmthSection: React.FC<WarmthSectionProps> = ({ images }) => {
                 <img
                   src={material.image}
                   alt={material.name}
-                  className="w-full h-24 object-cover rounded mb-2"
+                  className="w-full h-42 object-cover rounded mb-2"
                 />
                 <p className="text-sm">{material.name}</p>
               </div>
