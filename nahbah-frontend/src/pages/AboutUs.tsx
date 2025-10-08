@@ -19,7 +19,7 @@ const AboutUs = () => {
         <div className="absolute top-20 left-0  opacity-10 font-semibold text-9xl">
           About
         </div>
-        
+
         {/* Left Content - Text */}
         <div
           className={`w-full md:w-3/5 transition-opacity duration-1000 ${
@@ -79,154 +79,176 @@ const AboutUs = () => {
       </div>
 
       {/* Mission Section - Image Left */}
-      <div id="learn-more-section" className="max-w-7xl mx-auto px-4 py-20 mb-20 relative">
+      <div
+        id="learn-more-section"
+        className="max-w-7xl mx-auto px-4 py-20 mb-20 relative"
+      >
         {/* Background "Mission" text - lighter and better positioned */}
         <div className="absolute -top-5 right-0 text-gray-200 opacity-20 font-semibold text-9xl z-0 select-none">
           Mission
         </div>
-        
+
         <div className="bg-white rounded-xl overflow-hidden shadow-lg p-8 relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-12 mb-12">
             <div className="md:w-2/5">
               <div className="rounded-lg overflow-hidden shadow-md">
-                <img 
+                <img
                   src={ourMissionImage}
-                  alt="Community housing solutions" 
+                  alt="Community housing solutions"
                   className="w-full h-auto object-cover"
                 />
               </div>
             </div>
-            
+
             <div className="md:w-3/5">
               <h2 className="text-4xl font-bold  mb-6">Our Mission</h2>
               <p className="mb-4 ">
-                Housing is a fundamental right, yet many people are forced to create
-                their own shelters outside traditional systems. Through design knowledge, 
-                creativity, and shared solutions, we support self-built housing as a 
-                pathway to dignity and security.
+                As members of the Research Group for Solidarity in Architecture,
+                we believe that architects and architecture students can play a
+                role in alleviating social problems. On this site, we want to
+                spread basic knowledge that will help create a safer
+                environment. A built environment that can replace the inhumane
+                world of night shelters and provide temporary shelter for those
+                who find it difficult to survive on their own.
               </p>
               <p className=" mb-4">
-                Not a House, but a Home – We believe in the power of self-built
-                spaces to create stability and dignity. Our goal is to support,
-                inspire, and empower people to build homes that truly feel like home.
-              </p>
-              <p className="">
-                Whether you're looking for inspiration, guidance, or a way
-                to contribute, this platform is here to help.
+                We encourage all
+                architects and students to look at the world around them with a
+                slightly different perspective. Discover the possibilities of
+                the freely available materials around us. Let's help build
+                temporary shelters protected from wind, cold, and rain together.
               </p>
             </div>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8 mt-12">
             <div className="bg-lime-200 p-6 rounded-lg transition-transform hover:scale-[1.02]">
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">Our Approach</h3>
+              <h3 className="text-xl font-semibold mb-3 text-gray-800">
+                Our Approach
+              </h3>
               <p className="mb-4 ">
-                We combine architectural expertise with community knowledge to create solutions 
-                that are practical, sustainable, and empowering. Our resources are developed 
-                in collaboration with people who have direct experience with self-built housing.
+                We combine architectural expertise with community knowledge to
+                create solutions that are practical, sustainable, and
+                empowering. Our resources are developed in collaboration with
+                people who have direct experience with self-built housing.
               </p>
               <p className="">
-                Every design, guide, and material suggestion on this platform is tested,
-                accessible, and adaptable to different circumstances and resource availability.
+                Every design, guide, and material suggestion on this platform is
+                accessible, and adaptable to different circumstances and
+                resource availability and many of them are tested.
               </p>
             </div>
-            
+
             <div className="bg-yellow-200 bg-opacity-30 p-6 rounded-lg transition-transform hover:scale-[1.02]">
               <h3 className="text-xl font-semibold mb-3 ">Get Involved</h3>
               <p className="mb-4 ">
-                Whether you're looking to improve your own shelter, support someone else's 
-                housing journey, or advocate for housing justice, there are many ways to 
-                participate in our community.
+                Whether you're looking to improve your own shelter, support
+                someone else's housing journey, or advocate for housing justice,
+                there are many ways to participate in our community.
               </p>
               <p className="">
-                Browse our resource library, contribute design ideas, share success stories, or 
-                volunteer your skills. Together, we can transform the way we think about 
-                housing and create more pathways to dignified homes for all.
+                Browse our resource library, contribute design ideas, share
+                success stories, or volunteer your skills. Together, we can
+                transform the way we think about housing and create more
+                pathways to dignified homes for all.
               </p>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Impact Section - Creative Layout with Two Images */}
+      <div className="max-w-7xl mx-auto px-4 py-16 mb-20 relative">
+        <div className="relative z-10">
+          <div className="bg-white rounded-xl overflow-hidden shadow-lg relative z-10">
+            {/* Header with gradient overlay */}
+            <div className="h-24 flex items-center px-8">
+              <h2 className="text-4xl font-bold ">Our Impact</h2>
+            </div>
 
-{/* Impact Section - Creative Layout with Two Images */}
-<div className="max-w-7xl mx-auto px-4 py-16 mb-20 relative">
-  <div className="relative z-10">
-    <div className="bg-white rounded-xl overflow-hidden shadow-lg relative z-10">
-      {/* Header with gradient overlay */}
-      <div className="h-24 flex items-center px-8">
-        <h2 className="text-4xl font-bold ">Our Impact</h2>
-      </div>
-      
-      {/* Main content */}
-      <div className="p-8">
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Left column - Text and stats */}
-          <div>
-            <p className="mb-6 ">
-              This web application is a resource for those who build homes from found materials,
-              as well as for advocates and architects working in solidarity with unhoused communities.
-            </p>
-            <p className="mb-8 ">
-              A home is more than a shelter—it's a place of stability, privacy,
-              and connection. Through our resources and community, we're helping people
-              create dignified living spaces regardless of their circumstances.
-            </p>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div className="bg-lime-100 py-6 px-4 rounded-lg transform transition-transform hover:scale-105">
-                <h4 className="text-3xl font-bold text-lime-600 mb-1">100+</h4>
-                <p className="text-sm text-lime-800">Housing Solutions</p>
+            {/* Main content */}
+            <div className="p-8">
+              <div className="grid md:grid-cols-2 gap-12">
+                {/* Left column - Text and stats */}
+                <div>
+                  <p className="mb-6 ">
+                    This web application is a resource for those who build homes
+                    from found materials, as well as for advocates and
+                    architects working in solidarity with unhoused communities.
+                  </p>
+                  <p className="mb-8 ">
+                    A home is more than a shelter—it's a place of stability,
+                    privacy, and connection. Through our resources and
+                    community, we're helping people create dignified living
+                    spaces regardless of their circumstances.
+                  </p>
+
+                  {/* Stats */}
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    <div className="bg-lime-100 py-6 px-4 rounded-lg transform transition-transform hover:scale-105">
+                      <h4 className="text-3xl font-bold text-lime-600 mb-1">
+                        100+
+                      </h4>
+                      <p className="text-sm text-lime-800">Housing Solutions</p>
+                    </div>
+                    <div className="bg-yellow-100 py-6 px-4 rounded-lg transform transition-transform hover:scale-105">
+                      <h4 className="text-3xl font-bold text-yellow-600 mb-1">
+                        50+
+                      </h4>
+                      <p className="text-sm text-yellow-800">
+                        Communities Served
+                      </p>
+                    </div>
+                    <div className="bg-lime-100 py-6 px-4 rounded-lg transform transition-transform hover:scale-105">
+                      <h4 className="text-3xl font-bold text-lime-600 mb-1">
+                        1000+
+                      </h4>
+                      <p className="text-sm text-lime-800">People Helped</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right column - Overlapping cards layout */}
+                <div className="relative h-full min-h-[400px]">
+                  {/* First image - top right, slight rotation */}
+                  <div className="absolute top-0 right-0 w-4/5 shadow-xl rounded-lg overflow-hidden transform rotate-3 z-20 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-40">
+                    <img
+                      src={ourImpactImage}
+                      alt="Community impact interior"
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+
+                  {/* Second image - bottom left, opposite rotation */}
+                  <div className="absolute top-40 left-0 w-4/5 shadow-xl rounded-lg overflow-hidden transform -rotate-3 z-10 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-40">
+                    <img
+                      src={homeInteriorImage}
+                      alt="Home interior example"
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="bg-yellow-100 py-6 px-4 rounded-lg transform transition-transform hover:scale-105">
-                <h4 className="text-3xl font-bold text-yellow-600 mb-1">50+</h4>
-                <p className="text-sm text-yellow-800">Communities Served</p>
-              </div>
-              <div className="bg-lime-100 py-6 px-4 rounded-lg transform transition-transform hover:scale-105">
-                <h4 className="text-3xl font-bold text-lime-600 mb-1">1000+</h4>
-                <p className="text-sm text-lime-800">People Helped</p>
-              </div>
-            </div>
-          </div>
-          
-          {/* Right column - Overlapping cards layout */}
-          <div className="relative h-full min-h-[400px]">
-            {/* First image - top right, slight rotation */}
-            <div className="absolute top-0 right-0 w-4/5 shadow-xl rounded-lg overflow-hidden transform rotate-3 z-20 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-40">
-              <img 
-                src={ourImpactImage}
-                alt="Community impact interior" 
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            
-            {/* Second image - bottom left, opposite rotation */}
-            <div className="absolute top-40 left-0 w-4/5 shadow-xl rounded-lg overflow-hidden transform -rotate-3 z-10 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-40">
-              <img 
-                src={homeInteriorImage}
-                alt="Home interior example" 
-                className="w-full h-auto object-cover"
-              />
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
       {/* Call to action section */}
       <div className="max-w-7xl mx-auto px-4 py-12 mb-20 relative">
         <div className="rounded-2xl p-8 md:p-12 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold  mb-4">Ready to Make a Difference?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold  mb-4">
+            Ready to Make a Difference?
+          </h2>
           <p className="text-lg mb-8 max-w-3xl mx-auto ">
-            Whether you're building your own home, supporting others, or advocating for housing justice,
-            we invite you to join our community and be part of the solution.
+            Whether you're building your own home, supporting others, or
+            advocating for housing justice, we invite you to join our community
+            and be part of the solution.
           </p>
-          <button 
-          onClick={() => window.location.href = '/guide'}
-          className="px-8 py-4 bg-black inline-block transition-all duration-300 hover:bg-zinc-900 hover:shadow-lg hover:shadow-lime-300/20 hover:scale-105 cursor-pointer">
+          <button
+            onClick={() => (window.location.href = "/guide")}
+            className="px-8 py-4 bg-black inline-block transition-all duration-300 hover:bg-zinc-900 hover:shadow-lg hover:shadow-lime-300/20 hover:scale-105 cursor-pointer"
+          >
             <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold text-lg uppercase">
               Get Started Today
             </span>
