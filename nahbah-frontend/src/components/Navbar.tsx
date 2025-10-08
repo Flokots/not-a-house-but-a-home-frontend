@@ -25,7 +25,7 @@ const Navbar = ({ lightMode = false }: NavbarProps) => {
         <div>
           <NavLink
             to="/"
-            className={`font-fjalla ${textColor} text-xl flex items-center`}
+            className={`font-fjalla ${textColor} text-2xl flex items-center`}
           >
             NOT A HOUSE{" "}
             <span className={`${gradientClass} ml-2`}>BUT A HOME</span>

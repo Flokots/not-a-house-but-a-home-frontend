@@ -1,6 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-/* Make sure this CSS file is being imported in App.tsx */
+
+/* Custom Font Face Declarations */
+@font-face {
+  font-family: 'Futura Bold';
+  src: url('./assets/Futura Bold/Futura Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./assets/Helvetica Neue/HelveticaNeue-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./assets/Helvetica Neue/HelveticaNeue-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./assets/Helvetica Neue/HelveticaNeue-Roman.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./assets/Helvetica Neue/HelveticaNeue-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./assets/Helvetica Neue/HelveticaNeue-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* Base styles */
 :root {
@@ -8,20 +56,38 @@
   --gradient-end: #8ce70d;
 }
 
+/* Updated body to use Helvetica Neue as default */
 body {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Helvetica Neue', system-ui, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #1E1E1E;
   color: #fff;
 }
 
+/* Headings now default to Futura Bold */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Futura Bold', 'Helvetica Neue', system-ui, sans-serif;
+  font-weight: bold;
+}
+
+/* Font utility classes - updated defaults */
 .font-fjalla {
   font-family: 'Fjalla One', sans-serif;
 }
 
+/* Updated hero-text to use Helvetica Neue */
 .hero-text {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Helvetica Neue', system-ui, sans-serif;
+}
+
+/* Custom font classes */
+.futura-bold {
+  font-family: 'Futura Bold', 'Helvetica Neue', system-ui, sans-serif;
+}
+
+.helvetica-neue {
+  font-family: 'Helvetica Neue', system-ui, sans-serif;
 }
 
 /* Gradient text */
@@ -39,11 +105,11 @@ body {
   width: 120% ; 
 }
 
-/* Button styles */
+/* Button styles - updated to use Futura Bold */
 .gradient-border-btn {
   position: relative;
   padding: 0.75rem 2rem;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Futura Bold', 'Helvetica Neue', system-ui, sans-serif;
   font-size: 1.25rem;
   color: #fff;
   background: transparent;
@@ -73,10 +139,10 @@ body {
   border: 1px solid #0bf91b;
 }
 
-/* Navigation styles */
+/* Navigation styles - updated to use Futura Bold */
 .nav-link {
   font-family: 'Fjalla One', sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   text-decoration: none;
   padding-bottom: 0.25rem;
   position: relative;
@@ -151,54 +217,54 @@ body {
 }
 
 @keyframes pulse-ring {
-          0% {
-            transform: scale(0.8);
-            opacity: 0.8;
-          }
-          70% {
-            transform: scale(1.2);
-            opacity: 0;
-          }
-          100% {
-            transform: scale(1.2);
-            opacity: 0;
-          }
-        }
-        
-        @keyframes pulse {
-          0% {
-            transform: scale(0.8);
-            opacity: 0.8;
-          }
-          50% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          100% {
-            transform: scale(0.8);
-            opacity: 0.8;
-          }
-        }
-        
-        .animate-pulse-ring {
-          animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-        }
-        
-        .animate-pulse {
-          animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        
-        .animate-fadeIn {
-          animation: fadeIn 0.5s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: scale(0.9);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.animate-pulse {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

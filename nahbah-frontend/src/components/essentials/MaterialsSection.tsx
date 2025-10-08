@@ -135,16 +135,16 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
       </div>
       
       {/* Section divider - matching WeatherProtection exactly */}
-      <div className="flex items-center mb-16">
+      <div className="flex items-center mb-12">
         <div className="h-px bg-gray-200 flex-grow"></div>
-        <div className="px-4 text-4xl font-medium text-gray-600">Available Materials & Their Uses</div>
+        <div className="px-4 text-4xl font-medium text-gray-800">Available Materials & Their Uses</div>
         <div className="h-px bg-gray-200 flex-grow"></div>
       </div>
       <div className="space-y-24">
         {/* Materials cards section */}
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center mb-16">
-            <p className="text-gray-600 text-center mx-auto">
+            <p className="text-gray-800 text-center mx-auto text-lg">
               Navigate your surroundings with resourcefulness. Discover how
               everyday objects can be transformed into essential shelter
               components.
@@ -177,7 +177,7 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                   {/* Material title */}
                   <div className="bg-white p-6 flex-grow">
                     <h4 className="text-2xl font-bold mb-2">{material.title}</h4>
-                    <p className="text-gray-600 mb-4">{material.function}</p>
+                    <p className="text-gray-800 mb-4">{material.function}</p>
                     <div className="flex items-center text-lime-600 font-medium">
                       <span>View details</span>
                     </div>
@@ -220,11 +220,11 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                     <h4 className="text-xl font-bold mb-4">
                       Structural elements
                     </h4>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-800 mb-4">
                       Materials like wood crates and beverage cans can be
                       repurposed for walls, roof, and foundational elements.
                     </p>
-                    <ul className="list-disc list-inside text-gray-600">
+                    <ul className="list-disc list-inside text-gray-800">
                       <li>Roof shingles from cans</li>
                       <li>Rain screens from crates</li>
                       <li>Wall frames from scrap wood</li>
@@ -253,11 +253,11 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                     <h4 className="text-xl font-bold mb-4">
                       Insulation & protection
                     </h4>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-800 mb-4">
                       Soft and porous materials can provide crucial insulation
                       against cold and heat loss.
                     </p>
-                    <ul className="list-disc list-inside text-gray-600">
+                    <ul className="list-disc list-inside text-gray-800">
                       <li>Heat insulation from cardboard</li>
                       <li>Thermal protection with styrofoam</li>
                       <li>Water barriers using plastic sheets</li>
@@ -284,11 +284,11 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                       </svg>
                     </div>
                     <h4 className="text-xl font-bold mb-4">Weather protection</h4>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-800 mb-4">
                       Securing shelter against wind, rain, and moisture requires
                       specialized barriers.
                     </p>
-                    <ul className="list-disc list-inside text-gray-600">
+                    <ul className="list-disc list-inside text-gray-800">
                       <li>Windproof membranes from tents</li>
                       <li>Vapor barriers from plastic sheets</li>
                       <li>Waterproofing from tarpaulins</li>
@@ -399,7 +399,7 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                     <h3 className="text-3xl font-bold mb-2 text-black">
                       {selectedMaterial.title}
                     </h3>
-                    <p className="text-xl text-gray-600">
+                    <p className="text-xl text-gray-800">
                       {selectedMaterial.function}
                     </p>
                   </div>
@@ -459,7 +459,7 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                       {/* Added diagram/illustration */}
                       <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
                         <div className="flex items-center">
-                          <p className="text-gray-700 text-sm">
+                          <p className="text-gray-700 text-base">
                             This material can be found in common urban
                             environments and repurposed with minimal tools.
                           </p>
@@ -476,14 +476,14 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                       <ul className="space-y-4">
                         {selectedMaterial.examples.map((example, i) => (
                           <li key={i} className="flex items-start">
-                            <p className="text-gray-900">{example}</p>
+                            <p className="text-gray-900 text-base">{example}</p>
                           </li>
                         ))}
                       </ul>
 
                       {/* Added visual enhancement */}
                       <div className="mt-8 p-5 bg-gradient-to-r from-gray-50 to-white border border-gray-100 rounded-lg">
-                        <p className="text-gray-700 text-sm">
+                        <p className="text-gray-700 text-base">
                           For optimal results, clean and prepare materials
                           before repurposing. Remove labels, wash surfaces, and
                           test for structural integrity.

@@ -54,7 +54,7 @@ const Essentials: React.FC = () => {
     <div className="min-h-screen bg-slate-100 relative overflow-hidden hero-text text-black px-10">
       <div className="max-w-7xl mx-auto px-4 pt-32 pb-20 flex flex-col md:flex-row gap-8 relative top-10">
         {/* Background text */}
-        <div className="absolute top-24 left-0 text-black opacity-10 font-semibold text-8xl">
+        <div className="absolute top-25 left-0 text-black opacity-10 font-semibold text-8xl">
           Essentials
         </div>
 
@@ -65,10 +65,10 @@ const Essentials: React.FC = () => {
               loaded ? "opacity-100" : "opacity-0"
             }`}
           >
-            <h1 className="text-4xl font-bold mb-8 mt-2 ml-26 text-black">
+            <h1 className="text-4xl font-bold mb-10 mt-0 ml-24 text-black">
               What does a home need?
             </h1>
-            <p className="text-xl text-gray-700 mb-8 max-w-3xl">
+            <p className="text-xl text-gray-700 mb-8 ">
               Learn what makes a shelter into a home, from weather protection to
               finding and repurposing materials around you.
             </p>
@@ -79,7 +79,7 @@ const Essentials: React.FC = () => {
           <div className="flex flex-col sm:flex-row mb-12 border-b">
             <button
               onClick={() => setActiveTab("protection")}
-              className={`py-3 px-6 font-medium text-lg transition-colors ${
+              className={`py-3 px-6 font-medium text-xl transition-colors ${
                 activeTab === "protection"
                   ? "text-lime-700 border-b-2 border-lime-600"
                   : "text-gray-600 hover:text-gray-900"
@@ -89,7 +89,7 @@ const Essentials: React.FC = () => {
             </button>
             <button
               onClick={() => setActiveTab("materials")}
-              className={`py-3 px-6 font-medium text-lg transition-colors ${
+              className={`py-3 px-6 font-medium text-xl transition-colors ${
                 activeTab === "materials"
                   ? "text-lime-700 border-b-2 border-lime-600"
                   : "text-gray-600 hover:text-gray-900"

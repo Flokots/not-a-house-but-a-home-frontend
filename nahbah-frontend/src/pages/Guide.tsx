@@ -18,7 +18,7 @@ const Guide = () => {
       {/* Hero Section with Background Text and Image */}
       <div className="max-w-7xl mx-auto px-4 pt-32 pb-20 flex flex-col md:flex-row gap-8 relative top-10">
         {/* Background "Guide" text */}
-        <div className="absolute top-20 left-0 text-black opacity-10 font-semibold text-9xl">
+        <div className="absolute top-22 left-0 text-black opacity-10 font-semibold text-9xl">
           Guide
         </div>
 
@@ -28,7 +28,7 @@ const Guide = () => {
             loaded ? "opacity-100" : "opacity-0"
           } relative z-10`}
         >
-          <h1 className="text-4xl font-bold mb-8 mt-2 ml-22 leading-tight tracking-tight">
+          <h1 className="text-4xl font-bold mb-10 mt-0 ml-22 leading-tight tracking-tight">
             Building Better Homes
           </h1>
           <p className="text-lg mb-8 text-gray-700 leading-relaxed">
@@ -76,8 +76,8 @@ const Guide = () => {
       <div id="path-selection" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 mb-16">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Choose Your Path</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4">CHOOSE YOUR PATH</h2>
+            <p className="text-gray-600 text-lg mx-auto">
               We've tailored resources for different needs. Select the option
               that best represents your situation.
             </p>
@@ -102,7 +102,7 @@ const Guide = () => {
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-lime-700 transition-colors">
                   Essentials & Materials
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 text-lg mb-6">
                   Discover what makes a shelter a home and explore useful materials you can find around you.
                 </p>
                 <div
@@ -131,7 +131,7 @@ const Guide = () => {
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-lime-700 transition-colors">
                   Design Library
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 text-lg mb-6">
                   Browse, select, and download design plans to create your own customized building guide.
                 </p>
                 <div
@@ -160,7 +160,7 @@ const Guide = () => {
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-lime-700 transition-colors">
                   Contribute Your Expertise
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 text-lg mb-6">
                   Share your knowledge, upload designs, or collaborate with our community to help others.
                 </p>
                 <div
