@@ -7,13 +7,8 @@ import React, {
 } from "react";
 import { getMaterials } from "@/api/materials";
 import { submitDesign } from "@/api/designs";
-import TermsAndConditions from "@/components/TermsAndConditions";
-import GDPRStatement from "@/components/GDPRStatement";
 
 const Contribute: React.FC = () => {
-  const [showTerms, setShowTerms] = useState(false);
-  const [showGDPR, setShowGDPR] = useState(false);
-  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,6 +25,7 @@ const Contribute: React.FC = () => {
   const [materialOptions, setMaterialOptions] = useState<
     { id: number; name: string }[]
   >([]);
+  const [isAnonymous, setIsAnonymous] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Fetch material options from the backend
@@ -66,11 +62,15 @@ const Contribute: React.FC = () => {
     fetchMaterials();
   }, []);
 
-const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  const { name, value } = e.target;
-  console.log(`Updating ${name} to ${value}`);
-  setFormData(prev => ({ ...prev, [name]: value }));
-};
+  const handleInputChange = (
+    e: ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    console.log(`Updating ${name} to ${value}`);
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
@@ -111,12 +111,17 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
   const validateForm = (): boolean => {
     const newErrors: Record<string, string> = {};
 
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Valid email is required";
+    // Only validate name and email if NOT anonymous
+    if (!isAnonymous) {
+      if (!formData.name.trim()) newErrors.name = "Name is required";
+      if (!formData.email.trim()) {
+        newErrors.email = "Email is required";
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+        newErrors.email = "Valid email is required";
+      }
     }
+
+    // Keep all other existing validation the same
     if (!formData.title.trim()) newErrors.title = "Title is required";
     if (!formData.material) {
       newErrors.material = "Please select a material";
@@ -146,37 +151,34 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
     try {
       setLoading(true);
 
-      // Create FormData for Django DRF
-      const formDataToSend = new FormData();
+      // Prepare data with anonymous handling
+      const submitData = {
+        title: formData.title,
+        description: formData.description,
+        material: formData.material,
+        customMaterial: formData.customMaterial,
+        contributor: isAnonymous
+          ? {
+              name: "Anonymous",
+              email: "anonymous@email.com",
+            }
+          : {
+              name: formData.name,
+              email: formData.email,
+            },
+        isAnonymous: isAnonymous,
+      };
 
-      // Add basic fields
-      formDataToSend.append(
-        "title",
-        formData.title || `Design by ${formData.name}`
-      );
-      formDataToSend.append("name", formData.name);
-      formDataToSend.append("email", formData.email);
-      formDataToSend.append("material", formData.material);
-      formDataToSend.append("description", formData.description);
+      await submitDesign(submitData, file);
 
-      if (formData.material === "-1") {
-        // If "Other" was selected, include the custom material
-        formDataToSend.append("customMaterial", formData.customMaterial);
-        // You might want to create a new material or handle this specially
-      }
+      // Success message based on submission type
+      const message = isAnonymous
+        ? "Anonymous design submitted successfully! It will be reviewed by our team."
+        : `Thank you ${formData.name}! Your design was submitted successfully and will be reviewed by our team.`;
 
-      // Add file if it exists
-      if (file) {
-        formDataToSend.append("designFile", file);
-      }
+      alert(message);
 
-      // Submit the design
-      await submitDesign(formDataToSend);
-
-      // Success message
-      alert("Design submitted successfully! It will be reviewed by our team.");
-
-      // Reset form after submission
+      // Reset form including anonymous checkbox
       setFormData({
         name: "",
         email: "",
@@ -188,6 +190,7 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
       setFile(null);
       setAcceptGDPR(false);
       setAcceptTerms(false);
+      setIsAnonymous(false); // Reset anonymous checkbox
       if (fileInputRef.current) fileInputRef.current.value = "";
     } catch (error) {
       console.error("Error submitting design:", error);
@@ -233,47 +236,96 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
               )}
             </div>
 
-            {/* Name input */}
-            <div>
-              <label htmlFor="name" className="block text-lg mb-2">
-                Your Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                className={`w-full bg-transparent border-b ${
-                  errors.name ? "border-red-500" : "border-white"
-                } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
-                disabled={loading}
-              />
-              {errors.name && (
-                <p className="mt-1 text-red-500">{errors.name}</p>
-              )}
+            {/* Anonymous Checkbox with dynamic border color */}
+            <div className={`border-b pb-4 mb-6 transition-colors duration-300 ${
+              isAnonymous ? 'border-lime-400' : 'border-white'
+            }`}>
+              <div className="flex items-start">
+                <input
+                  type="checkbox"
+                  id="anonymous"
+                  checked={isAnonymous}
+                  onChange={(e) => {
+                    setIsAnonymous(e.target.checked);
+                    // Clear name/email when switching to anonymous
+                    if (e.target.checked) {
+                      setFormData(prev => ({
+                        ...prev,
+                        name: "",
+                        email: ""
+                      }));
+                      // Clear any validation errors for name/email
+                      setErrors(prev => {
+                        const newErrors = { ...prev };
+                        delete newErrors.name;
+                        delete newErrors.email;
+                        return newErrors;
+                      });
+                    }
+                  }}
+                  className="mt-1 mr-3 accent-lime-400"
+                  disabled={loading}
+                />
+                <div>
+                  <label htmlFor="anonymous" className="text-lg font-medium text-white">
+                    Submit Anonymously
+                  </label>
+                  <p className="text-sm text-gray-400 mt-1">
+                    {isAnonymous 
+                      ? "Your submission will be credited as 'Anonymous Contributor'."
+                      : "Your name will be credited with this contribution to help build our community."
+                    }
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {/* Email input */}
-            <div>
-              <label htmlFor="email" className="block text-lg mb-2">
-                Email Address
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                className={`w-full bg-transparent border-b ${
-                  errors.email ? "border-red-500" : "border-white"
-                } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
-                disabled={loading}
-              />
-              {errors.email && (
-                <p className="mt-1 text-red-500">{errors.email}</p>
-              )}
-            </div>
+            {/* Conditional Name and Email fields - only show if not anonymous */}
+            {!isAnonymous && (
+              <>
+                <div>
+                  <label htmlFor="name" className="block text-lg mb-2">
+                    Your Name*
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    placeholder="Your name for attribution"
+                    className={`w-full bg-transparent border-b ${
+                      errors.name ? "border-red-500" : "border-white"
+                    } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
+                    disabled={loading}
+                  />
+                  {errors.name && (
+                    <p className="mt-1 text-red-500">{errors.name}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-lg mb-2">
+                    Email Address*
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="your@email.com"
+                    className={`w-full bg-transparent border-b ${
+                      errors.email ? "border-red-500" : "border-white"
+                    } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
+                    disabled={loading}
+                  />
+                  {errors.email && (
+                    <p className="mt-1 text-red-500">{errors.email}</p>
+                  )}
+                </div>
+              </>
+            )}
 
             {/* Material dropdown */}
             <div>
@@ -385,7 +437,7 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
               )}
             </div>
 
-            {/* Checkboxes - Updated with clickable links */}
+            {/* Checkboxes */}
             <div className="space-y-3 mt-6">
               <div className="flex items-start">
                 <input
@@ -397,15 +449,7 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
                   disabled={loading}
                 />
                 <label htmlFor="gdpr" className="ml-2">
-                  Accept{" "}
-                  <button
-                    type="button"
-                    onClick={() => setShowGDPR(true)}
-                    className="text-lime-400 hover:text-lime-300 transition-colors"
-                    disabled={loading}
-                  >
-                    GDPR Data Protection Guidelines
-                  </button>
+                  Accept GDPR Data Protection guidelines
                 </label>
               </div>
               {errors.gdpr && <p className="text-red-500">{errors.gdpr}</p>}
@@ -420,15 +464,7 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
                   disabled={loading}
                 />
                 <label htmlFor="terms" className="ml-2">
-                  Accept{" "}
-                  <button
-                    type="button"
-                    onClick={() => setShowTerms(true)}
-                    className="text-lime-400 hover:text-lime-300 transition-colors"
-                    disabled={loading}
-                  >
-                    Terms and Conditions
-                  </button>
+                  Accept Terms and Conditions
                 </label>
               </div>
               {errors.terms && <p className="text-red-500">{errors.terms}</p>}
@@ -463,16 +499,6 @@ const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement
           </div>
         </form>
       </div>
-
-      {/* Modals */}
-      <TermsAndConditions 
-        isOpen={showTerms} 
-        onClose={() => setShowTerms(false)} 
-      />
-      <GDPRStatement 
-        isOpen={showGDPR} 
-        onClose={() => setShowGDPR(false)} 
-      />
     </div>
   );
 };
