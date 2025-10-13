@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
+import Navbar from "@/components/Navbar";
 import buildingMaterialsImage from "@/assets/buildingmaterials.png";
 import safetyImage from "@/assets/lounge_area.png";
 import architectImage from "@/assets/architect.png";
@@ -14,11 +15,15 @@ const Guide = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-50 relative overflow-hidden hero-text text-black px-10">
+    <div className="min-h-screen bg-slate-50 dark:bg-black relative overflow-hidden hero-text text-black dark:text-white px-10 transition-colors duration-300">
+      {/* Navbar that responds to theme */}
+      <Navbar />
+      
       {/* Hero Section with Background Text and Image */}
       <div className="max-w-7xl mx-auto px-4 pt-32 pb-20 flex flex-col md:flex-row gap-8 relative top-10">
-        {/* Background "Guide" text */}
-        <div className="absolute top-22 left-0 text-black opacity-10 font-semibold text-9xl">
+        {/* Background "Guide" text - matching styling pattern */}
+        <div className="absolute top-22 left-0 font-semibold text-9xl 
+                        text-black opacity-10 dark:text-white/14 dark:opacity-100">
           Guide
         </div>
 
@@ -28,10 +33,10 @@ const Guide = () => {
             loaded ? "opacity-100" : "opacity-0"
           } relative z-10`}
         >
-          <h1 className="text-4xl font-bold mb-10 mt-0 ml-22 leading-tight tracking-tight">
+          <h1 className="text-4xl font-bold mb-10 mt-0 ml-22 leading-tight tracking-tight text-black dark:text-white">
             Building Better Homes
           </h1>
-          <p className="text-lg mb-8 text-gray-700 leading-relaxed">
+          <p className="text-lg mb-8 text-gray-700 dark:text-gray-300 leading-relaxed">
             We've designed this guide to help anyone create safer, more durable
             living spaces using accessible materials and techniques. Whether
             you're building your own shelter, helping others, or just exploring
@@ -46,7 +51,11 @@ const Guide = () => {
                 behavior: "smooth",
               });
             }}
-            className="px-8 py-3 bg-black inline-block transition-all duration-300 hover:bg-zinc-900 hover:shadow-xl hover:shadow-yellow-200/10 hover:scale-105 cursor-pointer"
+            className="px-8 py-3 bg-black dark:bg-slate-900 inline-block transition-all duration-300 
+                       hover:bg-zinc-900 dark:hover:bg-gray-800 
+                       hover:shadow-xl hover:shadow-yellow-200/10 dark:hover:shadow-lime-400/10 
+                       hover:scale-105 cursor-pointer
+                       border border-transparent dark:border-gray-700"
           >
             <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold uppercase">
               Find Your Path
@@ -60,7 +69,7 @@ const Guide = () => {
             loaded ? "opacity-100" : "opacity-0"
           } relative z-10`}
         >
-          <div className="rounded-xl overflow-hidden shadow-xl bg-white">
+          <div className="rounded-xl overflow-hidden shadow-xl dark:shadow-black/30 bg-white dark:bg-gray-800 border border-transparent dark:border-gray-700">
             <div className="overflow-hidden rounded-lg">
               <img
                 src={heroImage}
@@ -73,11 +82,11 @@ const Guide = () => {
       </div>
 
       {/* User Type Selection */}
-      <div id="path-selection" className="py-20 bg-white">
+      <div id="path-selection" className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 mb-16">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">CHOOSE YOUR PATH</h2>
-            <p className="text-gray-600 text-lg mx-auto">
+            <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">CHOOSE YOUR PATH</h2>
+            <p className="text-gray-600 dark:text-gray-300 text-lg mx-auto">
               We've tailored resources for different needs. Select the option
               that best represents your situation.
             </p>
@@ -87,7 +96,10 @@ const Guide = () => {
             {/* First Card - Home Essentials & Materials */}
             <div 
               onClick={() => navigate('/essentials')}
-              className="bg-slate-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:translate-y-[-5px] group cursor-pointer"
+              className="bg-slate-50 dark:bg-gray-800 rounded-xl shadow-sm dark:shadow-black/20 
+                         hover:shadow-md dark:hover:shadow-black/40 
+                         transition-all hover:translate-y-[-5px] group cursor-pointer
+                         border border-transparent dark:border-gray-700"
             >
               <div className="p-2">
                 <div className="h-48 rounded-lg overflow-hidden">
@@ -99,15 +111,17 @@ const Guide = () => {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-lime-700 transition-colors">
+                <h3 className="text-2xl font-bold mb-3 text-black dark:text-white 
+                               group-hover:text-lime-700 dark:group-hover:text-lime-400 
+                               transition-colors">
                   Essentials & Materials
                 </h3>
-                <p className="text-gray-600 text-lg mb-6">
+                <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
                   Discover what makes a shelter a home and explore useful materials you can find around you.
                 </p>
-                <div
-                  className="text-lime-600 font-semibold hover:text-lime-800 flex items-center group cursor-pointer"
-                >
+                <div className="text-lime-600 dark:text-lime-400 font-semibold 
+                               hover:text-lime-800 dark:hover:text-lime-300 
+                               flex items-center group cursor-pointer">
                   <span>Explore Resources</span>
                 </div>
               </div>
@@ -116,7 +130,10 @@ const Guide = () => {
             {/* Second Card - Design Library */}
             <div 
               onClick={() => navigate('/designs')}
-              className="bg-slate-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:translate-y-[-5px] group cursor-pointer"
+              className="bg-slate-50 dark:bg-gray-800 rounded-xl shadow-sm dark:shadow-black/20 
+                         hover:shadow-md dark:hover:shadow-black/40 
+                         transition-all hover:translate-y-[-5px] group cursor-pointer
+                         border border-transparent dark:border-gray-700"
             >
               <div className="p-2">
                 <div className="h-48 rounded-lg overflow-hidden">
@@ -128,15 +145,17 @@ const Guide = () => {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-lime-700 transition-colors">
+                <h3 className="text-2xl font-bold mb-3 text-black dark:text-white 
+                               group-hover:text-lime-700 dark:group-hover:text-lime-400 
+                               transition-colors">
                   Design Library
                 </h3>
-                <p className="text-gray-600 text-lg mb-6">
+                <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
                   Browse, select, and download design plans to create your own customized building guide.
                 </p>
-                <div
-                  className="text-lime-600 font-semibold hover:text-lime-800 flex items-center group cursor-pointer"
-                >
+                <div className="text-lime-600 dark:text-lime-400 font-semibold 
+                               hover:text-lime-800 dark:hover:text-lime-300 
+                               flex items-center group cursor-pointer">
                   <span>Access Designs</span>
                 </div>
               </div>
@@ -145,7 +164,10 @@ const Guide = () => {
             {/* Third Card - Contribute */}
             <div 
               onClick={() => navigate('/contribute')}
-              className="bg-slate-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:translate-y-[-5px] group cursor-pointer"
+              className="bg-slate-50 dark:bg-gray-800 rounded-xl shadow-sm dark:shadow-black/20 
+                         hover:shadow-md dark:hover:shadow-black/40 
+                         transition-all hover:translate-y-[-5px] group cursor-pointer
+                         border border-transparent dark:border-gray-700"
             >
               <div className="p-2">
                 <div className="h-48 rounded-lg overflow-hidden">
@@ -157,15 +179,17 @@ const Guide = () => {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-lime-700 transition-colors">
+                <h3 className="text-2xl font-bold mb-3 text-black dark:text-white 
+                               group-hover:text-lime-700 dark:group-hover:text-lime-400 
+                               transition-colors">
                   Contribute Your Expertise
                 </h3>
-                <p className="text-gray-600 text-lg mb-6">
+                <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
                   Share your knowledge, upload designs, or collaborate with our community to help others.
                 </p>
-                <div
-                  className="text-lime-600 font-semibold hover:text-lime-800 flex items-center group cursor-pointer"
-                >
+                <div className="text-lime-600 dark:text-lime-400 font-semibold 
+                               hover:text-lime-800 dark:hover:text-lime-300 
+                               flex items-center group cursor-pointer">
                   <span>Join Our Efforts</span>
                 </div>
               </div>
