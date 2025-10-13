@@ -1,27 +1,37 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useTheme } from "@/contexts/ThemeContext";
 import "@/App.css";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
   
-  // Get actual theme state from context - use 'resolvedTheme' not 'theme'
+  // Get actual theme state from context
   const { resolvedTheme } = useTheme();
-  const isLightMode = resolvedTheme === 'light';
+  
+  // Special pages that should always be dark
+  const alwaysDarkPages = ['/', '/designs', '/contribute'];
+  const isAlwaysDark = alwaysDarkPages.includes(location.pathname);
+  
+  // Use dark theme for special pages, otherwise use actual theme
+  const isLightMode = isAlwaysDark ? false : resolvedTheme === 'light';
 
-  // Define text color classes based on actual theme
+  // Define text color classes with consistent sizing
   const textColor = isLightMode ? "text-black" : "text-white";
   const gradientClass = isLightMode ? "gradient-text-light" : "gradient-text";
 
-  // Helper function for NavLink classes
+  // Helper function for NavLink classes - same size as brand text
   const getLinkClass = (isActive: boolean) => {
-    return isActive
-      ? isLightMode
-        ? `nav-link ${textColor} active-light`
-        : `nav-link ${textColor} active`
-      : `nav-link ${textColor}`;
+    const baseClasses = `font-fjalla text-xl font-bold transition-colors duration-200 relative ${textColor}`;
+    
+    if (isActive) {
+      const activeColor = isLightMode ? "text-lime-600" : "text-lime-400";
+      return `${baseClasses} ${activeColor}`;
+    }
+    
+    return `${baseClasses} hover:text-lime-600 dark:hover:text-lime-400`;
   };
 
   // Close mobile menu when a link is clicked
@@ -35,7 +45,7 @@ const Navbar = () => {
         <div>
           <NavLink
             to="/"
-            className={`font-fjalla ${textColor} text-2xl flex items-center`}
+            className={`font-fjalla ${textColor} text-xl flex items-center font-bold`}
             onClick={handleMobileLinkClick}
           >
             NOT A HOUSE{" "}
@@ -46,30 +56,73 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
           <NavLink to="/" className={({ isActive }) => getLinkClass(isActive)}>
-            HOME
+            {({ isActive }) => (
+              <>
+                HOME
+                {isActive && (
+                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
+                )}
+              </>
+            )}
           </NavLink>
           <NavLink to="/about-us" className={({ isActive }) => getLinkClass(isActive)}>
-            ABOUT US
+            {({ isActive }) => (
+              <>
+                ABOUT US
+                {isActive && (
+                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
+                )}
+              </>
+            )}
           </NavLink>
           <NavLink to="/guide" className={({ isActive }) => getLinkClass(isActive)}>
-            GUIDE
+            {({ isActive }) => (
+              <>
+                GUIDE
+                {isActive && (
+                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
+                )}
+              </>
+            )}
           </NavLink>
           <NavLink to="/essentials" className={({ isActive }) => getLinkClass(isActive)}>
-            ESSENTIALS
+            {({ isActive }) => (
+              <>
+                ESSENTIALS
+                {isActive && (
+                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
+                )}
+              </>
+            )}
           </NavLink>
           <NavLink to="/designs" className={({ isActive }) => getLinkClass(isActive)}>
-            DESIGNS
+            {({ isActive }) => (
+              <>
+                DESIGNS
+                {isActive && (
+                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
+                )}
+              </>
+            )}
           </NavLink>
           <NavLink to="/contribute" className={({ isActive }) => getLinkClass(isActive)}>
-            CONTRIBUTE
+            {({ isActive }) => (
+              <>
+                CONTRIBUTE
+                {isActive && (
+                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
+                )}
+              </>
+            )}
           </NavLink>
           
-          <ThemeToggle />
+          {/* Only show theme toggle on pages that support theme switching */}
+          {!isAlwaysDark && <ThemeToggle />}
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-4">
-          <ThemeToggle />
+          {!isAlwaysDark && <ThemeToggle />}
           <button 
             className={`${textColor} text-xl focus:outline-none p-2 rounded-lg
                hover:bg-gray-100/50 dark:hover:bg-gray-800/50
