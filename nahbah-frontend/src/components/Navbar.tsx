@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "@/App.css";
+import ThemeToggle from "./ThemeToggle";
 
 interface NavbarProps {
   lightMode?: boolean;
@@ -42,66 +43,51 @@ const Navbar = ({ lightMode = false }: NavbarProps) => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8">
-          <NavLink
-            to="/"
-            className={({ isActive }) => getLinkClass(isActive)}
-          >
+        <div className="hidden md:flex items-center space-x-8">
+          <NavLink to="/" className={({ isActive }) => getLinkClass(isActive)}>
             HOME
           </NavLink>
-          <NavLink
-            to="/about-us"
-            className={({ isActive }) => getLinkClass(isActive)}
-          >
+          <NavLink to="/about-us" className={({ isActive }) => getLinkClass(isActive)}>
             ABOUT US
           </NavLink>
-          <NavLink
-            to="/guide"
-            className={({ isActive }) => getLinkClass(isActive)}
-          >
+          <NavLink to="/guide" className={({ isActive }) => getLinkClass(isActive)}>
             GUIDE
           </NavLink>
-          <NavLink
-            to="/essentials"
-            className={({ isActive }) => getLinkClass(isActive)}
-          >
+          <NavLink to="/essentials" className={({ isActive }) => getLinkClass(isActive)}>
             ESSENTIALS
           </NavLink>
-          <NavLink
-            to="/designs"
-            className={({ isActive }) => getLinkClass(isActive)}
-          >
+          <NavLink to="/designs" className={({ isActive }) => getLinkClass(isActive)}>
             DESIGNS
           </NavLink>
-          <NavLink
-            to="/contribute"
-            className={({ isActive }) => getLinkClass(isActive)}
-          >
+          <NavLink to="/contribute" className={({ isActive }) => getLinkClass(isActive)}>
             CONTRIBUTE
           </NavLink>
+          
+          {/* Add Theme Toggle */}
+          <ThemeToggle lightMode={lightMode} />
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button
-            className={`${textColor} text-xl focus:outline-none`}
+        <div className="md:hidden flex items-center space-x-4">
+          <ThemeToggle lightMode={lightMode} />
+          <button 
+            className={`${textColor} text-xl focus:outline-none p-2 rounded-lg
+               hover:bg-gray-100/50 dark:hover:bg-gray-800/50
+               transition-colors duration-200`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
-            {isMobileMenuOpen ? "✕" : "☰"}
+            {isMobileMenuOpen ? '✕' : '☰'}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu - add dark mode support */}
       {isMobileMenuOpen && (
-        <div
-          className={`md:hidden absolute top-full left-0 w-full ${
-            lightMode ? "bg-white" : "bg-black"
-          } border-t ${
-            lightMode ? "border-gray-300" : "border-gray-700"
-          } shadow-lg`}
-        >
+        <div className="md:hidden absolute top-full left-0 w-full 
+                        bg-white dark:bg-black 
+                        border-t border-gray-300 dark:border-gray-700 
+                        shadow-lg">
           <div className="px-4 py-4 space-y-4">
             <NavLink
               to="/"
