@@ -51,7 +51,7 @@ const Guide = () => {
                 behavior: "smooth",
               });
             }}
-            className="px-8 py-3 bg-black dark:bg-slate-900 inline-block transition-all duration-300 
+            className="px-8 py-3 bg-black dark:bg-slate-950 inline-block transition-all duration-300 
                        hover:bg-zinc-900 dark:hover:bg-gray-800 
                        hover:shadow-xl hover:shadow-yellow-200/10 dark:hover:shadow-lime-400/10 
                        hover:scale-105 cursor-pointer
@@ -82,7 +82,7 @@ const Guide = () => {
       </div>
 
       {/* User Type Selection */}
-      <div id="path-selection" className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
+      <div id="path-selection" className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 mb-16">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">CHOOSE YOUR PATH</h2>
@@ -96,10 +96,10 @@ const Guide = () => {
             {/* First Card - Home Essentials & Materials */}
             <div 
               onClick={() => navigate('/essentials')}
-              className="bg-slate-50 dark:bg-gray-800 rounded-xl shadow-sm dark:shadow-black/20 
-                         hover:shadow-md dark:hover:shadow-black/40 
-                         transition-all hover:translate-y-[-5px] group cursor-pointer
-                         border border-transparent dark:border-gray-700"
+              className="bg-slate-50 dark:bg-slate-900 rounded-xl shadow-lg dark:shadow-black/30 
+                           hover:shadow-xl dark:hover:shadow-black/50 
+                           transition-all duration-300 hover:translate-y-[-5px] group cursor-pointer
+                           border border-gray-200 dark:border-slate-800 "
             >
               <div className="p-2">
                 <div className="h-48 rounded-lg overflow-hidden">
@@ -130,10 +130,10 @@ const Guide = () => {
             {/* Second Card - Design Library */}
             <div 
               onClick={() => navigate('/designs')}
-              className="bg-slate-50 dark:bg-gray-800 rounded-xl shadow-sm dark:shadow-black/20 
-                         hover:shadow-md dark:hover:shadow-black/40 
-                         transition-all hover:translate-y-[-5px] group cursor-pointer
-                         border border-transparent dark:border-gray-700"
+              className="bg-slate-50 dark:bg-slate-900 rounded-xl shadow-lg dark:shadow-black/30 
+                           hover:shadow-xl dark:hover:shadow-black/50 
+                           transition-all duration-300 hover:translate-y-[-5px] group cursor-pointer
+                           border border-gray-200 dark:border-slate-800 "
             >
               <div className="p-2">
                 <div className="h-48 rounded-lg overflow-hidden">
@@ -164,10 +164,10 @@ const Guide = () => {
             {/* Third Card - Contribute */}
             <div 
               onClick={() => navigate('/contribute')}
-              className="bg-slate-50 dark:bg-gray-800 rounded-xl shadow-sm dark:shadow-black/20 
-                         hover:shadow-md dark:hover:shadow-black/40 
-                         transition-all hover:translate-y-[-5px] group cursor-pointer
-                         border border-transparent dark:border-gray-700"
+              className="bg-slate-50 dark:bg-slate-900 rounded-xl shadow-lg dark:shadow-black/30 
+                           hover:shadow-xl dark:hover:shadow-black/50 
+                           transition-all duration-300 hover:translate-y-[-5px] group cursor-pointer
+                           border border-gray-200 dark:border-slate-800 "
             >
               <div className="p-2">
                 <div className="h-48 rounded-lg overflow-hidden">

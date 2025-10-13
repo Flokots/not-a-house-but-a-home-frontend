@@ -44,9 +44,9 @@ const DryGroundSection: React.FC<DryGroundSectionProps> = ({ images }) => {
       {/* Main content */}
       <div className="space-y-8">
         {/* Why it matters */}
-        <div className="bg-gray-50 p-6 rounded-lg">
+        <div className="bg-gray-50 dark:bg-slate-900 p-6 rounded-lg">
           <h4 className="font-medium mb-3 text-lg">Why It Matters</h4>
-          <p className="text-gray-700">
+          <p className="text-gray-400">
             Keeping your shelter dry is essential. Water from rain and ground moisture can damage 
             your structure and make it uncomfortable to live in. Proper elevation and drainage 
             are key to a successful shelter.

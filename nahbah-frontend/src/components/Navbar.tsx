@@ -1,23 +1,24 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useTheme } from "@/contexts/ThemeContext";
 import "@/App.css";
 import ThemeToggle from "./ThemeToggle";
 
-interface NavbarProps {
-  lightMode?: boolean;
-}
-
-const Navbar = ({ lightMode = false }: NavbarProps) => {
+const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  // Get actual theme state from context - use 'resolvedTheme' not 'theme'
+  const { resolvedTheme } = useTheme();
+  const isLightMode = resolvedTheme === 'light';
 
-  // Define text color classes based on mode
-  const textColor = lightMode ? "text-black" : "text-white";
-  const gradientClass = lightMode ? "gradient-text-light" : "gradient-text";
+  // Define text color classes based on actual theme
+  const textColor = isLightMode ? "text-black" : "text-white";
+  const gradientClass = isLightMode ? "gradient-text-light" : "gradient-text";
 
   // Helper function for NavLink classes
   const getLinkClass = (isActive: boolean) => {
     return isActive
-      ? lightMode
+      ? isLightMode
         ? `nav-link ${textColor} active-light`
         : `nav-link ${textColor} active`
       : `nav-link ${textColor}`;
@@ -63,13 +64,12 @@ const Navbar = ({ lightMode = false }: NavbarProps) => {
             CONTRIBUTE
           </NavLink>
           
-          {/* Add Theme Toggle */}
-          <ThemeToggle lightMode={lightMode} />
+          <ThemeToggle />
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-4">
-          <ThemeToggle lightMode={lightMode} />
+          <ThemeToggle />
           <button 
             className={`${textColor} text-xl focus:outline-none p-2 rounded-lg
                hover:bg-gray-100/50 dark:hover:bg-gray-800/50
@@ -82,7 +82,7 @@ const Navbar = ({ lightMode = false }: NavbarProps) => {
         </div>
       </div>
 
-      {/* Mobile Menu - add dark mode support */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full 
                         bg-white dark:bg-black 

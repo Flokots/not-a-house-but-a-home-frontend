@@ -19,7 +19,7 @@ const AboutUs = () => {
       {/* Hero Section - Image Right */}
       <div className="max-w-7xl mx-auto px-4 pt-32 pb-20 flex flex-col md:flex-row gap-8 relative top-10">
         {/* Background "About" text */}
-        <div className="absolute top-17 left-0 font-semibold text-9xl futura-bold text-black  dark:text-white/14 ">
+        <div className="absolute top-17 left-0 font-semibold text-9xl futura-bold text-black opacity-10 dark:text-white/14 dark:opacity-100">
           About
         </div>
 
@@ -57,7 +57,7 @@ const AboutUs = () => {
                 behavior: "smooth",
               });
             }}
-            className="px-8 py-3 bg-black dark:bg-slate-900 inline-block transition-all duration-300 
+            className="px-8 py-3 bg-black dark:bg-slate-950 inline-block transition-all duration-300 
                        hover:bg-zinc-900 dark:hover:bg-gray-800 
                        hover:shadow-lg hover:shadow-lime-300/20 hover:scale-105 hover:-translate-y-1 cursor-pointer
                        border border-transparent dark:border-gray-700"
@@ -89,7 +89,7 @@ const AboutUs = () => {
         id="learn-more-section"
         className="max-w-7xl mx-auto px-4 py-20 mb-20 relative"
       >
-        <div className="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-lg dark:shadow-black/30 p-8 relative z-10 border border-transparent dark:border-gray-800 transition-colors duration-300">
+        <div className="bg-white dark:bg-slate-950 rounded-xl overflow-hidden shadow-lg dark:shadow-black/30 p-8 relative z-10  transition-colors duration-300">
           <div className="flex flex-col md:flex-row items-center gap-12 mb-12">
             <div className="md:w-2/5">
               <div className="rounded-lg overflow-hidden shadow-md dark:shadow-black/20">
@@ -160,9 +160,9 @@ const AboutUs = () => {
       {/* Impact Section - Creative Layout with Two Images */}
       <div className="max-w-7xl mx-auto px-4 py-16 mb-20 relative">
         <div className="relative z-10">
-          <div className="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-lg dark:shadow-black/30 relative z-10 border border-transparent dark:border-gray-800 transition-colors duration-300">
+          <div className="bg-white dark:bg-slate-950 rounded-xl overflow-hidden shadow-lg dark:shadow-black/30 relative z-10 border border-transparent transition-colors duration-300">
             {/* Header */}
-            <div className="h-24 flex items-center px-8 border-b border-gray-100 dark:border-gray-800">
+            <div className="h-24 flex items-center px-8">
               <h2 className="text-4xl font-bold text-black dark:text-white">OUR IMPACT</h2>
             </div>
 
@@ -247,7 +247,7 @@ const AboutUs = () => {
           </p>
           <button
             onClick={() => (window.location.href = "/guide")}
-            className="px-8 py-4 bg-black dark:bg-slate-900 inline-block transition-all duration-300 
+            className="px-8 py-4 bg-black dark:bg-slate-950 inline-block transition-all duration-300 
                        hover:bg-zinc-900 dark:hover:bg-gray-800 hover:shadow-lg hover:shadow-lime-300/20 hover:scale-105 cursor-pointer
                        border border-transparent dark:border-gray-700"
           >

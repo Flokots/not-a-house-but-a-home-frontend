@@ -36,15 +36,15 @@ const WarmthSection: React.FC<WarmthSectionProps> = ({ images }) => {
       {/* Simple header */}
       <div className="mb-8">
         <h3 className="text-2xl font-semibold mb-2">Warmth</h3>
-        <p className="text-gray-600 text-lg">Keeping the cold outside, comfort inside</p>
+        <p className="text-gray-400 text-lg">Keeping the cold outside, comfort inside</p>
       </div>
 
       {/* Main content */}
       <div className="space-y-8">
         {/* Why it matters */}
-        <div className="bg-gray-50 p-6 rounded-lg">
+        <div className="bg-gray-50 dark:bg-slate-900 p-6 rounded-lg">
           <h4 className="font-medium mb-3 text-lg">Why It Matters</h4>
-          <p className="text-gray-700">
+          <p className="text-gray-400">
             Thermal insulation protects against the cold and can reduce heat loss by up to 70%. 
             Proper insulation is crucial for comfort and sustainable living in your shelter.
           </p>
@@ -57,7 +57,7 @@ const WarmthSection: React.FC<WarmthSectionProps> = ({ images }) => {
             {tips.map((tip, index) => (
               <div key={index} className="border-l-4 border-lime-400 pl-4">
                 <h5 className="font-medium text-base">{tip.title}</h5>
-                <p className="text-gray-600 text-base">{tip.description}</p>
+                <p className="text-gray-400 text-base">{tip.description}</p>
               </div>
             ))}
           </div>

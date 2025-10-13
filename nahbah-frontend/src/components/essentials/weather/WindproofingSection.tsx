@@ -42,9 +42,9 @@ const WindproofingSection: React.FC<WindproofingSectionProps> = ({ images }) => 
       {/* Main content */}
       <div className="space-y-8">
         {/* Why it matters */}
-        <div className="bg-gray-50 p-6 rounded-lg">
+        <div className="bg-gray-50 dark:bg-slate-900 p-6 rounded-lg">
           <h4 className="font-medium mb-3 text-lg">Why It Matters</h4>
-          <p className="text-gray-700">
+          <p className="text-gray-400">
             A windproof layer prevents drafts that can make your shelter uncomfortable even when 
             well insulated. It helps maintain interior temperature and reduces heat loss.
           </p>
