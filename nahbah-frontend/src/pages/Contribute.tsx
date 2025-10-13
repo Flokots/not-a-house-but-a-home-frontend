@@ -7,6 +7,8 @@ import React, {
 } from "react";
 import { getMaterials } from "@/api/materials";
 import { submitDesign } from "@/api/designs";
+import TermsAndConditions from "@/components/TermsAndConditions";
+import GDPRStatement from "@/components/GDPRStatement";
 
 const Contribute: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -26,6 +28,8 @@ const Contribute: React.FC = () => {
     { id: number; name: string }[]
   >([]);
   const [isAnonymous, setIsAnonymous] = useState(false);
+  const [showTerms, setShowTerms] = useState(false);
+  const [showGDPR, setShowGDPR] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Fetch material options from the backend
@@ -437,7 +441,7 @@ const Contribute: React.FC = () => {
               )}
             </div>
 
-            {/* Checkboxes */}
+            {/* Checkboxes with clickable GDPR and Terms */}
             <div className="space-y-3 mt-6">
               <div className="flex items-start">
                 <input
@@ -445,14 +449,22 @@ const Contribute: React.FC = () => {
                   id="gdpr"
                   checked={acceptGDPR}
                   onChange={() => setAcceptGDPR(!acceptGDPR)}
-                  className="mt-1"
+                  className="mt-1 accent-lime-400"
                   disabled={loading}
                 />
                 <label htmlFor="gdpr" className="ml-2">
-                  Accept GDPR Data Protection guidelines
+                  Accept{" "}
+                  <button
+                    type="button"
+                    onClick={() => setShowGDPR(true)}
+                    className="text-lime-400 hover:text-lime-300 underline transition-colors"
+                    disabled={loading}
+                  >
+                    GDPR Data Protection Guidelines
+                  </button>
                 </label>
               </div>
-              {errors.gdpr && <p className="text-red-500">{errors.gdpr}</p>}
+              {errors.gdpr && <p className="text-red-500 text-sm mt-1">{errors.gdpr}</p>}
 
               <div className="flex items-start">
                 <input
@@ -460,14 +472,22 @@ const Contribute: React.FC = () => {
                   id="terms"
                   checked={acceptTerms}
                   onChange={() => setAcceptTerms(!acceptTerms)}
-                  className="mt-1"
+                  className="mt-1 accent-lime-400"
                   disabled={loading}
                 />
                 <label htmlFor="terms" className="ml-2">
-                  Accept Terms and Conditions
+                  Accept{" "}
+                  <button
+                    type="button"
+                    onClick={() => setShowTerms(true)}
+                    className="text-lime-400 hover:text-lime-300 underline transition-colors"
+                    disabled={loading}
+                  >
+                    Terms and Conditions
+                  </button>
                 </label>
               </div>
-              {errors.terms && <p className="text-red-500">{errors.terms}</p>}
+              {errors.terms && <p className="text-red-500 text-sm mt-1">{errors.terms}</p>}
             </div>
           </div>
 
@@ -498,6 +518,16 @@ const Contribute: React.FC = () => {
             )}
           </div>
         </form>
+
+        {/* Make sure these modals are at the bottom of your component */}
+        <TermsAndConditions 
+          isOpen={showTerms} 
+          onClose={() => setShowTerms(false)} 
+        />
+        <GDPRStatement 
+          isOpen={showGDPR} 
+          onClose={() => setShowGDPR(false)} 
+        />
       </div>
     </div>
   );
