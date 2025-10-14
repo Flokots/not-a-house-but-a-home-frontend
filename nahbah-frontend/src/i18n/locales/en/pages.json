@@ -163,6 +163,123 @@
           "title": "Dry Ground",
           "subtitle": "Foundation protection"
         }
+      },
+      "warmth": {
+        "title": "Warmth",
+        "subtitle": "Thermal insulation techniques",
+        "whyItMatters": {
+          "title": "Why It Matters",
+          "description": "Thermal insulation protects against the cold and can reduce heat loss by up to 70%. Proper insulation is crucial for comfort and sustainable living in your shelter."
+        },
+        "keyTechniques": "Key Techniques",
+        "tips": {
+          "exterior": {
+            "title": "Exterior Insulation",
+            "description": "Place thermal insulation on the outside of walls like a winter coat for your building."
+          },
+          "coverage": {
+            "title": "Full Coverage",
+            "description": "Wrap the entire building - sides, top and bottom. The ceiling needs the thickest insulation."
+          },
+          "frame": {
+            "title": "Frame Building Technique",
+            "description": "For frame buildings, insulation can go inside walls but must be protected with a vapor barrier."
+          }
+        },
+        "materialsYouCanUse": "Materials You Can Use",
+        "materials": {
+          "styrofoam": "Styrofoam",
+          "tentFabric": "Tent Fabric",
+          "cardboard": "Cardboard"
+        }
+      },
+      "stayingDry": {
+        "title": "Staying Dry",
+        "subtitle": "Moisture control systems",
+        "whyItMatters": {
+          "title": "Why It Matters",
+          "description": "Vapor barriers protect against steam from cooking, washing, and breathing. Without proper moisture control, condensation can destroy insulation and damage your shelter's structure."
+        },
+        "keyTechniques": "Key Techniques",
+        "tips": {
+          "layered": {
+            "title": "Layered Wall Protection",
+            "description": "Use vapor barriers in walls with multiple layers to prevent moisture damage."
+          },
+          "installation": {
+            "title": "Proper Installation",
+            "description": "Overlap vapor barrier pieces by 15cm and seal with tape when possible."
+          },
+          "interior": {
+            "title": "Interior Wall Options",
+            "description": "Cover interior walls with recycled materials like door panels or carpet."
+          }
+        },
+        "materialsYouCanUse": "Materials You Can Use",
+        "materials": {
+          "tentFabric": "Tent Fabric",
+          "pvcFlooring": "PVC Flooring",
+          "inflatableMattress": "Inflatable Mattress"
+        }
+      },
+      "windproofing": {
+        "title": "Windproofing",
+        "subtitle": "Draft protection systems",
+        "whyItMatters": {
+          "title": "Why It Matters",
+          "description": "A windproof layer prevents drafts that can make your shelter uncomfortable even when well insulated. It maintains interior temperature, reduces heat loss, and creates a stable indoor environment essential for comfort and energy efficiency."
+        },
+        "keyTechniques": "Key Techniques",
+        "tips": {
+          "exterior": {
+            "title": "Exterior Membrane Installation",
+            "description": "Fix windproof membrane to the exterior frame using staples, nails, or strong adhesive for maximum draft protection."
+          },
+          "sealing": {
+            "title": "Seal All Joints",
+            "description": "Glue membrane pieces together with double-sided tape and seal all seams to prevent wind penetration and air leaks."
+          },
+          "breathability": {
+            "title": "Maintain Breathability",
+            "description": "Ensure the windproof layer allows some vapor to pass through for moisture escape while blocking drafts effectively."
+          }
+        },
+        "materialsYouCanUse": "Materials You Can Use",
+        "materials": {
+          "tentFabric": "Tent Fabric",
+          "tarpMaterial": "Tarp Material",
+          "plasticSheeting": "Plastic Sheeting"
+        }
+      },
+      "dryGround": {
+        "title": "Dry Ground",
+        "subtitle": "Foundation protection techniques",
+        "whyItMatters": {
+          "title": "Why It Matters",
+          "description": "Ground moisture is one of the most damaging forces for any shelter. Water from rain, snow, and ground saturation can destroy materials, create unhealthy conditions, and make your shelter uninhabitable. Proper elevation and drainage are essential for long-term success."
+        },
+        "keyTechniques": "Key Techniques",
+        "tips": {
+          "elevate": {
+            "title": "Elevate Your Structure",
+            "description": "Raise the building off the ground using concrete blocks, crates, or any sturdy materials to prevent ground moisture infiltration."
+          },
+          "drainage": {
+            "title": "Create Proper Drainage",
+            "description": "Install sloped surfaces and channels to direct water away from the foundation and prevent pooling around the structure."
+          },
+          "roofing": {
+            "title": "Use Pitched Roofing",
+            "description": "Angled roofs help water run off effectively instead of pooling and causing leaks or structural damage."
+          }
+        },
+        "materialsYouCanUse": "Materials You Can Use",
+        "materials": {
+          "metalCans": "Metal Cans",
+          "woodCrates": "Wood Crates",
+          "plasticBottles": "Plastic Bottles",
+          "concreteBlocks": "Concrete Blocks"
+        }
       }
     }
   },

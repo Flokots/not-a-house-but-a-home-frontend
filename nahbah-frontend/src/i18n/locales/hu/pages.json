@@ -163,6 +163,123 @@
           "title": "Száraz Talaj",
           "subtitle": "Alapozás védelem"
         }
+      },
+      "warmth": {
+        "title": "Melegség",
+        "subtitle": "Hőszigetelési technikák",
+        "whyItMatters": {
+          "title": "Miért Fontos",
+          "description": "A hőszigetelés véd a hideg ellen és akár 70%-kal csökkentheti a hőveszteséget. A megfelelő szigetelés kulcsfontosságú a kényelem és a fenntartható életvitel szempontjából a menedékben."
+        },
+        "keyTechniques": "Kulcsfontosságú Technikák",
+        "tips": {
+          "exterior": {
+            "title": "Külső Szigetelés",
+            "description": "Helyezd a hőszigetelést a falak külső oldalára, mint egy téli kabátot az épületed számára."
+          },
+          "coverage": {
+            "title": "Teljes Lefedettség",
+            "description": "Burkold be az egész épületet - oldalakat, tetőt és aljzatot. A mennyezet igényli a legvastagabb szigetelést."
+          },
+          "frame": {
+            "title": "Vázas Építési Technika",
+            "description": "Vázas épületeknél a szigetelés kerülhet a falak belsejébe, de gőzzáróval kell védeni."
+          }
+        },
+        "materialsYouCanUse": "Felhasználható Anyagok",
+        "materials": {
+          "styrofoam": "Hungarocell",
+          "tentFabric": "Sátor Anyag",
+          "cardboard": "Karton"
+        }
+      },
+      "stayingDry": {
+        "title": "Szárazon Tartás",
+        "subtitle": "Nedvességkontroll rendszerek",
+        "whyItMatters": {
+          "title": "Miért Fontos",
+          "description": "A gőzzáró rétegek védenek a főzésből, mosásból és légzésből származó gőz ellen. Megfelelő nedvességkontroll nélkül a páralecsapódás tönkreteheti a szigetelést és károsíthatja a menedék szerkezetét."
+        },
+        "keyTechniques": "Kulcsfontosságú Technikák",
+        "tips": {
+          "layered": {
+            "title": "Réteges Falvédelem",
+            "description": "Használj gőzzáró rétegeket a falakban több rétegben a nedvességkárok megelőzéséhez."
+          },
+          "installation": {
+            "title": "Megfelelő Telepítés",
+            "description": "A gőzzáró darabokat 15 cm-rel átfedéssel helyezd el és lehetőség szerint ragasztószalaggal zárd le."
+          },
+          "interior": {
+            "title": "Belső Fal Lehetőségek",
+            "description": "Burkold be a belső falakat újrahasznosított anyagokkal, mint ajtópanelek vagy szőnyeg."
+          }
+        },
+        "materialsYouCanUse": "Felhasználható Anyagok",
+        "materials": {
+          "tentFabric": "Sátor Anyag",
+          "pvcFlooring": "PVC Padlóburkolat",
+          "inflatableMattress": "Felfújható Matrac"
+        }
+      },
+      "windproofing": {
+        "title": "Szél Elleni Védelem",
+        "subtitle": "Huzat elleni védelem rendszerek",
+        "whyItMatters": {
+          "title": "Miért Fontos",
+          "description": "A szél elleni réteg megakadályozza a huzatokat, amelyek kellemetlen érzést okozhatnak a menedékben, még akkor is, ha jól szigetelt. Fenntartja a belső hőmérsékletet, csökkenti a hőveszteséget és stabil beltéri környezetet teremt, amely elengedhetetlen a kényelem és az energiahatékonyság szempontjából."
+        },
+        "keyTechniques": "Kulcsfontosságú Technikák",
+        "tips": {
+          "exterior": {
+            "title": "Külső Membrán Telepítése",
+            "description": "Rögzítsd a szél elleni membránt a külső vázra tűzőkapcsokkal, szögekkel vagy erős ragasztóval a maximális huzat elleni védelem érdekében."
+          },
+          "sealing": {
+            "title": "Minden Illesztés Lezárása",
+            "description": "Ragaszd össze a membrán darabokat kétoldalas ragasztószalaggal és zárd le minden varrást a szél behatolásának és légáramlásának megakadályozására."
+          },
+          "breathability": {
+            "title": "Légáteresztő Képesség Fenntartása",
+            "description": "Győződj meg róla, hogy a szél elleni réteg engedi át a gőzt a nedvesség eltávozása érdekében, miközben hatékonyan blokkolja a huzatokat."
+          }
+        },
+        "materialsYouCanUse": "Felhasználható Anyagok",
+        "materials": {
+          "tentFabric": "Sátor Anyag",
+          "tarpMaterial": "Ponyva Anyag",
+          "plasticSheeting": "Műanyag Fólia"
+        }
+      },
+      "dryGround": {
+        "title": "Száraz Talaj",
+        "subtitle": "Alapozás védelmi technikák",
+        "whyItMatters": {
+          "title": "Miért Fontos",
+          "description": "A talaj nedvessége az egyik legkárosabb erő bármilyen menedék számára. Az eső, hó és talaj telítődése miatti víz tönkreteheti az anyagokat, egészségtelen körülményeket teremthet, és lakhatatlanná teheti a menedékedet. A megfelelő magasság és vízelvezetés elengedhetetlen a hosszú távú sikerhez."
+        },
+        "keyTechniques": "Kulcsfontosságú Technikák",
+        "tips": {
+          "elevate": {
+            "title": "Emeld Fel a Szerkezetet",
+            "description": "Emeld fel az épületet a talaj fölé betonblokkok, ládák vagy bármilyen erős anyag segítségével, hogy megakadályozd a talajnedvesség beszivárgását."
+          },
+          "drainage": {
+            "title": "Hozz Létre Megfelelő Vízelvezetést",
+            "description": "Telepíts lejtős felületeket és csatornákat, hogy a vizet elvezessd az alapzattól és megakadályozd a szerkezet körüli víz felgyülemlését."
+          },
+          "roofing": {
+            "title": "Használj Ferde Tetőt",
+            "description": "A ferde tetők segítik a víz hatékony lefolyását ahelyett, hogy felgyülemlik és szivárgást vagy szerkezeti károkat okozna."
+          }
+        },
+        "materialsYouCanUse": "Felhasználható Anyagok",
+        "materials": {
+          "metalCans": "Fém Dobozok",
+          "woodCrates": "Fa Ládák",
+          "plasticBottles": "Műanyag Palackok",
+          "concreteBlocks": "Beton Blokkok"
+        }
       }
     }
   },

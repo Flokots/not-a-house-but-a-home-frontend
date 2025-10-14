@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface WarmthSectionProps {
   images: {
@@ -10,25 +11,27 @@ interface WarmthSectionProps {
 }
 
 const WarmthSection: React.FC<WarmthSectionProps> = ({ images }) => {
+  const { t } = useTranslation('pages');
+
   const tips = [
     {
-      title: 'Exterior Insulation',
-      description: 'Place thermal insulation on the outside of walls like a winter coat for your building.'
+      title: t('essentials.weatherProtection.warmth.tips.exterior.title'),
+      description: t('essentials.weatherProtection.warmth.tips.exterior.description')
     },
     {
-      title: 'Full Coverage',
-      description: 'Wrap the entire building - sides, top and bottom. The ceiling needs the thickest insulation.'
+      title: t('essentials.weatherProtection.warmth.tips.coverage.title'),
+      description: t('essentials.weatherProtection.warmth.tips.coverage.description')
     },
     {
-      title: 'Frame Building Technique',
-      description: 'For frame buildings, insulation can go inside walls but must be protected with a vapor barrier.'
+      title: t('essentials.weatherProtection.warmth.tips.frame.title'),
+      description: t('essentials.weatherProtection.warmth.tips.frame.description')
     }
   ];
 
   const materials = [
-    { name: 'Styrofoam', image: images.styrofoam },
-    { name: 'Tent Fabric', image: images.tentFabric },
-    { name: 'Cardboard', image: images.cardboard }
+    { name: t('essentials.weatherProtection.warmth.materials.styrofoam'), image: images.styrofoam },
+    { name: t('essentials.weatherProtection.warmth.materials.tentFabric'), image: images.tentFabric },
+    { name: t('essentials.weatherProtection.warmth.materials.cardboard'), image: images.cardboard }
   ];
 
   return (
@@ -39,8 +42,12 @@ const WarmthSection: React.FC<WarmthSectionProps> = ({ images }) => {
           <div className="mb-8">
             <div className="flex items-center mb-4">
               <div>
-                <h3 className="text-3xl font-bold text-black dark:text-white">Warmth</h3>
-                <p className="text-gray-500 dark:text-gray-400">Thermal insulation techniques</p>
+                <h3 className="text-3xl font-bold text-black dark:text-white">
+                  {t('essentials.weatherProtection.warmth.title')}
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  {t('essentials.weatherProtection.warmth.subtitle')}
+                </p>
               </div>
             </div>
           </div>
@@ -48,16 +55,19 @@ const WarmthSection: React.FC<WarmthSectionProps> = ({ images }) => {
           {/* Why it matters */}
           <div className="bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/10 dark:to-orange-900/10 
                          p-6 rounded-xl mb-8 border border-red-100 dark:border-red-800/30">
-            <h4 className="text-lg font-semibold mb-3 text-black dark:text-white">Why It Matters</h4>
+            <h4 className="text-lg font-semibold mb-3 text-black dark:text-white">
+              {t('essentials.weatherProtection.warmth.whyItMatters.title')}
+            </h4>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              Thermal insulation protects against the cold and can reduce heat loss by up to 70%. 
-              Proper insulation is crucial for comfort and sustainable living in your shelter.
+              {t('essentials.weatherProtection.warmth.whyItMatters.description')}
             </p>
           </div>
 
           {/* Tips */}
           <div className="mb-8">
-            <h4 className="text-xl font-semibold mb-6 text-black dark:text-white">Key Techniques</h4>
+            <h4 className="text-xl font-semibold mb-6 text-black dark:text-white">
+              {t('essentials.weatherProtection.warmth.keyTechniques')}
+            </h4>
             <div className="space-y-4">
               {tips.map((tip, index) => (
                 <div key={index} className="bg-white dark:bg-slate-800 p-4 rounded-lg border border-gray-200 dark:border-slate-700">
@@ -76,7 +86,9 @@ const WarmthSection: React.FC<WarmthSectionProps> = ({ images }) => {
         {/* Materials */}
         <div className="lg:w-1/3">
           <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-xl border border-gray-200 dark:border-slate-700">
-            <h4 className="text-lg font-semibold mb-6 text-black dark:text-white">Materials You Can Use</h4>
+            <h4 className="text-lg font-semibold mb-6 text-black dark:text-white">
+              {t('essentials.weatherProtection.warmth.materialsYouCanUse')}
+            </h4>
             <div className="space-y-4">
               {materials.map((material, index) => (
                 <div key={index} className="bg-white dark:bg-slate-800 p-4 rounded-lg border border-gray-200 dark:border-slate-700 hover:shadow-md transition-shadow">
