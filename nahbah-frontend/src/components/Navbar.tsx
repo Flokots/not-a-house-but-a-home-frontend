@@ -12,7 +12,10 @@ const Navbar = () => {
   const location = useLocation();
   
   const isLightMode = resolvedTheme === 'light';
-  const isAlwaysDark = location.pathname === '/';
+  
+  // Pages that always have dark backgrounds and need white text
+  const alwaysDarkPages = ['/', '/contribute', '/designs'];
+  const isAlwaysDark = alwaysDarkPages.includes(location.pathname);
 
   const textColor = (isLightMode && !isAlwaysDark) ? 'text-black' : 'text-white';
   const gradientClass = 'bg-gradient-to-r from-yellow-500 to-lime-600 bg-clip-text text-transparent';
@@ -26,7 +29,7 @@ const Navbar = () => {
   };
 
   const getLinkClass = (isActive: boolean) =>
-    `font-fjalla relative px-1 py-1 transition-colors duration-200 ${
+    `font-fjalla text-lg relative px-1 py-1 transition-colors duration-200 ${
       (isLightMode && !isAlwaysDark) 
         ? `${isActive ? 'text-lime-600' : 'text-black'} hover:text-lime-600`
         : `${isActive ? 'text-lime-400' : 'text-white'} hover:text-lime-400`
@@ -38,7 +41,7 @@ const Navbar = () => {
         <div>
           <NavLink
             to="/"
-            className={`font-fjalla ${textColor} text-xl flex items-center font-bold`}
+            className={`font-fjalla text-lg ${textColor} flex items-center font-bold`}
             onClick={handleMobileLinkClick}
           >
             {t('navbar.brand.notAHouse')}{" "}
@@ -109,14 +112,16 @@ const Navbar = () => {
             )}
           </NavLink>
           
+          {/* Only show theme toggle on pages that actually support themes */}
           {!isAlwaysDark && <ThemeToggle />}
-          <LanguageSwitcher />
+          <LanguageSwitcher isAlwaysDark={isAlwaysDark} />
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-4">
+          {/* Only show theme toggle on pages that actually support themes */}
           {!isAlwaysDark && <ThemeToggle />}
-          <LanguageSwitcher />
+          <LanguageSwitcher isAlwaysDark={isAlwaysDark} />
           <button
             onClick={toggleMobileMenu}
             className={`${textColor} focus:outline-none`}
