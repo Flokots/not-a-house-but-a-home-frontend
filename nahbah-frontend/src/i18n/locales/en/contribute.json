@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "backgroundText": "Upload",
+    "title": "Upload Design"
+  },
+  "form": {
+    "designTitle": {
+      "label": "Design Title",
+      "placeholder": "Give your design a title",
+      "error": "Title is required"
+    },
+    "anonymous": {
+      "label": "Submit Anonymously",
+      "descriptionAnonymous": "Your submission will be credited as 'Anonymous Contributor'.",
+      "descriptionNamed": "Your name will be credited with this contribution to help build our community."
+    },
+    "name": {
+      "label": "Your Name*",
+      "placeholder": "Your name for attribution",
+      "error": "Name is required"
+    },
+    "email": {
+      "label": "Email Address*",
+      "placeholder": "your@email.com",
+      "errorRequired": "Email is required",
+      "errorInvalid": "Valid email is required"
+    },
+    "material": {
+      "label": "Material",
+      "placeholder": "Select a material",
+      "loading": "Loading materials...",
+      "error": "Please select a material"
+    },
+    "customMaterial": {
+      "label": "Material Description",
+      "placeholder": "Please describe the material",
+      "note": "An admin will review and categorize this material during approval.",
+      "error": "Please describe the material"
+    },
+    "description": {
+      "label": "Description",
+      "characterCount": "{{count}}/1500 characters",
+      "errorRequired": "Description is required",
+      "errorTooLong": "Description must not exceed 1500 characters"
+    },
+    "file": {
+      "uploadButton": "Upload Design",
+      "selectedButton": "File Selected",
+      "description": "PDF or image file (JPG, PNG). Max 5MB.",
+      "errorRequired": "Design file is required",
+      "errorType": "Only PDF or image files are allowed",
+      "errorSize": "File size must not exceed 5MB"
+    },
+    "gdpr": {
+      "label": "Accept",
+      "linkText": "GDPR Data Protection Guidelines",
+      "error": "You must accept GDPR guidelines"
+    },
+    "terms": {
+      "label": "Accept",
+      "linkText": "Terms and Conditions", 
+      "error": "You must accept Terms and Conditions"
+    },
+    "submit": {
+      "button": "Submit",
+      "submitting": "Submitting..."
+    }
+  },
+  "messages": {
+    "successAnonymous": "Anonymous design submitted successfully! It will be reviewed by our team.",
+    "successNamed": "Thank you {{name}}! Your design was submitted successfully and will be reviewed by our team.",
+    "error": "Failed to submit design. Please try again later.",
+    "reviewNote": "All submissions will be reviewed by our team before being published.",
+    "customMaterialNote": "Materials marked as \"Other\" will be reviewed and properly categorized during the approval process."
+  }
+}

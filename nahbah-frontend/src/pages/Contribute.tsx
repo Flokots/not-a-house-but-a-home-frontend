@@ -5,12 +5,14 @@ import React, {
   type ChangeEvent,
   type FormEvent,
 } from "react";
+import { useTranslation } from "react-i18next";
 import { getMaterials } from "@/api/materials";
 import { submitDesign } from "@/api/designs";
 import TermsAndConditions from "@/components/TermsAndConditions";
 import GDPRStatement from "@/components/GDPRStatement";
 
 const Contribute: React.FC = () => {
+  const { t } = useTranslation('contribute');
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -95,14 +97,14 @@ const Contribute: React.FC = () => {
     const isValidSize = selectedFile.size <= 5 * 1024 * 1024;
 
     if (!isValidType) {
-      setErrors({ ...errors, file: "Only PDF or image files are allowed" });
+      setErrors({ ...errors, file: t('form.file.errorType') });
       setFile(null);
       e.target.value = "";
       return;
     }
 
     if (!isValidSize) {
-      setErrors({ ...errors, file: "File size must not exceed 5MB" });
+      setErrors({ ...errors, file: t('form.file.errorSize') });
       setFile(null);
       e.target.value = "";
       return;
@@ -117,29 +119,29 @@ const Contribute: React.FC = () => {
 
     // Only validate name and email if NOT anonymous
     if (!isAnonymous) {
-      if (!formData.name.trim()) newErrors.name = "Name is required";
+      if (!formData.name.trim()) newErrors.name = t('form.name.error');
       if (!formData.email.trim()) {
-        newErrors.email = "Email is required";
+        newErrors.email = t('form.email.errorRequired');
       } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-        newErrors.email = "Valid email is required";
+        newErrors.email = t('form.email.errorInvalid');
       }
     }
 
     // Keep all other existing validation the same
-    if (!formData.title.trim()) newErrors.title = "Title is required";
+    if (!formData.title.trim()) newErrors.title = t('form.designTitle.error');
     if (!formData.material) {
-      newErrors.material = "Please select a material";
+      newErrors.material = t('form.material.error');
     } else if (formData.material === "-1" && !formData.customMaterial.trim()) {
-      newErrors.customMaterial = "Please describe the material";
+      newErrors.customMaterial = t('form.customMaterial.error');
     }
     if (!formData.description.trim()) {
-      newErrors.description = "Description is required";
+      newErrors.description = t('form.description.errorRequired');
     } else if (formData.description.length > 1500) {
-      newErrors.description = "Description must not exceed 1500 characters";
+      newErrors.description = t('form.description.errorTooLong');
     }
-    if (!file) newErrors.file = "Design file is required";
-    if (!acceptGDPR) newErrors.gdpr = "You must accept GDPR guidelines";
-    if (!acceptTerms) newErrors.terms = "You must accept Terms and Conditions";
+    if (!file) newErrors.file = t('form.file.errorRequired');
+    if (!acceptGDPR) newErrors.gdpr = t('form.gdpr.error');
+    if (!acceptTerms) newErrors.terms = t('form.terms.error');
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -177,8 +179,8 @@ const Contribute: React.FC = () => {
 
       // Success message based on submission type
       const message = isAnonymous
-        ? "Anonymous design submitted successfully! It will be reviewed by our team."
-        : `Thank you ${formData.name}! Your design was submitted successfully and will be reviewed by our team.`;
+        ? t('messages.successAnonymous')
+        : t('messages.successNamed', { name: formData.name });
 
       alert(message);
 
@@ -198,7 +200,7 @@ const Contribute: React.FC = () => {
       if (fileInputRef.current) fileInputRef.current.value = "";
     } catch (error) {
       console.error("Error submitting design:", error);
-      alert("Failed to submit design. Please try again later.");
+      alert(t('messages.error'));
     } finally {
       setLoading(false);
     }
@@ -212,16 +214,16 @@ const Contribute: React.FC = () => {
     <div className="min-h-screen bg-black text-white hero-text">
       <div className="pt-32 px-4 max-w-3xl mx-auto">
         <div className="absolute top-20 mb-8 text-white/14 font-semibold text-9xl">
-          Upload
+          {t('hero.backgroundText')}
         </div>
-        <h1 className="text-5xl mb-20 ml-26 font-semibold">Upload Design</h1>
+        <h1 className="text-5xl mb-20 ml-26 font-semibold">{t('hero.title')}</h1>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-4">
             {/* Title input */}
             <div>
               <label htmlFor="title" className="block text-lg mb-2">
-                Design Title
+                {t('form.designTitle.label')}
               </label>
               <input
                 type="text"
@@ -229,7 +231,7 @@ const Contribute: React.FC = () => {
                 name="title"
                 value={formData.title}
                 onChange={handleInputChange}
-                placeholder="Give your design a title"
+                placeholder={t('form.designTitle.placeholder')}
                 className={`w-full bg-transparent border-b ${
                   errors.title ? "border-red-500" : "border-white"
                 } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
@@ -272,12 +274,12 @@ const Contribute: React.FC = () => {
                 />
                 <div>
                   <label htmlFor="anonymous" className="text-lg font-medium text-white">
-                    Submit Anonymously
+                    {t('form.anonymous.label')}
                   </label>
                   <p className="text-sm text-gray-400 mt-1">
                     {isAnonymous 
-                      ? "Your submission will be credited as 'Anonymous Contributor'."
-                      : "Your name will be credited with this contribution to help build our community."
+                      ? t('form.anonymous.descriptionAnonymous')
+                      : t('form.anonymous.descriptionNamed')
                     }
                   </p>
                 </div>
@@ -289,7 +291,7 @@ const Contribute: React.FC = () => {
               <>
                 <div>
                   <label htmlFor="name" className="block text-lg mb-2">
-                    Your Name*
+                    {t('form.name.label')}
                   </label>
                   <input
                     type="text"
@@ -297,7 +299,7 @@ const Contribute: React.FC = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="Your name for attribution"
+                    placeholder={t('form.name.placeholder')}
                     className={`w-full bg-transparent border-b ${
                       errors.name ? "border-red-500" : "border-white"
                     } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
@@ -310,7 +312,7 @@ const Contribute: React.FC = () => {
 
                 <div>
                   <label htmlFor="email" className="block text-lg mb-2">
-                    Email Address*
+                    {t('form.email.label')}
                   </label>
                   <input
                     type="email"
@@ -318,7 +320,7 @@ const Contribute: React.FC = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="your@email.com"
+                    placeholder={t('form.email.placeholder')}
                     className={`w-full bg-transparent border-b ${
                       errors.email ? "border-red-500" : "border-white"
                     } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
@@ -334,7 +336,7 @@ const Contribute: React.FC = () => {
             {/* Material dropdown */}
             <div>
               <label htmlFor="material" className="block text-lg mb-2">
-                Material
+                {t('form.material.label')}
               </label>
               <select
                 name="material"
@@ -344,7 +346,7 @@ const Contribute: React.FC = () => {
                     errors.customMaterial ? "border-red-500" : "border-white"
                   } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
               >
-                <option value="">Select a material</option>
+                <option value="">{t('form.material.placeholder')}</option>
                 {materialOptions.map((material) => (
                   <option key={material.id} value={material.id.toString()}>
                     {material.name}
@@ -352,7 +354,7 @@ const Contribute: React.FC = () => {
                 ))}
               </select>
               {loading && materialOptions.length === 0 && (
-                <p className="mt-1 text-gray-400">Loading materials...</p>
+                <p className="mt-1 text-gray-400">{t('form.material.loading')}</p>
               )}
               {errors.material && (
                 <p className="mt-1 text-red-500">{errors.material}</p>
@@ -363,7 +365,7 @@ const Contribute: React.FC = () => {
             {formData.material === "-1" && (
               <div className="mt-3 pl-4 border-l-2 border-lime-500">
                 <label htmlFor="customMaterial" className="block text-lg mb-2">
-                  Material Description
+                  {t('form.customMaterial.label')}
                 </label>
                 <input
                   type="text"
@@ -371,15 +373,14 @@ const Contribute: React.FC = () => {
                   name="customMaterial"
                   value={formData.customMaterial}
                   onChange={handleInputChange}
-                  placeholder="Please describe the material"
+                  placeholder={t('form.customMaterial.placeholder')}
                   className={`w-full bg-transparent border-b ${
                     errors.customMaterial ? "border-red-500" : "border-white"
                   } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
                   disabled={loading}
                 />
                 <p className="mt-1 text-sm text-gray-400">
-                  An admin will review and categorize this material during
-                  approval.
+                  {t('form.customMaterial.note')}
                 </p>
                 {errors.customMaterial && (
                   <p className="mt-1 text-red-500">{errors.customMaterial}</p>
@@ -390,7 +391,7 @@ const Contribute: React.FC = () => {
             {/* Description textarea */}
             <div>
               <label htmlFor="description" className="block text-lg mb-2">
-                Description
+                {t('form.description.label')}
               </label>
               <textarea
                 id="description"
@@ -405,7 +406,7 @@ const Contribute: React.FC = () => {
                 disabled={loading}
               ></textarea>
               <p className="text-sm text-gray-400">
-                {formData.description.length}/1500 characters
+                {t('form.description.characterCount', { count: formData.description.length })}
               </p>
               {errors.description && (
                 <p className="mt-1 text-red-500">{errors.description}</p>
@@ -431,10 +432,10 @@ const Contribute: React.FC = () => {
                   loading ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               >
-                {file ? "File Selected" : "Upload Design"}
+                {file ? t('form.file.selectedButton') : t('form.file.uploadButton')}
               </button>
               <span className="ml-4 text-gray-400">
-                {file ? file.name : "PDF or image file (JPG, PNG). Max 5MB."}
+                {file ? file.name : t('form.file.description')}
               </span>
               {errors.file && (
                 <p className="mt-1 text-red-500">{errors.file}</p>
@@ -453,14 +454,14 @@ const Contribute: React.FC = () => {
                   disabled={loading}
                 />
                 <label htmlFor="gdpr" className="ml-2">
-                  Accept{" "}
+                  {t('form.gdpr.label')}{" "}
                   <button
                     type="button"
                     onClick={() => setShowGDPR(true)}
                     className="text-lime-400 hover:text-lime-300 underline transition-colors"
                     disabled={loading}
                   >
-                    GDPR Data Protection Guidelines
+                    {t('form.gdpr.linkText')}
                   </button>
                 </label>
               </div>
@@ -476,14 +477,14 @@ const Contribute: React.FC = () => {
                   disabled={loading}
                 />
                 <label htmlFor="terms" className="ml-2">
-                  Accept{" "}
+                  {t('form.terms.label')}{" "}
                   <button
                     type="button"
                     onClick={() => setShowTerms(true)}
                     className="text-lime-400 hover:text-lime-300 underline transition-colors"
                     disabled={loading}
                   >
-                    Terms and Conditions
+                    {t('form.terms.linkText')}
                   </button>
                 </label>
               </div>
@@ -500,20 +501,18 @@ const Contribute: React.FC = () => {
                 loading ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
-              {loading ? "Submitting..." : "Submit"}
+              {loading ? t('form.submit.submitting') : t('form.submit.button')}
             </button>
           </div>
 
           {/* Submission note */}
           <div className="mt-6 mb-2 text-sm text-gray-400 pb-6">
             <p>
-              All submissions will be reviewed by our team before being
-              published.
+              {t('messages.reviewNote')}
             </p>
             {formData.material === "-1" && (
               <p className="mt-2">
-                Materials marked as "Other" will be reviewed and properly
-                categorized during the approval process.
+                {t('messages.customMaterialNote')}
               </p>
             )}
           </div>

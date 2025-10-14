@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "backgroundText": "Feltöltés",
+    "title": "Terv Feltöltése"
+  },
+  "form": {
+    "designTitle": {
+      "label": "Terv Címe",
+      "placeholder": "Add meg a terved címét",
+      "error": "A cím megadása kötelező"
+    },
+    "anonymous": {
+      "label": "Névtelen Beküldés",
+      "descriptionAnonymous": "A beküldésed 'Névtelen Közreműködő'-ként lesz feltüntetve.",
+      "descriptionNamed": "A neved fel lesz tüntetve ezzel a hozzájárulással, hogy segítsd közösségünk építését."
+    },
+    "name": {
+      "label": "Neved*",
+      "placeholder": "Neved a hivatkozáshoz",
+      "error": "A név megadása kötelező"
+    },
+    "email": {
+      "label": "Email Cím*",
+      "placeholder": "te@email.com",
+      "errorRequired": "Az email megadása kötelező",
+      "errorInvalid": "Érvényes email cím szükséges"
+    },
+    "material": {
+      "label": "Anyag",
+      "placeholder": "Válassz anyagot",
+      "loading": "Anyagok betöltése...",
+      "error": "Kérlek válassz anyagot"
+    },
+    "customMaterial": {
+      "label": "Anyag Leírása",
+      "placeholder": "Kérlek írd le az anyagot",
+      "note": "Az adminisztrátor áttekinti és kategorizálja ezt az anyagot a jóváhagyás során.",
+      "error": "Kérlek írd le az anyagot"
+    },
+    "description": {
+      "label": "Leírás",
+      "characterCount": "{{count}}/1500 karakter",
+      "errorRequired": "A leírás megadása kötelező",
+      "errorTooLong": "A leírás nem lehet hosszabb 1500 karakternél"
+    },
+    "file": {
+      "uploadButton": "Terv Feltöltése",
+      "selectedButton": "Fájl Kiválasztva",
+      "description": "PDF vagy képfájl (JPG, PNG). Max 5MB.",
+      "errorRequired": "Tervfájl feltöltése kötelező",
+      "errorType": "Csak PDF vagy képfájlok engedélyezettek",
+      "errorSize": "A fájlméret nem haladhatja meg az 5MB-ot"
+    },
+    "gdpr": {
+      "label": "Elfogadom a",
+      "linkText": "GDPR Adatvédelmi Irányelveket",
+      "error": "El kell fogadnod a GDPR irányelveket"
+    },
+    "terms": {
+      "label": "Elfogadom az",
+      "linkText": "Általános Szerződési Feltételeket",
+      "error": "El kell fogadnod az Általános Szerződési Feltételeket"
+    },
+    "submit": {
+      "button": "Beküldés",
+      "submitting": "Beküldés..."
+    }
+  },
+  "messages": {
+    "successAnonymous": "Névtelen terv sikeresen beküldve! Csapatunk áttekinti.",
+    "successNamed": "Köszönjük {{name}}! A terved sikeresen beküldve és csapatunk áttekinti.",
+    "error": "Nem sikerült beküldeni a tervet. Kérlek próbáld újra később.",
+    "reviewNote": "Minden beküldést csapatunk áttekint publikálás előtt.",
+    "customMaterialNote": "Az \"Egyéb\"-ként megjelölt anyagokat áttekintik és megfelelően kategorizálják a jóváhagyási folyamat során."
+  }
+}
