@@ -1,0 +1,14 @@
+{
+  "buttons": {
+    "learnMore": "Tudj meg többet",
+    "viewDetails": "Részletek megtekintése",
+    "getStarted": "Kezdj bele",
+    "close": "Bezárás"
+  },
+  "common": {
+    "loading": "Betöltés...",
+    "error": "Valami hiba történt",
+    "materials": "Anyagok",
+    "techniques": "Technikák"
+  }
+}

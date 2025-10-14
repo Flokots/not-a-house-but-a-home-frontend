@@ -1,21 +1,19 @@
-import { Outlet, useLocation } from "react-router-dom";
-import Navbar from "./Navbar";
+import type { ReactNode } from 'react';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
-const Layout = () => {
-  const location = useLocation();
+interface LayoutProps {
+  children: ReactNode;
+}
 
-  // Define which routes should use light mode
-  const lightModeRoutes = ["/about-us", "/guide", "/essentials"];
-
-  // Check if current path should use light mode
-  const useLightMode = lightModeRoutes.includes(location.pathname);
-
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex">
-      <Navbar lightMode={useLightMode} />
-      <div className="flex-grow">
-        <Outlet />
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-1">
+        {children}
+      </main>
+      <Footer />
     </div>
   );
 };

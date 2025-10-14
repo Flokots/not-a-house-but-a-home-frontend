@@ -1,0 +1,49 @@
+{
+  "home": {
+    "hero": {
+      "title": "NEM HÁZ",
+      "subtitle": "HANEM OTTHON",
+      "description": "Alapvető források vészhelyzeti menedék építéséhez és fenntartható lakásoldatok létrehozásához, amikor a legnagyobb szükséged van rájuk.",
+      "cta": "Kezdj építeni"
+    },
+    "features": {
+      "materials": {
+        "title": "Anyag Útmutató",
+        "description": "Tanuld meg, mely anyagok működnek a legjobban különböző menedéktípusokhoz és időjárási körülményekhez."
+      },
+      "techniques": {
+        "title": "Építési Technikák",
+        "description": "Lépésről lépésre utasítások bevált építési módszerekhez és biztonsági gyakorlatokhoz."
+      },
+      "designs": {
+        "title": "Tesztelt Tervek",
+        "description": "Hozzáférés olyan tervrajzokhoz és tervekhez, amelyeket valós körülmények között teszteltek."
+      }
+    }
+  },
+  "essentials": {
+    "title": "ALAPVETŐ TUDÁS",
+    "subtitle": "Sajátítsd el az alapokat",
+    "description": "Tanuld meg az alapvető technikákat és anyagokat, amelyek szükségesek biztonságos, időjárásálló menedék építéséhez bármilyen helyzetben.",
+    "weatherProtection": {
+      "title": "IDŐJÁRÁS ELLENI VÉDELEM MÓDJAI",
+      "description": "Sajátítsd el ezt a négy alapvető technikát átfogó időjárásvédelem létrehozásához bármilyen menedékhez, elérhető anyagok és bevált építési módszerek használatával.",
+      "warmth": {
+        "title": "MELEGSÉG",
+        "description": "Hőszigetelési technikák a kényelmes belső hőmérséklet fenntartásához és a hőveszteség megelőzéséhez"
+      },
+      "stayingDry": {
+        "title": "SZÁRAZON MARADÁS",
+        "description": "Gőzzáró rendszerek és nedvességszabályozás a vízkárok és kondenzáció megelőzéséhez"
+      },
+      "windproofing": {
+        "title": "SZÉLVÉDELEM",
+        "description": "Huzatvédelem és légzárás a szükséges szellőzés biztonsági fenntartása mellett"
+      },
+      "dryGround": {
+        "title": "SZÁRAZ TALAJ",
+        "description": "Alapvédelem és magassági technikák a talaj nedvességének behatolásának megakadályozásához"
+      }
+    }
+  }
+}

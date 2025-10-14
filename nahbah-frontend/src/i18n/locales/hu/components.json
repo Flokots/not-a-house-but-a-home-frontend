@@ -1,0 +1,29 @@
+{
+  "navbar": {
+    "brand": {
+      "notAHouse": "NEM HÁZ",
+      "butAHome": "HANEM OTTHON"
+    },
+    "home": "FŐOLDAL",
+    "aboutUs": "RÓLUNK",
+    "guide": "ÚTMUTATÓ",
+    "essentials": "ALAPISMERETEK",
+    "designs": "TERVEK",
+    "contribute": "KÖZREMŰKÖDÉS"
+  },
+  "footer": {
+    "copyright": "© 2024 Nem Ház Hanem Otthon. Minden jog fenntartva.",
+    "terms": "Általános Szerződési Feltételek",
+    "privacy": "Adatvédelmi Irányelvek",
+    "contact": "Kapcsolat"
+  },
+  "themeToggle": {
+    "lightMode": "Váltás világos módra",
+    "darkMode": "Váltás sötét módra"
+  },
+  "languageSwitcher": {
+    "changeLanguage": "Nyelv váltása",
+    "english": "Angol",
+    "hungarian": "Magyar"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "home": {
+    "hero": {
+      "title": "NOT A HOUSE",
+      "subtitle": "BUT A HOME",
+      "description": "Essential resources for building emergency shelter and creating sustainable housing solutions when you need them most.",
+      "cta": "Start Building"
+    },
+    "features": {
+      "materials": {
+        "title": "Materials Guide",
+        "description": "Learn what materials work best for different shelter types and weather conditions."
+      },
+      "techniques": {
+        "title": "Building Techniques", 
+        "description": "Step-by-step instructions for proven construction methods and safety practices."
+      },
+      "designs": {
+        "title": "Tested Designs",
+        "description": "Access blueprints and plans that have been tested in real-world conditions."
+      }
+    }
+  },
+  "essentials": {
+    "title": "ESSENTIAL KNOWLEDGE",
+    "subtitle": "Master the fundamentals",
+    "description": "Learn the core techniques and materials needed to build safe, weatherproof shelter in any situation.",
+    "weatherProtection": {
+      "title": "WEATHER PROTECTION METHODS",
+      "description": "Master these four essential techniques to create comprehensive weather protection for any shelter using accessible materials and proven construction methods.",
+      "warmth": {
+        "title": "WARMTH",
+        "description": "Thermal insulation techniques to maintain comfortable interior temperature and prevent heat loss"
+      },
+      "stayingDry": {
+        "title": "STAYING DRY", 
+        "description": "Vapor barrier systems and moisture control to prevent water damage and condensation"
+      },
+      "windproofing": {
+        "title": "WINDPROOFING",
+        "description": "Draft protection and air sealing while maintaining necessary ventilation for safety"
+      },
+      "dryGround": {
+        "title": "DRY GROUND",
+        "description": "Foundation protection and elevation techniques to prevent ground moisture infiltration"
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "navbar": {
+    "brand": {
+      "notAHouse": "NOT A HOUSE",
+      "butAHome": "BUT A HOME"
+    },
+    "home": "HOME",
+    "aboutUs": "ABOUT US",
+    "guide": "GUIDE",
+    "essentials": "ESSENTIALS",
+    "designs": "DESIGNS",
+    "contribute": "CONTRIBUTE"
+  },
+  "footer": {
+    "copyright": "© 2024 Not A House But A Home. All rights reserved.",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "contact": "Contact Us"
+  }
+}

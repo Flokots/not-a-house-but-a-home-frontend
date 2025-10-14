@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import MaterialsSection from "@/components/essentials/MaterialsSection";
 import WeatherProtection from "@/components/essentials/WeatherProtection";
