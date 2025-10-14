@@ -9,45 +9,28 @@
       "description": "Az otthon több mint puszta menedék—ez a stabilitás, a magánélet és a közösség helye. Ez a kezdeményezés támogatja azokat, akik nehéz körülmények között építik saját otthonukat, platformot biztosítva a tervek megosztásához.",
       "learnMoreBtn": "TUDJ MEG TÖBBET",
       "viewDesignsBtn": "TERVEK MEGTEKINTÉSE"
-    },
-    "features": {
-      "materials": {
-        "title": "Anyag Útmutató",
-        "description": "Tanuld meg, mely anyagok működnek a legjobban különböző menedéktípusokhoz és időjárási körülményekhez."
-      },
-      "techniques": {
-        "title": "Építési Technikák",
-        "description": "Lépésről lépésre utasítások bevált építési módszerekhez és biztonsági gyakorlatokhoz."
-      },
-      "designs": {
-        "title": "Tesztelt Tervek",
-        "description": "Hozzáférés olyan tervrajzokhoz és tervekhez, amelyeket valós körülmények között teszteltek."
-      }
     }
   },
-  "essentials": {
-    "title": "ALAPVETŐ TUDÁS",
-    "subtitle": "Sajátítsd el az alapokat",
-    "description": "Tanuld meg az alapvető technikákat és anyagokat, amelyek szükségesek biztonságos, időjárásálló menedék építéséhez bármilyen helyzetben.",
-    "weatherProtection": {
-      "title": "IDŐJÁRÁS ELLENI VÉDELEM MÓDJAI",
-      "description": "Sajátítsd el ezt a négy alapvető technikát átfogó időjárásvédelem létrehozásához bármilyen menedékhez, elérhető anyagok és bevált építési módszerek használatával.",
-      "warmth": {
-        "title": "MELEGSÉG",
-        "description": "Hőszigetelési technikák a kényelmes belső hőmérséklet fenntartásához és a hőveszteség megelőzéséhez"
-      },
-      "stayingDry": {
-        "title": "SZÁRAZON MARADÁS",
-        "description": "Gőzzáró rendszerek és nedvességszabályozás a vízkárok és kondenzáció megelőzéséhez"
-      },
-      "windproofing": {
-        "title": "SZÉLVÉDELEM",
-        "description": "Huzatvédelem és légzárás a szükséges szellőzés biztonsági fenntartása mellett"
-      },
-      "dryGround": {
-        "title": "SZÁRAZ TALAJ",
-        "description": "Alapvédelem és magassági technikák a talaj nedvességének behatolásának megakadályozásához"
-      }
+  "guide": {
+    "title": "Jobb Otthonok Építése",
+    "description": "Ezt az útmutatót azért készítettük, hogy bárki számára lehetővé tegyük biztonságosabb, tartósabb lakóterek létrehozását elérhető anyagok és technikák segítségével. Akár saját menedéket építesz, másoknak segítesz, vagy csak felfedezed a lehetőségeket, itt vagyunk, hogy támogassuk az utadat.",
+    "findYourPath": "Találd Meg Az Utad",
+    "chooseYourPath": "VÁLASZD KI AZ UTAD",
+    "pathDescription": "Különböző igényekhez szabott forrásokat készítettünk. Válaszd azt az opciót, amely a legjobban jellemzi a helyzeted.",
+    "essentials": {
+      "title": "Alapok és Anyagok",
+      "description": "Fedezd fel, mi tesz egy menedéket otthonná, és ismerj meg hasznos anyagokat, amelyeket a környezetedben találhatsz.",
+      "action": "Források Felfedezése"
+    },
+    "designs": {
+      "title": "Tervtár",
+      "description": "Böngészd, válaszd ki és töltsd le a terveket, hogy saját egyedi építési útmutatót készíts.",
+      "action": "Tervek Elérése"
+    },
+    "contribute": {
+      "title": "Oszd Meg Szakértelmét",
+      "description": "Oszd meg tudásodat, tölts fel terveket, vagy működj együtt közösségünkkel mások segítése érdekében.",
+      "action": "Csatlakozz Erőfeszítéseinkhez"
     }
   },
   "about": {
@@ -58,36 +41,6 @@
       "paragraph1": "A lakhatás alapvető jog, mégis sokan kényszerülnek saját menedéket építeni a hagyományos rendszereken kívül. Ez a webalkalmazás forrás azok számára, akik talált anyagokból építenek otthont, valamint az őket támogató és velük szolidaritást vállaló építészek és aktivisták számára.",
       "paragraph2": "Az otthon több mint menedék—ez a stabilitás, a magánélet és a kapcsolatok helye. Tervezési tudás, kreativitás és közös megoldások révén támogatjuk az önépített lakhatást mint a méltóság és biztonság felé vezető utat.",
       "learnMoreBtn": "Tudj meg többet"
-    },
-    "mission": {
-      "title": "KÜLDETÉSÜNK",
-      "paragraph1": "A Szolidáris Építészeti Kutatócsoport tagjaként hiszünk abban, hogy az építészek és építészethallgatók szerepet játszhatnak a társadalmi problémák enyhítésében. Ezen az oldalon alapvető tudást szeretnénk terjeszteni, amely segít biztonságosabb környezet kialakításában. Egy olyan épített környezetet, amely helyettesítheti az éjjeli menhelyek embertelen világát és átmeneti menedéket nyújthat azoknak, akik nehezen tudnak egyedül megélni.",
-      "paragraph2": "Minden építészt és hallgatót arra bátorítunk, hogy kissé eltérő szemszögből tekintsék a körülöttük lévő világot. Fedezzék fel a körülöttünk szabadon elérhető anyagokban rejlő lehetőségeket. Segítsünk együtt szél, hideg és eső ellen védett átmeneti menedékeket építeni."
-    },
-    "approach": {
-      "title": "Megközelítésünk",
-      "paragraph1": "Építészeti szakértelmet kombinálunk közösségi tudással, hogy gyakorlati, fenntartható és felhatalmazó megoldásokat hozzunk létre. Forrásainkat olyan emberekkel együttműködve fejlesztjük, akik közvetlen tapasztalattal rendelkeznek az önépített lakhatás terén.",
-      "paragraph2": "Minden terv, útmutató és anyagválasztási javaslat ezen a platformon elérhető és adaptálható különböző körülményekhez és erőforrás-elérhetőséghez, és sokuk kipróbált."
-    },
-    "getInvolved": {
-      "title": "Csatlakozz",
-      "paragraph1": "Akár saját menedéked javítását tervezed, mások lakhatási útját támogatod, vagy a lakhatási igazságosságért szállsz síkra, számos módon részt vehetsz közösségünkben.",
-      "paragraph2": "Böngészd forráskönyvtárunkat, járulj hozzá tervezési ötletekkel, oszd meg sikersztorijd, vagy ajánld fel készségeidet. Együtt átalakíthatjuk a lakhatásról való gondolkodásunkat és több utat teremthetünk a méltóságteljes otthonhoz mindenki számára."
-    },
-    "impact": {
-      "title": "HATÁSUNK",
-      "paragraph1": "Ez a webalkalmazás forrás azok számára, akik talált anyagokból építenek otthont, valamint az őket támogató és velük szolidaritást vállaló építészek és aktivisták számára.",
-      "paragraph2": "Az otthon több mint menedék—ez a stabilitás, a magánélet és a kapcsolatok helye. Forrásainkon és közösségünkön keresztül segítünk az embereknek méltóságteljes lakóterek kialakításában, körülményeiktől függetlenül.",
-      "stats": {
-        "solutions": "Lakhatási Megoldás",
-        "communities": "Támogatott Közösség",
-        "people": "Segített Ember"
-      }
-    },
-    "cta": {
-      "title": "Készen állsz a változásra?",
-      "description": "Akár saját otthont építesz, másokat támogatsz, vagy a lakhatási igazságosságért küzdesz, meghívunk közösségünkbe, hogy részese legyél a megoldásnak.",
-      "button": "Kezdd el ma"
     }
   }
 }

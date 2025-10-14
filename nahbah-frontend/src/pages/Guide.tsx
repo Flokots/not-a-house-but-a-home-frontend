@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 import Navbar from "@/components/Navbar";
 import buildingMaterialsImage from "@/assets/buildingmaterials.png";
 import safetyImage from "@/assets/lounge_area.png";
@@ -9,6 +10,7 @@ import heroImage from "@/assets/entrance_night_view.png";
 const Guide = () => {
   const [loaded, setLoaded] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation('pages');
 
   useEffect(() => {
     setLoaded(true);
@@ -34,13 +36,10 @@ const Guide = () => {
           } relative z-10`}
         >
           <h1 className="text-4xl font-bold mb-10 mt-0 ml-22 leading-tight tracking-tight text-black dark:text-white">
-            Building Better Homes
+            {t('guide.title')}
           </h1>
           <p className="text-lg mb-8 text-gray-700 dark:text-gray-300 leading-relaxed">
-            We've designed this guide to help anyone create safer, more durable
-            living spaces using accessible materials and techniques. Whether
-            you're building your own shelter, helping others, or just exploring
-            possibilities, we're here to support your journey.
+            {t('guide.description')}
           </p>
           <div className="h-1 w-28 bg-gradient-to-r from-yellow-500 to-lime-600 mb-10"></div>
 
@@ -58,7 +57,7 @@ const Guide = () => {
                        border border-transparent dark:border-gray-700"
           >
             <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold uppercase">
-              Find Your Path
+              {t('guide.findYourPath')}
             </span>
           </button>
         </div>
@@ -85,10 +84,9 @@ const Guide = () => {
       <div id="path-selection" className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 mb-16">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">CHOOSE YOUR PATH</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">{t('guide.chooseYourPath')}</h2>
             <p className="text-gray-600 dark:text-gray-300 text-lg mx-auto">
-              We've tailored resources for different needs. Select the option
-              that best represents your situation.
+              {t('guide.pathDescription')}
             </p>
           </div>
 
@@ -114,15 +112,15 @@ const Guide = () => {
                 <h3 className="text-2xl font-bold mb-3 text-black dark:text-white 
                                group-hover:text-lime-700 dark:group-hover:text-lime-400 
                                transition-colors">
-                  Essentials & Materials
+                  {t('guide.essentials.title')}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
-                  Discover what makes a shelter a home and explore useful materials you can find around you.
+                  {t('guide.essentials.description')}
                 </p>
                 <div className="text-lime-600 dark:text-lime-400 font-semibold 
                                hover:text-lime-800 dark:hover:text-lime-300 
                                flex items-center group cursor-pointer">
-                  <span>Explore Resources</span>
+                  <span>{t('guide.essentials.action')}</span>
                 </div>
               </div>
             </div>
@@ -148,15 +146,15 @@ const Guide = () => {
                 <h3 className="text-2xl font-bold mb-3 text-black dark:text-white 
                                group-hover:text-lime-700 dark:group-hover:text-lime-400 
                                transition-colors">
-                  Design Library
+                  {t('guide.designs.title')}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
-                  Browse, select, and download design plans to create your own customized building guide.
+                  {t('guide.designs.description')}
                 </p>
                 <div className="text-lime-600 dark:text-lime-400 font-semibold 
                                hover:text-lime-800 dark:hover:text-lime-300 
                                flex items-center group cursor-pointer">
-                  <span>Access Designs</span>
+                  <span>{t('guide.designs.action')}</span>
                 </div>
               </div>
             </div>
@@ -182,15 +180,15 @@ const Guide = () => {
                 <h3 className="text-2xl font-bold mb-3 text-black dark:text-white 
                                group-hover:text-lime-700 dark:group-hover:text-lime-400 
                                transition-colors">
-                  Contribute Your Expertise
+                  {t('guide.contribute.title')}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
-                  Share your knowledge, upload designs, or collaborate with our community to help others.
+                  {t('guide.contribute.description')}
                 </p>
                 <div className="text-lime-600 dark:text-lime-400 font-semibold 
                                hover:text-lime-800 dark:hover:text-lime-300 
                                flex items-center group cursor-pointer">
-                  <span>Join Our Efforts</span>
+                  <span>{t('guide.contribute.action')}</span>
                 </div>
               </div>
             </div>
