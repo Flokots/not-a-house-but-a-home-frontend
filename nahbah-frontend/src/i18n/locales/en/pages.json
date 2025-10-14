@@ -39,7 +39,108 @@
     "title": "What does a home need?",
     "description": "Learn what makes a shelter into a home, from weather protection to finding and repurposing materials around you.",
     "materials": "Materials",
-    "weatherProtection": "Weather Protection"
+    "weatherProtection": "Weather Protection",
+    "materialsSection": {
+      "title": "USEFUL MATERIALS AROUND US",
+      "description": "Building and making a house more comfortable is not only possible with building materials. In big cities, we can find many packaging materials that are suitable for making our temporary shelter cozier, more comfortable, and safer.",
+      "imageCaption": "Self made house from door leaves. Facade is covered with PVC flooring. Built by Lajos (65)",
+      "availableMaterials": "AVAILABLE MATERIALS & THEIR USES",
+      "availableDescription": "Navigate your surroundings with resourcefulness. Discover how everyday objects can be transformed into essential shelter components.",
+      "viewDetails": "View Details",
+      "repurpose": {
+        "title": "HOW TO REPURPOSE MATERIALS",
+        "description": "Transform discarded materials into essential shelter components.",
+        "structural": {
+          "title": "Structural Elements",
+          "description": "Materials like wood crates and beverage cans can be repurposed for walls, roof, and foundational elements.",
+          "items": [
+            "Roof shingles from cans",
+            "Rain screens from crates",
+            "Wall frames from scrap wood"
+          ]
+        },
+        "insulation": {
+          "title": "Insulation & Protection",
+          "description": "Soft and porous materials can provide crucial insulation against cold and heat loss.",
+          "items": [
+            "Heat insulation from cardboard",
+            "Thermal protection with styrofoam",
+            "Water barriers using plastic sheets"
+          ]
+        },
+        "weather": {
+          "title": "Weather Protection",
+          "description": "Securing shelter against wind, rain, and moisture requires specialized barriers.",
+          "items": [
+            "Windproof membranes from tents",
+            "Vapor barriers from plastic sheets",
+            "Waterproofing from tarpaulins"
+          ]
+        }
+      },
+      "lookAround": {
+        "title": "Look Around with New Eyes",
+        "description": "Very often, we don't even think that a carpet can be used for more than walking on, or that beverage cans could also be useful if there are a lot of them. Remember to see the potential in everyday discarded items."
+      },
+      "materials": {
+        "paper": {
+          "title": "PAPER",
+          "function": "Cardboard, Packing box",
+          "rawMaterial": "Paper",
+          "whereToFind": "Bicycle shops, Shopping malls",
+          "use": "Heat insulation (keep it dry)",
+          "examples": ["Heat insulation made of cardboards"]
+        },
+        "metals": {
+          "title": "METALS",
+          "function": "Beverage can",
+          "rawMaterial": "Aluminum, Iron",
+          "whereToFind": "Around pubs, Parks",
+          "use": "Facade cladding, Roofing",
+          "examples": ["Roof shingles made of beverage cans"]
+        },
+        "textiles": {
+          "title": "TEXTILES",
+          "function": "Tents",
+          "rawMaterial": "Textile",
+          "whereToFind": "Festivals' venues, Beaches",
+          "use": "Vapor barrier membrane, Windproof membrane, Secondary layer under roof shingles",
+          "examples": [
+            "Windproof membrane made of tents",
+            "Vapor barrier made of tents"
+          ]
+        },
+        "plastics": {
+          "title": "PLASTICS",
+          "function": "Protective packaging",
+          "rawMaterial": "Styrofoam",
+          "whereToFind": "Electronic stores, Shopping malls",
+          "use": "Thermal insulation",
+          "examples": [
+            "Thermal insulation made of styrofoam packaging",
+            "Roof shingles made of PVC flooring"
+          ]
+        },
+        "wood": {
+          "title": "WOOD",
+          "function": "Provide dry ground",
+          "rawMaterial": "Wood",
+          "whereToFind": "Market halls, Markets, Grocery stores",
+          "use": "Rain screen, Facade, Roof shingles",
+          "examples": ["Rain screen facade made of fruit crates"]
+        }
+      },
+      "modal": {
+        "information": "Information",
+        "examples": "Examples",
+        "rawMaterial": "Raw material",
+        "whereToFind": "Where to find",
+        "useInShelter": "Use in shelter",
+        "examplesOfUse": "Examples of use",
+        "infoNote": "This material can be found in common urban environments and repurposed with minimal tools.",
+        "examplesNote": "For optimal results, clean and prepare materials before repurposing. Remove labels, wash surfaces, and test for structural integrity."
+      }
+    }
   },
   "about": {
     "hero": {

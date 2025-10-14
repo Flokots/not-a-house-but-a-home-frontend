@@ -39,7 +39,108 @@
     "title": "Mire van szüksége egy otthonnak?",
     "description": "Tanuld meg, mi tesz egy menedéket otthonná, az időjárás elleni védelemtől kezdve a körülötted található anyagok megtalálásáig és újrahasznosításáig.",
     "materials": "Anyagok",
-    "weatherProtection": "Időjárás Elleni Védelem"
+    "weatherProtection": "Időjárás Elleni Védelem",
+    "materialsSection": {
+      "title": "HASZNOS ANYAGOK KÖRÜLÖTTÜNK",
+      "description": "Az otthon építése és kényelmesebbé tétele nem csak építőanyagokkal lehetséges. Nagy városokban sok csomagolóanyagot találhatunk, amelyek alkalmasak arra, hogy ideiglenes menedékünket kényelmesebbé, kényelmesebbé és biztonságosabbá tegyük.",
+      "imageCaption": "Ajtószárnyakból készült saját ház. A homlokzatot PVC padlóburkolat borítja. Építette: Lajos (65)",
+      "availableMaterials": "ELÉRHETŐ ANYAGOK ÉS FELHASZNÁLÁSUK",
+      "availableDescription": "Navigálj körülményeid között találékonysággal. Fedezd fel, hogyan alakíthatók át mindennapi tárgyak alapvető menedék komponensekké.",
+      "viewDetails": "Részletek Megtekintése",
+      "repurpose": {
+        "title": "HOGYAN HASZNOSÍTSUK ÚJRA AZ ANYAGOKAT",
+        "description": "Alakítsd át az eldobott anyagokat alapvető menedék komponensekké.",
+        "structural": {
+          "title": "Szerkezeti Elemek",
+          "description": "Az olyan anyagok, mint a faládák és italos dobozok, újrahasznosíthatók falakhoz, tetőhöz és alapozási elemekhez.",
+          "items": [
+            "Tetőcserepek dobozokból",
+            "Eső elleni védelem ládákból",
+            "Falvázak hulladék fából"
+          ]
+        },
+        "insulation": {
+          "title": "Szigetelés és Védelem",
+          "description": "A puha és porózus anyagok létfontosságú szigetelést nyújthatnak a hideg és hőveszteség ellen.",
+          "items": [
+            "Hőszigetelés kartonból",
+            "Hővédelem hungarocellel",
+            "Vízzáró rétegek műanyag fóliákkal"
+          ]
+        },
+        "weather": {
+          "title": "Időjárás Elleni Védelem",
+          "description": "A szél, eső és nedvesség elleni védelem speciális akadályokat igényel.",
+          "items": [
+            "Szélálló membránok sátrakból",
+            "Gőzzáró rétegek műanyag fóliákból",
+            "Vízhatlanítás ponyvákból"
+          ]
+        }
+      },
+      "lookAround": {
+        "title": "Nézz Körül Új Szemmel",
+        "description": "Nagyon gyakran eszünkbe sem jut, hogy egy szőnyeg többre is használható, mint hogy rálépjünk, vagy hogy az italos dobozok is hasznosak lehetnek, ha sok van belőlük. Ne feledd, hogy lásd meg a potenciált a mindennapi eldobott tárgyakban."
+      },
+      "materials": {
+        "paper": {
+          "title": "PAPÍR",
+          "function": "Karton, Csomagolódoboz",
+          "rawMaterial": "Papír",
+          "whereToFind": "Kerékpárboltok, Bevásárlóközpontok",
+          "use": "Hőszigetelés (tartsd szárazon)",
+          "examples": ["Kartonból készült hőszigetelés"]
+        },
+        "metals": {
+          "title": "FÉMEK",
+          "function": "Italos doboz",
+          "rawMaterial": "Alumínium, Vas",
+          "whereToFind": "Kocsmák környékén, Parkok",
+          "use": "Homlokzatburkolat, Tetőfedés",
+          "examples": ["Italos dobozokból készült tetőcserepek"]
+        },
+        "textiles": {
+          "title": "TEXTÍLIÁK",
+          "function": "Sátrak",
+          "rawMaterial": "Textília",
+          "whereToFind": "Fesztiválhelyszínek, Strandok",
+          "use": "Gőzzáró membrán, Szélálló membrán, Másodlagos réteg tetőcserepek alatt",
+          "examples": [
+            "Sátrakból készült szélálló membrán",
+            "Sátrakból készült gőzzáró réteg"
+          ]
+        },
+        "plastics": {
+          "title": "MŰANYAGOK",
+          "function": "Védő csomagolás",
+          "rawMaterial": "Hungarocell",
+          "whereToFind": "Elektronikai boltok, Bevásárlóközpontok",
+          "use": "Hőszigetelés",
+          "examples": [
+            "Hungarocell csomagolásból készült hőszigetelés",
+            "PVC padlóburkolatból készült tetőcserepek"
+          ]
+        },
+        "wood": {
+          "title": "FA",
+          "function": "Száraz talaj biztosítása",
+          "rawMaterial": "Fa",
+          "whereToFind": "Vásárcsarnokok, Piacok, Élelmiszerboltok",
+          "use": "Eső elleni védőréteg, Homlokzat, Tetőcserepek",
+          "examples": ["Gyümölcsös ládákból készült eső elleni homlokzat"]
+        }
+      },
+      "modal": {
+        "information": "Információ",
+        "examples": "Példák",
+        "rawMaterial": "Alapanyag",
+        "whereToFind": "Hol található",
+        "useInShelter": "Felhasználás menedékben",
+        "examplesOfUse": "Használati példák",
+        "infoNote": "Ez az anyag általános városi környezetben megtalálható és minimális eszközökkel újrahasznosítható.",
+        "examplesNote": "Az optimális eredmények érdekében tisztítsd meg és készítsd elő az anyagokat újrahasznosítás előtt. Távolítsd el a címkéket, mosd le a felületeket és teszteld a szerkezeti szilárdságot."
+      }
+    }
   },
   "about": {
     "hero": {
@@ -51,4 +152,4 @@
       "learnMoreBtn": "Tudj meg többet"
     }
   }
-} 
+}

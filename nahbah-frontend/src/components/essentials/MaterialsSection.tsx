@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Dialog } from "@headlessui/react";
+import { useTranslation } from 'react-i18next';
 
 interface MaterialsSectionProps {
   images: {
@@ -13,6 +14,7 @@ interface MaterialsSectionProps {
 }
 
 interface MaterialData {
+  key: string;
   title: string;
   image: string;
   alt: string;
@@ -28,67 +30,67 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
   const [selectedMaterial, setSelectedMaterial] = useState<MaterialData | null>(null);
   const [activeTab, setActiveTab] = useState<"info" | "examples">("info");
   const closeButtonRef = useRef(null);
+  const { t } = useTranslation('pages');
 
   const materials: MaterialData[] = [
     {
-      title: "PAPER",
+      key: 'paper',
+      title: t('essentials.materialsSection.materials.paper.title'),
       image: images.cardboard,
       alt: "Cardboard materials",
-      function: "Cardboard, Packing box",
-      rawMaterial: "Paper",
-      whereToFind: "Bicycle shops, Shopping malls",
-      use: "Heat insulation (keep it dry)",
-      examples: ["Heat insulation made of cardboards"],
+      function: t('essentials.materialsSection.materials.paper.function'),
+      rawMaterial: t('essentials.materialsSection.materials.paper.rawMaterial'),
+      whereToFind: t('essentials.materialsSection.materials.paper.whereToFind'),
+      use: t('essentials.materialsSection.materials.paper.use'),
+      examples: t('essentials.materialsSection.materials.paper.examples', { returnObjects: true }) as string[],
       accent: "border-yellow-500",
     },
     {
-      title: "METALS",
+      key: 'metals',
+      title: t('essentials.materialsSection.materials.metals.title'),
       image: images.metalCans,
       alt: "Metal can materials",
-      function: "Beverage can",
-      rawMaterial: "Aluminum, Iron",
-      whereToFind: "Around pubs, Parks",
-      use: "Facade cladding, Roofing",
-      examples: ["Roof shingles made of beverage cans"],
+      function: t('essentials.materialsSection.materials.metals.function'),
+      rawMaterial: t('essentials.materialsSection.materials.metals.rawMaterial'),
+      whereToFind: t('essentials.materialsSection.materials.metals.whereToFind'),
+      use: t('essentials.materialsSection.materials.metals.use'),
+      examples: t('essentials.materialsSection.materials.metals.examples', { returnObjects: true }) as string[],
       accent: "border-gray-400",
     },
     {
-      title: "TEXTILES",
+      key: 'textiles',
+      title: t('essentials.materialsSection.materials.textiles.title'),
       image: images.tentFabric,
       alt: "Textile materials",
-      function: "Tents",
-      rawMaterial: "Textile",
-      whereToFind: "Festivals' venues, Beaches",
-      use: "Vapor barrier membrane, Windproof membrane, Secondary layer under roof shingles",
-      examples: [
-        "Windproof membrane made of tents",
-        "Vapor barrier made of tents",
-      ],
+      function: t('essentials.materialsSection.materials.textiles.function'),
+      rawMaterial: t('essentials.materialsSection.materials.textiles.rawMaterial'),
+      whereToFind: t('essentials.materialsSection.materials.textiles.whereToFind'),
+      use: t('essentials.materialsSection.materials.textiles.use'),
+      examples: t('essentials.materialsSection.materials.textiles.examples', { returnObjects: true }) as string[],
       accent: "border-lime-500",
     },
     {
-      title: "PLASTICS",
+      key: 'plastics',
+      title: t('essentials.materialsSection.materials.plastics.title'),
       image: images.styrofoam,
       alt: "Plastic materials",
-      function: "Protective packaging",
-      rawMaterial: "Styrofoam",
-      whereToFind: "Electronic stores, Shopping malls",
-      use: "Thermal insulation",
-      examples: [
-        "Thermal insulation made of styrofoam packaging",
-        "Roof shingles made of PVC flooring",
-      ],
+      function: t('essentials.materialsSection.materials.plastics.function'),
+      rawMaterial: t('essentials.materialsSection.materials.plastics.rawMaterial'),
+      whereToFind: t('essentials.materialsSection.materials.plastics.whereToFind'),
+      use: t('essentials.materialsSection.materials.plastics.use'),
+      examples: t('essentials.materialsSection.materials.plastics.examples', { returnObjects: true }) as string[],
       accent: "border-blue-500",
     },
     {
-      title: "WOOD",
+      key: 'wood',
+      title: t('essentials.materialsSection.materials.wood.title'),
       image: images.woodCrates,
       alt: "Wood materials",
-      function: "Provide dry ground",
-      rawMaterial: "Wood",
-      whereToFind: "Market halls, Markets, Grocery stores",
-      use: "Rain screen, Facade, Roof shingles",
-      examples: ["Rain screen facade made of fruit crates"],
+      function: t('essentials.materialsSection.materials.wood.function'),
+      rawMaterial: t('essentials.materialsSection.materials.wood.rawMaterial'),
+      whereToFind: t('essentials.materialsSection.materials.wood.whereToFind'),
+      use: t('essentials.materialsSection.materials.wood.use'),
+      examples: t('essentials.materialsSection.materials.wood.examples', { returnObjects: true }) as string[],
       accent: "border-lime-800",
     },
   ];
@@ -99,13 +101,10 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
       <div className="mb-20 relative">
         <div className="relative z-10">
           <h2 className="text-4xl font-bold mb-10 text-black dark:text-white">
-            USEFUL MATERIALS AROUND US
+            {t('essentials.materialsSection.title')}
           </h2>
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-12 leading-relaxed">
-            Building and making a house more comfortable is not only
-            possible with building materials. In big cities, we can find
-            many packaging materials that are suitable for making our
-            temporary shelter cozier, more comfortable, and safer.
+            {t('essentials.materialsSection.description')}
           </p>
 
           {/* Featured image - same style as Guide */}
@@ -121,7 +120,7 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
           
           {/* Image caption */}
           <p className="text-gray-600 dark:text-gray-400 mt-4 text-center">
-            Self made house from door leaves. Facade is covered with PVC flooring. Built by Lajos (65)
+            {t('essentials.materialsSection.imageCaption')}
           </p>
         </div>
       </div>
@@ -130,10 +129,9 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
       <div className="py-20 bg-white dark:bg-slate-950 transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6 mb-16">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">AVAILABLE MATERIALS & THEIR USES</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">{t('essentials.materialsSection.availableMaterials')}</h2>
             <p className="text-gray-600 dark:text-gray-300 text-lg mx-auto">
-              Navigate your surroundings with resourcefulness. Discover how
-              everyday objects can be transformed into essential shelter components.
+              {t('essentials.materialsSection.availableDescription')}
             </p>
           </div>
 
@@ -141,7 +139,7 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
             {materials.map((material) => (
               <div
-                key={material.title}
+                key={material.key}
                 onClick={() => { setSelectedMaterial(material); setActiveTab("info"); }}
                 className="bg-slate-50 dark:bg-slate-900 rounded-xl shadow-lg dark:shadow-black/30 
                            hover:shadow-xl dark:hover:shadow-black/50 
@@ -169,7 +167,7 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                   <div className="text-lime-600 dark:text-lime-400 font-semibold 
                                hover:text-lime-800 dark:hover:text-lime-300 
                                flex items-center group cursor-pointer text-sm">
-                    <span>View Details</span>
+                    <span>{t('essentials.materialsSection.viewDetails')}</span>
                   </div>
                 </div>
               </div>
@@ -183,10 +181,10 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">
-              HOW TO REPURPOSE MATERIALS
+              {t('essentials.materialsSection.repurpose.title')}
             </h2>
             <p className="text-gray-600 dark:text-gray-300 text-lg mx-auto">
-              Transform discarded materials into essential shelter components.
+              {t('essentials.materialsSection.repurpose.description')}
             </p>
           </div>
 
@@ -206,24 +204,18 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                 <h3 className="text-2xl font-bold mb-3 text-black dark:text-white 
                                group-hover:text-lime-400 dark:group-hover:text-lime-400 
                                transition-colors">
-                  Structural Elements
+                  {t('essentials.materialsSection.repurpose.structural.title')}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-lg mb-6 leading-relaxed">
-                  Materials like wood crates and beverage cans can be repurposed for walls, roof, and foundational elements.
+                  {t('essentials.materialsSection.repurpose.structural.description')}
                 </p>
                 <ul className="text-gray-600 dark:text-gray-400 space-y-2">
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-lime-500 rounded-full mr-3"></div>
-                    Roof shingles from cans
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-lime-500 rounded-full mr-3"></div>
-                    Rain screens from crates
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-lime-500 rounded-full mr-3"></div>
-                    Wall frames from scrap wood
-                  </li>
+                  {(t('essentials.materialsSection.repurpose.structural.items', { returnObjects: true }) as string[]).map((item, index) => (
+                    <li key={index} className="flex items-center">
+                      <div className="w-1.5 h-1.5 bg-lime-500 rounded-full mr-3"></div>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -242,24 +234,18 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                 <h3 className="text-2xl font-bold mb-3 text-black dark:text-white 
                                group-hover:text-lime-400 dark:group-hover:text-lime-400 
                                transition-colors">
-                  Insulation & Protection
+                  {t('essentials.materialsSection.repurpose.insulation.title')}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-lg mb-6 leading-relaxed">
-                  Soft and porous materials can provide crucial insulation against cold and heat loss.
+                  {t('essentials.materialsSection.repurpose.insulation.description')}
                 </p>
                 <ul className="text-gray-600 dark:text-gray-400 space-y-2">
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-lime-500 rounded-full mr-3"></div>
-                    Heat insulation from cardboard
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-lime-500 rounded-full mr-3"></div>
-                    Thermal protection with styrofoam
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-lime-500 rounded-full mr-3"></div>
-                    Water barriers using plastic sheets
-                  </li>
+                  {(t('essentials.materialsSection.repurpose.insulation.items', { returnObjects: true }) as string[]).map((item, index) => (
+                    <li key={index} className="flex items-center">
+                      <div className="w-1.5 h-1.5 bg-lime-500 rounded-full mr-3"></div>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -278,24 +264,18 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                 <h3 className="text-2xl font-bold mb-3 text-black dark:text-white 
                                group-hover:text-lime-400 dark:group-hover:text-lime-400 
                                transition-colors">
-                  Weather Protection
+                  {t('essentials.materialsSection.repurpose.weather.title')}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-lg mb-6 leading-relaxed">
-                  Securing shelter against wind, rain, and moisture requires specialized barriers.
+                  {t('essentials.materialsSection.repurpose.weather.description')}
                 </p>
                 <ul className="text-gray-600 dark:text-gray-400 space-y-2">
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-lime-500 rounded-full mr-3"></div>
-                    Windproof membranes from tents
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-lime-500 rounded-full mr-3"></div>
-                    Vapor barriers from plastic sheets
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-lime-500 rounded-full mr-3"></div>
-                    Waterproofing from tarpaulins
-                  </li>
+                  {(t('essentials.materialsSection.repurpose.weather.items', { returnObjects: true }) as string[]).map((item, index) => (
+                    <li key={index} className="flex items-center">
+                      <div className="w-1.5 h-1.5 bg-lime-500 rounded-full mr-3"></div>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -307,12 +287,10 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
       <div className="py-20 bg-white dark:bg-slate-950 transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4 text-black dark:text-white">
-            Look Around with New Eyes
+            {t('essentials.materialsSection.lookAround.title')}
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
-            Very often, we don't even think that a carpet can be used for more than walking on, 
-            or that beverage cans could also be useful if there are a lot of them. Remember to 
-            see the potential in everyday discarded items.
+            {t('essentials.materialsSection.lookAround.description')}
           </p>
           <div className="h-1 w-28 bg-gradient-to-r from-yellow-500 to-lime-600 mx-auto"></div>
         </div>
@@ -366,7 +344,7 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                       }`}
                       onClick={() => setActiveTab("info")}
                     >
-                      Information
+                      {t('essentials.materialsSection.modal.information')}
                     </button>
                     <button
                       className={`py-3 px-6 font-medium focus:outline-none transition-colors ${
@@ -376,7 +354,7 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                       }`}
                       onClick={() => setActiveTab("examples")}
                     >
-                      Examples
+                      {t('essentials.materialsSection.modal.examples')}
                     </button>
                   </div>
 
@@ -385,13 +363,13 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
                         <div>
                           <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">
-                            Raw material
+                            {t('essentials.materialsSection.modal.rawMaterial')}
                           </h4>
                           <p className="text-gray-900 dark:text-gray-200">{selectedMaterial.rawMaterial}</p>
                         </div>
                         <div>
                           <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">
-                            Where to find
+                            {t('essentials.materialsSection.modal.whereToFind')}
                           </h4>
                           <p className="text-gray-900 dark:text-gray-200">{selectedMaterial.whereToFind}</p>
                         </div>
@@ -399,14 +377,14 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
 
                       <div>
                         <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">
-                          Use in shelter
+                          {t('essentials.materialsSection.modal.useInShelter')}
                         </h4>
                         <p className="text-gray-900 dark:text-gray-200">{selectedMaterial.use}</p>
                       </div>
 
                       <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
                         <p className="text-gray-700 dark:text-gray-300 text-base">
-                          This material can be found in common urban environments and repurposed with minimal tools.
+                          {t('essentials.materialsSection.modal.infoNote')}
                         </p>
                       </div>
                     </div>
@@ -415,7 +393,7 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
                   {activeTab === "examples" && (
                     <div>
                       <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">
-                        Examples of use
+                        {t('essentials.materialsSection.modal.examplesOfUse')}
                       </h4>
                       <ul className="space-y-4">
                         {selectedMaterial.examples.map((example, i) => (
@@ -427,7 +405,7 @@ const MaterialsSection: React.FC<MaterialsSectionProps> = ({ images }) => {
 
                       <div className="mt-8 p-5 bg-gradient-to-r from-gray-50 dark:from-gray-800 to-white dark:to-gray-700 border border-gray-100 dark:border-gray-600 rounded-lg">
                         <p className="text-gray-700 dark:text-gray-300 text-base">
-                          For optimal results, clean and prepare materials before repurposing. Remove labels, wash surfaces, and test for structural integrity.
+                          {t('essentials.materialsSection.modal.examplesNote')}
                         </p>
                       </div>
                     </div>
