@@ -1,14 +1,7 @@
 {
   "buttons": {
-    "learnMore": "Learn More",
-    "viewDetails": "View Details",
-    "getStarted": "Get Started",
-    "close": "Close"
-  },
-  "common": {
-    "loading": "Loading...",
-    "error": "Something went wrong",
-    "materials": "Materials",
-    "techniques": "Techniques"
+    "close": "Close",
+    "submit": "Submit",
+    "cancel": "Cancel"
   }
 }

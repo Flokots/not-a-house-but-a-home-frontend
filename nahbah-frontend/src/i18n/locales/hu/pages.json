@@ -12,6 +12,7 @@
     }
   },
   "guide": {
+    "backgroundText": "Útmutató",
     "title": "Jobb Otthonok Építése",
     "description": "Ezt az útmutatót azért készítettük, hogy bárki számára lehetővé tegyük biztonságosabb, tartósabb lakóterek létrehozását elérhető anyagok és technikák segítségével. Akár saját menedéket építesz, másoknak segítesz, vagy csak felfedezed a lehetőségeket, itt vagyunk, hogy támogassuk az utadat.",
     "findYourPath": "Találd Meg Az Utad",
@@ -33,6 +34,13 @@
       "action": "Csatlakozz Erőfeszítéseinkhez"
     }
   },
+  "essentials": {
+    "backgroundText": "Alapok",
+    "title": "Mire van szüksége egy otthonnak?",
+    "description": "Tanuld meg, mi tesz egy menedéket otthonná, az időjárás elleni védelemtől kezdve a körülötted található anyagok megtalálásáig és újrahasznosításáig.",
+    "materials": "Anyagok",
+    "weatherProtection": "Időjárás Elleni Védelem"
+  },
   "about": {
     "hero": {
       "backgroundText": "Rólunk",
@@ -43,4 +51,4 @@
       "learnMoreBtn": "Tudj meg többet"
     }
   }
-}
+} 

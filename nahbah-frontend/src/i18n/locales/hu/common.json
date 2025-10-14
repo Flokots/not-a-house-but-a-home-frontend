@@ -1,9 +1,8 @@
 {
   "buttons": {
-    "learnMore": "Tudj meg többet",
-    "viewDetails": "Részletek megtekintése",
-    "getStarted": "Kezdj bele",
-    "close": "Bezárás"
+    "close": "Bezárás",
+    "submit": "Küldés",
+    "cancel": "Mégse"
   },
   "common": {
     "loading": "Betöltés...",

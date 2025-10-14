@@ -41,7 +41,7 @@ i18n
       caches: ['localStorage'],
     },
 
-    debug: false,
+    debug: true, // Enable debug to see what's happening
     ns: ['common', 'components', 'pages'],
     
     // Add missing key handler

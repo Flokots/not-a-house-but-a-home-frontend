@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 import Navbar from "@/components/Navbar";
 import MaterialsSection from "@/components/essentials/MaterialsSection";
 import WeatherProtection from "@/components/essentials/WeatherProtection";
@@ -25,6 +26,7 @@ import styrofoamSheets from "@/assets/styrofoam_sheets.png";
 const Essentials = () => {
   const [loaded, setLoaded] = useState(false);
   const [activeSection, setActiveSection] = useState<'materials' | 'weather'>('materials');
+  const { t } = useTranslation('pages');
 
   useEffect(() => {
     setLoaded(true);
@@ -68,7 +70,7 @@ const Essentials = () => {
         {/* Background "Essentials" text - matching other pages exactly */}
         <div className="absolute top-22 left-0 font-semibold text-9xl 
                         text-black opacity-10 dark:text-white/14 dark:opacity-100">
-          Essentials
+          {t('essentials.backgroundText')}
         </div>
 
         <div
@@ -77,10 +79,10 @@ const Essentials = () => {
           } relative z-10`}
         >
           <h1 className="text-5xl futura-bold mb-4 mt-0 ml-22 text-black dark:text-white">
-            What does a home need?
+            {t('essentials.title')}
           </h1>
           <p className="text-lg mb-8 mt-14 text-black dark:text-gray-200">
-            Learn what makes a shelter into a home, from weather protection to finding and repurposing materials around you.
+            {t('essentials.description')}
           </p>
 
           {/* Enhanced underline navigation */}
@@ -93,7 +95,7 @@ const Essentials = () => {
                   : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
               }`}
             >
-              Materials
+              {t('essentials.materials')}
               <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#F9D90B] to-[#98F90F] transition-all duration-300 ${
                 activeSection === 'materials' ? 'w-full' : 'w-0 group-hover:w-full'
               }`}></div>
@@ -106,7 +108,7 @@ const Essentials = () => {
                   : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
               }`}
             >
-              Weather Protection
+              {t('essentials.weatherProtection')}
               <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#F9D90B] to-[#98F90F] transition-all duration-300 ${
                 activeSection === 'weather' ? 'w-full' : 'w-0 group-hover:w-full'
               }`}></div>

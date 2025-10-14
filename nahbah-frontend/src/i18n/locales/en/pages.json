@@ -12,6 +12,7 @@
     }
   },
   "guide": {
+    "backgroundText": "Guide",
     "title": "Building Better Homes",
     "description": "We've designed this guide to help anyone create safer, more durable living spaces using accessible materials and techniques. Whether you're building your own shelter, helping others, or just exploring possibilities, we're here to support your journey.",
     "findYourPath": "Find Your Path",
@@ -33,6 +34,13 @@
       "action": "Join Our Efforts"
     }
   },
+  "essentials": {
+    "backgroundText": "Essentials",
+    "title": "What does a home need?",
+    "description": "Learn what makes a shelter into a home, from weather protection to finding and repurposing materials around you.",
+    "materials": "Materials",
+    "weatherProtection": "Weather Protection"
+  },
   "about": {
     "hero": {
       "backgroundText": "About",
@@ -41,36 +49,6 @@
       "paragraph1": "Housing is a fundamental right, yet many people are forced to create their own shelters outside traditional systems. This web application is a resource for those who build homes from found materials, as well as for advocates and architects working in solidarity with unhoused communities.",
       "paragraph2": "A home is more than a shelter—it's a place of stability, privacy, and connection. Through design knowledge, creativity, and shared solutions, we support self-built housing as a pathway to dignity and security.",
       "learnMoreBtn": "Learn More"
-    },
-    "mission": {
-      "title": "OUR MISSION",
-      "paragraph1": "As members of the Research Group for Solidarity in Architecture, we believe that architects and architecture students can play a role in alleviating social problems. On this site, we want to spread basic knowledge that will help create a safer environment. A built environment that can replace the inhumane world of night shelters and provide temporary shelter for those who find it difficult to survive on their own.",
-      "paragraph2": "We encourage all architects and students to look at the world around them with a slightly different perspective. Discover the possibilities of the freely available materials around us. Let's help build temporary shelters protected from wind, cold, and rain together."
-    },
-    "approach": {
-      "title": "Our Approach",
-      "paragraph1": "We combine architectural expertise with community knowledge to create solutions that are practical, sustainable, and empowering. Our resources are developed in collaboration with people who have direct experience with self-built housing.",
-      "paragraph2": "Every design, guide, and material suggestion on this platform is accessible, and adaptable to different circumstances and resource availability and many of them are tested."
-    },
-    "getInvolved": {
-      "title": "Get Involved",
-      "paragraph1": "Whether you're looking to improve your own shelter, support someone else's housing journey, or advocate for housing justice, there are many ways to participate in our community.",
-      "paragraph2": "Browse our resource library, contribute design ideas, share success stories, or volunteer your skills. Together, we can transform the way we think about housing and create more pathways to dignified homes for all."
-    },
-    "impact": {
-      "title": "OUR IMPACT",
-      "paragraph1": "This web application is a resource for those who build homes from found materials, as well as for advocates and architects working in solidarity with unhoused communities.",
-      "paragraph2": "A home is more than a shelter—it's a place of stability, privacy, and connection. Through our resources and community, we're helping people create dignified living spaces regardless of their circumstances.",
-      "stats": {
-        "solutions": "Housing Solutions",
-        "communities": "Communities Served",
-        "people": "People Helped"
-      }
-    },
-    "cta": {
-      "title": "Ready to Make a Difference?",
-      "description": "Whether you're building your own home, supporting others, or advocating for housing justice, we invite you to join our community and be part of the solution.",
-      "button": "Get Started Today"
     }
   }
 }
