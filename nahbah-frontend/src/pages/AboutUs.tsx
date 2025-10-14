@@ -7,7 +7,7 @@ import homeInteriorImage from "@/assets/home_interior.png";
 
 const AboutUs = () => {
   const [loaded, setLoaded] = useState(false);
-  const { t } = useTranslation('pages');
+  const { t } = useTranslation('about'); // Changed from 'pages' to 'about'
 
   useEffect(() => {
     setLoaded(true);
@@ -20,7 +20,7 @@ const AboutUs = () => {
       <div className="max-w-7xl mx-auto px-4 pt-32 pb-20 flex flex-col md:flex-row gap-8 relative top-10">
         {/* Background "About" text */}
         <div className="absolute top-17 left-0 font-semibold text-9xl futura-bold text-black opacity-10 dark:text-white/14 dark:opacity-100">
-          {t('about.hero.backgroundText')}
+          {t('hero.backgroundText')}
         </div>
 
         {/* Left Content - Text */}
@@ -30,16 +30,16 @@ const AboutUs = () => {
           }`}
         >
           <h1 className="text-4xl futura-bold mb-4 mt-0 ml-22 text-black dark:text-white">
-            {t('about.hero.title')}
+            {t('hero.title')}
           </h1>
           <p className="text-lg font-semibold mb-6 mt-12 text-black dark:text-gray-200">
-            {t('about.hero.subtitle')}
+            {t('hero.subtitle')}
           </p>
           <p className="text-lg mb-6 text-black dark:text-gray-300">
-            {t('about.hero.paragraph1')}
+            {t('hero.paragraph1')}
           </p>
           <p className="text-lg mb-8 text-black dark:text-gray-300">
-            {t('about.hero.paragraph2')}
+            {t('hero.paragraph2')}
           </p>
           <button
             onClick={() => {
@@ -53,7 +53,7 @@ const AboutUs = () => {
                        border border-transparent dark:border-gray-700"
           >
             <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold uppercase">
-              {t('about.hero.learnMoreBtn')}
+              {t('hero.learnMoreBtn')}
             </span>
           </button>
         </div>
@@ -93,13 +93,13 @@ const AboutUs = () => {
 
             <div className="md:w-3/5">
               <h2 className="text-4xl font-bold mb-6 text-black dark:text-white">
-                {t('about.mission.title')}
+                {t('mission.title')}
               </h2>
               <p className="mb-4 text-lg font-futura text-black dark:text-gray-200">
-                {t('about.mission.paragraph1')}
+                {t('mission.paragraph1')}
               </p>
               <p className="mb-4 text-lg text-black dark:text-gray-300">
-                {t('about.mission.paragraph2')}
+                {t('mission.paragraph2')}
               </p>
             </div>
           </div>
@@ -107,25 +107,25 @@ const AboutUs = () => {
           <div className="grid md:grid-cols-2 gap-8 mt-12">
             <div className="bg-lime-200 dark:bg-lime-900/30 p-6 rounded-lg transition-all duration-300 hover:scale-[1.02] border border-transparent dark:border-lime-800/30">
               <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-lime-200">
-                {t('about.approach.title')}
+                {t('approach.title')}
               </h3>
               <p className="mb-4 text-lg text-gray-700 dark:text-gray-300">
-                {t('about.approach.paragraph1')}
+                {t('approach.paragraph1')}
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                {t('about.approach.paragraph2')}
+                {t('approach.paragraph2')}
               </p>
             </div>
 
             <div className="bg-yellow-200 dark:bg-yellow-900/30 bg-opacity-30 p-6 rounded-lg transition-all duration-300 hover:scale-[1.02] border border-transparent dark:border-yellow-800/30">
               <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-yellow-200">
-                {t('about.getInvolved.title')}
+                {t('getInvolved.title')}
               </h3>
               <p className="mb-4 text-lg text-gray-700 dark:text-gray-300">
-                {t('about.getInvolved.paragraph1')}
+                {t('getInvolved.paragraph1')}
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                {t('about.getInvolved.paragraph2')}
+                {t('getInvolved.paragraph2')}
               </p>
             </div>
           </div>
@@ -139,7 +139,7 @@ const AboutUs = () => {
             {/* Header */}
             <div className="h-24 flex items-center px-8">
               <h2 className="text-4xl font-bold text-black dark:text-white">
-                {t('about.impact.title')}
+                {t('impact.title')}
               </h2>
             </div>
 
@@ -149,10 +149,10 @@ const AboutUs = () => {
                 {/* Left column - Text and stats */}
                 <div>
                   <p className="mb-6 text-lg text-black dark:text-gray-200">
-                    {t('about.impact.paragraph1')}
+                    {t('impact.paragraph1')}
                   </p>
                   <p className="mb-8 text-lg text-black dark:text-gray-300">
-                    {t('about.impact.paragraph2')}
+                    {t('impact.paragraph2')}
                   </p>
 
                   {/* Stats */}
@@ -162,7 +162,7 @@ const AboutUs = () => {
                         100+
                       </h4>
                       <p className="text-sm text-lime-800 dark:text-lime-300">
-                        {t('about.impact.stats.solutions')}
+                        {t('impact.stats.solutions')}
                       </p>
                     </div>
                     <div className="bg-yellow-100 dark:bg-yellow-900/40 py-6 px-4 rounded-lg transform transition-transform hover:scale-105 border border-transparent dark:border-yellow-800/30">
@@ -170,7 +170,7 @@ const AboutUs = () => {
                         50+
                       </h4>
                       <p className="text-sm text-yellow-800 dark:text-yellow-300">
-                        {t('about.impact.stats.communities')}
+                        {t('impact.stats.communities')}
                       </p>
                     </div>
                     <div className="bg-lime-100 dark:bg-lime-900/40 py-6 px-4 rounded-lg transform transition-transform hover:scale-105 border border-transparent dark:border-lime-800/30">
@@ -178,7 +178,7 @@ const AboutUs = () => {
                         1000+
                       </h4>
                       <p className="text-sm text-lime-800 dark:text-lime-300">
-                        {t('about.impact.stats.people')}
+                        {t('impact.stats.people')}
                       </p>
                     </div>
                   </div>
@@ -214,10 +214,10 @@ const AboutUs = () => {
       <div className="max-w-7xl mx-auto px-4 py-12 mb-20 relative">
         <div className="rounded-2xl p-8 md:p-12 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
-            {t('about.cta.title')}
+            {t('cta.title')}
           </h2>
           <p className="text-lg mb-8 max-w-3xl mx-auto text-black dark:text-gray-300">
-            {t('about.cta.description')}
+            {t('cta.description')}
           </p>
           <button
             onClick={() => (window.location.href = "/guide")}
@@ -226,7 +226,7 @@ const AboutUs = () => {
                        border border-transparent dark:border-gray-700"
           >
             <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold text-lg uppercase">
-              {t('about.cta.button')}
+              {t('cta.button')}
             </span>
           </button>
         </div>

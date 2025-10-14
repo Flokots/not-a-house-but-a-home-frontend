@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "backgroundText": "Építési Útmutató",
+    "titlePart1": "Lépésről Lépésre",
+    "titleHighlight": "Építési Útmutató",
+    "description": "Tanulj meg alapvető építési technikákat és biztonsági gyakorlatokat talált anyagokkal való építéshez.",
+    "imageAlt": "Építési Útmutató"
+  },
+  "sections": {
+    "planning": "Építés Tervezése",
+    "materials": "Anyag Értékelés",
+    "techniques": "Építési Technikák",
+    "safety": "Biztonsági Irányelvek"
+  },
+  "loading": "Útmutató tartalom betöltése...",
+  "errors": {
+    "loadFailed": "Nem sikerült betölteni az útmutató tartalmát. Kérlek próbáld újra.",
+    "tryAgain": "Próbáld Újra"
+  }
+}

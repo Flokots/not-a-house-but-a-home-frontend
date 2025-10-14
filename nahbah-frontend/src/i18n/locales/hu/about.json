@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "backgroundText": "Rólunk",
+    "title": "Az Otthon és Menedék Újragondolása",
+    "subtitle": "Nem ház, hanem otthon – Hiszünk az önépítésű terek erejében, hogy stabilitást és méltóságot teremtsenek. Célunk támogatni, inspirálni és felhatalmazni az embereket, hogy olyan otthonokat építsenek, amelyek valóban otthonnak érezhetők.",
+    "paragraph1": "A lakhatás alapvető jog, mégis sokan kényszerülnek arra, hogy saját menedéküket teremtsék meg a hagyományos rendszereken kívül. Ez a webalkalmazás forrást nyújt azoknak, akik talált anyagokból építenek otthonokat, valamint a hajléktalan közösségekkel szolidáris támogatóknak és építészeknek.",
+    "paragraph2": "Az otthon több mint menedék—ez a stabilitás, a magánélet és a kapcsolódás helye. Tervezési tudás, kreativitás és közös megoldások révén támogatjuk az önépítésű lakhatást mint a méltóság és biztonság útját.",
+    "learnMoreBtn": "Tudj Meg Többet",
+    "imageAlt": "Önépítésű lakóterület"
+  },
+  "sections": {
+    "mission": "Küldetésünk",
+    "team": "Csapatunk",
+    "impact": "Hatásunk",
+    "contact": "Kapcsolat"
+  },
+  "mission": {
+    "title": "Küldetésünk",
+    "paragraph1": "A lakhatás alapvető jog, mégis sokan kényszerülnek arra, hogy saját menedéküket teremtsék meg a hagyományos rendszereken kívül. Tervezési tudás, kreativitás és közös megoldások révén támogatjuk az önépítésű lakhatást mint a méltóság és biztonság útját.",
+    "paragraph2": "Nem ház, hanem otthon – Hiszünk az önépítésű terek erejében, hogy stabilitást és méltóságot teremtsenek. Célunk támogatni, inspirálni és felhatalmazni az embereket, hogy olyan otthonokat építsenek, amelyek valóban otthonnak érezhetők. Akár inspirációt, útmutatást vagy közreműködési lehetőséget keresel, ez a platform itt van, hogy segítsen."
+  },
+  "approach": {
+    "title": "Megközelítésünk",
+    "paragraph1": "Az építészeti szakértelmet a közösségi tudással ötvözve olyan megoldásokat alkotunk, amelyek gyakorlatiak, fenntarthatók és felhatalmazók. Forrásainkat olyan emberekkel együttműködve fejlesztjük, akiknek közvetlen tapasztalatuk van az önépítésű lakhatással kapcsolatban.",
+    "paragraph2": "A platform minden terve, útmutatója és anyagajánlása tesztelt, hozzáférhető és különböző körülményekhez és erőforrás-elérhetőséghez alkalmazkodó."
+  },
+  "getInvolved": {
+    "title": "Kapcsolódj Be",
+    "paragraph1": "Akár saját menedéked javítását tervezed, mások lakhatási útját támogatod, vagy a lakhatási igazságosságért küzdesz, sokféleképpen részt vehetsz közösségünkben.",
+    "paragraph2": "Böngészd forráskönyvtárunkat, járulj hozzá tervezési ötletekkel, oszd meg sikertörténeteket, vagy ajánld fel készségeidet. Együtt átalakíthatjuk a lakhatásról való gondolkodásunkat és több utat teremthetünk mindenkinek a méltóságteljes otthonhoz."
+  },
+  "impact": {
+    "title": "Hatásunk",
+    "paragraph1": "Ez a webalkalmazás forrást nyújt azoknak, akik talált anyagokból építenek otthonokat, valamint a hajléktalan közösségekkel szolidáris támogatóknak és építészeknek.",
+    "paragraph2": "Az otthon több mint menedék—ez a stabilitás, a magánélet és a kapcsolódás helye. Forrásaink és közösségünk révén segítünk az embereknek méltóságteljes lakótereket létrehozni, körülményeiktől függetlenül.",
+    "stats": {
+      "solutions": "Lakhatási Megoldás",
+      "communities": "Kiszolgált Közösség",
+      "people": "Megsegített Ember"
+    }
+  },
+  "cta": {
+    "title": "Készen Állsz a Változásra?",
+    "description": "Akár saját otthonod építed, másokat támogatsz, vagy a lakhatási igazságosságért küzdesz, meghívunk, hogy csatlakozz közösségünkhöz és légy része a megoldásnak.",
+    "button": "Kezdj El Ma"
+  },
+  "contact": {
+    "title": "Kapcsolat",
+    "description": "Kérdéseid vannak vagy szeretnél közreműködni? Szívesen hallunk felőled.",
+    "email": "Email",
+    "phone": "Telefon",
+    "address": "Cím"
+  },
+  "loading": "Tartalom betöltése...",
+  "errors": {
+    "loadFailed": "Nem sikerült betölteni a tartalmat. Kérlek próbáld újra.",
+    "tryAgain": "Próbáld Újra"
+  }
+}

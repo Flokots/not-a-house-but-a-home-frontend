@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "imageAlt": "Kreatív lakásbelső",
+    "titlePart1": "ÚTMUTATÓ",
+    "titleHighlight": "KREATÍVOKNAK", 
+    "concept1": "ÉPÍTÉSZET",
+    "concept2": "KREATIVITÁS",
+    "description": "Az otthon több mint puszta menedék—ez a stabilitás, a magánélet és a közösség helye. Ez a kezdeményezés támogatja azokat, akik nehéz körülmények között építik saját otthonukat, platformot biztosítva a tervek megosztásához.",
+    "learnMoreBtn": "TUDJ MEG TÖBBET",
+    "viewDesignsBtn": "TERVEK MEGTEKINTÉSE"
+  },
+  "features": {
+    "title": "Mit Kínálunk",
+    "design": {
+      "title": "Tervtár",
+      "description": "Hozzáférés bevált menedék tervekhez, különböző anyagokra és körülményekre optimalizálva."
+    },
+    "guide": {
+      "title": "Építési Útmutató",
+      "description": "Lépésről lépésre utasítások biztonságos és hatékony építési technikákhoz."
+    },
+    "community": {
+      "title": "Közösségi Támogatás",
+      "description": "Kapcsolódj másokhoz, akik tudást és forrásokat osztanak meg."
+    }
+  },
+  "cta": {
+    "title": "Készen Állsz a Kezdésre?",
+    "description": "Fedezd fel forrásainkat és kezdd el építési utazásodat még ma.",
+    "button": "TERVEK FELFEDEZÉSE"
+  }
+}

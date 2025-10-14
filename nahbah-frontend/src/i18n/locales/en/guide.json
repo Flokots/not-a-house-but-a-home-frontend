@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "backgroundText": "Construction Guide",
+    "titlePart1": "Step-by-Step",
+    "titleHighlight": "Building Guide",
+    "description": "Learn essential construction techniques and safety practices for building with found materials.",
+    "imageAlt": "Construction Guide"
+  },
+  "sections": {
+    "planning": "Planning Your Build",
+    "materials": "Material Assessment",
+    "techniques": "Construction Techniques",
+    "safety": "Safety Guidelines"
+  },
+  "loading": "Loading guide content...",
+  "errors": {
+    "loadFailed": "Failed to load guide content. Please try again.",
+    "tryAgain": "Try Again"
+  }
+}

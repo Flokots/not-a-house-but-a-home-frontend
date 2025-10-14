@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "backgroundText": "Essentials",
+    "titlePart1": "Essential",
+    "titleHighlight": "Resources",
+    "description": "Access critical resources, tools, and information for emergency shelter construction.",
+    "imageAlt": "Essential Resources"
+  },
+  "categories": {
+    "tools": "Tools",
+    "materials": "Materials",
+    "emergency": "Emergency Info",
+    "contacts": "Contacts"
+  },
+  "loading": "Loading essential resources...",
+  "errors": {
+    "loadFailed": "Failed to load resources. Please try again.",
+    "tryAgain": "Try Again"
+  }
+}

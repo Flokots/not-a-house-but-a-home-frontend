@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "imageAlt": "Creative home interior",
+    "titlePart1": "A GUIDE FOR",
+    "titleHighlight": "CREATIVES",
+    "concept1": "ARCHITECTURE",
+    "concept2": "CREATIVITY",
+    "description": "A home is more than just shelter—it's a place of stability, privacy, and community. This initiative supports those creating their own homes in difficult circumstances by providing a platform for sharing designs.",
+    "learnMoreBtn": "LEARN MORE",
+    "viewDesignsBtn": "VIEW DESIGNS"
+  },
+  "features": {
+    "title": "What We Offer",
+    "design": {
+      "title": "Design Library",
+      "description": "Access proven shelter designs optimized for different materials and conditions."
+    },
+    "guide": {
+      "title": "Construction Guide",
+      "description": "Step-by-step instructions for safe and effective building techniques."
+    },
+    "community": {
+      "title": "Community Support",
+      "description": "Connect with others sharing knowledge and resources."
+    }
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "description": "Explore our resources and begin your building journey today.",
+    "button": "EXPLORE DESIGNS"
+  }
+}

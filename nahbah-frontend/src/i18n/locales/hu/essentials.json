@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "backgroundText": "Alapvető Dolgok",
+    "titlePart1": "Alapvető",
+    "titleHighlight": "Források",
+    "description": "Hozzáférés kritikus forrásokhoz, eszközökhöz és információkhoz vészhelyzeti menedék építéshez.",
+    "imageAlt": "Alapvető Források"
+  },
+  "categories": {
+    "tools": "Eszközök",
+    "materials": "Anyagok",
+    "emergency": "Vészhelyzeti Info",
+    "contacts": "Kapcsolatok"
+  },
+  "loading": "Alapvető források betöltése...",
+  "errors": {
+    "loadFailed": "Nem sikerült betölteni a forrásokat. Kérlek próbáld újra.",
+    "tryAgain": "Próbáld Újra"
+  }
+}

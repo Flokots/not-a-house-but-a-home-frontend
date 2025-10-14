@@ -6,21 +6,42 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import enCommon from './locales/en/common.json';
 import enComponents from './locales/en/components.json';
 import enPages from './locales/en/pages.json';
+import enHome from './locales/en/home.json';
+import enGuide from './locales/en/guide.json';
+import enEssentials from './locales/en/essentials.json';
+import enAbout from './locales/en/about.json';
+import enDesignsLibrary from './locales/en/designsLibrary.json';
 
 import huCommon from './locales/hu/common.json';
 import huComponents from './locales/hu/components.json';
 import huPages from './locales/hu/pages.json';
+import huHome from './locales/hu/home.json';
+import huGuide from './locales/hu/guide.json';
+import huEssentials from './locales/hu/essentials.json';
+import huAbout from './locales/hu/about.json';
+import huDesignsLibrary from './locales/hu/designsLibrary.json';
+
 
 const resources = {
   en: {
     common: enCommon,
     components: enComponents,
     pages: enPages,
+    home: enHome,
+    guide: enGuide,
+    essentials: enEssentials,
+    about: enAbout,
+    designsLibrary: enDesignsLibrary,
   },
   hu: {
     common: huCommon,
     components: huComponents,
     pages: huPages,
+    home: huHome,
+    guide: huGuide,
+    essentials: huEssentials,
+    about: huAbout,
+    designsLibrary: huDesignsLibrary,
   },
 };
 
