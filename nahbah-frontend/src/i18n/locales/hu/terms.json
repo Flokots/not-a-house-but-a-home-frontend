@@ -1,0 +1,130 @@
+{
+  "title": "Általános Szerződési Feltételek",
+  "close": "Bezárás",
+  "sections": {
+    "acceptance": {
+      "title": "1. Feltételek Elfogadása",
+      "content": "A 'Nem ház, hanem otthon' (\"a Platform\") elérésekor és használatakor Ön vállalja, hogy betartja ezeket az Általános Szerződési Feltételeket. Ha nem ért egyet ezekkel a feltételekkel, kérjük, ne használja ezt a platformot."
+    },
+    "purpose": {
+      "title": "2. Cél és Küldetés",
+      "content": "Ez a platform az egyének és közösségek támogatására szolgál méltóságteljes, önépítésű lakhatási megoldások létrehozásában. Forrásokat, terveket és tudást biztosítunk, hogy segítsünk az embereknek biztonságos és fenntartható menedékeket építeni elérhető anyagok felhasználásával."
+    },
+    "contentSubmission": {
+      "title": "3. Tartalom Beküldés és Tulajdonjogok",
+      "grantOfRights": {
+        "title": "3.1 Jogok Biztosítása",
+        "content": "Bármilyen terv, dokumentum, kép vagy egyéb tartalom (\"Beküldött Tartalom\") Platformra történő beküldésével Ön örök, világszerte érvényes, jogdíjmentes, nem kizárólagos és átruházható licencet biztosít a 'Nem ház, hanem otthon' és üzemeltetői számára a Beküldött Tartalom használatára, reprodukálására, terjesztésére, megjelenítésére, módosítására, adaptálására és származékos művek készítésére."
+      },
+      "distributionRights": {
+        "title": "3.2 Teljes Terjesztési Jogok",
+        "intro": "Kifejezetten jogot biztosít nekünk a következőkre:",
+        "items": [
+          "Tervei szabad terjesztése bárkinek, aki lakhatási megoldásokra szorul",
+          "Tervei nyomtatása és megosztása fizikai és digitális formátumban",
+          "Tartalmak fordítása és adaptálása különböző közösségek és kontextusok számára",
+          "Tervek beillesztése oktatási anyagokba és támogató forrásokba",
+          "Tervek módosítása a biztonság, hozzáférhetőség vagy funkcionalitás javítása érdekében"
+        ]
+      },
+      "humanitarian": {
+        "title": "3.3 Humanitárius Cél",
+        "content": "Ezek a széles körű jogok elengedhetetlenek a kiszolgáltatott közösségek támogatására irányuló küldetésünkhöz. Tartalom beküldésével Ön tudomásul veszi, hogy terveit felhasználhatjuk hajléktalanságot, kitelepítést vagy lakhatási bizonytalanságot átélő emberek világszerte történő segítésére."
+      }
+    },
+    "attribution": {
+      "title": "4. Hivatkozás és Névtelen Hozzájárulások",
+      "namedContributions": {
+        "title": "4.1 Nevesített Hozzájárulások",
+        "content": "Nevesített hozzájárulások esetén elkötelezettek vagyunk a közreműködők elismerése iránt beküldéseikért. Amikor terve megjelenik vagy terjesztésre kerül, ésszerű erőfeszítéseket teszünk a beküldéskor megadott név feltüntetésére."
+      },
+      "anonymousContributions": {
+        "title": "4.2 Névtelen Hozzájárulások",
+        "content": "A közreműködők választhatják a névtelen beküldést különböző okokból, beleértve a biztonságot, magánéletet vagy személyes preferenciát. A névtelen beküldések ugyanolyan értékesek küldetésünk szempontjából, és ugyanazzal a gondossággal és áttekintési folyamattal kezeljük őket, mint a nevesített hozzájárulásokat."
+      },
+      "anonymousProcess": {
+        "title": "4.3 Névtelen Hozzájárulás Folyamata",
+        "intro": "Névtelen hozzájárulások beküldhetők:",
+        "items": [
+          "Standard beküldési űrlapunkon a \"Névtelen Beküldés\" kiválasztásával",
+          "Harmadik fél biztonságos beküldési szolgáltatásain keresztül, ha elérhetőek",
+          "Közösségi közvetítőkön keresztül, akik névtelen közreműködők nevében küldhetnek be",
+          "Partner szervezetek fizikai leadási pontjain"
+        ]
+      },
+      "anonymousAttribution": {
+        "title": "4.4 Névtelen Hivatkozás",
+        "content": "A névtelen hozzájárulások \"Névtelen Közreműködő\" vagy hasonló megjelöléssel lesznek feltüntetve. Tiszteletben tartjuk a névtelen közreműködők magánéleti választásait, és nem kíséreljük meg azonosítani őket vagy azonosító információkat tárolni azon túl, ami a tartalom áttekintéséhez szükséges."
+      },
+      "communityBuilding": {
+        "title": "4.5 Közösségépítés",
+        "content": "Mind a nevesített, mind a névtelen hozzájárulások segítenek együttműködő közösségünk építésében. Hozzájárulásai, függetlenül a hivatkozási preferenciától, segítenek olyan környezet kialakításában, ahol a tudás és megoldások nyíltan megosztásra kerülnek."
+      },
+      "attributionLimitations": {
+        "title": "4.6 Hivatkozási Korlátozások",
+        "content": "Bár arra törekszünk, hogy megfelelő hivatkozást biztosítsunk, Ön tudomásul veszi, hogy vészhelyzeti szituációkban vagy jelentős tervadaptációk esetén a konkrét hivatkozás nem mindig lehet gyakorlatilag megvalósítható. A platform humanitárius küldetése elsőbbséget élvez a hivatkozási követelményekkel szemben."
+      }
+    },
+    "privacyAnonymous": {
+      "title": "5. Magánélet és Adatvédelem Névtelen Beküldések Esetén",
+      "dataMinimization": {
+        "title": "5.1 Adatminimalizáció",
+        "content": "Névtelen beküldések esetén csak a tartalom áttekintéséhez és publikálásához szükséges minimális adatokat gyűjtjük. Névtelen hozzájárulások esetén nincs szükség személyazonosító információkra, és azokat nem is tároljuk."
+      },
+      "technicalAnonymity": {
+        "title": "5.2 Technikai Névtelenség",
+        "content": "Bár technikai intézkedéseket vezetünk be a névtelenség védelmére, a közreműködőknek tudniuk kell, hogy a teljes névtelenség nem garantálható az internetes kommunikáció természete miatt. További magánéleti eszközök használatát javasoljuk, ha a teljes névtelenség elengedhetetlen."
+      },
+      "contentReview": {
+        "title": "5.3 Tartalom Áttekintés",
+        "content": "A névtelen beküldések ugyanazon tartalmi áttekintési folyamaton mennek keresztül, mint a nevesített beküldések. Azonban nem tudunk kapcsolatba lépni névtelen közreműködőkkel tisztázások vagy javítások céljából, ezért a beküldéseknek a lehető legteljesebbnek kell lenniük."
+      }
+    },
+    "contentRequirements": {
+      "title": "6. Tartalom Követelmények és Szabványok",
+      "originalWork": {
+        "title": "6.1 Eredeti Munka",
+        "content": "Ön szavatolja, hogy minden Beküldött Tartalom az Ön eredeti munkája, vagy hogy minden szükséges jogot és engedélyt megszerzett annak beküldéséhez. Ez mind a nevesített, mind a névtelen beküldésekre vonatkozik."
+      },
+      "safetyAppropriateness": {
+        "title": "6.2 Biztonság és Megfelelőség",
+        "content": "Minden beküldésnek megfelelőnek kell lennie a platform humanitárius küldetése szempontjából. A terveknek a biztonságot kell előtérbe helyezniük és alkalmasnak kell lenniük kiszolgáltatott populációk segítésére. Fenntartjuk a jogot, hogy elutasítsuk vagy eltávolítsuk azokat a tartalmakat, amelyek nem felelnek meg ezeknek a szabványoknak."
+      },
+      "anonymousQuality": {
+        "title": "6.3 Névtelen Beküldés Minősége",
+        "content": "A névtelen beküldéseknek elegendő részletet és dokumentációt kell tartalmazniuk, mivel nem tudunk utólag tisztázásokat kérni. Fontolja meg átfogó leírások, méretek és biztonsági jegyzetek beillesztését."
+      }
+    },
+    "review": {
+      "title": "7. Áttekintés és Moderálás",
+      "content": "Minden beküldés csapatunk áttekintésének van alávetve publikálás előtt. Fenntartjuk a jogot, hogy szerkesszük, módosítsuk vagy elutasítsuk a beküldéseket annak biztosítása érdekében, hogy megfeleljenek minőségi és biztonsági szabványainknak. Ez az áttekintési folyamat segít fenntartani forráskönyvtárunk integritását és hasznosságát."
+    },
+    "disclaimer": {
+      "title": "8. Jogi Nyilatkozat és Felelősség Korlátozása",
+      "useAtRisk": {
+        "title": "8.1 Saját Kockázatra Történő Használat",
+        "content": "A platform minden terve és információja oktatási célokra szolgál. A felhasználók saját kockázatukra valósítják meg ezeket a terveket. Erősen javasoljuk, hogy bármilyen építési projekt megkezdése előtt konzultáljanak helyi szakértőkkel és hatóságokkal."
+      },
+      "noWarranties": {
+        "title": "8.2 Garancia Nélkül",
+        "content": "Semmilyen garanciát nem vállalunk a tartalom pontosságára, teljességére vagy konkrét célokra való alkalmasságára vonatkozóan. Az építési előírások, biztonsági követelmények és környezeti feltételek helyszínenként változnak."
+      }
+    },
+    "dataProtection": {
+      "title": "9. Adatvédelem és Magánélet",
+      "content": "Elkötelezettek vagyunk az Ön magánéletének védelme iránt az alkalmazandó adatvédelmi törvényekkel összhangban, beleértve a GDPR-t. Személyes információit csak platform adminisztrációhoz, közösségépítéshez és hivatkozási célokra használjuk fel, amint azt Adatvédelmi Irányelvünkben leírjuk."
+    },
+    "modifications": {
+      "title": "10. Feltételek Módosítása",
+      "content": "Fenntartjuk a jogot, hogy bármikor módosítsuk ezeket az Általános Szerződési Feltételeket. A frissített feltételek közzétételre kerülnek a platformon, és a folyamatos használat a módosított feltételek elfogadását jelenti."
+    },
+    "contact": {
+      "title": "11. Kapcsolattartási Információk",
+      "content": "Ha kérdései vannak ezekkel az Általános Szerződési Feltételekkel kapcsolatban, kérjük, lépjen velünk kapcsolatba a platform kapcsolattartási mechanizmusain keresztül."
+    }
+  },
+  "footer": {
+    "lastUpdated": "Utoljára frissítve: {{date}}",
+    "acknowledgment": "Tartalom beküldésével erre a platformra, legyen az nevesített vagy névtelen, Ön tudomásul veszi, hogy elolvasta, megértette és vállalja, hogy betartja ezeket az Általános Szerződési Feltételeket."
+  }
+}

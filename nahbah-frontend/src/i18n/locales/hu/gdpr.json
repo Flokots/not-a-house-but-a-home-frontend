@@ -1,0 +1,166 @@
+{
+  "title": "GDPR Adatvédelmi Irányelvek",
+  "close": "Bezárás",
+  "sections": {
+    "rights": {
+      "title": "Az Ön Adatvédelmi Jogai",
+      "content": "Az Általános Adatvédelmi Rendelet (GDPR) alapján Önnek konkrét jogai vannak a személyes adataival kapcsolatban. Ez a nyilatkozat elmagyarázza, hogyan gyűjtjük, használjuk és védjük az információit, amikor hozzájárul a 'Nem ház, hanem otthon' projekthez."
+    },
+    "dataCollection": {
+      "title": "Milyen Adatokat Gyűjtünk",
+      "namedContributions": {
+        "title": "Nevesített Hozzájárulások esetén:",
+        "items": [
+          "Az Ön neve (hivatkozási célokra)",
+          "Az Ön e-mail címe (a beküldésével kapcsolatos kommunikációhoz)",
+          "A beküldött tervfájlok és leírások",
+          "Technikai adatok (IP-cím, böngésző típusa) biztonsági célokra"
+        ]
+      },
+      "anonymousContributions": {
+        "title": "Névtelen Hozzájárulások esetén:",
+        "items": [
+          "Csak a beküldött tervfájlok és leírások",
+          "Semmilyen személyazonosító információt nem gyűjtünk vagy tárolunk",
+          "Minimális technikai adatok biztonsági célokra (automatikusan törlődnek áttekintés után)"
+        ]
+      }
+    },
+    "legalBasis": {
+      "title": "Az Adatkezelés Jogalapja",
+      "intro": "Személyes adatait az alábbi jogalapokon kezeljük:",
+      "items": [
+        {
+          "title": "Hozzájárulás:",
+          "description": "Kifejezett hozzájárulást ad a hozzájárulása beküldésekor"
+        },
+        {
+          "title": "Jogos Érdek:",
+          "description": "Humanitárius küldetésünk a kiszolgáltatott közösségek megsegítésére"
+        },
+        {
+          "title": "Közérdek:",
+          "description": "A lakhatási megoldások nyújtása közérdeket szolgál"
+        }
+      ]
+    },
+    "dataUse": {
+      "title": "Hogyan Használjuk Az Adatait",
+      "items": [
+        "Tervezési hozzájárulások áttekintése és publikálása",
+        "Hivatkozás biztosítása a beküldésekhez",
+        "Kommunikáció Önnel a hozzájárulásával kapcsolatban (csak nevesített beküldések)",
+        "Platformunk és szolgáltatásaink fejlesztése",
+        "Biztonság biztosítása és visszaélések megelőzése",
+        "Jogi kötelezettségek teljesítése"
+      ]
+    },
+    "dataSharing": {
+      "title": "Adatmegosztás és Terjesztés",
+      "designContent": {
+        "title": "Tervezési Tartalom:",
+        "intro": "A beküldött tervek globálisan megosztásra kerülhetnek humanitárius küldetésünk részeként. Ez magában foglalja a terjesztést:",
+        "items": [
+          "Lakhatási megoldásokra szoruló egyének és közösségek felé",
+          "Non-profit szervezetek és segélyszervezetek felé",
+          "Oktatási intézmények felé kutatási és oktatási célokra",
+          "Lakhatási kérdésekkel foglalkozó kormányzati szervek felé"
+        ]
+      },
+      "personalInfo": {
+        "title": "Személyes Információk:",
+        "content": "Személyes kapcsolattartási adatait soha nem osztjuk meg harmadik felekkel kifejezett hozzájárulása nélkül, kivéve, ha azt a törvény megköveteli."
+      }
+    },
+    "gdprRights": {
+      "title": "Az Ön GDPR Jogai",
+      "intro": "A GDPR alapján Önnek joga van:",
+      "items": [
+        {
+          "title": "Hozzáférés:",
+          "description": "Másolat kérése az Önről tárolt személyes adatokról"
+        },
+        {
+          "title": "Helyesbítés:",
+          "description": "Pontatlan vagy hiányos adatok javítása"
+        },
+        {
+          "title": "Törlés:",
+          "description": "Személyes adatok törlésének kérése (a publikált tartalom korlátaival)"
+        },
+        {
+          "title": "Korlátozás:",
+          "description": "Adatkezelés korlátozása"
+        },
+        {
+          "title": "Hordozhatóság:",
+          "description": "Adatok strukturált, géppel olvasható formátumban való megkapása"
+        },
+        {
+          "title": "Tiltakozás:",
+          "description": "Tiltakozás jogos érdeken alapuló adatkezelés ellen"
+        },
+        {
+          "title": "Hozzájárulás Visszavonása:",
+          "description": "Hozzájárulás bármikor történő visszavonása"
+        }
+      ]
+    },
+    "dataRetention": {
+      "title": "Adatmegőrzés",
+      "personalInfo": {
+        "title": "Személyes Információk:",
+        "items": [
+          "Kapcsolattartási adatok: 3 évig megőrzve az utolsó kapcsolattartás után vagy törlés kéréséig",
+          "Beküldési metaadatok: Adminisztratív célokra megőrizve"
+        ]
+      },
+      "designContent": {
+        "title": "Tervezési Tartalom:",
+        "content": "A publikált terveket véglegesen megőrizzük állandó humanitárius forráskönyvtárunk részeként. A személyes hivatkozás azonban kérésre eltávolítható."
+      },
+      "anonymous": {
+        "title": "Névtelen Beküldések:",
+        "content": "Névtelen beküldések esetén semmilyen személyes adatot nem őrzünk meg."
+      }
+    },
+    "dataSecurity": {
+      "title": "Adatbiztonság",
+      "intro": "Megfelelő technikai és szervezési intézkedéseket vezetünk be személyes adatai védelmére:",
+      "items": [
+        "Adatok titkosítása továbbítás és tárolás során",
+        "Rendszeres biztonsági értékelések és frissítések",
+        "Hozzáférés-vezérlés és személyzeti képzés",
+        "Biztonságos biztonsági mentés és helyreállítási eljárások",
+        "Incidenskezelési protokollok"
+      ]
+    },
+    "internationalTransfers": {
+      "title": "Nemzetközi Adattovábbítások",
+      "intro": "Globális humanitárius küldetésünk miatt adatait az Európai Gazdasági Térségen kívüli országokban is feldolgozhatjuk. Megfelelő biztosítékokat biztosítunk:",
+      "items": [
+        "Az Európai Bizottság által jóváhagyott Általános Szerződési Záradékok",
+        "Megfelelőségi döntések bizonyos országokra",
+        "További biztonsági intézkedések szükség esetén"
+      ]
+    },
+    "contact": {
+      "title": "Kapcsolattartási Információk",
+      "intro": "Adatvédelemmel kapcsolatos kérdések vagy GDPR jogok gyakorlása esetén kérjük, vegye fel velünk a kapcsolatot:",
+      "details": {
+        "title": "Adatvédelmi Tisztviselő",
+        "organization": "Nem ház, hanem otthon",
+        "email": "E-mail: (frissítendő)",
+        "address": "Cím: (frissítendő)"
+      }
+    },
+    "supervisory": {
+      "title": "Felügyeleti Hatóság",
+      "content": "Ha úgy véli, hogy nem megfelelően kezeltük adatait, joga van panaszt tenni a helyi adatvédelmi felügyeleti hatóságnál."
+    }
+  },
+  "footer": {
+    "lastUpdated": "Utoljára frissítve: {{date}}",
+    "acknowledgment": "A tartalom beküldésével és a GDPR elfogadási négyzet bejelölésével Ön tudomásul veszi, hogy elolvasta és megértette ezt az adatvédelmi nyilatkozatot."
+  }
+}

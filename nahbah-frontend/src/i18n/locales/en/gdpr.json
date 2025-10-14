@@ -1,0 +1,166 @@
+{
+  "title": "GDPR Data Protection Guidelines",
+  "close": "Close",
+  "sections": {
+    "rights": {
+      "title": "Your Data Protection Rights",
+      "content": "Under the General Data Protection Regulation (GDPR), you have specific rights regarding your personal data. This statement explains how we collect, use, and protect your information when you contribute to Not a House, but a Home."
+    },
+    "dataCollection": {
+      "title": "What Data We Collect",
+      "namedContributions": {
+        "title": "For Named Contributions:",
+        "items": [
+          "Your name (for attribution purposes)",
+          "Your email address (for communication about your submission)",
+          "Design files and descriptions you submit",
+          "Technical data (IP address, browser type) for security purposes"
+        ]
+      },
+      "anonymousContributions": {
+        "title": "For Anonymous Contributions:",
+        "items": [
+          "Only the design files and descriptions you submit",
+          "No personal identifying information is collected or stored",
+          "Minimal technical data for security (automatically deleted after review)"
+        ]
+      }
+    },
+    "legalBasis": {
+      "title": "Legal Basis for Processing",
+      "intro": "We process your personal data based on:",
+      "items": [
+        {
+          "title": "Consent:",
+          "description": "You provide explicit consent when submitting your contribution"
+        },
+        {
+          "title": "Legitimate Interest:",
+          "description": "Our humanitarian mission to help vulnerable communities"
+        },
+        {
+          "title": "Public Interest:",
+          "description": "Providing housing solutions serves the public good"
+        }
+      ]
+    },
+    "dataUse": {
+      "title": "How We Use Your Data",
+      "items": [
+        "Review and publish your design contributions",
+        "Provide attribution for your submissions",
+        "Communicate with you about your contribution (named submissions only)",
+        "Improve our platform and services",
+        "Ensure security and prevent misuse",
+        "Comply with legal obligations"
+      ]
+    },
+    "dataSharing": {
+      "title": "Data Sharing and Distribution",
+      "designContent": {
+        "title": "Design Content:",
+        "intro": "Your submitted designs may be shared globally as part of our humanitarian mission. This includes distribution to:",
+        "items": [
+          "Individuals and communities in need of housing solutions",
+          "Non-profit organizations and aid agencies",
+          "Educational institutions for research and teaching",
+          "Government agencies working on housing issues"
+        ]
+      },
+      "personalInfo": {
+        "title": "Personal Information:",
+        "content": "Your personal contact information is never shared with third parties without your explicit consent, except as required by law."
+      }
+    },
+    "gdprRights": {
+      "title": "Your GDPR Rights",
+      "intro": "Under GDPR, you have the right to:",
+      "items": [
+        {
+          "title": "Access:",
+          "description": "Request a copy of the personal data we hold about you"
+        },
+        {
+          "title": "Rectification:",
+          "description": "Correct any inaccurate or incomplete data"
+        },
+        {
+          "title": "Erasure:",
+          "description": "Request deletion of your personal data (with limitations for published content)"
+        },
+        {
+          "title": "Restriction:",
+          "description": "Limit how we process your data"
+        },
+        {
+          "title": "Portability:",
+          "description": "Receive your data in a structured, machine-readable format"
+        },
+        {
+          "title": "Objection:",
+          "description": "Object to processing based on legitimate interests"
+        },
+        {
+          "title": "Withdraw Consent:",
+          "description": "Withdraw your consent at any time"
+        }
+      ]
+    },
+    "dataRetention": {
+      "title": "Data Retention",
+      "personalInfo": {
+        "title": "Personal Information:",
+        "items": [
+          "Contact details: Retained for 3 years after last contact or until deletion requested",
+          "Submission metadata: Retained for administrative purposes"
+        ]
+      },
+      "designContent": {
+        "title": "Design Content:",
+        "content": "Published designs are retained indefinitely as part of our permanent humanitarian resource library. However, personal attribution can be removed upon request."
+      },
+      "anonymous": {
+        "title": "Anonymous Submissions:",
+        "content": "No personal data is retained for anonymous submissions."
+      }
+    },
+    "dataSecurity": {
+      "title": "Data Security",
+      "intro": "We implement appropriate technical and organizational measures to protect your personal data:",
+      "items": [
+        "Encryption of data in transit and at rest",
+        "Regular security assessments and updates",
+        "Access controls and staff training",
+        "Secure backup and recovery procedures",
+        "Incident response protocols"
+      ]
+    },
+    "internationalTransfers": {
+      "title": "International Transfers",
+      "intro": "Given our global humanitarian mission, your data may be processed in countries outside the European Economic Area. We ensure appropriate safeguards are in place through:",
+      "items": [
+        "Standard Contractual Clauses approved by the European Commission",
+        "Adequacy decisions for certain countries",
+        "Additional security measures where required"
+      ]
+    },
+    "contact": {
+      "title": "Contact Information",
+      "intro": "For any questions about data protection or to exercise your GDPR rights, please contact:",
+      "details": {
+        "title": "Data Protection Officer",
+        "organization": "Not a House, but a Home",
+        "email": "Email: (to be updated)",
+        "address": "Address: (to be updated)"
+      }
+    },
+    "supervisory": {
+      "title": "Supervisory Authority",
+      "content": "If you believe we have not handled your data properly, you have the right to lodge a complaint with your local data protection supervisory authority."
+    }
+  },
+  "footer": {
+    "lastUpdated": "Last updated: {{date}}",
+    "acknowledgment": "By submitting content and checking the GDPR acceptance box, you acknowledge that you have read and understood this data protection statement."
+  }
+}

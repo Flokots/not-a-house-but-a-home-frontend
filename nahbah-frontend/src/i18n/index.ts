@@ -12,6 +12,8 @@ import enEssentials from './locales/en/essentials.json';
 import enAbout from './locales/en/about.json';
 import enDesignsLibrary from './locales/en/designsLibrary.json';
 import enContribute from './locales/en/contribute.json';
+import enGdpr from './locales/en/gdpr.json';
+import enTerms from './locales/en/terms.json';
 
 import huCommon from './locales/hu/common.json';
 import huComponents from './locales/hu/components.json';
@@ -22,6 +24,8 @@ import huEssentials from './locales/hu/essentials.json';
 import huAbout from './locales/hu/about.json';
 import huDesignsLibrary from './locales/hu/designsLibrary.json';
 import huContribute from './locales/hu/contribute.json';
+import huGdpr from './locales/hu/gdpr.json';
+import huTerms from './locales/hu/terms.json';
 
 
 const resources = {
@@ -35,6 +39,8 @@ const resources = {
     about: enAbout,
     designsLibrary: enDesignsLibrary,
     contribute: enContribute,
+    gdpr: enGdpr,
+    terms: enTerms,
   },
   hu: {
     common: huCommon,
@@ -46,6 +52,8 @@ const resources = {
     about: huAbout,
     designsLibrary: huDesignsLibrary,
     contribute: huContribute,
+    gdpr: huGdpr,
+    terms: huTerms,
   },
 };
 

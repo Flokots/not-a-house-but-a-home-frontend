@@ -1,0 +1,130 @@
+{
+  "title": "Terms and Conditions",
+  "close": "Close",
+  "sections": {
+    "acceptance": {
+      "title": "1. Acceptance of Terms",
+      "content": "By accessing and using Not a House, but a Home (\"the Platform\"), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use this platform."
+    },
+    "purpose": {
+      "title": "2. Purpose and Mission",
+      "content": "This platform is dedicated to supporting individuals and communities in creating dignified, self-built housing solutions. We provide resources, designs, and knowledge to help people build safe and sustainable shelters using available materials."
+    },
+    "contentSubmission": {
+      "title": "3. Content Submission and Ownership Rights",
+      "grantOfRights": {
+        "title": "3.1 Grant of Rights",
+        "content": "By submitting any design, document, image, or other content (\"Submitted Content\") to the Platform, you grant Not a House, but a Home and its operators a perpetual, worldwide, royalty-free, non-exclusive, and transferable license to use, reproduce, distribute, display, modify, adapt, and create derivative works from your Submitted Content."
+      },
+      "distributionRights": {
+        "title": "3.2 Full Distribution Rights",
+        "intro": "You specifically grant us the right to:",
+        "items": [
+          "Distribute your designs freely to anyone in need of housing solutions",
+          "Print and share your designs in physical and digital formats",
+          "Translate and adapt your content for different communities and contexts",
+          "Include your designs in educational materials and advocacy resources",
+          "Modify your designs to improve safety, accessibility, or functionality"
+        ]
+      },
+      "humanitarian": {
+        "title": "3.3 Humanitarian Purpose",
+        "content": "These broad rights are essential to our mission of supporting vulnerable communities. By submitting content, you acknowledge that your designs may be used to help people experiencing homelessness, displacement, or housing insecurity worldwide."
+      }
+    },
+    "attribution": {
+      "title": "4. Attribution and Anonymous Contributions",
+      "namedContributions": {
+        "title": "4.1 Named Contributions",
+        "content": "For named contributions, we are committed to crediting contributors for their submissions. When your design is displayed or distributed, we will make reasonable efforts to include attribution using the name you provided during submission."
+      },
+      "anonymousContributions": {
+        "title": "4.2 Anonymous Contributions",
+        "content": "Contributors may choose to submit designs anonymously for various reasons including safety, privacy, or personal preference. Anonymous submissions are equally valuable to our mission and will be handled with the same care and review process as named contributions."
+      },
+      "anonymousProcess": {
+        "title": "4.3 Anonymous Contribution Process",
+        "intro": "Anonymous contributions may be submitted through:",
+        "items": [
+          "Our standard submission form by selecting \"Submit Anonymously\"",
+          "Third-party secure submission services when available",
+          "Community intermediaries who can submit on behalf of anonymous contributors",
+          "Physical drop-off points in partnering organizations"
+        ]
+      },
+      "anonymousAttribution": {
+        "title": "4.4 Anonymous Attribution",
+        "content": "Anonymous contributions will be credited as \"Anonymous Contributor\" or similar designation. We respect the privacy choices of anonymous contributors and will not attempt to identify them or store identifying information beyond what is necessary for content review."
+      },
+      "communityBuilding": {
+        "title": "4.5 Community Building",
+        "content": "Both named and anonymous contributions help build our collaborative community. Your contributions, regardless of attribution preference, help create an environment where knowledge and solutions are shared openly."
+      },
+      "attributionLimitations": {
+        "title": "4.6 Attribution Limitations",
+        "content": "While we strive to provide appropriate attribution, you acknowledge that in emergency situations or when designs are adapted significantly, specific attribution may not always be practically possible. The humanitarian mission of the platform takes precedence over attribution requirements."
+      }
+    },
+    "privacyAnonymous": {
+      "title": "5. Privacy and Data Protection for Anonymous Submissions",
+      "dataMinimization": {
+        "title": "5.1 Data Minimization",
+        "content": "For anonymous submissions, we collect only the minimum data necessary to review and publish the content. No personal identifying information is required or stored for anonymous contributions."
+      },
+      "technicalAnonymity": {
+        "title": "5.2 Technical Anonymity",
+        "content": "While we implement technical measures to protect anonymity, contributors should be aware that complete anonymity cannot be guaranteed due to the nature of internet communications. We recommend using additional privacy tools if complete anonymity is essential."
+      },
+      "contentReview": {
+        "title": "5.3 Content Review",
+        "content": "Anonymous submissions undergo the same content review process as named submissions. However, we cannot contact anonymous contributors for clarifications or improvements, so submissions should be as complete as possible."
+      }
+    },
+    "contentRequirements": {
+      "title": "6. Content Requirements and Standards",
+      "originalWork": {
+        "title": "6.1 Original Work",
+        "content": "You warrant that all Submitted Content is your original work or that you have obtained all necessary rights and permissions to submit it. This applies to both named and anonymous submissions."
+      },
+      "safetyAppropriateness": {
+        "title": "6.2 Safety and Appropriateness",
+        "content": "All submissions must be appropriate for the platform's humanitarian mission. Designs should prioritize safety and be suitable for helping vulnerable populations. We reserve the right to reject or remove content that doesn't meet these standards."
+      },
+      "anonymousQuality": {
+        "title": "6.3 Anonymous Submission Quality",
+        "content": "Anonymous submissions should include sufficient detail and documentation since we cannot follow up for clarifications. Consider including comprehensive descriptions, measurements, and safety notes."
+      }
+    },
+    "review": {
+      "title": "7. Review and Moderation",
+      "content": "All submissions are subject to review by our team before publication. We reserve the right to edit, modify, or reject submissions to ensure they meet our quality and safety standards. This review process helps maintain the integrity and usefulness of our resource library."
+    },
+    "disclaimer": {
+      "title": "8. Disclaimer and Limitation of Liability",
+      "useAtRisk": {
+        "title": "8.1 Use at Own Risk",
+        "content": "All designs and information on this platform are provided for educational purposes. Users implement these designs at their own risk. We strongly recommend consulting with local experts and authorities before beginning any construction project."
+      },
+      "noWarranties": {
+        "title": "8.2 No Warranties",
+        "content": "We make no warranties about the accuracy, completeness, or suitability of any content for specific purposes. Building codes, safety requirements, and environmental conditions vary by location."
+      }
+    },
+    "dataProtection": {
+      "title": "9. Data Protection and Privacy",
+      "content": "We are committed to protecting your privacy in accordance with applicable data protection laws, including GDPR. Your personal information will only be used for platform administration, community building, and attribution purposes as described in our Privacy Policy."
+    },
+    "modifications": {
+      "title": "10. Modifications to Terms",
+      "content": "We reserve the right to modify these Terms and Conditions at any time. Updated terms will be posted on the platform, and continued use constitutes acceptance of the modified terms."
+    },
+    "contact": {
+      "title": "11. Contact Information",
+      "content": "If you have questions about these Terms and Conditions, please contact us through the platform's contact mechanisms."
+    }
+  },
+  "footer": {
+    "lastUpdated": "Last updated: {{date}}",
+    "acknowledgment": "By submitting content to this platform, whether named or anonymous, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions."
+  }
+}
