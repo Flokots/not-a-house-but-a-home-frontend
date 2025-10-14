@@ -292,5 +292,40 @@
       "paragraph2": "Az otthon több mint menedék—ez a stabilitás, a magánélet és a kapcsolatok helye. Tervezési tudás, kreativitás és közös megoldások révén támogatjuk az önépített lakhatást mint a méltóság és biztonság felé vezető utat.",
       "learnMoreBtn": "Tudj meg többet"
     }
+  },
+  "designsLibrary": {
+    "hero": {
+      "backgroundText": "Tervtár",
+      "titlePart1": "Fenntartható Menedékek",
+      "titleHighlight": "Tervgyűjtemény",
+      "description": "Böngészd át innovatív terveink válogatott gyűjteményét, amelyek talált anyagokat alakítanak át alapvető menedék elemekké.",
+      "selectedCount": "terv kiválasztva a füzetedhez",
+      "imageAlt": "Tervtár"
+    },
+    "filters": {
+      "title": "Szűrők"
+    },
+    "content": {
+      "title": "Innovatív Tervek",
+      "showing": "{{count}} terv megjelenítése",
+      "showing_plural": "{{count}} terv megjelenítése",
+      "showingWithFilters": "{{count}} terv megjelenítése a kiválasztott anyagokhoz",
+      "showingWithFilters_plural": "{{count}} terv megjelenítése a kiválasztott anyagokhoz",
+      "clearFilters": "Szűrők törlése"
+    },
+    "noResults": {
+      "title": "Nem találhatók tervek",
+      "withFilters": "Nem találtunk terveket a jelenlegi anyag kiválasztásodhoz.",
+      "noDesigns": "Jelenleg nincsenek elérhető tervek a könyvtárunkban.",
+      "clearAllFilters": "Összes szűrő törlése"
+    },
+    "mobile": {
+      "viewBooklet": "FÜZETED MEGTEKINTÉSE"
+    },
+    "loading": "Fenntartható tervek betöltése...",
+    "errors": {
+      "loadFailed": "Nem sikerült betölteni a terveket. Kérlek próbáld újra később.",
+      "tryAgain": "Próbáld Újra"
+    }
   }
 }

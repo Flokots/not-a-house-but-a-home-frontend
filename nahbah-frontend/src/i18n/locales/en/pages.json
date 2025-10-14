@@ -292,5 +292,40 @@
       "paragraph2": "A home is more than a shelter—it's a place of stability, privacy, and connection. Through design knowledge, creativity, and shared solutions, we support self-built housing as a pathway to dignity and security.",
       "learnMoreBtn": "Learn More"
     }
+  },
+  "designsLibrary": {
+    "hero": {
+      "backgroundText": "Design Library",
+      "titlePart1": "Sustainable Shelters",
+      "titleHighlight": "Design Collection",
+      "description": "Browse our curated collection of innovative designs that transform found materials into essential shelter components.",
+      "selectedCount": "design(s) selected for your booklet",
+      "imageAlt": "Design Library"
+    },
+    "filters": {
+      "title": "Filters"
+    },
+    "content": {
+      "title": "Innovative Designs",
+      "showing": "Showing {{count}} design",
+      "showing_plural": "Showing {{count}} designs",
+      "showingWithFilters": "Showing {{count}} design for your selected materials",
+      "showingWithFilters_plural": "Showing {{count}} designs for your selected materials",
+      "clearFilters": "Clear filters"
+    },
+    "noResults": {
+      "title": "No designs found",
+      "withFilters": "We couldn't find any designs matching your current material selection.",
+      "noDesigns": "No designs are currently available in our library.",
+      "clearAllFilters": "Clear all filters"
+    },
+    "mobile": {
+      "viewBooklet": "VIEW YOUR BOOKLET"
+    },
+    "loading": "Loading sustainable designs...",
+    "errors": {
+      "loadFailed": "Failed to load designs. Please try again later.",
+      "tryAgain": "Try Again"
+    }
   }
 }

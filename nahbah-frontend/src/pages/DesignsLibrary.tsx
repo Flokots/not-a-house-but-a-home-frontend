@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
+import { useTranslation } from 'react-i18next';
 import DesignCard from "@/components/designs/DesignCard";
 import DesignFilters from "@/components/designs/DesignFilters";
 import BookletBuilder from "@/components/designs/BookletBuilder";
@@ -7,6 +8,7 @@ import { type Design } from "@/types/designs";
 import designLibrary from "@/assets/designLibrary.png"
 
 const DesignsLibrary = () => {
+  const { t } = useTranslation('pages');
   const [designs, setDesigns] = useState<Design[]>([]);
   const [filteredDesigns, setFilteredDesigns] = useState<Design[]>([]);
   const [selectedDesigns, setSelectedDesigns] = useState<number[]>([]);
@@ -36,14 +38,14 @@ const DesignsLibrary = () => {
         setFilteredDesigns(approvedDesigns);
       } catch (error) {
         console.error("Failed to fetch designs:", error);
-        setError("Failed to load designs. Please try again later.");
+        setError(t('designsLibrary.errors.loadFailed'));
       } finally {
         setIsLoading(false);
       }
     };
     
     loadDesigns();
-  }, []);
+  }, [t]);
 
   // Filter designs when filters change
   useEffect(() => {
@@ -81,7 +83,7 @@ const DesignsLibrary = () => {
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={designLibrary}
-            alt="Design Library"
+            alt={t('designsLibrary.hero.imageAlt')}
             className="w-full h-full object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black/50"></div>
@@ -92,21 +94,20 @@ const DesignsLibrary = () => {
             <div className="inline-flex items-center mb-6">
               <div className="h-px bg-lime-500 w-8"></div>
               <span className="mx-4 text-sm font-medium text-lime-400 uppercase tracking-widest">
-                Design Library
+                {t('designsLibrary.hero.backgroundText')}
               </span>
               <div className="h-px bg-lime-500 w-8"></div>
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Sustainable Shelters
+              {t('designsLibrary.hero.titlePart1')}
               <span className="block bg-gradient-to-r from-lime-400 to-yellow-300 bg-clip-text text-transparent">
-                Design Collection
+                {t('designsLibrary.hero.titleHighlight')}
               </span>
             </h1>
             
             <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
-              Browse our curated collection of innovative designs that transform 
-              found materials into essential shelter components.
+              {t('designsLibrary.hero.description')}
             </p>
             
             {selectedDesigns.length > 0 && (
@@ -114,7 +115,9 @@ const DesignsLibrary = () => {
                 <span className="flex items-center justify-center bg-lime-500 text-white w-8 h-8 rounded-full font-bold">
                   {selectedDesigns.length}
                 </span>
-                <span className="text-white font-medium">design(s) selected for your booklet</span>
+                <span className="text-white font-medium">
+                  {t('designsLibrary.hero.selectedCount', { count: selectedDesigns.length })}
+                </span>
               </div>
             )}
           </div>
@@ -138,7 +141,7 @@ const DesignsLibrary = () => {
               onClick={() => window.location.reload()}
               className="px-6 py-2 bg-red-50 hover:bg-red-100 rounded-lg transition-colors text-red-700 font-medium"
             >
-              Try Again
+              {t('designsLibrary.errors.tryAgain')}
             </button>
           </div>
         ) : (
@@ -153,7 +156,7 @@ const DesignsLibrary = () => {
                   <svg className="w-5 h-5 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
                   </svg>
-                  Filters {filters.materials.length > 0 && `(${filters.materials.length})`}
+                  {t('designsLibrary.filters.title')} {filters.materials.length > 0 && `(${filters.materials.length})`}
                 </span>
                 <svg className={`w-5 h-5 text-gray-500 transform transition-transform ${showMobileFilters ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -204,28 +207,31 @@ const DesignsLibrary = () => {
                       <div className="absolute top-0 left-0 right-0 bottom-0 animate-pulse-ring rounded-full border-4 border-lime-400"></div>
                       <div className="absolute top-0 left-0 right-0 bottom-0 animate-pulse bg-lime-500 rounded-full opacity-75"></div>
                     </div>
-                    <p className="text-gray-700 font-medium mt-6">Loading sustainable designs...</p>
+                    <p className="text-gray-700 font-medium mt-6">{t('designsLibrary.loading')}</p>
                   </div>
                 ) : filteredDesigns.length > 0 ? (
                   <>
                     <div className="mb-8 bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                       <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
                         <div>
-                          <h2 className="text-2xl font-bold text-gray-800 mb-1">Innovative Designs</h2>
+                          <h2 className="text-2xl font-bold text-gray-800 mb-1">
+                            {t('designsLibrary.content.title')}
+                          </h2>
                           <p className="text-gray-600">
-                            Showing {filteredDesigns.length} design{filteredDesigns.length !== 1 ? 's' : ''}
-                            {filters.materials.length > 0 ? ' for your selected materials' : ''}
+                            {filters.materials.length > 0 
+                              ? t('designsLibrary.content.showingWithFilters', { count: filteredDesigns.length })
+                              : t('designsLibrary.content.showing', { count: filteredDesigns.length })
+                            }
                           </p>
                         </div>
                         
                         <div className="mt-3 md:mt-0 flex items-center">
-                          {/* Sort dropdown could go here */}
                           {filters.materials.length > 0 && (
                             <button
                               onClick={() => setFilters({ materials: [] })}
                               className="text-sm flex items-center text-gray-500 hover:text-gray-700"
                             >
-                              <span>Clear filters</span>
+                              <span>{t('designsLibrary.content.clearFilters')}</span>
                               <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none">
                                 <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                               </svg>
@@ -253,18 +259,20 @@ const DesignsLibrary = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-3">No designs found</h3>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-3">
+                      {t('designsLibrary.noResults.title')}
+                    </h3>
                     <p className="text-gray-600 text-lg max-w-md mx-auto mb-6">
                       {filters.materials.length > 0 
-                        ? "We couldn't find any designs matching your current material selection." 
-                        : "No designs are currently available in our library."}
+                        ? t('designsLibrary.noResults.withFilters')
+                        : t('designsLibrary.noResults.noDesigns')}
                     </p>
                     {filters.materials.length > 0 && (
                       <button
                         onClick={() => setFilters({ materials: [] })}
                         className="px-8 py-3 bg-gradient-to-r from-lime-500 to-lime-600 hover:from-lime-600 hover:to-lime-700 text-white rounded-lg transition-all duration-300 font-medium shadow-sm hover:shadow"
                       >
-                        Clear all filters
+                        {t('designsLibrary.noResults.clearAllFilters')}
                       </button>
                     )}
                   </div>
@@ -283,7 +291,7 @@ const DesignsLibrary = () => {
                     {selectedDesigns.length}
                   </span>
                   <span className="font-bold bg-gradient-to-r from-lime-400 to-yellow-300 bg-clip-text text-transparent">
-                    VIEW YOUR BOOKLET
+                    {t('designsLibrary.mobile.viewBooklet')}
                   </span>
                 </button>
                 
