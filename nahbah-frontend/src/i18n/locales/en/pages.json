@@ -39,7 +39,7 @@
     "title": "What does a home need?",
     "description": "Learn what makes a shelter into a home, from weather protection to finding and repurposing materials around you.",
     "materials": "Materials",
-    "weatherProtection": "Weather Protection",
+    "weatherProtectionTab": "Weather Protection",
     "materialsSection": {
       "title": "USEFUL MATERIALS AROUND US",
       "description": "Building and making a house more comfortable is not only possible with building materials. In big cities, we can find many packaging materials that are suitable for making our temporary shelter cozier, more comfortable, and safer.",
@@ -139,6 +139,30 @@
         "examplesOfUse": "Examples of use",
         "infoNote": "This material can be found in common urban environments and repurposed with minimal tools.",
         "examplesNote": "For optimal results, clean and prepare materials before repurposing. Remove labels, wash surfaces, and test for structural integrity."
+      }
+    },
+    "weatherProtection": {
+      "title": "HOW TO PROTECT FROM WEATHER",
+      "description": "Weather protection is essential for turning a basic shelter into a safe, comfortable home. Learn how to protect against cold, moisture, wind, and rain using accessible materials.",
+      "protectionMethods": "Protection Methods",
+      "preview": {
+        "learnMore": "Learn More",
+        "warmth": {
+          "title": "Warmth",
+          "subtitle": "Thermal insulation"
+        },
+        "stayingDry": {
+          "title": "Staying Dry",
+          "subtitle": "Moisture control"
+        },
+        "windproofing": {
+          "title": "Windproofing",
+          "subtitle": "Draft protection"
+        },
+        "dryGround": {
+          "title": "Dry Ground",
+          "subtitle": "Foundation protection"
+        }
       }
     }
   },

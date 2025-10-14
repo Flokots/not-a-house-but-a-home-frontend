@@ -39,7 +39,7 @@
     "title": "Mire van szüksége egy otthonnak?",
     "description": "Tanuld meg, mi tesz egy menedéket otthonná, az időjárás elleni védelemtől kezdve a körülötted található anyagok megtalálásáig és újrahasznosításáig.",
     "materials": "Anyagok",
-    "weatherProtection": "Időjárás Elleni Védelem",
+    "weatherProtectionTab": "Időjárás Elleni Védelem",
     "materialsSection": {
       "title": "HASZNOS ANYAGOK KÖRÜLÖTTÜNK",
       "description": "Az otthon építése és kényelmesebbé tétele nem csak építőanyagokkal lehetséges. Nagy városokban sok csomagolóanyagot találhatunk, amelyek alkalmasak arra, hogy ideiglenes menedékünket kényelmesebbé, kényelmesebbé és biztonságosabbá tegyük.",
@@ -139,6 +139,30 @@
         "examplesOfUse": "Használati példák",
         "infoNote": "Ez az anyag általános városi környezetben megtalálható és minimális eszközökkel újrahasznosítható.",
         "examplesNote": "Az optimális eredmények érdekében tisztítsd meg és készítsd elő az anyagokat újrahasznosítás előtt. Távolítsd el a címkéket, mosd le a felületeket és teszteld a szerkezeti szilárdságot."
+      }
+    },
+    "weatherProtection": {
+      "title": "HOGYAN VÉDEKEZZ AZ IDŐJÁRÁS ELLEN",
+      "description": "Az időjárás elleni védelem elengedhetetlen ahhoz, hogy egy egyszerű menedékből biztonságos, kényelmes otthont alakíts ki. Tanuld meg, hogyan védekezz a hideg, nedvesség, szél és eső ellen elérhető anyagok segítségével.",
+      "protectionMethods": "Védelmi Módszerek",
+      "preview": {
+        "learnMore": "Tudj Meg Többet",
+        "warmth": {
+          "title": "Melegség",
+          "subtitle": "Hőszigetelés"
+        },
+        "stayingDry": {
+          "title": "Szárazon Tartás",
+          "subtitle": "Nedvességkontroll"
+        },
+        "windproofing": {
+          "title": "Szélfogás",
+          "subtitle": "Huzat elleni védelem"
+        },
+        "dryGround": {
+          "title": "Száraz Talaj",
+          "subtitle": "Alapozás védelem"
+        }
       }
     }
   },

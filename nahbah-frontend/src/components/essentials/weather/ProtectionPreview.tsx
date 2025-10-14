@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 interface ProtectionPreviewProps {
   images: {
@@ -10,11 +11,33 @@ interface ProtectionPreviewProps {
 }
 
 const ProtectionPreview: React.FC<ProtectionPreviewProps> = ({ images }) => {
+  const { t } = useTranslation('pages');
+
   const methods = [
-    { id: "warmth", title: "Warmth", subtitle: "Thermal insulation", image: images.warmth },
-    { id: "staying-dry", title: "Staying Dry", subtitle: "Moisture control", image: images.stayingDry },
-    { id: "windproofing", title: "Windproofing", subtitle: "Draft protection", image: images.windproofing },
-    { id: "dry-ground", title: "Dry Ground", subtitle: "Foundation protection", image: images.dryGround }
+    { 
+      id: "warmth", 
+      title: t('essentials.weatherProtection.preview.warmth.title'), 
+      subtitle: t('essentials.weatherProtection.preview.warmth.subtitle'), 
+      image: images.warmth 
+    },
+    { 
+      id: "staying-dry", 
+      title: t('essentials.weatherProtection.preview.stayingDry.title'), 
+      subtitle: t('essentials.weatherProtection.preview.stayingDry.subtitle'), 
+      image: images.stayingDry 
+    },
+    { 
+      id: "windproofing", 
+      title: t('essentials.weatherProtection.preview.windproofing.title'), 
+      subtitle: t('essentials.weatherProtection.preview.windproofing.subtitle'), 
+      image: images.windproofing 
+    },
+    { 
+      id: "dry-ground", 
+      title: t('essentials.weatherProtection.preview.dryGround.title'), 
+      subtitle: t('essentials.weatherProtection.preview.dryGround.subtitle'), 
+      image: images.dryGround 
+    }
   ];
 
   return (
@@ -49,7 +72,7 @@ const ProtectionPreview: React.FC<ProtectionPreviewProps> = ({ images }) => {
               <div className="text-lime-600 dark:text-lime-400 font-semibold 
                              hover:text-lime-800 dark:hover:text-lime-300 
                              flex items-center group cursor-pointer text-sm">
-                <span>Learn More</span>
+                <span>{t('essentials.weatherProtection.preview.learnMore')}</span>
                 <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>

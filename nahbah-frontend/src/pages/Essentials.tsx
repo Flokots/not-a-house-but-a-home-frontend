@@ -108,7 +108,7 @@ const Essentials = () => {
                   : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
               }`}
             >
-              {t('essentials.weatherProtection')}
+              {t('essentials.weatherProtectionTab')}
               <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#F9D90B] to-[#98F90F] transition-all duration-300 ${
                 activeSection === 'weather' ? 'w-full' : 'w-0 group-hover:w-full'
               }`}></div>

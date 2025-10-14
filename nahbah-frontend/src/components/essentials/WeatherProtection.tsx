@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import ProtectionPreview from '@/components/essentials/weather/ProtectionPreview';
 import WarmthSection from '@/components/essentials/weather/WarmthSection';
 import StayingDrySection from '@/components/essentials/weather/StayingDrySection';
@@ -27,17 +28,17 @@ interface WeatherProtectionProps {
 }
 
 const WeatherProtection: React.FC<WeatherProtectionProps> = ({ images }) => {
+  const { t } = useTranslation('pages');
+
   return (
     <div className="animate-fadeIn">
       <div className="mb-20 relative">
         <div className="relative z-10">
           <h2 className="text-4xl font-bold mb-10 text-black dark:text-white">
-            HOW TO PROTECT FROM WEATHER
+            {t('essentials.weatherProtection.title')}
           </h2>
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-12 leading-relaxed">
-            Weather protection is essential for turning a basic shelter
-            into a safe, comfortable home. Learn how to protect against
-            cold, moisture, wind, and rain using accessible materials.
+            {t('essentials.weatherProtection.description')}
           </p>
 
           <ProtectionPreview images={images} />
@@ -47,7 +48,9 @@ const WeatherProtection: React.FC<WeatherProtectionProps> = ({ images }) => {
       {/* Section divider with dark mode */}
       <div className="flex items-center mb-16">
         <div className="h-px bg-gray-200 dark:bg-gray-500 flex-grow"></div>
-        <div className="px-4 text-4xl font-medium text-gray-600 dark:text-gray-200">Protection Methods</div>
+        <div className="px-4 text-4xl font-medium text-gray-600 dark:text-gray-200">
+          {t('essentials.weatherProtection.protectionMethods')}
+        </div>
         <div className="h-px bg-gray-200 dark:bg-gray-500 flex-grow"></div>
       </div>
 
