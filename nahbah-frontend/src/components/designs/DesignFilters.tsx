@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 import { getMaterials } from "@/api/materials";
 
 interface Material {
@@ -19,6 +20,7 @@ interface DesignFiltersProps {
 }
 
 const DesignFilters: React.FC<DesignFiltersProps> = ({ filters, setFilters }) => {
+  const { t } = useTranslation('pages');
   const [materials, setMaterials] = useState<Material[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
@@ -95,13 +97,13 @@ const DesignFilters: React.FC<DesignFiltersProps> = ({ filters, setFilters }) =>
     <div className="bg-slate-100 rounded-md border border-neutral-100 overflow-hidden hero-text font-medium">
       {/* Header */}
       <div className="px-6 py-5 border-b border-neutral-100">
-        <h3 className="text-lg text-neutral-800 mb-6">Material Selection</h3>
+        <h3 className="text-lg text-neutral-800 mb-6">{t('designsLibrary.filters.materialSelection')}</h3>
         
         {/* Search box */}
         <div className="relative">
           <input
             type="text"
-            placeholder="Search materials..."
+            placeholder={t('designsLibrary.filters.searchMaterials')}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full pl-10 pr-4 py-2.5 bg-neutral-200 border-none rounded-md text-sm text-black font-normal focus:ring-1 focus:ring-amber-400 placeholder-neutral-900"
@@ -129,7 +131,7 @@ const DesignFilters: React.FC<DesignFiltersProps> = ({ filters, setFilters }) =>
       {/* Material selection */}
       <div className="px-6 py-5 hero-text font-medium">
         <div className="flex items-center justify-between mb-5">
-          <h4 className="text-sm uppercase tracking-widest text-neutral-600">Materials</h4>
+          <h4 className="text-sm uppercase tracking-widest text-neutral-600">{t('designsLibrary.filters.materials')}</h4>
           
           {filters.materials.length > 0 && (
             <motion.button 
@@ -139,7 +141,7 @@ const DesignFilters: React.FC<DesignFiltersProps> = ({ filters, setFilters }) =>
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 5 }}
             >
-              Clear all
+              {t('designsLibrary.filters.clearAll')}
               <svg className="ml-1 w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
               </svg>
@@ -234,7 +236,9 @@ const DesignFilters: React.FC<DesignFiltersProps> = ({ filters, setFilters }) =>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
-              <p className="text-neutral-600 text-sm font-normal">No materials found matching "{searchTerm}"</p>
+              <p className="text-neutral-600 text-sm font-normal">
+                {t('designsLibrary.filters.noResultsFor', { searchTerm })}
+              </p>
             </motion.div>
           ) : (
             <motion.div 
@@ -242,7 +246,7 @@ const DesignFilters: React.FC<DesignFiltersProps> = ({ filters, setFilters }) =>
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <p className="text-neutral-600 text-sm">No materials available</p>
+              <p className="text-neutral-600 text-sm">{t('designsLibrary.filters.noMaterials')}</p>
             </motion.div>
           )}
         </AnimatePresence>
@@ -258,7 +262,9 @@ const DesignFilters: React.FC<DesignFiltersProps> = ({ filters, setFilters }) =>
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <h4 className="text-xs uppercase tracking-wider text-neutral-500 font-light mb-3">Active Filters</h4>
+            <h4 className="text-xs uppercase tracking-wider text-neutral-500 font-light mb-3">
+              {t('designsLibrary.filters.activeFilters')}
+            </h4>
             <div className="flex flex-wrap gap-2">
               {filters.materials.map((name) => (
                 <motion.span 
@@ -289,7 +295,9 @@ const DesignFilters: React.FC<DesignFiltersProps> = ({ filters, setFilters }) =>
       <div className="px-6 py-5 bg-neutral-900 text-white">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-light text-neutral-300">Filtering by {filters.materials.length} material{filters.materials.length !== 1 ? 's' : ''}</p>
+            <p className="text-sm font-light text-neutral-300">
+              {t('designsLibrary.filters.filteringBy', { count: filters.materials.length })}
+            </p>
           </div>
           
           {filters.materials.length > 0 && (
@@ -297,7 +305,7 @@ const DesignFilters: React.FC<DesignFiltersProps> = ({ filters, setFilters }) =>
               onClick={clearFilters}
               className="text-xs px-3 py-1.5 border border-neutral-700 rounded-full text-neutral-200 hover:border-neutral-500 hover:text-white transition-colors"
             >
-              Reset
+              {t('designsLibrary.filters.reset')}
             </button>
           )}
         </div>

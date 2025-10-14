@@ -303,7 +303,17 @@
       "imageAlt": "Design Library"
     },
     "filters": {
-      "title": "Filters"
+      "title": "Filters",
+      "materialSelection": "Material Selection",
+      "searchMaterials": "Search materials...",
+      "materials": "Materials",
+      "clearAll": "Clear all",
+      "noResultsFor": "No materials found matching \"{{searchTerm}}\"",
+      "noMaterials": "No materials available",
+      "activeFilters": "Active Filters",
+      "filteringBy": "Filtering by {{count}} material",
+      "filteringBy_plural": "Filtering by {{count}} materials",
+      "reset": "Reset"
     },
     "content": {
       "title": "Innovative Designs",
@@ -326,6 +336,38 @@
     "errors": {
       "loadFailed": "Failed to load designs. Please try again later.",
       "tryAgain": "Try Again"
+    },
+    "bookletBuilder": {
+      "title": "Your Booklet",
+      "selectedCount": "{{count}} design selected for your custom booklet",
+      "selectedCount_plural": "{{count}} designs selected for your custom booklet",
+      "noDesigns": "No designs selected yet",
+      "downloadBooklet": "Download Booklet",
+      "generating": "Generating...",
+      "generateError": "Failed to generate booklet. Please try again later."
+    },
+    "designCard": {
+      "selected": "Selected",
+      "add": "Add",
+      "viewDetails": "View details for {{title}}",
+      "closeDialog": "Close dialog",
+      "materialDesign": "{{material}} Design",
+      "tabs": {
+        "information": "Information",
+        "details": "Details"
+      },
+      "materialRequired": "Material Required",
+      "dateAdded": "Date Added",
+      "description": "Description",
+      "contributor": "Contributor",
+      "constructionNote": "This design can be constructed using common tools and techniques. Download the design file for detailed instructions.",
+      "designSpecifications": "Design Specifications",
+      "previewDesignFile": "PREVIEW DESIGN FILE",
+      "practicalSolution": "This design provides a practical solution for shelter construction using {{material}} materials.",
+      "optimizationNote": "For optimal results, ensure materials are clean and structurally sound. Test construction techniques on a small scale before full implementation.",
+      "close": "Close",
+      "removeFromBooklet": "Remove from Booklet",
+      "addToBooklet": "Add to Booklet"
     }
   }
 }
