@@ -33,7 +33,7 @@ const Navbar = () => {
     }`;
 
   return (
-    <nav className="absolute left-0 w-full z-20 py-8">
+    <nav className="absolute left-0 w-full z-20 py-4">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
         <div>
           <NavLink

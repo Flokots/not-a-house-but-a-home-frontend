@@ -12,18 +12,14 @@
     "contribute": "KÖZREMŰKÖDÉS"
   },
   "footer": {
-    "copyright": "© 2024 Nem Ház Hanem Otthon. Minden jog fenntartva.",
+    "description": "Alapvető források vészhelyzeti menedék építéséhez és fenntartható lakásoldatok létrehozásához, amikor a legnagyobb szükséged van rájuk.",
+    "quickLinks": "Gyors Linkek",
+    "resources": "Források",
+    "community": "Közösség",
+    "support": "Támogatás",
+    "copyright": "© 2025 Nem Ház Hanem Otthon. Minden jog fenntartva.",
     "terms": "Általános Szerződési Feltételek",
     "privacy": "Adatvédelmi Irányelvek",
     "contact": "Kapcsolat"
-  },
-  "themeToggle": {
-    "lightMode": "Váltás világos módra",
-    "darkMode": "Váltás sötét módra"
-  },
-  "languageSwitcher": {
-    "changeLanguage": "Nyelv váltása",
-    "english": "Angol",
-    "hungarian": "Magyar"
   }
 }

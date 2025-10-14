@@ -1,10 +1,14 @@
 {
   "home": {
     "hero": {
-      "title": "NEM HÁZ",
-      "subtitle": "HANEM OTTHON",
-      "description": "Alapvető források vészhelyzeti menedék építéséhez és fenntartható lakásoldatok létrehozásához, amikor a legnagyobb szükséged van rájuk.",
-      "cta": "Kezdj építeni"
+      "imageAlt": "Kreatív lakásbelső",
+      "titlePart1": "ÚTMUTATÓ",
+      "titleHighlight": "KREATÍVOKNAK",
+      "concept1": "ÉPÍTÉSZET",
+      "concept2": "KREATIVITÁS",
+      "description": "Az otthon több mint puszta menedék—ez a stabilitás, a magánélet és a közösség helye. Ez a kezdeményezés támogatja azokat, akik nehéz körülmények között építik saját otthonukat, platformot biztosítva a tervek megosztásához.",
+      "learnMoreBtn": "TUDJ MEG TÖBBET",
+      "viewDesignsBtn": "TERVEK MEGTEKINTÉSE"
     },
     "features": {
       "materials": {
@@ -44,6 +48,46 @@
         "title": "SZÁRAZ TALAJ",
         "description": "Alapvédelem és magassági technikák a talaj nedvességének behatolásának megakadályozásához"
       }
+    }
+  },
+  "about": {
+    "hero": {
+      "backgroundText": "Rólunk",
+      "title": "Az Otthon és Menedék Újragondolása",
+      "subtitle": "Nem ház, hanem otthon – Hiszünk az önépített terek erejében a stabilitás és méltóság megteremtésében. Célunk támogatni, inspirálni és felhatalmazni az embereket olyan otthonok építésére, amelyek valóban otthonnak érezhetőek.",
+      "paragraph1": "A lakhatás alapvető jog, mégis sokan kényszerülnek saját menedéket építeni a hagyományos rendszereken kívül. Ez a webalkalmazás forrás azok számára, akik talált anyagokból építenek otthont, valamint az őket támogató és velük szolidaritást vállaló építészek és aktivisták számára.",
+      "paragraph2": "Az otthon több mint menedék—ez a stabilitás, a magánélet és a kapcsolatok helye. Tervezési tudás, kreativitás és közös megoldások révén támogatjuk az önépített lakhatást mint a méltóság és biztonság felé vezető utat.",
+      "learnMoreBtn": "Tudj meg többet"
+    },
+    "mission": {
+      "title": "KÜLDETÉSÜNK",
+      "paragraph1": "A Szolidáris Építészeti Kutatócsoport tagjaként hiszünk abban, hogy az építészek és építészethallgatók szerepet játszhatnak a társadalmi problémák enyhítésében. Ezen az oldalon alapvető tudást szeretnénk terjeszteni, amely segít biztonságosabb környezet kialakításában. Egy olyan épített környezetet, amely helyettesítheti az éjjeli menhelyek embertelen világát és átmeneti menedéket nyújthat azoknak, akik nehezen tudnak egyedül megélni.",
+      "paragraph2": "Minden építészt és hallgatót arra bátorítunk, hogy kissé eltérő szemszögből tekintsék a körülöttük lévő világot. Fedezzék fel a körülöttünk szabadon elérhető anyagokban rejlő lehetőségeket. Segítsünk együtt szél, hideg és eső ellen védett átmeneti menedékeket építeni."
+    },
+    "approach": {
+      "title": "Megközelítésünk",
+      "paragraph1": "Építészeti szakértelmet kombinálunk közösségi tudással, hogy gyakorlati, fenntartható és felhatalmazó megoldásokat hozzunk létre. Forrásainkat olyan emberekkel együttműködve fejlesztjük, akik közvetlen tapasztalattal rendelkeznek az önépített lakhatás terén.",
+      "paragraph2": "Minden terv, útmutató és anyagválasztási javaslat ezen a platformon elérhető és adaptálható különböző körülményekhez és erőforrás-elérhetőséghez, és sokuk kipróbált."
+    },
+    "getInvolved": {
+      "title": "Csatlakozz",
+      "paragraph1": "Akár saját menedéked javítását tervezed, mások lakhatási útját támogatod, vagy a lakhatási igazságosságért szállsz síkra, számos módon részt vehetsz közösségünkben.",
+      "paragraph2": "Böngészd forráskönyvtárunkat, járulj hozzá tervezési ötletekkel, oszd meg sikersztorijd, vagy ajánld fel készségeidet. Együtt átalakíthatjuk a lakhatásról való gondolkodásunkat és több utat teremthetünk a méltóságteljes otthonhoz mindenki számára."
+    },
+    "impact": {
+      "title": "HATÁSUNK",
+      "paragraph1": "Ez a webalkalmazás forrás azok számára, akik talált anyagokból építenek otthont, valamint az őket támogató és velük szolidaritást vállaló építészek és aktivisták számára.",
+      "paragraph2": "Az otthon több mint menedék—ez a stabilitás, a magánélet és a kapcsolatok helye. Forrásainkon és közösségünkön keresztül segítünk az embereknek méltóságteljes lakóterek kialakításában, körülményeiktől függetlenül.",
+      "stats": {
+        "solutions": "Lakhatási Megoldás",
+        "communities": "Támogatott Közösség",
+        "people": "Segített Ember"
+      }
+    },
+    "cta": {
+      "title": "Készen állsz a változásra?",
+      "description": "Akár saját otthont építesz, másokat támogatsz, vagy a lakhatási igazságosságért küzdesz, meghívunk közösségünkbe, hogy részese legyél a megoldásnak.",
+      "button": "Kezdd el ma"
     }
   }
 }

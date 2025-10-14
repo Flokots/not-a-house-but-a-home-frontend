@@ -1,61 +1,53 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
-// Simple initial setup - we'll add detection later
+// Import translation files
+import enCommon from './locales/en/common.json';
+import enComponents from './locales/en/components.json';
+import enPages from './locales/en/pages.json';
+
+import huCommon from './locales/hu/common.json';
+import huComponents from './locales/hu/components.json';
+import huPages from './locales/hu/pages.json';
+
+const resources = {
+  en: {
+    common: enCommon,
+    components: enComponents,
+    pages: enPages,
+  },
+  hu: {
+    common: huCommon,
+    components: huComponents,
+    pages: huPages,
+  },
+};
+
 i18n
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    resources: {
-      en: {
-        common: {
-          "buttons": {
-            "close": "Close"
-          }
-        },
-        components: {
-          "navbar": {
-            "brand": {
-              "notAHouse": "NOT A HOUSE",
-              "butAHome": "BUT A HOME"
-            },
-            "home": "HOME",
-            "aboutUs": "ABOUT US",
-            "guide": "GUIDE",
-            "essentials": "ESSENTIALS",
-            "designs": "DESIGNS",
-            "contribute": "CONTRIBUTE"
-          }
-        }
-      },
-      hu: {
-        common: {
-          "buttons": {
-            "close": "Bezárás"
-          }
-        },
-        components: {
-          "navbar": {
-            "brand": {
-              "notAHouse": "NEM HÁZ",
-              "butAHome": "HANEM OTTHON"
-            },
-            "home": "FŐOLDAL",
-            "aboutUs": "RÓLUNK",
-            "guide": "ÚTMUTATÓ",
-            "essentials": "ALAPISMERETEK",
-            "designs": "TERVEK",
-            "contribute": "KÖZREMŰKÖDÉS"
-          }
-        }
-      }
-    },
-    lng: 'en',
+    resources,
     fallbackLng: 'en',
     defaultNS: 'common',
-    ns: ['common', 'components'],
     
     interpolation: {
       escapeValue: false,
+    },
+    
+    detection: {
+      order: ['localStorage', 'navigator', 'htmlTag'],
+      caches: ['localStorage'],
+    },
+
+    debug: false,
+    ns: ['common', 'components', 'pages'],
+    
+    // Add missing key handler
+    saveMissing: false,
+    missingKeyHandler: (lng, ns, key) => {
+      console.warn(`Missing translation: ${lng}:${ns}:${key}`);
     },
   });
 

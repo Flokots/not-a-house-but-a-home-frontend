@@ -12,7 +12,12 @@
     "contribute": "CONTRIBUTE"
   },
   "footer": {
-    "copyright": "© 2024 Not A House But A Home. All rights reserved.",
+    "description": "Essential resources for building emergency shelter and creating sustainable housing solutions when you need them most.",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "community": "Community",
+    "support": "Support",
+    "copyright": "© 2025 Not A House But A Home. All rights reserved.",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
     "contact": "Contact Us"
