@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* Add Inter as fallback for Hungarian support */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&display=swap');
 
 /* Custom Font Face Declarations */
 @font-face {
@@ -8,6 +10,8 @@
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+  /* Enable advanced typography features */
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
 @font-face {
@@ -16,6 +20,7 @@
   font-weight: 100;
   font-style: normal;
   font-display: swap;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
 @font-face {
@@ -24,6 +29,7 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
 @font-face {
@@ -32,6 +38,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
 @font-face {
@@ -40,6 +47,7 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
 @font-face {
@@ -48,46 +56,90 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
 /* Base styles */
 :root {
   --gradient-start: #F9D90B;
   --gradient-end: #8ce70d;
+  /* Font stacks with Hungarian support */
+  --font-primary: 'Helvetica Neue', 'Inter', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  --font-display: 'Futura Bold', 'Fjalla One', 'Inter', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  --font-fjalla: 'Fjalla One', 'Inter', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
 }
 
-/* Updated body to use Helvetica Neue as default */
+/* Enhanced body with Hungarian text support */
 body {
-  font-family: 'Helvetica Neue', system-ui, sans-serif;
+  font-family: var(--font-primary);
   margin: 0;
   padding: 0;
   background-color: #1E1E1E;
   color: #fff;
+  /* Improved text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* Enable advanced typography features */
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
-/* Headings now default to Futura Bold */
+/* Enhanced headings with fallbacks */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Futura Bold', 'Helvetica Neue', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: bold;
+  /* Better text rendering for headings */
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
-/* Font utility classes - updated defaults */
+/* Hungarian text enhancement - now works with dynamic classes */
+html.lang-hu, .lang-hu, [data-lang="hu"] {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "dlig" 1;
+}
+
+html.lang-hu body, 
+html.lang-hu h1, 
+html.lang-hu h2, 
+html.lang-hu h3, 
+html.lang-hu h4, 
+html.lang-hu h5, 
+html.lang-hu h6,
+html.lang-hu p,
+html.lang-hu span {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "dlig" 1;
+}
+
+/* English text (default) */
+html.lang-en {
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Font utility classes - updated with Hungarian support */
 .font-fjalla {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: var(--font-fjalla);
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
-/* Updated hero-text to use Helvetica Neue */
+/* Updated hero-text with enhanced rendering */
 .hero-text {
-  font-family: 'Helvetica Neue', system-ui, sans-serif;
+  font-family: var(--font-primary);
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
-/* Custom font classes */
+/* Custom font classes with Hungarian fallbacks */
 .futura-bold {
-  font-family: 'Futura Bold', 'Helvetica Neue', system-ui, sans-serif;
+  font-family: var(--font-display);
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
 .helvetica-neue {
-  font-family: 'Helvetica Neue', system-ui, sans-serif;
+  font-family: var(--font-primary);
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
 /* Gradient text */
@@ -105,11 +157,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 120% ; 
 }
 
-/* Button styles - updated to use Futura Bold */
+/* Button styles - enhanced with better font rendering */
 .gradient-border-btn {
   position: relative;
   padding: 0.75rem 2rem;
-  font-family: 'Futura Bold', 'Helvetica Neue', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 1.25rem;
   color: #fff;
   background: transparent;
@@ -119,6 +171,9 @@ h1, h2, h3, h4, h5, h6 {
   background-origin: border-box;
   background-clip: padding-box, border-box;
   transition: all 0.3s ease;
+  /* Enhanced text rendering */
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
 }
 
 .gradient-border-btn:hover {
@@ -128,10 +183,13 @@ h1, h2, h3, h4, h5, h6 {
 .lime-btn {
   position: relative;
   padding: 0.75rem 2rem;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: var(--font-fjalla);
   font-size: 1.25rem;
   border: 1px solid #8ce70d;
   transition: all 0.3s ease;
+  /* Enhanced text rendering */
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
 }
 
 .lime-btn:hover {
@@ -139,14 +197,17 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #0bf91b;
 }
 
-/* Navigation styles - updated to use Futura Bold */
+/* Navigation styles - enhanced font rendering */
 .nav-link {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: var(--font-fjalla);
   font-size: 1.25rem;
   text-decoration: none;
   padding-bottom: 0.25rem;
   position: relative;
   color: #fff; /* Default color for dark mode */
+  /* Enhanced text rendering */
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
 }
 
 .nav-link.text-black {
@@ -194,6 +255,7 @@ h1, h2, h3, h4, h5, h6 {
   background: radial-gradient(circle at left, #65AA03 0%, #508703 100%); /* Darker green gradient for contrast */
 }
 
+/* Enhanced scrollbar styles */
 .custom-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
@@ -216,6 +278,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* Animation keyframes */
 @keyframes pulse-ring {
   0% {
     transform: scale(0.8);
@@ -267,4 +330,29 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* Additional Hungarian text utilities */
+.text-hungarian {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "dlig" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* Enhanced font loading for better Hungarian support */
+@supports (font-display: swap) {
+  .font-optimized {
+    font-display: swap;
+  }
+}
+
+/* Target specific components by language */
+[data-lang="hu"] h1,
+[data-lang="hu"] p {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "dlig" 1;
+  text-rendering: optimizeLegibility;
+}
+
+[data-lang="en"] h1,
+[data-lang="en"] p {
+  font-feature-settings: "kern" 1, "liga" 1;
 }

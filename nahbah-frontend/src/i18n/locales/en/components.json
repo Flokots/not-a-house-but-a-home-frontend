@@ -12,7 +12,13 @@
     "contribute": "CONTRIBUTE"
   },
   "footer": {
-    "description": "Essential resources for building emergency shelter and creating sustainable housing solutions when you need them most.",
+    "home": "Home",
+    "aboutUs": "About Us",
+    "guide": "Guide",
+    "essentials": "Essentials",
+    "designs": "Designs",
+    "contribute": "Contribute",
+    "description": "Helping people create stable, dignified homes through shared design and community support.",
     "quickLinks": "Quick Links",
     "resources": "Resources",
     "community": "Community",

@@ -1,34 +1,45 @@
-import React from 'react';
-import type { ReactNode } from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { LanguageContext } from '@/contexts/LanguageContext';
 
 interface LanguageProviderProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const { i18n, t } = useTranslation();
+const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
+  const { i18n } = useTranslation();
 
-  const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
+  useEffect(() => {
+    // Set initial language attributes
+    const updateLanguageAttributes = (language: string) => {
+      // Set HTML lang attribute for screen readers and SEO
+      document.documentElement.lang = language;
 
-  const currentLanguage = i18n.language || 'en';
-  const isHungarian = currentLanguage.startsWith('hu');
-  const isEnglish = currentLanguage.startsWith('en');
+      // Add CSS class for styling
+      document.documentElement.className = document.documentElement.className
+        .replace(/lang-\w+/g, '');
+      document.documentElement.classList.add(`lang-${language}`);
 
-  return (
-    <LanguageContext.Provider
-      value={{
-        currentLanguage,
-        changeLanguage,
-        t,
-        isHungarian,
-        isEnglish,
-      }}
-    >
-      {children}
-    </LanguageContext.Provider>
-  );
+      // Set dir attribute for RTL languages (future-proofing)
+      document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+    };
+
+    // Set initial language
+    updateLanguageAttributes(i18n.language);
+
+    // Listen for language changes
+    const handleLanguageChange = (language: string) => {
+      updateLanguageAttributes(language);
+    };
+
+    i18n.on('languageChanged', handleLanguageChange);
+
+    // Cleanup
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+  }, [i18n]);
+
+  return <>{children}</>;
 };
+
+export default LanguageProvider;

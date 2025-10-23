@@ -12,7 +12,13 @@
     "contribute": "KÖZREMŰKÖDÉS"
   },
   "footer": {
-    "description": "Alapvető források vészhelyzeti menedék építéséhez és fenntartható lakásoldatok létrehozásához, amikor a legnagyobb szükséged van rájuk.",
+    "home": "Főoldal",
+    "aboutUs": "Rólunk",
+    "guide": "Útmutató",
+    "essentials": "Alapismeretek",
+    "designs": "Tervek",
+    "contribute": "Közreműködés",
+    "description": "Segítünk az embereknek stabil, méltó otthonokat teremteni közös tervezéssel és közösségi támogatással.",
     "quickLinks": "Gyors Linkek",
     "resources": "Források",
     "community": "Közösség",

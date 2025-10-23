@@ -1,6 +1,5 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 
 // Import translation files
 import enCommon from './locales/en/common.json';
@@ -58,7 +57,6 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
@@ -83,5 +81,13 @@ i18n
       console.warn(`Missing translation: ${lng}:${ns}:${key}`);
     },
   });
+
+// Add language change listener to update document lang
+i18n.on('languageChanged', (lng) => {
+  document.documentElement.lang = lng;
+  // Also add a class for CSS targeting
+  document.documentElement.className = document.documentElement.className.replace(/lang-\w+/, '');
+  document.documentElement.classList.add(`lang-${lng}`);
+});
 
 export default i18n;
