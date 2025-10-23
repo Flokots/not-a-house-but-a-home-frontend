@@ -4,7 +4,7 @@
       "notAHouse": "NEM HÁZ",
       "butAHome": "HANEM OTTHON"
     },
-    "home": "FŐOLDAL",
+    "home": "KEZDŐLAP",
     "aboutUs": "RÓLUNK",
     "guide": "ÚTMUTATÓ",
     "essentials": "ALAPISMERETEK",
@@ -12,7 +12,7 @@
     "contribute": "KÖZREMŰKÖDÉS"
   },
   "footer": {
-    "home": "Főoldal",
+    "home": "Kezdőlap",
     "aboutUs": "Rólunk",
     "guide": "Útmutató",
     "essentials": "Alapismeretek",

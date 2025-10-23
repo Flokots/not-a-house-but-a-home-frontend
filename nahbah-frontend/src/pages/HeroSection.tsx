@@ -4,12 +4,7 @@ import "@/App.css";
 import homepageImage from "@/assets/homepage.png";
 
 const HeroSection = () => {
-  const { t, ready, i18n } = useTranslation('pages');
-
-  // Debug logging
-  console.log('Translation ready:', ready);
-  console.log('Current language:', i18n.language);
-  console.log('Translation test:', t('home.hero.titlePart1'));
+  const { t, ready } = useTranslation('home');
 
   // Show loading state if translations aren't ready
   if (!ready) {
@@ -25,7 +20,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={homepageImage}
-          alt={t('home.hero.imageAlt')}
+          alt={t('hero.imageAlt')}
           className="w-full h-full object-cover absolute inset-0 z-0"
         />
         <div className="absolute inset-0 bg-black/70 z-10"></div>
@@ -33,7 +28,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-32 sm:py-48 lg:py-64 h-full flex flex-col justify-center text-center">
         <h1 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-fjalla mb-2">
-          {t('home.hero.titlePart1')} <span className="gradient-text">{t('home.hero.titleHighlight')}</span>
+          {t('hero.titlePart1')} <span className="gradient-text">{t('hero.titleHighlight')}</span>
         </h1>
 
         <div className="mt-2 md:mt-4 mb-4 md:mb-5 text-center">
@@ -44,13 +39,13 @@ const HeroSection = () => {
             {/* Text content */}
             <div className="flex items-center justify-center flex-wrap px-2">
               <span className="gradient-text text-1xl sm:text-2xl md:text-3xl lg:text-4xl font-fjalla">
-                {t('home.hero.concept1')}
+                {t('hero.concept1')}
               </span>
               <span className="text-white mx-1 md:mx-2 text-2xl sm:text-3xl md:text-4xl font-fjalla">
                 +
               </span>
               <span className="text-white text-1xl sm:text-2xl md:text-3xl lg:text-4xl font-fjalla">
-                {t('home.hero.concept2')}
+                {t('hero.concept2')}
               </span>
             </div>
 
@@ -60,7 +55,7 @@ const HeroSection = () => {
         </div>
 
         <p className="text-white text-sm md:text-base lg:text-lg max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto mb-8 md:mb-12 hero-text text-center">
-          {t('home.hero.description')}
+          {t('hero.description')}
         </p>
 
         <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
@@ -68,10 +63,10 @@ const HeroSection = () => {
             to="/about-us"
             className="lime-btn text-sm md:text-base gradient-text"
           >
-            {t('home.hero.learnMoreBtn')}
+            {t('hero.learnMoreBtn')}
           </Link>
           <Link to="/designs" className="lime-btn text-sm md:text-base">
-            {t('home.hero.viewDesignsBtn')}
+            {t('hero.viewDesignsBtn')}
           </Link>
         </div>
       </div>
