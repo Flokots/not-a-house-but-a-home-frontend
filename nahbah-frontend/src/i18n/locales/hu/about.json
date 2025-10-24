@@ -1,55 +1,40 @@
 {
   "hero": {
     "backgroundText": "Rólunk",
-    "title": "Az Otthon és Menedék Újragondolása",
-    "subtitle": "Nem ház, hanem otthon – Hiszünk az önépítésű terek erejében, hogy stabilitást és méltóságot teremtsenek. Célunk támogatni, inspirálni és felhatalmazni az embereket, hogy olyan otthonokat építsenek, amelyek valóban otthonnak érezhetők.",
-    "paragraph1": "A lakhatás alapvető jog, mégis sokan kényszerülnek arra, hogy saját menedéküket teremtsék meg a hagyományos rendszereken kívül. Ez a webalkalmazás forrást nyújt azoknak, akik talált anyagokból építenek otthonokat, valamint a hajléktalan közösségekkel szolidáris támogatóknak és építészeknek.",
-    "paragraph2": "Az otthon több mint menedék—ez a stabilitás, a magánélet és a kapcsolódás helye. Tervezési tudás, kreativitás és közös megoldások révén támogatjuk az önépítésű lakhatást mint a méltóság és biztonság útját.",
+    "title": "Az otthon és a menedék újragondolása",
+    "subtitle": "A Pécsi Tudományegyetem Műszaki és Informatikai Karának Szolidáris Építészet Kutatócsoportjának tagjai és a Bölcsészettudományi kar szociálpszichológus kollégái együtt indultunk a Pécs környéki hajléktalan közösség felfedezésére. A hajdani hobbikertek szerszámos kamráiból átalakított kunyhókban sok helyen találtunk barátságos otthonokat.",
+    "paragraph1": "A közművekre nem csatlakoztatott házikókban olyan emberek élnek, akik nem rendelkeznek rendszeres jövedelemmel, nem tudnak lakáshoz jutni a piacról. Lenne lehetőségük éjjeli menedékhelyeken tölteni az éjszakákat és nappali melegedőkben a nappalokat, de ők inkább egy kunyhóban élnek. Azért, mert itt együtt aludhatnak azzal, akit szeretnek, együtt maradhatnak a kedvenc háziállatukkal, találkozhatnak a barátaikkal. Mert itt önálló életet élhetnek, még ha sokkal alacsonyabb színvonalon is, mint a többségi társadalom.",
+    "paragraph2": "Mi, a “Nem ház, de otthon”  készítői hisszük, hogy az önálló építés  ereje képes stabilitást és méltóságot teremteni. Célunk, hogy támogassuk, inspiráljuk és megerősítsük azokat, akik saját kezűleg építik meg azt a helyet, amit valóban otthonuknak érezhetnek.",
+    "paragraph3": "A lakhatás alapvető emberi jog, mégis sokan kényszerülnek arra, hogy a hagyományos rendszereken kívül teremtsenek maguknak menedéket. Ez a weboldal forrás és közösségi tér mindazok számára, akik talált anyagokból építenek otthont, valamint az őket segítő aktivisták és építészek számára, akik szolidaritást vállalnak a hajléktalan közösségekkel.",
+    "paragraph4": "Az otthon több, mint menedék – a stabilitás, a magánélet és a kapcsolódás helye. A Pécs környéki hajléktalan közösség példái által inspirálódva a saját  ismereteink, kreativitásunk és közös megoldásaink révén támogatjuk az önálló lakhatást, mint az független, kiszolgáltatottság nélküli élethez vezető utat.",
     "learnMoreBtn": "Tudj Meg Többet",
     "imageAlt": "Önépítésű lakóterület"
   },
   "sections": {
     "mission": "Küldetésünk",
-    "team": "Csapatunk",
+    "approach": "Megközelítésünk",
     "impact": "Hatásunk",
-    "contact": "Kapcsolat"
+    "getInvolved": "Csatlakozz hozzánk"
   },
   "mission": {
     "title": "Küldetésünk",
-    "paragraph1": "A lakhatás alapvető jog, mégis sokan kényszerülnek arra, hogy saját menedéküket teremtsék meg a hagyományos rendszereken kívül. Tervezési tudás, kreativitás és közös megoldások révén támogatjuk az önépítésű lakhatást mint a méltóság és biztonság útját.",
-    "paragraph2": "Nem ház, hanem otthon – Hiszünk az önépítésű terek erejében, hogy stabilitást és méltóságot teremtsenek. Célunk támogatni, inspirálni és felhatalmazni az embereket, hogy olyan otthonokat építsenek, amelyek valóban otthonnak érezhetők. Akár inspirációt, útmutatást vagy közreműködési lehetőséget keresel, ez a platform itt van, hogy segítsen."
+    "paragraph1": "A lakhatás alapvető emberi jog, mégis sokan kényszerülnek arra, hogy a hagyományos rendszereken kívül teremtsenek maguknak menedéket. Tervezési ismereteink, kreativitásunk és közös megoldásaink révén támogatjuk az önállóan épített lakhatási megoldásokat, mint a méltósághoz és biztonsághoz vezető utat",
+    "paragraph2": "Hiszünk az önállóan épített terek erejében a stabilitás és a méltóság megteremtésében. Célunk, hogy támogassuk, inspiráljuk és felhatalmazzuk az embereket olyan környezet megteremtésére, amelyeket  valóban otthonnak érezhetnek. Akár inspirációra, útmutatásra van szükséged, akár segíteni szeretnél, ez a platform neked szól."
   },
   "approach": {
     "title": "Megközelítésünk",
-    "paragraph1": "Az építészeti szakértelmet a közösségi tudással ötvözve olyan megoldásokat alkotunk, amelyek gyakorlatiak, fenntarthatók és felhatalmazók. Forrásainkat olyan emberekkel együttműködve fejlesztjük, akiknek közvetlen tapasztalatuk van az önépítésű lakhatással kapcsolatban.",
-    "paragraph2": "A platform minden terve, útmutatója és anyagajánlása tesztelt, hozzáférhető és különböző körülményekhez és erőforrás-elérhetőséghez alkalmazkodó."
-  },
-  "getInvolved": {
-    "title": "Kapcsolódj Be",
-    "paragraph1": "Akár saját menedéked javítását tervezed, mások lakhatási útját támogatod, vagy a lakhatási igazságosságért küzdesz, sokféleképpen részt vehetsz közösségünkben.",
-    "paragraph2": "Böngészd forráskönyvtárunkat, járulj hozzá tervezési ötletekkel, oszd meg sikertörténeteket, vagy ajánld fel készségeidet. Együtt átalakíthatjuk a lakhatásról való gondolkodásunkat és több utat teremthetünk mindenkinek a méltóságteljes otthonhoz."
+    "paragraph1": "Az építészeti szakértelmet és a közösségi tudást ötvözzük, hogy olyan megoldásokat hozzunk létre, amelyek gyakorlatiasak, fenntarthatók és megerősítő hatásúak. Erőforrásainkat azokkal együttműködésben fejlesztjük, akiknek közvetlen tapasztalatuk van a hajléképítés terén.",
+    "paragraph2": "Minden itt elérhető terv, útmutató és anyagjavaslat szabadon felhasználható, különböző körülményekhez és erőforrásokhoz igazítható, és sok esetben kipróbált, bevált megoldásokon alapul."
   },
   "impact": {
     "title": "Hatásunk",
-    "paragraph1": "Ez a webalkalmazás forrást nyújt azoknak, akik talált anyagokból építenek otthonokat, valamint a hajléktalan közösségekkel szolidáris támogatóknak és építészeknek.",
-    "paragraph2": "Az otthon több mint menedék—ez a stabilitás, a magánélet és a kapcsolódás helye. Forrásaink és közösségünk révén segítünk az embereknek méltóságteljes lakótereket létrehozni, körülményeiktől függetlenül.",
-    "stats": {
-      "solutions": "Lakhatási Megoldás",
-      "communities": "Kiszolgált Közösség",
-      "people": "Megsegített Ember"
-    }
+    "paragraph1": "Ez a webalkalmazás forrást és támogatást nyújt mindazoknak, akik talált anyagokból építenek otthont, valamint azoknak az aktivistáknak és építészeknek, akik szolidaritást vállalnak a hajléktalan közösségekkel. Az itt bemutatott megoldások nem helyettesítik azokat a biztonságos, korszerű otthonokat, amelyekhez mindenkinek joga van, és amelyek az építési előírásoknak megfelelően készülnek.",
+    "paragraph2": "Viszont segíteni szeretnénk azoknak, akik menedékhelyek helyett kunyhókban élnek, hogy biztonságosabb és méltóbb otthonokat hozhassanak létre maguknak — akkor is, ha nem tudják megfizetni sem az építészek szolgáltatásait, sem az új építőanyagokat."
   },
-  "cta": {
-    "title": "Készen Állsz a Változásra?",
-    "description": "Akár saját otthonod építed, másokat támogatsz, vagy a lakhatási igazságosságért küzdesz, meghívunk, hogy csatlakozz közösségünkhöz és légy része a megoldásnak.",
+  "getInvolved": {
+    "title": "Csatlakozz hozzánk",
+    "description": "Akár a saját lakóhelyedet szeretnéd fejleszteni, akár mások lakhatási útját támogatnád, vagy a lakhatási igazságosságért szeretnél kiállni – számos módja van annak, hogy részt vegyél közösségünk munkájában. Böngészd tudástárunkat, ossz meg tervezési ötleteket, sikertörténeteket, vagy ajánld fel szakmai segítségedet. Együtt átalakíthatjuk a lakhatásról való gondolkodást, és új utakat nyithatunk a mindenki számára biztonságosabb otthonok felé.",
     "button": "Kezdj El Ma"
-  },
-  "contact": {
-    "title": "Kapcsolat",
-    "description": "Kérdéseid vannak vagy szeretnél közreműködni? Szívesen hallunk felőled.",
-    "email": "Email",
-    "phone": "Telefon",
-    "address": "Cím"
   },
   "loading": "Tartalom betöltése...",
   "errors": {

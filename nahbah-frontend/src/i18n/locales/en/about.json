@@ -2,54 +2,40 @@
   "hero": {
     "backgroundText": "About",
     "title": "Reimagining Home & Shelter",
-    "subtitle": "Not a House, but a Home – We believe in the power of self-built spaces to create stability and dignity. Our goal is to support, inspire, and empower people to build homes that truly feel like home.",
-    "paragraph1": "Housing is a fundamental right, yet many people are forced to create their own shelters outside traditional systems. This web application is a resource for those who build homes from found materials, as well as for advocates and architects working in solidarity with unhoused communities.",
-    "paragraph2": "A home is more than a shelter—it's a place of stability, privacy, and connection. Through design knowledge, creativity, and shared solutions, we support self-built housing as a pathway to dignity and security.",
+    "subtitle": "Members of the Research Group for Solidarity in Architecture of the Faculty of Engineering and Informatics of the University of Pécs, Hungary, and our social psychologist colleagues from the Faculty of Humanities set out to explore the homeless community around Pécs.",
+    "paragraph1": "We found friendly homes in many places in huts converted from the tool sheds of former hobby gardens. People who do not have a regular income and cannot get housing on the market live in huts that are isolated from public utilities. They could spend their nights in night shelters and their days in day shelters, but they prefer to live in their huts. Because here they can sleep with the person they love, stay with their pets, and meet their friends. Because here they can live an independent life, even if at a much lower standard than the majority society.",
+    "paragraph2": "We, the creators of “Not a House, but a Home,” believe in the power of self-built spaces to bring about stability and dignity. Our goal is to support, inspire, and empower people to build homes that truly feel like home.",
+    "paragraph3": "Housing is a fundamental right, yet many people are forced to create their own shelters outside traditional systems. This web application is a resource for those who build homes from found materials, as well as for advocates and architects working in solidarity with unhoused communities.",
+    "paragraph4": "A home is more than a shelter—it's a place of stability, privacy, and connection. Through design knowledge, creativity, and shared solutions, we support self-built housing as a pathway to dignity and security.",
     "learnMoreBtn": "Learn More",
     "imageAlt": "Self-built living space"
   },
   "sections": {
     "mission": "Our Mission",
-    "team": "Our Team",
+    "approach": "Our Approach",
     "impact": "Our Impact",
-    "contact": "Get in Touch"
+    "getInvolved": "Get Involved"
   },
   "mission": {
     "title": "Our Mission",
     "paragraph1": "Housing is a fundamental right, yet many people are forced to create their own shelters outside traditional systems. Through design knowledge, creativity, and shared solutions, we support self-built housing as a pathway to dignity and security.",
-    "paragraph2": "Not a House, but a Home – We believe in the power of self-built spaces to create stability and dignity. Our goal is to support, inspire, and empower people to build homes that truly feel like home. Whether you're looking for inspiration, guidance, or a way to contribute, this platform is here to help."
+    "paragraph2": "We believe in the power of self-built spaces to create stability and dignity. Our goal is to support, inspire, and empower people to build homes that truly feel like home."
   },
   "approach": {
     "title": "Our Approach",
-    "paragraph1": "We combine architectural expertise with community knowledge to create solutions that are practical, sustainable, and empowering. Our resources are developed in collaboration with people who have direct experience with self-built housing.",
-    "paragraph2": "Every design, guide, and material suggestion on this platform is tested, accessible, and adaptable to different circumstances and resource availability."
-  },
-  "getInvolved": {
-    "title": "Get Involved",
-    "paragraph1": "Whether you're looking to improve your own shelter, support someone else's housing journey, or advocate for housing justice, there are many ways to participate in our community.",
-    "paragraph2": "Browse our resource library, contribute design ideas, share success stories, or volunteer your skills. Together, we can transform the way we think about housing and create more pathways to dignified homes for all."
+    "paragraph1": "We combine architectural expertise with community knowledge to create solutions that are practical, sustainable, and empowering.",
+    "paragraph2": "Our resources are developed with people who have direct experience with self-built housing.",
+    "paragraph3": "Every design, guide, and material suggestion on this platform is accessible, and adaptable to different circumstances and resource availability, many of them are tested."
   },
   "impact": {
     "title": "Our Impact",
-    "paragraph1": "This web application is a resource for those who build homes from found materials, as well as for advocates and architects working in solidarity with unhoused communities.",
-    "paragraph2": "A home is more than a shelter—it's a place of stability, privacy, and connection. Through our resources and community, we're helping people create dignified living spaces regardless of their circumstances.",
-    "stats": {
-      "solutions": "Housing Solutions",
-      "communities": "Communities Served",
-      "people": "People Helped"
-    }
+    "paragraph1": "This web application is a resource for those who build homes from found materials, as well as for advocates and architects working in solidarity with unhoused communities.These solutions are not a substitute for the modern and safe homes that everyone deserves, built according to building codes and regulations.",
+    "paragraph2": "We want to help people who choose to live in their own huts instead of night shelters to create safer homes for themselves, even if they can afford neither architects nor new, modern building materials."
   },
-  "cta": {
-    "title": "Ready to Make a Difference?",
-    "description": "Whether you're building your own home, supporting others, or advocating for housing justice, we invite you to join our community and be part of the solution.",
+  "getInvolved": {
+    "title": "Get Involved",
+    "description": "Whether you're looking to improve your own shelter, support someone else's housing journey, or advocate for housing equity, there are many ways to participate in our community. Browse our resource library, contribute design ideas, share success stories, or volunteer your skills. Together, we can transform the way we think about housing and create more pathways to safer homes for all.",
     "button": "Get Started Today"
-  },
-  "contact": {
-    "title": "Contact Us",
-    "description": "Have questions or want to contribute? We'd love to hear from you.",
-    "email": "Email",
-    "phone": "Phone",
-    "address": "Address"
   },
   "loading": "Loading about content...",
   "errors": {

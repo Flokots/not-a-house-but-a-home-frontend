@@ -4,205 +4,187 @@ import aboutUsImage from "@/assets/green_lawn_home.png";
 import ourImpactImage from "@/assets/entrance_night_view.png";
 import ourMissionImage from "@/assets/lounge_area.png";
 import homeInteriorImage from "@/assets/home_interior.png";
+import shelterWithPlasticShutters from "@/assets/shelter-with-plastic-shutters.jpeg";
+import puppyImage from "@/assets/puppy-cannot-go-to-nightshelter.jpeg";
+import rosaryAndKittenImage from "@/assets/rosary-and-kitten-in-homeless-shelter-near-pecs.jpeg";
+import doorPanelsHutWithCarpetInsulation from "@/assets/door-panels-hut-carpet-insulation.jpeg";
+import wellLitInteriorImage from "@/assets/homepage.png";
 
 const AboutUs = () => {
   const [loaded, setLoaded] = useState(false);
-  const { t } = useTranslation('about'); // Changed from 'pages' to 'about'
+  const { t } = useTranslation("about");
 
   useEffect(() => {
     setLoaded(true);
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-100 dark:bg-black relative overflow-hidden hero-text text-black dark:text-white px-10 transition-colors duration-300">
-      
-      {/* Hero Section - Image Right */}
-      <div className="max-w-7xl mx-auto px-4 pt-32 pb-20 flex flex-col md:flex-row gap-8 relative top-10">
+    <div className="min-h-screen bg-slate-100 dark:bg-black relative overflow-hidden hero-text text-black dark:text-white px-4 sm:px-6 md:px-10 transition-colors duration-300">
+      {/* Hero Section - Responsive stacked gallery */}
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 flex flex-col lg:flex-row gap-6 sm:gap-8 relative top-6 sm:top-8 md:top-10">
         {/* Background "About" text */}
-        <div className="absolute top-17 left-0 font-semibold text-9xl futura-bold text-black opacity-10 dark:text-white/14 dark:opacity-100">
-          {t('hero.backgroundText')}
+        <div className="absolute top-12 sm:top-14 md:top-17 left-0 font-semibold text-6xl sm:text-7xl md:text-8xl lg:text-9xl futura-bold text-black opacity-10 dark:text-white/14 dark:opacity-100 pointer-events-none">
+          {t("hero.backgroundText")}
         </div>
 
-        {/* Left Content - Text */}
+        {/* Left Content - Enhanced text structure */}
         <div
-          className={`w-full md:w-3/5 transition-opacity duration-1000 ${
+          className={`w-full lg:w-3/5 transition-opacity duration-1000 ${
             loaded ? "opacity-100" : "opacity-0"
           }`}
         >
-          <h1 className="text-4xl futura-bold mb-4 mt-0 ml-22 text-black dark:text-white">
-            {t('hero.title')}
+          <h1 className="text-2xl sm:text-3xl md:text-4xl futura-bold mb-10 sm:mb-12 mt-0 ml-0 sm:ml-10 md:ml-22 text-black dark:text-white leading-tight">
+            {t("hero.title")}
           </h1>
-          <p className="text-lg font-semibold mb-6 mt-12 text-black dark:text-gray-200">
-            {t('hero.subtitle')}
-          </p>
-          <p className="text-lg mb-6 text-black dark:text-gray-300">
-            {t('hero.paragraph1')}
-          </p>
-          <p className="text-lg mb-8 text-black dark:text-gray-300">
-            {t('hero.paragraph2')}
-          </p>
+          
+          {/* Subtitle with accent bar */}
+          <div className="mb-6 sm:mb-8 md:mb-10">
+            <p className="text-lg sm:text-xl font-semibold text-black dark:text-gray-200 leading-relaxed">
+              {t("hero.subtitle")}
+            </p>
+          </div>
+
+          {/* Main content paragraphs with better spacing */}
+          <div className="space-y-6 sm:space-y-7 mb-10 sm:mb-12">
+            <p className="text-base sm:text-lg text-black dark:text-gray-300 leading-relaxed">
+              {t("hero.paragraph1")}
+            </p>
+            <p className="text-base sm:text-lg text-black dark:text-gray-300 leading-relaxed">
+              {t("hero.paragraph2")}
+            </p>
+            <p className="text-base sm:text-lg text-black dark:text-gray-300 leading-relaxed">
+              {t("hero.paragraph3")}
+            </p>
+            <p className="text-base sm:text-lg text-black dark:text-gray-300 leading-relaxed">
+              {t("hero.paragraph4")}
+            </p>
+          </div>
+
+          {/* Call to action button */}
           <button
             onClick={() => {
               document.getElementById("learn-more-section")?.scrollIntoView({
                 behavior: "smooth",
               });
             }}
-            className="px-8 py-3 bg-black dark:bg-slate-950 inline-block transition-all duration-300 
+            className="px-8 sm:px-10 py-3 sm:py-4 bg-black dark:bg-slate-950 inline-block transition-all duration-300 
                        hover:bg-zinc-900 dark:hover:bg-gray-800 
-                       hover:shadow-lg hover:shadow-lime-300/20 hover:scale-105 hover:-translate-y-1 cursor-pointer
-                       border border-transparent dark:border-gray-700"
+                       hover:shadow-xl hover:shadow-lime-300/25 hover:scale-105 hover:-translate-y-1 cursor-pointer
+                       border border-transparent dark:border-gray-700 rounded-sm text-sm sm:text-base"
           >
-            <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold uppercase">
-              {t('hero.learnMoreBtn')}
+            <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold uppercase tracking-wide">
+              {t("hero.learnMoreBtn")}
             </span>
           </button>
         </div>
 
-        {/* Right Content - Image */}
+        {/* Right Content - Fully Responsive Stacked Gallery */}
         <div
-          className={`w-full md:w-2/5 transition-opacity duration-1000 delay-300 ${
+          className={`w-full lg:w-2/5 transition-opacity duration-1000 delay-300 ${
             loaded ? "opacity-100" : "opacity-0"
-          }`}
+          } mt-8 lg:mt-0`}
         >
-          <div className="rounded-lg overflow-hidden h-full shadow-lg dark:shadow-black/20">
-            <img
-              src={aboutUsImage}
-              alt="Self-built living space"
-              className="w-full h-full object-cover"
-            />
+          <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-full w-full">
+            {/* Photo Stack - Responsive to match text height */}
+            <div className="absolute inset-0">
+              {/* Back photo */}
+              <div className="absolute top-0 right-2 sm:right-4 md:right-6 lg:right-4 w-56 sm:w-60 md:w-64 lg:w-72 xl:w-80 transform rotate-6 transition-all duration-300 hover:rotate-3 hover:scale-105">
+                <div className="p-2 sm:p-3 rounded-lg shadow-xl sm:shadow-2xl dark:shadow-black/50">
+                  <img
+                    src={shelterWithPlasticShutters}
+                    alt="Shelter with plastic shutters"
+                    className="w-full h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 object-cover rounded"
+                  />
+                </div>
+              </div>
+              
+              {/* Middle photo */}
+              <div className="absolute top-16 sm:top-20 md:top-28 lg:top-32 xl:top-40 left-2 sm:left-4 md:left-6 lg:left-8 w-56 sm:w-60 md:w-64 lg:w-72 xl:w-80 transform -rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 z-10">
+                <div className="p-2 sm:p-3 rounded-lg shadow-xl sm:shadow-2xl dark:shadow-black/50">
+                  <img
+                    src={puppyImage}
+                    alt="Puppy seeking shelter"
+                    className="w-full h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 object-cover rounded"
+                  />
+                </div>
+              </div>
+              
+              {/* Front photo */}
+              <div className="absolute top-32 sm:top-40 md:top-56 lg:top-64 xl:top-80 right-4 sm:right-8 md:right-10 lg:right-12 w-56 sm:w-60 md:w-64 lg:w-72 xl:w-80 transform rotate-2 transition-all duration-300 hover:-rotate-1 hover:scale-105 z-20">
+                <div className="p-2 sm:p-3 rounded-lg shadow-xl sm:shadow-2xl dark:shadow-black/50">
+                  <img
+                    src={rosaryAndKittenImage}
+                    alt="Rosary and kitten in shelter"
+                    className="w-full h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 object-cover rounded"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Mission Section - Image Left */}
+      {/* Mission Section - Responsive Layout */}
       <div
         id="learn-more-section"
-        className="max-w-7xl mx-auto px-4 py-20 mb-20 relative"
+        className="max-w-7xl mx-auto px-2 sm:px-4 py-12 sm:py-16 md:py-20 mb-12 sm:mb-16 md:mb-20 relative"
       >
-        <div className="bg-white dark:bg-slate-950 rounded-xl overflow-hidden shadow-lg dark:shadow-black/30 p-8 relative z-10 transition-colors duration-300">
-          <div className="flex flex-col md:flex-row items-center gap-12 mb-12">
-            <div className="md:w-2/5">
-              <div className="rounded-lg overflow-hidden shadow-md dark:shadow-black/20">
-                <img
-                  src={ourMissionImage}
-                  alt="Community housing solutions"
-                  className="w-full h-auto object-cover"
-                />
+        <div className="bg-white dark:bg-slate-950 rounded-xl overflow-hidden shadow-lg dark:shadow-black/30 relative z-10 transition-colors duration-300">
+          {/* Mission Content - Responsive Grid */}
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 p-4 sm:p-6 md:p-8">
+            {/* Image - Full width on mobile */}
+            <div className="relative h-64 sm:h-72 md:h-84 order-2 md:order-1">
+              <div className="w-full h-full transform transition-all duration-300 hover:rotate-1 hover:scale-105">
+                <div className="rounded-lg shadow-lg dark:shadow-black/30">
+                  <img
+                    src={wellLitInteriorImage}
+                    alt="Community housing solutions"
+                    className="w-full h-86 object-cover rounded"
+                  />
+                </div>
               </div>
             </div>
 
-            <div className="md:w-3/5">
-              <h2 className="text-4xl font-bold mb-6 text-black dark:text-white">
-                {t('mission.title')}
+            {/* Text - Full width on mobile */}
+            <div className="bg-yellow-200 dark:bg-yellow-900/30 p-4 sm:p-6 rounded-lg transition-all duration-300 hover:scale-[1.02] border border-transparent dark:border-yellow-800/30 order-1 md:order-2">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-black dark:text-white">
+                {t("mission.title")}
               </h2>
-              <p className="mb-4 text-lg font-futura text-black dark:text-gray-200">
-                {t('mission.paragraph1')}
+              <p className="mb-3 sm:mb-4 text-base sm:text-lg font-futura text-black dark:text-gray-200">
+                {t("mission.paragraph1")}
               </p>
-              <p className="mb-4 text-lg text-black dark:text-gray-300">
-                {t('mission.paragraph2')}
+              <p className="mb-3 sm:mb-4 text-base sm:text-lg text-black dark:text-gray-300">
+                {t("mission.paragraph2")}
               </p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
-            <div className="bg-lime-200 dark:bg-lime-900/30 p-6 rounded-lg transition-all duration-300 hover:scale-[1.02] border border-transparent dark:border-lime-800/30">
-              <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-lime-200">
-                {t('approach.title')}
+          {/* Approach Section - Responsive Grid */}
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 p-4 sm:p-6 md:p-8 pt-2 sm:pt-3 md:pt-4">
+            <div className="bg-lime-200 dark:bg-lime-900/30 p-4 sm:p-6 rounded-lg transition-all duration-300 hover:scale-[1.02] border border-transparent dark:border-lime-800/30">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-800 dark:text-lime-200">
+                {t("approach.title")}
               </h3>
-              <p className="mb-4 text-lg text-gray-700 dark:text-gray-300">
-                {t('approach.paragraph1')}
+              <p className="mb-3 sm:mb-4 text-base sm:text-lg text-gray-700 dark:text-gray-300">
+                {t("approach.paragraph1")}
               </p>
-              <p className="text-lg text-gray-700 dark:text-gray-300">
-                {t('approach.paragraph2')}
+              <p className="mb-3 sm:mb-4 text-base sm:text-lg text-gray-700 dark:text-gray-300">
+                {t("approach.paragraph2")}
               </p>
-            </div>
-
-            <div className="bg-yellow-200 dark:bg-yellow-900/30 bg-opacity-30 p-6 rounded-lg transition-all duration-300 hover:scale-[1.02] border border-transparent dark:border-yellow-800/30">
-              <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-yellow-200">
-                {t('getInvolved.title')}
-              </h3>
-              <p className="mb-4 text-lg text-gray-700 dark:text-gray-300">
-                {t('getInvolved.paragraph1')}
-              </p>
-              <p className="text-lg text-gray-700 dark:text-gray-300">
-                {t('getInvolved.paragraph2')}
+              <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300">
+                {t("approach.paragraph3")}
               </p>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Impact Section - Creative Layout with Two Images */}
-      <div className="max-w-7xl mx-auto px-4 py-16 mb-20 relative">
-        <div className="relative z-10">
-          <div className="bg-white dark:bg-slate-950 rounded-xl overflow-hidden shadow-lg dark:shadow-black/30 relative z-10 border border-transparent transition-colors duration-300">
-            {/* Header */}
-            <div className="h-24 flex items-center px-8">
-              <h2 className="text-4xl font-bold text-black dark:text-white">
-                {t('impact.title')}
-              </h2>
-            </div>
-
-            {/* Main content */}
-            <div className="p-8">
-              <div className="grid md:grid-cols-2 gap-12">
-                {/* Left column - Text and stats */}
-                <div>
-                  <p className="mb-6 text-lg text-black dark:text-gray-200">
-                    {t('impact.paragraph1')}
-                  </p>
-                  <p className="mb-8 text-lg text-black dark:text-gray-300">
-                    {t('impact.paragraph2')}
-                  </p>
-
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div className="bg-lime-100 dark:bg-lime-900/40 py-6 px-4 rounded-lg transform transition-transform hover:scale-105 border border-transparent dark:border-lime-800/30">
-                      <h4 className="text-3xl font-bold text-lime-600 dark:text-lime-400 mb-1">
-                        100+
-                      </h4>
-                      <p className="text-sm text-lime-800 dark:text-lime-300">
-                        {t('impact.stats.solutions')}
-                      </p>
-                    </div>
-                    <div className="bg-yellow-100 dark:bg-yellow-900/40 py-6 px-4 rounded-lg transform transition-transform hover:scale-105 border border-transparent dark:border-yellow-800/30">
-                      <h4 className="text-3xl font-bold text-yellow-600 dark:text-yellow-400 mb-1">
-                        50+
-                      </h4>
-                      <p className="text-sm text-yellow-800 dark:text-yellow-300">
-                        {t('impact.stats.communities')}
-                      </p>
-                    </div>
-                    <div className="bg-lime-100 dark:bg-lime-900/40 py-6 px-4 rounded-lg transform transition-transform hover:scale-105 border border-transparent dark:border-lime-800/30">
-                      <h4 className="text-3xl font-bold text-lime-600 dark:text-lime-400 mb-1">
-                        1000+
-                      </h4>
-                      <p className="text-sm text-lime-800 dark:text-lime-300">
-                        {t('impact.stats.people')}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right column - Overlapping cards layout */}
-                <div className="relative h-full min-h-[400px]">
-                  {/* First image - top right, slight rotation */}
-                  <div className="absolute top-0 right-0 w-4/5 shadow-xl dark:shadow-black/40 rounded-lg overflow-hidden transform rotate-3 z-20 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-40">
-                    <img
-                      src={ourImpactImage}
-                      alt="Community impact interior"
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-
-                  {/* Second image - bottom left, opposite rotation */}
-                  <div className="absolute top-40 left-0 w-4/5 shadow-xl dark:shadow-black/40 rounded-lg overflow-hidden transform -rotate-3 z-10 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-40">
-                    <img
-                      src={homeInteriorImage}
-                      alt="Home interior example"
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
+            {/* Image */}
+            <div className="relative h-64 sm:h-72 md:h-84">
+              <div className="w-full h-full transform transition-all duration-300 hover:rotate-1 hover:scale-105">
+                <div className="p-2 rounded-lg shadow-lg dark:shadow-black/30">
+                  <img
+                    src={ourMissionImage}
+                    alt="Shelter with plastic shutters"
+                    className="w-full h-full object-cover rounded"
+                  />
                 </div>
               </div>
             </div>
@@ -210,23 +192,97 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Call to action section */}
-      <div className="max-w-7xl mx-auto px-4 py-12 mb-20 relative">
-        <div className="rounded-2xl p-8 md:p-12 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
-            {t('cta.title')}
-          </h2>
-          <p className="text-lg mb-8 max-w-3xl mx-auto text-black dark:text-gray-300">
-            {t('cta.description')}
+      {/* Impact Section - Responsive Masonry Gallery */}
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 py-10 sm:py-12 md:py-16 mb-12 sm:mb-16 md:mb-20 relative">
+        <div className="bg-white dark:bg-slate-950 rounded-xl overflow-hidden shadow-lg dark:shadow-black/30 relative z-10 border border-transparent transition-colors duration-300">
+          {/* Header */}
+          <div className="h-16 sm:h-20 md:h-24 flex items-center px-4 sm:px-6 md:px-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black dark:text-white">
+              {t("impact.title")}
+            </h2>
+          </div>
+
+          {/* Main content - Responsive */}
+          <div className="p-4 sm:p-6 md:p-8">
+            <div className="mb-8 sm:mb-10 md:mb-12">
+              <p className="mb-4 sm:mb-6 text-base sm:text-lg text-black dark:text-gray-200">
+                {t("impact.paragraph1")}
+              </p>
+              <p className="text-base sm:text-lg text-black dark:text-gray-300">
+                {t("impact.paragraph2")}
+              </p>
+            </div>
+
+            {/* Responsive Masonry Gallery */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {/* Tall image - spans 2 rows on large screens */}
+              <div className="sm:col-span-1 lg:row-span-2">
+                <div className="rounded-lg overflow-hidden shadow-xl dark:shadow-black/40 h-64 sm:h-80 lg:h-96 group">
+                  <img
+                    src={ourImpactImage}
+                    alt="Community impact"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+              </div>
+
+              {/* Two stacked images - responsive */}
+              <div className="space-y-4 sm:space-y-6">
+                <div className="rounded-lg overflow-hidden shadow-lg dark:shadow-black/30 group">
+                  <img
+                    src={aboutUsImage}
+                    alt="Community living space"
+                    className="w-full h-40 sm:h-44 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-lg dark:shadow-black/30 group">
+                  <img
+                    src={doorPanelsHutWithCarpetInsulation}
+                    alt="Finding comfort"
+                    className="w-full h-40 sm:h-44 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+              </div>
+
+              {/* Two more stacked images - responsive */}
+              <div className="space-y-4 sm:space-y-6">
+                <div className="rounded-lg overflow-hidden shadow-lg dark:shadow-black/30 group">
+                  <img
+                    src={homeInteriorImage}
+                    alt="Home interior example"
+                    className="w-full h-40 sm:h-44 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+                <div className="rounded-lg overflow-hidden shadow-lg dark:shadow-black/30 group">
+                  <img
+                    src={shelterWithPlasticShutters}
+                    alt="Weather protection"
+                    className="w-full h-40 sm:h-44 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action - Responsive */}
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 py-8 sm:py-10 md:py-12 mb-12 sm:mb-16 md:mb-20 relative">
+        <div className="rounded-2xl p-6 sm:p-8 md:p-12 text-center relative z-10">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-black dark:text-white">
+            {t("getInvolved.title")}
+          </h3>
+          <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-6 sm:mb-8 max-w-4xl lg:max-w-6xl mx-auto px-2">
+            {t("getInvolved.description")}
           </p>
           <button
             onClick={() => (window.location.href = "/guide")}
-            className="px-8 py-4 bg-black dark:bg-slate-950 inline-block transition-all duration-300 
+            className="px-6 sm:px-8 py-3 sm:py-4 bg-black dark:bg-slate-950 inline-block transition-all duration-300 
                        hover:bg-zinc-900 dark:hover:bg-gray-800 hover:shadow-lg hover:shadow-lime-300/20 hover:scale-105 cursor-pointer
-                       border border-transparent dark:border-gray-700"
+                       border border-transparent dark:border-gray-700 text-sm sm:text-base"
           >
-            <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold text-lg uppercase">
-              {t('cta.button')}
+            <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold text-base sm:text-lg uppercase">
+              {t("getInvolved.button")}
             </span>
           </button>
         </div>

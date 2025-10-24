@@ -2,7 +2,7 @@
   "navbar": {
     "brand": {
       "notAHouse": "NEM HÁZ",
-      "butAHome": "HANEM OTTHON"
+      "butAHome": "DE OTTHON"
     },
     "home": "KEZDŐLAP",
     "aboutUs": "RÓLUNK",
@@ -23,7 +23,7 @@
     "resources": "Források",
     "community": "Közösség",
     "support": "Támogatás",
-    "copyright": "© 2025 Nem Ház Hanem Otthon. Minden jog fenntartva.",
+    "copyright": "© 2025 Nem Ház De Otthon. Minden jog fenntartva.",
     "terms": "Általános Szerződési Feltételek",
     "privacy": "Adatvédelmi Irányelvek",
     "contact": "Kapcsolat"
