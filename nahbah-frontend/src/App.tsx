@@ -2,8 +2,9 @@ import { Routes, Route } from 'react-router-dom'; // Keep Routes, Route
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import AboutUs from './pages/AboutUs';
-import DesignsLibrary from './pages/DesignsLibrary';
-import Essentials from './pages/Essentials';
+import Plans from './pages/Plans';
+import Principles from './pages/Principles';
+import Materials from './pages/Materials';
 import Guide from './pages/Guide';
 import Contribute from './pages/Contribute';
 import './App.css';
@@ -15,8 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/designs" element={<DesignsLibrary />} />
-          <Route path="/essentials" element={<Essentials />} />
+          <Route path="/plans" element={<Plans />} />
+          <Route path="/principles" element={<Principles />} />
+          <Route path="/materials" element={<Materials />} />
           <Route path="/guide" element={<Guide />} />
           <Route path="/contribute" element={<Contribute />} />
         </Routes>

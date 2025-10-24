@@ -1,20 +1,31 @@
 {
-  "hero": {
-    "backgroundText": "Construction Guide",
-    "titlePart1": "Step-by-Step",
-    "titleHighlight": "Building Guide",
-    "description": "Learn essential construction techniques and safety practices for building with found materials.",
-    "imageAlt": "Construction Guide"
+  "backgroundText": "Guide",
+  "title": "Building Better Shelters",
+  "description1": "We've designed this guide to help anyone create safer, more durable living spaces using accessible materials and techniques.",
+  "description2": "Whether you're building your own shelter, helping others, or just exploring possibilities - we're here to support your journey.",
+  "explore": "Get Started",
+  "chooseSuggestions": "Choose From The Suggestions",
+  "suggestionDescription": "The main goal of the website is to provide useful advice to those who are trying to build a habitable shelter for themselves. We've tailored resources for different needs. Select the option that best represents your situation.",
+  "principles": {
+    "title": "Principles",
+    "description": "In the PRINCIPLES section, you can read general information about, for example, the fundamental role of waterproofing and thermal insulation.",
+    "action": "Read Principles"
   },
-  "sections": {
-    "planning": "Planning Your Build",
-    "materials": "Material Assessment",
-    "techniques": "Construction Techniques",
-    "safety": "Safety Guidelines"
+  "materials": {
+    "title": "Materials",
+    "description": "Under the MATERIALS menu item, you can find information about the possible uses of some important raw materials.",
+    "action": "Explore Materials"
   },
-  "loading": "Loading guide content...",
-  "errors": {
-    "loadFailed": "Failed to load guide content. Please try again.",
-    "tryAgain": "Try Again"
+  "plan": {
+    "title": "Plans",
+    "badge": "Most Useful",
+    "description": "The most useful part - the PLANS menu item offers specific suggestions to improve shelters. Choose and print plans as booklets.",
+    "action": "Browse Plans"
+  },
+  "contribute": {
+    "title": "Contribute",
+    "description": "If you have a usable idea that you would like to share with others, use the CONTRIBUTE menu item. Create a drawing or photo montage of your plan and upload it with a short description so that others can benefit from it.",
+    "review": "(Uploaded materials will appear on the platform after professional review.)",
+    "action": "Upload Your Plan"
   }
 }

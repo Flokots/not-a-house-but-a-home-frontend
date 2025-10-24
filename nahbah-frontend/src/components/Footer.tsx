@@ -76,7 +76,7 @@ const Footer = () => {
                 <li><Link to="/" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.home')}</Link></li>
                 <li><Link to="/about" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.aboutUs')}</Link></li>
                 <li><Link to="/guide" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.guide')}</Link></li>
-                <li><Link to="/essentials" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.essentials')}</Link></li>
+                <li><Link to="/principles" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.principles')}</Link></li>
               </ul>
             </div>
 
@@ -84,9 +84,9 @@ const Footer = () => {
             <div>
               <h4 className={`text-lg mb-4 ${styles.text}`}>{t('footer.resources')}</h4>
               <ul className="space-y-2">
-                <li><Link to="/designs" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.designs')}</Link></li>
+                <li><a href="/materials" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.materials')}</a></li>
+                <li><Link to="/plans" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.plans')}</Link></li>
                 <li><Link to="/contribute" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.contribute')}</Link></li>
-                <li><a href="#" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.community')}</a></li>
                 <li><a href="mailto:support@nahbah.org" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.support')}</a></li>
               </ul>
             </div>

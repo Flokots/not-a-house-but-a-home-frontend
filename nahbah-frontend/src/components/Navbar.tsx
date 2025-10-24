@@ -14,7 +14,7 @@ const Navbar = () => {
   const isLightMode = resolvedTheme === 'light';
   
   // Pages that always have dark backgrounds and need white text
-  const alwaysDarkPages = ['/', '/contribute', '/designs'];
+  const alwaysDarkPages = ['/', '/contribute', '/plans'];
   const isAlwaysDark = alwaysDarkPages.includes(location.pathname);
 
   const textColor = (isLightMode && !isAlwaysDark) ? 'text-black' : 'text-white';
@@ -81,20 +81,30 @@ const Navbar = () => {
               </>
             )}
           </NavLink>
-          <NavLink to="/essentials" className={({ isActive }) => getLinkClass(isActive)}>
+          <NavLink to="/principles" className={({ isActive }) => getLinkClass(isActive)}>
             {({ isActive }) => (
               <>
-                {t('navbar.essentials')}
+                {t('navbar.principles')}
                 {isActive && (
                   <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
                 )}
               </>
             )}
           </NavLink>
-          <NavLink to="/designs" className={({ isActive }) => getLinkClass(isActive)}>
+          <NavLink to="/materials" className={({ isActive }) => getLinkClass(isActive)}>
             {({ isActive }) => (
               <>
-                {t('navbar.designs')}
+                {t('navbar.materials')}
+                {isActive && (
+                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
+                )}
+              </>
+            )}
+          </NavLink>
+          <NavLink to="/plans" className={({ isActive }) => getLinkClass(isActive)}>
+            {({ isActive }) => (
+              <>
+                {t('navbar.plans')}
                 {isActive && (
                   <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
                 )}
@@ -165,18 +175,25 @@ const Navbar = () => {
               {t('navbar.guide')}
             </NavLink>
             <NavLink
-              to="/essentials"
+              to="/principles"
               className={({ isActive }) => `block ${getLinkClass(isActive)}`}
               onClick={handleMobileLinkClick}
             >
-              {t('navbar.essentials')}
+              {t('navbar.principles')}
             </NavLink>
             <NavLink
-              to="/designs"
+              to="/materials"
               className={({ isActive }) => `block ${getLinkClass(isActive)}`}
               onClick={handleMobileLinkClick}
             >
-              {t('navbar.designs')}
+              {t('navbar.materials')}
+            </NavLink>
+            <NavLink
+              to="/plans"
+              className={({ isActive }) => `block ${getLinkClass(isActive)}`}
+              onClick={handleMobileLinkClick}
+            >
+              {t('navbar.plans')}
             </NavLink>
             <NavLink
               to="/contribute"

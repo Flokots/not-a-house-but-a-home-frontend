@@ -11,29 +11,6 @@
       "viewDesignsBtn": "VIEW DESIGNS"
     }
   },
-  "guide": {
-    "backgroundText": "Guide",
-    "title": "Building Better Homes",
-    "description": "We've designed this guide to help anyone create safer, more durable living spaces using accessible materials and techniques. Whether you're building your own shelter, helping others, or just exploring possibilities, we're here to support your journey.",
-    "findYourPath": "Find Your Path",
-    "chooseYourPath": "CHOOSE YOUR PATH",
-    "pathDescription": "We've tailored resources for different needs. Select the option that best represents your situation.",
-    "essentials": {
-      "title": "Essentials & Materials",
-      "description": "Discover what makes a shelter a home and explore useful materials you can find around you.",
-      "action": "Explore Resources"
-    },
-    "designs": {
-      "title": "Design Library",
-      "description": "Browse, select, and download design plans to create your own customized building guide.",
-      "action": "Access Designs"
-    },
-    "contribute": {
-      "title": "Contribute Your Expertise",
-      "description": "Share your knowledge, upload designs, or collaborate with our community to help others.",
-      "action": "Join Our Efforts"
-    }
-  },
   "essentials": {
     "backgroundText": "Essentials",
     "title": "What does a home need?",

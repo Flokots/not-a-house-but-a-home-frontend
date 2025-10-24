@@ -1,20 +1,31 @@
 {
-  "hero": {
-    "backgroundText": "Építési Útmutató",
-    "titlePart1": "Lépésről Lépésre",
-    "titleHighlight": "Építési Útmutató",
-    "description": "Tanulj meg alapvető építési technikákat és biztonsági gyakorlatokat talált anyagokkal való építéshez.",
-    "imageAlt": "Építési Útmutató"
+  "backgroundText": "Útmutató",
+  "title": "Jobb Menedékek Építése",
+  "description1": "Ezt az útmutatót azért hoztuk létre, hogy a rászorulók számára segítséget nyújtson a biztonságosabb és tartósabb lakóhelyek megvalósításában, elérhető anyagok és technikák felhasználásával.",
+  "description2": "Akár saját menedékedet építed, akár másoknak segítesz, vagy egyszerűen csak új lehetőségeket fedezel fel - mi azért vagyunk itt, hogy támogassunk ebben.",
+  "explore": "Kezdjük",
+  "chooseSuggestions": "Válassz A Javaslatok Közül",
+  "suggestionDescription": "A honlap legfontosabb célja, hogy használható tanácsokat adjon azoknak, akik saját maguknak próbálnak lakható menedéket építeni. Különböző igényekre szabott forrásokat kínálunk. Válaszd ki azt a lehetőséget, amely leginkább megfelel a helyzetednek.",
+  "principles": {
+    "title": "Alapelvek",
+    "description": "Az ALAPELVEK fejezetben általános információkat lehet olvasni például a vízszigetelés és hőszigetelés alapvető szerepéről.",
+    "action": "Alapelvek Olvasása"
   },
-  "sections": {
-    "planning": "Építés Tervezése",
-    "materials": "Anyag Értékelés",
-    "techniques": "Építési Technikák",
-    "safety": "Biztonsági Irányelvek"
+  "materials": {
+    "title": "Anyagok",
+    "description": "Az ANYAGOK menüpont alatt néhány fontos alapanyag felhasználási lehetőségéről találsz információkat.",
+    "action": "Anyagok Felfedezése"
   },
-  "loading": "Útmutató tartalom betöltése...",
-  "errors": {
-    "loadFailed": "Nem sikerült betölteni az útmutató tartalmát. Kérlek próbáld újra.",
-    "tryAgain": "Próbáld Újra"
+  "plan": {
+    "title": "Tervtár",
+    "badge": "Leghasznosabb",
+    "description": "A leghasznosabb rész - a TERVTÁR menüpont konkrét javaslatokat kínál a menedékek fejlesztéséhez. Válassz és nyomtass terveket füzet formában.",
+    "action": "Tervek Böngészése"
+  },
+  "contribute": {
+    "title": "Feltöltés",
+    "description": "Ha van használható ötleted, amit megosztanál másokkal, akkor használd a FELTÖLTÉS menüpontot. Készíts rajzot, vagy fotómontázst a tervedről és egy rövid leírással együtt töltsd fel, hogy másoknak is hasznára legyen.",
+    "review": "(A feltöltött anyagok szakmai ellenőrzés után jelennek meg a felületen.)",
+    "action": "Terv Feltöltése"
   }
 }
