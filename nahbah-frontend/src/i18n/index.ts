@@ -19,6 +19,12 @@ import enMaterials from './locales/en/materials.json';
 import huMaterials from './locales/hu/materials.json';
 import enPlans from './locales/en/plans.json';
 import huPlans from './locales/hu/plans.json';
+import enContribute from './locales/en/contribute.json';
+import huContribute from './locales/hu/contribute.json';
+import enGDPR from './locales/en/gdpr.json';
+import huGDPR from './locales/hu/gdpr.json';
+import enTermsAndConditions from './locales/en/terms.json';
+import huTermsAndConditions from './locales/hu/terms.json';
 
 const resources = {
   en: {
@@ -29,7 +35,10 @@ const resources = {
     pages: enPages,
     principles: enPrinciples,
     materials: enMaterials,
-    plans: enPlans
+    plans: enPlans,
+    contribute: enContribute,
+    gdpr: enGDPR,
+    terms: enTermsAndConditions
   },
   hu: {
     home: huHome,
@@ -39,7 +48,10 @@ const resources = {
     pages: huPages,
     principles: huPrinciples,
     materials: huMaterials,
-    plans: huPlans
+    plans: huPlans,
+    contribute: huContribute,
+    gdpr: huGDPR,
+    terms: huTermsAndConditions
   }
 };
 
