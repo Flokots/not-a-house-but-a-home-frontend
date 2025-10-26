@@ -1,0 +1,189 @@
+{
+  "loading": "Loading essential resources...",
+  "errors": {
+    "loadFailed": "Failed to load resources. Please try again.",
+    "tryAgain": "Try Again"
+  },
+  "backgroundText": "Materials",
+  "title": "Using Repurposed Materials",
+  "description": "Building doesn't always require expensive or new materials. Our surroundings are full of valuable, reusable resources that — with the right mindset and care — can be turned into safe, durable, and dignified homes.",
+  "learnMore": "Learn More",
+  "mindset": {
+    "title": "Foundations of the Right Approach",
+    "foundationsList": {
+      "foundationOne": {
+        "title": "See value in leftovers",
+        "description": "What others might throw away can often be reused for building, protection, or insulation."
+      },
+      "foundationTwo": {
+        "title": "Examine material properties",
+        "description": "Make sure they are safe — free from harmful chemicals, mold, or sharp edges."
+      },
+      "foundationThree": {
+        "title": "Be creative",
+        "description": "Combining materials such as wood, metal, plastic, fabric, and cardboard can result in stronger and more functional solutions."
+      },
+      "foundationFour": {
+        "title": "Adapt to local conditions",
+        "description": "Materials differ between urban and rural areas — use what is easily available and environmentally friendly."
+      },
+      "foundationFive": {
+        "title": "Prioritize safety",
+        "description": "Reuse should never compromise stability or health — materials must be dry, sturdy, and non-toxic."
+      },
+      "foundationSix": {
+        "title": "Think long-term",
+        "description": "Good material choices not only provide immediate shelter but also ensure durability and easier maintenance."
+      }
+    },
+    "conclusion": "With this mindset, building becomes not merely a necessity but a creative, value-generating process — even in the simplest circumstances."
+  },
+
+  "environment": {
+    "title": "Usable Materials in Our Environment",
+    "description": "Creating or improving a home doesn't always require conventional building supplies. In cities, a wide range of packaging materials and discarded items can be found and reused to make temporary shelters warmer, safer, and more comfortable.",
+    "callToAction": "Keep your eyes open as you walk the streets — notice what could help make your shelter waterproof, windproof, and better insulated. This way of thinking helps you see your environment differently and turn waste into valuable resources instead of letting it go to the landfill."
+  },
+
+  "materialsSection": {
+    "title": "Available Materials and Their Use",
+    "description": "Learn to look at your surroundings resourcefully — discover how everyday objects can be transformed into essential parts of a home.",
+    "imageCaption": "Self-made house from door leaves",
+    "availableMaterials": "Material Categories",
+    "availableDescription": "Click on each material to learn more about its properties and uses",
+    "viewDetails": "View Details",
+
+    "materials": {
+      "paper": {
+        "title": "Paper & Cardboard",
+        "function": "Insulation, wall panels, temporary protection",
+        "rawMaterial": "Cardboard boxes, paper, packaging materials",
+        "whereToFind": "Supermarkets, recycling bins, packaging waste",
+        "use": "Layered cardboard provides excellent insulation. Can be used for wall panels, floor underlays, or temporary roofing when combined with waterproof layers.",
+        "examples": [
+          "Cardboard boxes flattened and layered for wall insulation",
+          "Thick paper used as windbreak between wall gaps",
+          "Cardboard panels as temporary flooring over pallets",
+          "Paper stuffed into gaps for draft protection"
+        ]
+      },
+      "metals": {
+        "title": "Metals",
+        "function": "Structural support, roofing, fasteners",
+        "rawMaterial": "Metal cans, wire, rods, sheets",
+        "whereToFind": "Construction waste, scrap yards, discarded appliances",
+        "use": "Metal provides strength and weather resistance. Flattened cans make excellent roofing shingles, while wire and rods create structural reinforcement.",
+        "examples": [
+          "Flattened beverage cans as waterproof roof tiles",
+          "Wire for tying structural elements together",
+          "Metal sheets as wind and rain barriers",
+          "Rods and bars for structural reinforcement"
+        ]
+      },
+      "textiles": {
+        "title": "Textiles",
+        "function": "Insulation, sealing, weather protection",
+        "rawMaterial": "Old clothes, blankets, curtains, fabric scraps",
+        "whereToFind": "Donation bins, discarded clothing, textile waste",
+        "use": "Fabrics provide excellent insulation and can seal gaps. Layered textiles retain heat and block wind when used in walls or as door/window coverings.",
+        "examples": [
+          "Old blankets hung as internal insulation layers",
+          "Fabric strips stuffed into wall gaps for sealing",
+          "Curtains used as door or window covers",
+          "Layered clothing in walls for thermal mass"
+        ]
+      },
+      "plastics": {
+        "title": "Plastics",
+        "function": "Waterproofing, insulation, vapor barriers",
+        "rawMaterial": "Plastic bottles, bags, sheeting, foam",
+        "whereToFind": "Packaging waste, construction sites, discarded containers",
+        "use": "Plastic is waterproof and versatile. Bottles can be filled for insulation, sheets create vapor barriers, and foam provides thermal insulation.",
+        "examples": [
+          "Plastic bottles filled with sand or straw for wall insulation",
+          "Plastic sheeting as waterproof roof underlayment",
+          "Styrofoam panels for thermal insulation",
+          "Plastic bags layered for wind and moisture barriers"
+        ]
+      },
+      "wood": {
+        "title": "Wood",
+        "function": "Structural framework, flooring, walls",
+        "rawMaterial": "Pallets, crates, planks, branches",
+        "whereToFind": "Construction sites, shipping areas, furniture waste",
+        "use": "Wood is the primary structural material. Pallets become frames and floors, planks form walls, and branches can be woven for panels.",
+        "examples": [
+          "Pallets as ready-made floor and wall frames",
+          "Wooden crates dismantled for planks and panels",
+          "Branches woven together for wall filling",
+          "Planks used for roof structure and support beams"
+        ]
+      }
+    },
+
+    "modal": {
+      "information": "Information",
+      "examples": "Examples",
+      "rawMaterial": "Raw Material",
+      "whereToFind": "Where to Find",
+      "useInShelter": "Use in Shelter",
+      "examplesOfUse": "Examples of Use",
+      "infoNote": "Always inspect materials for safety before use. Avoid materials with mold, sharp edges, or toxic residues.",
+      "examplesNote": "These are practical examples. Be creative and adapt based on what materials you can safely access."
+    },
+
+    "repurpose": {
+      "title": "How Materials Can Be Repurposed",
+      "description": "Transform everyday waste into functional shelter components",
+      "structural": {
+        "title": "Structural Support",
+        "description": "Materials that provide strength and framework",
+        "items": [
+          "Wooden pallets Floor base, wall frames",
+          "Metal rods/pipes Structural reinforcement",
+          "Concrete blocks Foundation, anchoring",
+          "Wooden crates Wall panels, storage"
+        ]
+      },
+      "insulation": {
+        "title": "Insulation & Comfort",
+        "description": "Materials that retain heat and improve comfort",
+        "items": [
+          "Cardboard layers Wall/floor insulation",
+          "Styrofoam Thermal insulation",
+          "Old clothes/blankets Gap filling, warmth",
+          "Plastic bottles Filled insulation blocks"
+        ]
+      },
+      "weather": {
+        "title": "Weather Protection",
+        "description": "Materials that protect from rain, wind, and elements",
+        "items": [
+          "Plastic sheeting Roof waterproofing",
+          "Metal cans Roof shingles",
+          "Tarps Rain and wind barriers",
+          "Fabric + plastic Sealed wall layers"
+        ]
+      }
+    },
+
+    "lookAround": {
+      "title": "Look Around With New Eyes",
+      "description": "Walk the streets with resourcefulness in mind. What seems like waste could be the key to making your shelter warmer, drier, and safer. This mindset transforms your environment into a source of valuable building materials."
+    }
+  },
+
+  "recycling": {
+    "title": "Recycling and Reusing Materials",
+    "subtitle": "Objects and discarded items around you can become valuable building materials if used creatively and safely.",
+    "principlesTitle": "Basic Principles",
+    "principles": [
+      "Observe the material's properties: Is it waterproof, flexible, heat-retaining, or rigid? Let this determine its use.",
+      "Clean and prepare it: Removing dust, mold, rust, or oil extends the material's lifespan.",
+      "Combine materials: For example, wood + fabric or cardboard + plastic sheet can improve insulation or strengthen structures.",
+      "Give materials a new purpose: A pallet can become flooring or wall panels; a plastic bottle can serve as roofing or insulation.",
+      "Design based on local resources: Consider what's available nearby — construction waste, packaging materials, or furniture panels."
+    ],
+    "conclusion": "By thinking creatively and acting sustainably, even discarded materials can become the foundation of a safe and dignified home."
+  }
+}

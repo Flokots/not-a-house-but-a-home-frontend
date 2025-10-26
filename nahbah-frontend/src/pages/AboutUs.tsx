@@ -36,7 +36,7 @@ const AboutUs = () => {
           <h1 className="text-2xl sm:text-3xl md:text-4xl futura-bold mb-10 sm:mb-12 mt-0 ml-0 sm:ml-10 md:ml-22 text-black dark:text-white leading-tight">
             {t("hero.title")}
           </h1>
-          
+
           {/* Subtitle with accent bar */}
           <div className="mb-6 sm:mb-8 md:mb-10">
             <p className="text-lg sm:text-xl font-semibold text-black dark:text-gray-200 leading-relaxed">
@@ -89,7 +89,7 @@ const AboutUs = () => {
             <div className="absolute inset-0">
               {/* Back photo */}
               <div className="absolute top-0 right-2 sm:right-4 md:right-6 lg:right-4 w-56 sm:w-60 md:w-64 lg:w-72 xl:w-80 transform rotate-6 transition-all duration-300 hover:rotate-3 hover:scale-105">
-                <div className="p-2 sm:p-3 rounded-lg shadow-xl sm:shadow-2xl dark:shadow-black/50">
+                <div className="rounded-lg shadow-xl sm:shadow-2xl dark:shadow-black/50">
                   <img
                     src={shelterWithPlasticShutters}
                     alt="Shelter with plastic shutters"
@@ -97,10 +97,10 @@ const AboutUs = () => {
                   />
                 </div>
               </div>
-              
+
               {/* Middle photo */}
               <div className="absolute top-16 sm:top-20 md:top-28 lg:top-32 xl:top-40 left-2 sm:left-4 md:left-6 lg:left-8 w-56 sm:w-60 md:w-64 lg:w-72 xl:w-80 transform -rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 z-10">
-                <div className="p-2 sm:p-3 rounded-lg shadow-xl sm:shadow-2xl dark:shadow-black/50">
+                <div className="rounded-lg shadow-xl sm:shadow-2xl dark:shadow-black/50">
                   <img
                     src={puppyImage}
                     alt="Puppy seeking shelter"
@@ -108,10 +108,10 @@ const AboutUs = () => {
                   />
                 </div>
               </div>
-              
+
               {/* Front photo */}
               <div className="absolute top-32 sm:top-40 md:top-56 lg:top-64 xl:top-80 right-4 sm:right-8 md:right-10 lg:right-12 w-56 sm:w-60 md:w-64 lg:w-72 xl:w-80 transform rotate-2 transition-all duration-300 hover:-rotate-1 hover:scale-105 z-20">
-                <div className="p-2 sm:p-3 rounded-lg shadow-xl sm:shadow-2xl dark:shadow-black/50">
+                <div className="rounded-lg shadow-xl sm:shadow-2xl dark:shadow-black/50">
                   <img
                     src={rosaryAndKittenImage}
                     alt="Rosary and kitten in shelter"
@@ -162,7 +162,7 @@ const AboutUs = () => {
           {/* Approach Section - Responsive Grid */}
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 p-4 sm:p-6 md:p-8 pt-2 sm:pt-3 md:pt-4">
             <div className="bg-lime-200 dark:bg-lime-900/30 p-4 sm:p-6 rounded-lg transition-all duration-300 hover:scale-[1.02] border border-transparent dark:border-lime-800/30">
-              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-800 dark:text-lime-200">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 sm:mb-4 text-gray-800 dark:text-lime-200">
                 {t("approach.title")}
               </h3>
               <p className="mb-3 sm:mb-4 text-base sm:text-lg text-gray-700 dark:text-gray-300">
@@ -179,11 +179,11 @@ const AboutUs = () => {
             {/* Image */}
             <div className="relative h-64 sm:h-72 md:h-84">
               <div className="w-full h-full transform transition-all duration-300 hover:rotate-1 hover:scale-105">
-                <div className="p-2 rounded-lg shadow-lg dark:shadow-black/30">
+                <div className="rounded-lg shadow-lg dark:shadow-black/30">
                   <img
                     src={ourMissionImage}
                     alt="Shelter with plastic shutters"
-                    className="w-full h-full object-cover rounded"
+                    className="w-full h-90 object-cover rounded"
                   />
                 </div>
               </div>
@@ -211,6 +211,33 @@ const AboutUs = () => {
               <p className="text-base sm:text-lg text-black dark:text-gray-300">
                 {t("impact.paragraph2")}
               </p>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4 mb-12 text-center">
+              <div className="bg-lime-100 dark:bg-lime-900/40 py-6 px-4 rounded-lg transform transition-transform hover:scale-105 border border-transparent dark:border-lime-800/30">
+                <h4 className="text-3xl font-bold text-lime-600 dark:text-lime-400 mb-1">
+                  100+
+                </h4>
+                <p className="text-sm text-lime-800 dark:text-lime-300">
+                  Housing Solutions
+                </p>
+              </div>
+              <div className="bg-yellow-100 dark:bg-yellow-900/40 py-6 px-4 rounded-lg transform transition-transform hover:scale-105 border border-transparent dark:border-yellow-800/30">
+                <h4 className="text-3xl font-bold text-yellow-600 dark:text-yellow-400 mb-1">
+                  50+
+                </h4>
+                <p className="text-sm text-yellow-800 dark:text-yellow-300">
+                  Communities Served
+                </p>
+              </div>
+              <div className="bg-lime-100 dark:bg-lime-900/40 py-6 px-4 rounded-lg transform transition-transform hover:scale-105 border border-transparent dark:border-lime-800/30">
+                <h4 className="text-3xl font-bold text-lime-600 dark:text-lime-400 mb-1">
+                  1000+
+                </h4>
+                <p className="text-sm text-lime-800 dark:text-lime-300">
+                  People Helped
+                </p>
+              </div>
             </div>
 
             {/* Responsive Masonry Gallery */}

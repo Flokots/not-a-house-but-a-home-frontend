@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
-import Navbar from "@/components/Navbar";
 import buildingMaterialsImage from "@/assets/buildingmaterials.png";
 import safetyImage from "@/assets/lounge_area.png";
 import architectImage from "@/assets/architect.png";
@@ -18,9 +17,7 @@ const Guide = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-black relative overflow-hidden hero-text text-black dark:text-white px-10 transition-colors duration-300">
-      {/* Navbar that responds to theme */}
-      <Navbar />
-      
+       
       {/* Hero Section with Background Text and Image */}
       <div className="max-w-7xl mx-auto px-4 pt-32 pb-20 flex flex-col md:flex-row gap-8 relative top-10">
         {/* Background "Guide" text - matching styling pattern */}

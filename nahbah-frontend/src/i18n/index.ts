@@ -15,6 +15,10 @@ import enPages from './locales/en/pages.json';
 import huPages from './locales/hu/pages.json';
 import enPrinciples from './locales/en/principles.json';
 import huPrinciples from './locales/hu/principles.json';
+import enMaterials from './locales/en/materials.json';
+import huMaterials from './locales/hu/materials.json';
+import enPlans from './locales/en/plans.json';
+import huPlans from './locales/hu/plans.json';
 
 const resources = {
   en: {
@@ -23,7 +27,9 @@ const resources = {
     guide: enGuide,
     components: enComponents,
     pages: enPages,
-    principles: enPrinciples
+    principles: enPrinciples,
+    materials: enMaterials,
+    plans: enPlans
   },
   hu: {
     home: huHome,
@@ -31,7 +37,9 @@ const resources = {
     guide: huGuide,
     components: huComponents,
     pages: huPages,
-    principles: huPrinciples
+    principles: huPrinciples,
+    materials: huMaterials,
+    plans: huPlans
   }
 };
 

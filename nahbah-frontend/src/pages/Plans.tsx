@@ -8,7 +8,7 @@ import { type Design } from "@/types/designs";
 import designLibrary from "@/assets/designLibrary.png"
 
 const DesignsLibrary = () => {
-  const { t } = useTranslation('pages');
+  const { t } = useTranslation('plans');
   const [designs, setDesigns] = useState<Design[]>([]);
   const [filteredDesigns, setFilteredDesigns] = useState<Design[]>([]);
   const [selectedDesigns, setSelectedDesigns] = useState<number[]>([]);

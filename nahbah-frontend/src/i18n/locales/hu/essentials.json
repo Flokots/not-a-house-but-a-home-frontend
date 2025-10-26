@@ -1,10 +1,10 @@
 {
   "hero": {
-    "backgroundText": "Alapvető Dolgok",
-    "titlePart1": "Alapvető",
-    "titleHighlight": "Források",
-    "description": "Hozzáférés kritikus forrásokhoz, eszközökhöz és információkhoz vészhelyzeti menedék építéshez.",
-    "imageAlt": "Alapvető Források"
+    "backgroundText": "Alapok",
+    "titlePart1": "Fellelhető",
+    "titleHighlight": "Építőanyagok",
+    "description": "Az építéshez nem mindig van szükség drága vagy új anyagokra. A környezetünk tele van értékes, újrahasznosítható alapanyagokkal, amelyek – megfelelő szemlélettel és odafigyeléssel – biztonságos, tartós és emberhez méltó otthonokká alakíthatók.",
+    "imageAlt": "Fellelhető Építőanyagok"
   },
   "categories": {
     "tools": "Eszközök",
@@ -12,9 +12,170 @@
     "emergency": "Vészhelyzeti Info",
     "contacts": "Kapcsolatok"
   },
-  "loading": "Alapvető források betöltése...",
+  "loading": "Fellelhető építőanyagok betöltése...",
   "errors": {
-    "loadFailed": "Nem sikerült betölteni a forrásokat. Kérlek próbáld újra.",
+    "loadFailed": "Nem sikerült betölteni az építőanyagokat. Kérlek próbáld újra.",
     "tryAgain": "Próbáld Újra"
+  },
+  "mindset": {
+    "title": "A Fellelhető Építőanyagok Szerepe és a Helyes Szemlélet",
+    "subtitle": "A helyes szemlélet alapjai",
+    "principles": [
+      "Lásd értéknek a maradékot: amit más kidobna, az gyakran alkalmas építésre, védelemre vagy szigetelésre.",
+      "Vizsgáld meg az anyag tulajdonságait: fontos, hogy biztonságos legyen – ne tartalmazzon veszélyes vegyszert, penészt vagy éles elemeket.",
+      "Használj kreatívan: a különböző anyagok – fa, fém, műanyag, textil, karton – kombinálásával erősebb, funkcionálisabb megoldások születhetnek.",
+      "Alkalmazkodj a helyi adottságokhoz: más anyagokat találni egy városban, mást vidéken; használd azt, ami könnyen hozzáférhető.",
+      "Tartsd szem előtt a biztonságot: az újrahasznosítás nem jelenthet kockázatot – az anyag legyen stabil, száraz és nem mérgező.",
+      "Gondolkodj hosszú távon: a jó anyagválasztás nemcsak az azonnali menedéket segíti, hanem tartósságot és karbantarthatóságot is biztosít."
+    ],
+    "conclusion": "Ezzel a szemlélettel az építés nem csupán szükségmegoldás, hanem alkotó, értékteremtő folyamat lehet – még a legegyszerűbb körülmények között is."
+  },
+
+  "environment": {
+    "title": "Felhasználható Anyagok a Környezetünkben",
+    "description": "Egy otthon megépítése vagy kényelmesebbé tétele nem csak építőanyagokkal lehetséges. A nagyvárosokban számos csomagolóanyag és hulladéknak tűnő alapanyag található, amelyekkel melegebbé, kényelmesebbé és biztonságosabbá tehetjük ideiglenes menedékünket.",
+    "callToAction": "Járjunk nyitott szemmel az utcán, és figyeljük meg, mi az, amit felhasználhatunk, hogy otthonunk ne ázzon be, ne húzzon át a szél, és jobban tartsa a meleget. Ez a szemlélet segít, hogy másként tekintsünk a környezetünkre, és értékes nyersanyagokat használjunk fel újra ahelyett, hogy a szeméttelepre kerülnének."
+  },
+
+  "materialsSection": {
+    "title": "Rendelkezésre Álló Anyagok és Azok Felhasználása",
+    "description": "Tanulj meg leleményesen tekinteni a környezetedre - fedezd fel, hogyan alakíthatók a mindennapi tárgyak az otthon alapvető elemeivé.",
+    "imageCaption": "Ajtólapokból készült ház",
+    "availableMaterials": "Anyagkategóriák",
+    "availableDescription": "Kattints az egyes anyagokra, hogy többet megtudj tulajdonságaikról és felhasználásukról",
+    "viewDetails": "Részletek →",
+
+    "materials": {
+      "paper": {
+        "title": "Papír és Karton",
+        "function": "Szigetelés, falpanelek, ideiglenes védelem",
+        "rawMaterial": "Kartondobozok, papír, csomagolóanyagok",
+        "whereToFind": "Szupermarketek, szelektív hulladékgyűjtők, csomagolási hulladék",
+        "use": "A rétegezett karton kiváló szigetelést nyújt. Használható falpanelekhez, padlóalátétekhez vagy ideiglenes tetőfedéshez vízálló rétegekkel kombinálva.",
+        "examples": [
+          "Összenyomott kartondobozok rétegezve falszigeteléshez",
+          "Vastag papír szélvédelemként falak közötti résekben",
+          "Kartonpanelek ideiglenes padlóként raklapokon",
+          "Papír tömítve résekbe huzatvédelemhez"
+        ]
+      },
+      "metals": {
+        "title": "Fémek",
+        "function": "Szerkezeti támasz, tetőfedés, rögzítők",
+        "rawMaterial": "Fémdobozok, drót, rudak, lemezek",
+        "whereToFind": "Építési hulladék, fémhulladék telepek, leselejtezett készülékek",
+        "use": "A fém erőt és időjárás-állóságot biztosít. Az összenyomott dobozok kiváló tetőcserepek, míg a drót és rudak szerkezeti merevítést adnak.",
+        "examples": [
+          "Összenyomott italos dobozok vízálló tetőcserepekként",
+          "Drót szerkezeti elemek összekötéséhez",
+          "Fémlemezek szél- és esővédő barrierként",
+          "Rudak és gerendák szerkezeti merevítéshez"
+        ]
+      },
+      "textiles": {
+        "title": "Textíliák",
+        "function": "Szigetelés, tömítés, időjárásvédelem",
+        "rawMaterial": "Régi ruhák, takarók, függönyök, textilfoszlányok",
+        "whereToFind": "Adománygyűjtő konténerek, kidobott ruházat, textilhulladék",
+        "use": "A textíliák kiváló szigetelést nyújtanak és tömíthetik a réseket. A rétegezett textíliák megtartják a meleget és blokkolják a szelet, amikor falakban vagy ajtó-/ablakfedésként használják.",
+        "examples": [
+          "Régi takarók belső szigetelő rétegként",
+          "Textilcsíkok tömítve falak közötti résekbe",
+          "Függönyök ajtó- vagy ablakfedésként",
+          "Rétegezett ruházat falakban hőtároláshoz"
+        ]
+      },
+      "plastics": {
+        "title": "Műanyagok",
+        "function": "Vízhatlanítás, szigetelés, párazárás",
+        "rawMaterial": "Műanyag palackok, zacskók, fóliák, hab",
+        "whereToFind": "Csomagolási hulladék, építkezések, eldobott tartályok",
+        "use": "A műanyag vízálló és sokoldalú. A palackok tölthetők szigeteléshez, a fóliák párazárást hoznak létre, a hab hőszigetelést nyújt.",
+        "examples": [
+          "Műanyag palackok homokkal vagy szalmával töltve falszigeteléshez",
+          "Műanyag fólia vízálló tetőalátétként",
+          "Hungarocell panelek hőszigeteléshez",
+          "Műanyag zacskók rétegezve szél- és nedvességzáráshoz"
+        ]
+      },
+      "wood": {
+        "title": "Fa",
+        "function": "Szerkezeti váz, padló, falak",
+        "rawMaterial": "Raklapok, ládák, deszkák, ágak",
+        "whereToFind": "Építkezések, szállítási területek, bútorhulladék",
+        "use": "A fa az elsődleges szerkezeti anyag. A raklapok vázzá és padlóvá válnak, a deszkák falakat alkotnak, az ágak panelekké fonhatók.",
+        "examples": [
+          "Raklapok kész padló- és falvázként",
+          "Faládák szétszedve deszkákra és panelekre",
+          "Ágak összefon va falkitöltéshez",
+          "Deszkák tetőszerkezethez és tartógerendákhoz"
+        ]
+      }
+    },
+
+    "modal": {
+      "information": "Információ",
+      "examples": "Példák",
+      "rawMaterial": "Nyersanyag",
+      "whereToFind": "Hol Található",
+      "useInShelter": "Felhasználás a Menedékben",
+      "examplesOfUse": "Felhasználási Példák",
+      "infoNote": "Mindig vizsgáld meg az anyagok biztonságosságát használat előtt. Kerüld a penészes, éles szélű vagy mérgező maradványokat tartalmazó anyagokat.",
+      "examplesNote": "Ezek gyakorlati példák. Légy kreatív és alkalmazkodj ahhoz, milyen anyagokhoz férsz hozzá biztonságosan."
+    }
+  },
+
+  "recycling": {
+    "title": "Anyagok Újrahasznosítása és Újrafelhasználása",
+    "subtitle": "A környezetedben található tárgyak és hulladékok értékes építőanyagokká válhatnak, ha kreatívan és biztonságosan használod őket.",
+    "principlesTitle": "Alapelvek",
+    "principles": [
+      "Figyeld meg az anyag tulajdonságait: vízálló, hajlékony, hőtartó vagy merev? Ezek alapján döntsd el, mire alkalmas.",
+      "Tisztítsd meg és készítsd elő: por, penész, rozsda vagy olaj eltávolítása meghosszabbítja az anyag élettartamát.",
+      "Kombináld az anyagokat: például fa + textil, karton + fólia, hogy jobb szigetelést vagy stabilabb szerkezetet kapj.",
+      "Használd új funkcióban: egy raklapból lehet padló vagy falpanel, egy műanyag palackból tetőfedés vagy szigetelés.",
+      "Tervezz újra a helyi adottságok szerint: gondold át, mi áll rendelkezésre a közeledben – építési hulladék, csomagolóanyag, bútorlap stb."
+    ],
+    "conclusion": "Kreatív gondolkodással és fenntartható cselekvéssel még az eldobott anyagok is biztonságos és emberhez méltó otthon alapjai lehetnek."
+  },
+
+  "repurpose": {
+    "title": "Hogyan Hasznosíthatók Újra az Anyagok",
+    "description": "Alakíts át mindennapi hulladékot funkcionális menedék elemekké",
+    "structural": {
+      "title": "Szerkezeti Támasz",
+      "description": "Anyagok, amelyek erőt és keretet adnak",
+      "items": [
+        "Fa raklapok → Padlóalap, falvázak",
+        "Fémrudak/csövek → Szerkezeti merevítés",
+        "Betontömbök → Alapozás, rögzítés",
+        "Faládák → Falpanelek, tárolás"
+      ]
+    },
+    "insulation": {
+      "title": "Szigetelés és Kényelem",
+      "description": "Anyagok, amelyek megtartják a meleget és javítják a kényelmet",
+      "items": [
+        "Kartonrétegek → Fal/padló szigetelés",
+        "Hungarocell → Hőszigetelés",
+        "Régi ruhák/takarók → Réstömítés, melegség",
+        "Műanyag palackok → Töltött szigetelő blokkok"
+      ]
+    },
+    "weather": {
+      "title": "Időjárásvédelem",
+      "description": "Anyagok, amelyek védenek az esőtől, széltől és elemektől",
+      "items": [
+        "Műanyag fólia → Tető vízhatlanítás",
+        "Fémdobozok → Tetőcserepek",
+        "Ponyvák → Eső- és szélvédő falak",
+        "Textil + műanyag → Tömített falrétegek"
+      ]
+    }
+  },
+
+  "lookAround": {
+    "title": "Nézz Körül Új Szemmel",
+    "description": "Járd az utcákat leleményességgel. Ami hulladéknak tűnik, az lehet a kulcs ahhoz, hogy melegebbé, szárazabbá és biztonságosabbá tedd menedékedet. Ez a szemlélet környezetedet értékes építőanyagok forrásává változtatja."
   }
 }
