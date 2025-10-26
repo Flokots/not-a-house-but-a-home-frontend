@@ -1,0 +1,140 @@
+{
+  "backgroundText": "Alapelvek",
+  "title": "Mire van Szüksége egy Otthonnak?",
+  "sectionTitle": "Alapok és Anyagok",
+  "description": "Tudd meg, mitől válik egy menedék biztonságos otthonná, és fedezd fel azokat a hasznos anyagokat, amelyeket a környezetedben is megtalálhatsz.",
+  "explore": "Fedezd Fel",
+  "learnMore": "Tudj Meg Többet",
+  "details": {
+    "stability": {
+      "title": "Állékonyság",
+      "preview": "Stabil Alap",
+      "description": "Egy menedék tartósságának alapja az állékonyság - vagyis, hogy az építmény biztonságosan megálljon, ne roskadjon meg vagy dőljön össze.",
+      "considerationsTitle": "Fő Szempontok",
+      "considerations": [
+        "Szilárd alap: ha lehet, a falakat stabil, vízszintes felületre (pl. raklapokra, kőre vagy betonlapra) építsd, hogy ne süllyedjen meg.",
+        "Háromszög merevítések: a falvázakban és tetőszerkezetben átlós elemek (merevítők) segítik a szerkezet szilárdságát.",
+        "Egyenletes teherelosztás: a nehezebb elemeket (pl. tető) úgy rögzítsd, hogy a súly egyenletesen oszoljon el a falakon és az alapon.",
+        "Rögzítések és kötések: használj csavarokat, drótot, kötelet vagy szöget a stabil összekapcsoláshoz.",
+        "Szél elleni védelem: ha nyílt területen építesz, horgonyozd le a szerkezetet – például homokzsákokkal, kövekkel vagy földdel."
+      ],
+      "materialsTitle": "Hasznos Anyagok",
+      "materialImages": {
+        "pallets": "Raklapok",
+        "concrete": "Kövek/Beton",
+        "metal": "Fém Rögzítők",
+        "rope": "Kötelek/Drótok"
+      },
+      "conclusion": "Ezekkel az egyszerű, de hatékony módszerekkel megelőzhetők a dőlések, repedések és instabilitás, így az építmény biztonságosabb és tartósabb lesz."
+    },
+    "rainwater": {
+      "title": "Csapadékvíz Elleni Védelem",
+      "preview": "Szárazon Maradás",
+      "description": "A csapadékvíz elleni védelem az építmény tartósságának és biztonságának egyik legfontosabb feltétele. Ha a víz bejut a falakba, a tetőbe vagy az alapba, az szerkezeti károsodáshoz, penészedéshez és hőveszteséghez vezethet.",
+      "consequencesTitle": "Ha Nem Véded Meg a Házadat",
+      "consequences": [
+        "A víz eláztatja, majd meggyengíti a fa- és papíralapú anyagokat, ami idővel összeomláshoz vezethet.",
+        "A tartós nedvesség kedvez a gombák és baktériumok szaporodásának, ami egészségügyi kockázatot jelent.",
+        "A nedves falak és padló gyorsabban lehűlnek, így a menedék hidegebbnek érződik.",
+        "A nedves szerkezetek elvesztik eredeti formájukat, stabilitásukat és szigetelőképességüket."
+      ],
+      "methodsTitle": "Egyszerű Védekezési Módok",
+      "methods": [
+        "A tető legyen lejtős, hogy a víz le tudjon folyni.",
+        "Használj ponyvákat, fóliát, bádogot vagy italosdoboz-lapokat a víz elvezetésére.",
+        "A falak alját emeld el a talajtól, például raklapokkal.",
+        "Vezesd el a vizet árkokkal vagy kavicsréteggel az építmény körül."
+      ],
+      "materialsTitle": "Hasznos Anyagok",
+      "materialImages": {
+        "tarp": "Ponyvák",
+        "plastic": "Fóliák",
+        "metal": "Bádogdarabok",
+        "pallets": "Raklapok"
+      },
+      "conclusion": "Ezekkel az egyszerű módszerekkel megelőzhető az átnedvesedés, és hosszú távon biztonságosabb, egészségesebb otthon hozható létre."
+    },
+    "groundMoisture": {
+      "title": "Száraz Talaj",
+      "preview": "Talajnedvesség Elleni Védelem",
+      "description": "A talajból felszivárgó nedvesség lassan, de folyamatosan károsítja az építmény alsó részeit. Ha a menedék vagy ház közvetlenül a földre épül, a nedvesség átitatja a padlót, a falakat és a szigetelést, ami hosszú távon penészesedéshez, hőveszteséghez és szerkezeti gyengüléshez vezethet.",
+      "consequencesTitle": "Ha Nem Védekezel a Talajnedvesség Ellen",
+      "consequences": [
+        "A fa, karton, textil és egyéb porózus anyagok gyorsan korhadnak.",
+        "Elszaporodnak a gombák és rovarok, amelyek allergiát és betegségeket okozhatnak.",
+        "A nedves padló lehűti a belső teret, így hidegebb lesz az otthon.",
+        "Csökken a szerkezetek élettartama."
+      ],
+      "methodsTitle": "Egyszerű Védekezési Módszerek",
+      "methods": [
+        "Emeld meg a padlót (raklap, kő, tégla vagy más szilárd alátét segítségével).",
+        "Helyezz vízszigetelő réteget (ponyva, fólia, bitumenes lemez vagy bármilyen vízlepergető anyag) a talaj és a szerkezet közé.",
+        "Biztosíts vízelvezetést a menedék körül (pl. kavicsréteggel, lejtés kialakításával, árokkal)."
+      ],
+      "materialsTitle": "Hasznos Anyagok",
+      "materialImages": {
+        "pallets": "Raklapok",
+        "tarp": "Ponyva",
+        "plastic": "Fóliák",
+        "concrete": "Kövek/Téglák"
+      },
+      "conclusion": "Ezekkel az egyszerű lépésekkel megelőzhető a felázás és a penészesedés, így az otthon tartósabb, szárazabb és egészségesebb marad."
+    },
+    "thermalInsulation": {
+      "title": "Hőszigetelés",
+      "preview": "Melegség",
+      "description": "A hőszigetelés alapvető szerepet játszik abban, hogy az otthon meleg, száraz és energiatakarékos maradjon. Egy jól szigetelt menedék kevesebb tüzelőanyagot igényel, és egészségesebb lakókörnyezetet biztosít.",
+      "whyMattersTitle": "Miért Fontos",
+      "whyMatters": [
+        "Megőrzi a meleget télen: a hőszigetelés csökkenti a hőveszteséget, így a belső tér tovább marad meleg.",
+        "Véd a hőségtől nyáron: a szigetelés megakadályozza, hogy a falak és a tető átforrósodjanak.",
+        "Kiegyenlíti a hőmérsékletet: segít elkerülni a hideg zugokat és a páralecsapódást, ami penészedést okozhat.",
+        "Egészségesebb környezetet teremt: a megfelelő hőmérséklet és páratartalom javítja a közérzetet és csökkenti a betegségek kockázatát.",
+        "Növeli az építmény élettartamát: a hőingadozások csökkentésével kíméli az anyagokat és a szerkezetet."
+      ],
+      "materialsTitle": "Egyszerű, Elérhető Szigetelőanyagok",
+      "materialImages": {
+        "cardboard": "Karton",
+        "paper": "Papír",
+        "fabric": "Textil",
+        "blankets": "Takaró",
+        "curtains": "Függöny",
+        "styrofoam": "Hungarocell",
+        "plastic": "Fólia",
+        "tent": "Sátoranyag"
+      },
+      "materials": [
+        "Karton, papír, textil, takaró, függöny",
+        "Fűrészpor, szalma, nád, száraz levelek",
+        "Hungarocell, habszivacs, fólia",
+        "Újrahasznosított ruhák vagy papírdobozok rétegezve"
+      ],
+      "conclusion": "Már néhány réteg ilyen anyag is jelentősen javítja a hőérzetet, és hozzájárul egy melegebb, biztonságosabb otthon megteremtéséhez."
+    },
+    "airtightness": {
+      "title": "Légzárás",
+      "preview": "Szélvédelem",
+      "description": "A légzárás célja, hogy megakadályozza a hideg levegő beáramlását és a meleg levegő elszökését. Egy jól záró menedék nemcsak melegebb, hanem egészségesebb és tartósabb is.",
+      "whyMattersTitle": "Miért Fontos",
+      "whyMatters": [
+        "Csökkenti a hőveszteséget: a huzatmentes térben a meleg levegő bent marad, így kevesebb fűtésre van szükség.",
+        "Véd a nedvességtől: a levegővel együtt a pára és az esővíz is bejuthat a repedéseken, ami penészedést okoz."
+      ],
+      "methodsTitle": "Egyszerű Megoldások a Jobb Légzárásra",
+      "methods": [
+        "Tömítsd a réseket és illesztéseket: ronggyal, habszivaccsal, agyaggal, szigetelőszalaggal vagy fóliával.",
+        "Használj több rétegű anyagokat: például textil + fólia kombinációt, ami egyszerre szigetel és zár.",
+        "Zárd le az ajtók és ablakok körüli hézagokat: függönnyel, pokróccal vagy gumicsíkkal.",
+        "Hagyj irányított szellőzőnyílásokat: hogy a levegő cserélődjön, de ne alakuljon ki huzat."
+      ],
+      "materialsTitle": "Hasznos Anyagok",
+      "materialImages": {
+        "fabric": "Textil/Rongy",
+        "plastic": "Fóliák",
+        "tape": "Szigetelőszalag",
+        "rubber": "Gumicsíkok"
+      },
+      "conclusion": "A megfelelő légzárás révén az otthon melegebb, szárazabb és energiatakarékosabb lesz – ez különösen fontos az ideiglenes menedékek esetében is."
+    }
+  }
+}

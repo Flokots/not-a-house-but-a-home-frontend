@@ -1,0 +1,140 @@
+{
+  "backgroundText": "Principles",
+  "title": "What does a Home Need?",
+  "sectionTitle": "Essentials & Materials",
+  "description": "Discover what makes a shelter a home and explore useful materials you can find around you.",
+  "explore": "Explore",
+  "learnMore": "Learn More",
+  "details": {
+    "stability": {
+      "title": "Stability",
+      "preview": "Stable Foundation",
+      "description": "The durability of a shelter begins with stability — meaning the structure must stand securely without sagging or collapsing.",
+      "considerationsTitle": "Key Considerations",
+      "considerations": [
+        "Solid foundation: Whenever possible, build the walls on a firm, level surface (e.g., pallets, stones, or concrete slabs) to prevent sinking.",
+        "Triangular bracing: Use diagonal members (braces) in wall frames and roof structures to increase rigidity.",
+        "Even load distribution: Attach heavier components (like the roof) so that their weight is evenly distributed across the walls and the foundation.",
+        "Fastenings and joints: Use screws, wires, ropes, or nails to create stable connections.",
+        "Wind protection: When building in an open area, anchor the structure with sandbags, stones, or earth."
+      ],
+      "materialsTitle": "Useful Materials",
+      "materialImages": {
+        "pallets": "Pallets",
+        "concrete": "Stones/Concrete",
+        "metal": "Metal Fasteners",
+        "rope": "Ropes/Wires"
+      },
+      "conclusion": "With these simple yet effective techniques, you can prevent tilting, cracking, and instability — making the structure safer and more durable."
+    },
+    "rainwater": {
+      "title": "Rainwater Protection",
+      "preview": "Staying Dry",
+      "description": "Protecting a structure from rainwater is one of the most important conditions for its durability and safety. If water penetrates the walls, roof, or foundation, it can lead to structural damage, mold, and heat loss.",
+      "consequencesTitle": "If You Don't Protect Your Shelter",
+      "consequences": [
+        "Water will soak and weaken wood- or paper-based materials, which may eventually cause collapse.",
+        "Persistent moisture encourages the growth of fungi and bacteria, posing health risks.",
+        "Wet walls and floors cool down faster, making the shelter feel colder.",
+        "Damp structures lose their original shape, stability, and insulating ability."
+      ],
+      "methodsTitle": "Simple Protection Methods",
+      "methods": [
+        "Build the roof with a slope so rainwater can drain away.",
+        "Use tarps, plastic sheets, metal pieces, or flattened cans to divert water.",
+        "Raise the bottom of the walls off the ground, for example with pallets.",
+        "Channel water away using shallow ditches or a layer of gravel around the shelter."
+      ],
+      "materialsTitle": "Useful Materials",
+      "materialImages": {
+        "tarp": "Tarps",
+        "plastic": "Plastic Sheets",
+        "metal": "Metal Pieces",
+        "pallets": "Pallets"
+      },
+      "conclusion": "With these simple techniques, you can prevent dampness and create a safer, healthier, and longer-lasting home."
+    },
+    "groundMoisture": {
+      "title": "Dry Ground",
+      "preview": "Protection Against Ground Moisture",
+      "description": "Moisture rising from the ground can slowly but continuously damage the lower parts of a structure. If a shelter or house is built directly on the ground, this moisture can soak into the floor, walls, and insulation — leading over time to mold, heat loss, and structural weakening.",
+      "consequencesTitle": "If You Don't Protect Against Ground Moisture",
+      "consequences": [
+        "Wood, cardboard, fabric, and other porous materials will rot quickly.",
+        "Fungi and insects may multiply, causing allergies and health problems.",
+        "A damp floor cools the interior, making the home feel colder.",
+        "The lifespan of the structure is significantly reduced."
+      ],
+      "methodsTitle": "Simple Protection Methods",
+      "methods": [
+        "Raise the floor using pallets, stones, bricks, or other solid supports.",
+        "Add a waterproof layer (tarp, plastic sheet, bitumen membrane, or any water-repellent material) between the ground and the structure.",
+        "Provide drainage around the shelter — for example, with gravel, proper slope, or a shallow ditch."
+      ],
+      "materialsTitle": "Useful Materials",
+      "materialImages": {
+        "pallets": "Pallets",
+        "tarp": "Tarp",
+        "plastic": "Plastic Sheets",
+        "concrete": "Stones/Bricks"
+      },
+      "conclusion": "With these simple steps, you can prevent dampness and mold, keeping your home more durable, dry, and healthy."
+    },
+    "thermalInsulation": {
+      "title": "Thermal Insulation",
+      "preview": "Warmth",
+      "description": "Thermal insulation plays a key role in keeping a home warm, dry, and energy efficient. A well-insulated shelter requires less fuel and provides a healthier living environment.",
+      "whyMattersTitle": "Why It Matters",
+      "whyMatters": [
+        "Keeps warmth inside during winter: Insulation reduces heat loss, helping the interior stay warm longer.",
+        "Protects from heat in summer: It prevents walls and roofs from overheating.",
+        "Balances indoor temperature: Helps avoid cold corners and condensation, which can lead to mold.",
+        "Creates a healthier environment: Proper temperature and humidity improve comfort and reduce the risk of illness.",
+        "Extends the structure's lifespan: By reducing temperature fluctuations, insulation protects materials and joints."
+      ],
+      "materialsTitle": "Simple, Accessible Insulating Materials",
+      "materialImages": {
+        "cardboard": "Cardboard",
+        "paper": "Paper",
+        "fabric": "Fabric",
+        "blankets": "Blankets",
+        "curtains": "Curtains",
+        "styrofoam": "Styrofoam",
+        "plastic": "Plastic Sheets",
+        "tent": "Tent Fabric"
+      },
+      "materials": [
+        "Cardboard, paper, fabric, blankets, curtains",
+        "Sawdust, straw, reeds, dry leaves",
+        "Styrofoam, foam, plastic sheets",
+        "Layered recycled clothes, cardboard boxes"
+      ],
+      "conclusion": "Even a few layers of these materials can greatly improve warmth and comfort, helping to create a safer and more resilient home."
+    },
+    "airtightness": {
+      "title": "Airtightness",
+      "preview": "Windproofing",
+      "description": "The goal of airtightness is to prevent cold air from entering and warm air from escaping. A well-sealed shelter is not only warmer, but also healthier and more durable.",
+      "whyMattersTitle": "Why It Matters",
+      "whyMatters": [
+        "Reduces heat loss: In a draft-free space, warm air stays inside, reducing the need for heating.",
+        "Protects against moisture: Air leaks can also let in humidity and rainwater, which may lead to mold."
+      ],
+      "methodsTitle": "Simple Ways to Improve Airtightness",
+      "methods": [
+        "Seal gaps and joints using rags, foam, clay, tape, or plastic sheets.",
+        "Use layered materials — for example, a fabric and plastic combination that both insulates and seals.",
+        "Close gaps around doors and windows with curtains, blankets, or rubber strips.",
+        "Provide controlled ventilation openings so that air can circulate without creating drafts."
+      ],
+      "materialsTitle": "Useful Materials",
+      "materialImages": {
+        "fabric": "Fabric/Rags",
+        "plastic": "Plastic Sheets",
+        "tape": "Sealing Tape",
+        "rubber": "Rubber Strips"
+      },
+      "conclusion": "Good airtightness helps keep the home warmer, drier, and more energy-efficient — which is especially important in temporary shelters."
+    }
+  }
+}

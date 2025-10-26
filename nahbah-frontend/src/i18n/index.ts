@@ -1,93 +1,54 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
-// Import translation files
-import enCommon from './locales/en/common.json';
-import enComponents from './locales/en/components.json';
-import enPages from './locales/en/pages.json';
+// Import translations
 import enHome from './locales/en/home.json';
-import enGuide from './locales/en/guide.json';
-import enEssentials from './locales/en/essentials.json';
-import enAbout from './locales/en/about.json';
-import enDesignsLibrary from './locales/en/designsLibrary.json';
-import enContribute from './locales/en/contribute.json';
-import enGdpr from './locales/en/gdpr.json';
-import enTerms from './locales/en/terms.json';
-
-import huCommon from './locales/hu/common.json';
-import huComponents from './locales/hu/components.json';
-import huPages from './locales/hu/pages.json';
 import huHome from './locales/hu/home.json';
-import huGuide from './locales/hu/guide.json';
-import huEssentials from './locales/hu/essentials.json';
+import enAbout from './locales/en/about.json';
 import huAbout from './locales/hu/about.json';
-import huDesignsLibrary from './locales/hu/designsLibrary.json';
-import huContribute from './locales/hu/contribute.json';
-import huGdpr from './locales/hu/gdpr.json';
-import huTerms from './locales/hu/terms.json';
-
+import enGuide from './locales/en/guide.json';
+import huGuide from './locales/hu/guide.json';
+import enComponents from './locales/en/components.json';
+import huComponents from './locales/hu/components.json';
+import enPages from './locales/en/pages.json';
+import huPages from './locales/hu/pages.json';
+import enPrinciples from './locales/en/principles.json';
+import huPrinciples from './locales/hu/principles.json';
 
 const resources = {
   en: {
-    common: enCommon,
+    home: enHome,
+    about: enAbout,
+    guide: enGuide,
     components: enComponents,
     pages: enPages,
-    home: enHome,
-    guide: enGuide,
-    essentials: enEssentials,
-    about: enAbout,
-    designsLibrary: enDesignsLibrary,
-    contribute: enContribute,
-    gdpr: enGdpr,
-    terms: enTerms,
+    principles: enPrinciples
   },
   hu: {
-    common: huCommon,
+    home: huHome,
+    about: huAbout,
+    guide: huGuide,
     components: huComponents,
     pages: huPages,
-    home: huHome,
-    guide: huGuide,
-    essentials: huEssentials,
-    about: huAbout,
-    designsLibrary: huDesignsLibrary,
-    contribute: huContribute,
-    gdpr: huGdpr,
-    terms: huTerms,
-  },
+    principles: huPrinciples
+  }
 };
 
 i18n
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
     fallbackLng: 'en',
-    defaultNS: 'common',
-    
+    debug: true,
     interpolation: {
-      escapeValue: false,
+      escapeValue: false
     },
-    
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
-    },
-
-    debug: true, // Enable debug to see what's happening
-    ns: ['common', 'components', 'pages'],
-    
-    // Add missing key handler
-    saveMissing: false,
-    missingKeyHandler: (lng, ns, key) => {
-      console.warn(`Missing translation: ${lng}:${ns}:${key}`);
-    },
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage']
+    }
   });
-
-// Add language change listener to update document lang
-i18n.on('languageChanged', (lng) => {
-  document.documentElement.lang = lng;
-  // Also add a class for CSS targeting
-  document.documentElement.className = document.documentElement.className.replace(/lang-\w+/, '');
-  document.documentElement.classList.add(`lang-${lng}`);
-});
 
 export default i18n;
