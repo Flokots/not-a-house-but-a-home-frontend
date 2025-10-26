@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "backgroundText": "Tervtár",
+    "titlePart1": "Fenntartható Menedékek",
+    "titleHighlight": "Tervgyűjtemény",
+    "description": "Böngészd át innovatív terveink válogatott gyűjteményét, amelyek talált anyagokat alakítanak át alapvető menedék elemekké.",
+    "selectedCount": "terv kiválasztva a füzetedhez",
+    "imageAlt": "Tervtár"
+  },
+  "filters": {
+    "title": "Szűrők",
+    "materialSelection": "Anyag Kiválasztás",
+    "searchMaterials": "Anyagok keresése...",
+    "materials": "Anyagok",
+    "clearAll": "Összes törlése",
+    "noResultsFor": "Nincs találat a következőre: \"{{searchTerm}}\"",
+    "noMaterials": "Nincsenek elérhető anyagok",
+    "activeFilters": "Aktív Szűrők",
+    "filteringBy": "Szűrés {{count}} anyag szerint",
+    "filteringBy_plural": "Szűrés {{count}} anyag szerint",
+    "reset": "Visszaállítás"
+  },
+  "content": {
+    "title": "Innovatív Tervek",
+    "showing": "{{count}} terv megjelenítése",
+    "showing_plural": "{{count}} terv megjelenítése",
+    "showingWithFilters": "{{count}} terv megjelenítése a kiválasztott anyagokhoz",
+    "showingWithFilters_plural": "{{count}} terv megjelenítése a kiválasztott anyagokhoz",
+    "clearFilters": "Szűrők törlése"
+  },
+  "noResults": {
+    "title": "Nem találhatók tervek",
+    "withFilters": "Nem találtunk terveket a jelenlegi anyag kiválasztásodhoz.",
+    "noDesigns": "Jelenleg nincsenek elérhető tervek a könyvtárunkban.",
+    "clearAllFilters": "Összes szűrő törlése"
+  },
+  "mobile": {
+    "viewBooklet": "FÜZETED MEGTEKINTÉSE"
+  },
+  "loading": "Fenntartható tervek betöltése...",
+  "errors": {
+    "loadFailed": "Nem sikerült betölteni a terveket. Kérlek próbáld újra később.",
+    "tryAgain": "Próbáld Újra"
+  },
+  "bookletBuilder": {
+    "title": "A Te Füzeted",
+    "selectedCount": "{{count}} terv kiválasztva az egyedi füzetedhez",
+    "selectedCount_plural": "{{count}} terv kiválasztva az egyedi füzetedhez",
+    "noDesigns": "Még nincsenek kiválasztott tervek",
+    "downloadBooklet": "Füzet Letöltése",
+    "generating": "Generálás...",
+    "generateError": "Nem sikerült a füzet generálása. Kérlek próbáld újra később."
+  },
+  "designCard": {
+    "selected": "Kiválasztva",
+    "add": "Hozzáadás",
+    "viewDetails": "Részletek megtekintése: {{title}}",
+    "closeDialog": "Párbeszédablak bezárása",
+    "materialDesign": "{{material}} Terv",
+    "tabs": {
+      "information": "Információk",
+      "details": "Részletek"
+    },
+    "materialRequired": "Szükséges Anyag",
+    "dateAdded": "Hozzáadás Dátuma",
+    "description": "Leírás",
+    "contributor": "Közreműködő",
+    "constructionNote": "Ez a terv általános eszközökkel és technikákkal megépíthető. Töltsd le a tervfájlt a részletes utasításokért.",
+    "designSpecifications": "Tervrajz Specifikációk",
+    "previewDesignFile": "TERVFÁJL ELŐNÉZETE",
+    "practicalSolution": "Ez a terv praktikus megoldást nyújt menedék építéshez {{material}} anyagok felhasználásával.",
+    "optimizationNote": "Az optimális eredmények érdekében győződj meg róla, hogy az anyagok tiszták és szerkezetileg megfelelőek. Teszteld az építési technikákat kis léptékben a teljes megvalósítás előtt.",
+    "close": "Bezárás",
+    "removeFromBooklet": "Eltávolítás a Füzetből",
+    "addToBooklet": "Hozzáadás a Füzethez"
+  }
+}
