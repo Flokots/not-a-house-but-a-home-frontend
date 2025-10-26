@@ -14,7 +14,7 @@ const BookletBuilder: React.FC<BookletBuilderProps> = ({
   designs, 
   onRemoveDesign 
 }) => {
-  const { t } = useTranslation('pages');
+  const { t } = useTranslation('plans');
   const [isGenerating, setIsGenerating] = useState(false);
   
   const selectedDesignsData = designs.filter(design => 
@@ -30,7 +30,7 @@ const BookletBuilder: React.FC<BookletBuilderProps> = ({
       // Success! The file download should have started automatically
     } catch (error) {
       console.error("Failed to generate booklet:", error);
-      alert(t('designsLibrary.bookletBuilder.generateError'));
+      alert(t('bookletBuilder.generateError'));
     } finally {
       setIsGenerating(false);
     }
@@ -43,13 +43,13 @@ const BookletBuilder: React.FC<BookletBuilderProps> = ({
           <svg className="w-4 h-4 mr-2 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
           </svg>
-          {t('designsLibrary.bookletBuilder.title')}
+          {t('bookletBuilder.title')}
         </h3>
       </div>
       
       <div className="p-5">
         <p className="text-sm text-neutral-600 mb-4">
-          {t('designsLibrary.bookletBuilder.selectedCount', { count: selectedDesigns.length })}
+          {t('bookletBuilder.selectedCount', { count: selectedDesigns.length })}
         </p>
         
         {selectedDesignsData.length > 0 ? (
@@ -81,7 +81,7 @@ const BookletBuilder: React.FC<BookletBuilderProps> = ({
           </div>
         ) : (
           <div className="text-center py-6 text-neutral-500 text-sm bg-neutral-50 rounded-md mb-5">
-            {t('designsLibrary.bookletBuilder.noDesigns')}
+            {t('bookletBuilder.noDesigns')}
           </div>
         )}
         
@@ -97,7 +97,7 @@ const BookletBuilder: React.FC<BookletBuilderProps> = ({
           {isGenerating ? (
             <>
               <div className="w-4 h-4 border-2 border-neutral-400 border-t-white rounded-full animate-spin mr-2"></div>
-              <span>{t('designsLibrary.bookletBuilder.generating')}</span>
+              <span>{t('bookletBuilder.generating')}</span>
             </>
           ) : (
             <>
@@ -105,7 +105,7 @@ const BookletBuilder: React.FC<BookletBuilderProps> = ({
                 <path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
                   stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              <span>{t('designsLibrary.bookletBuilder.downloadBooklet')}</span>
+              <span>{t('bookletBuilder.downloadBooklet')}</span>
             </>
           )}
         </button>

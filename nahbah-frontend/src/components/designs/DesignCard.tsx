@@ -10,7 +10,7 @@ interface DesignCardProps {
 }
 
 const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSelect }) => {
-  const { t } = useTranslation('pages');
+  const { t } = useTranslation('plans');
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<"info" | "details">("info");
   const closeButtonRef = useRef(null);
@@ -97,7 +97,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900'
                 }`}
               >
-                {isSelected ? t('designsLibrary.designCard.selected') : t('designsLibrary.designCard.add')}
+                {isSelected ? t('designCard.selected') : t('designCard.add')}
               </button>
             </div>
             
@@ -105,7 +105,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
             <button 
               className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" 
               onClick={openDialog}
-              aria-label={t('designsLibrary.designCard.viewDetails', { title: design.title })}
+              aria-label={t('designCard.viewDetails', { title: design.title })}
             />
           </div>
         </div>
@@ -130,7 +130,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
               ref={closeButtonRef}
               onClick={() => setIsOpen(false)}
               className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-100"
-              aria-label={t('designsLibrary.designCard.closeDialog')}
+              aria-label={t('designCard.closeDialog')}
             >
               <svg
                 className="w-6 h-6 text-gray-700"
@@ -168,7 +168,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                     {design.title}
                   </h3>
                   <p className="text-xl text-gray-600">
-                    {t('designsLibrary.designCard.materialDesign', { material: design.material.name })}
+                    {t('designCard.materialDesign', { material: design.material.name })}
                   </p>
                 </div>
 
@@ -182,7 +182,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                     }`}
                     onClick={() => setActiveTab("info")}
                   >
-                    {t('designsLibrary.designCard.tabs.information')}
+                    {t('designCard.tabs.information')}
                   </button>
                   <button
                     className={`py-3 px-6 font-medium focus:outline-none ${
@@ -192,7 +192,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                     }`}
                     onClick={() => setActiveTab("details")}
                   >
-                    {t('designsLibrary.designCard.tabs.details')}
+                    {t('designCard.tabs.details')}
                   </button>
                 </div>
 
@@ -201,7 +201,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
                       <div>
                         <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-2">
-                          {t('designsLibrary.designCard.materialRequired')}
+                          {t('designCard.materialRequired')}
                         </h4>
                         <p className="text-gray-900">
                           {design.material.name}
@@ -209,7 +209,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                       </div>
                       <div>
                         <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-2">
-                          {t('designsLibrary.designCard.dateAdded')}
+                          {t('designCard.dateAdded')}
                         </h4>
                         <p className="text-gray-900">
                           {formattedDate}
@@ -219,7 +219,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
 
                     <div>
                       <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-2">
-                        {t('designsLibrary.designCard.description')}
+                        {t('designCard.description')}
                       </h4>
                       <p className="text-gray-900">{design.description}</p>
                     </div>
@@ -227,7 +227,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                     {design.contributor && (
                       <div>
                         <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-2">
-                          {t('designsLibrary.designCard.contributor')}
+                          {t('designCard.contributor')}
                         </h4>
                         <p className="text-gray-900">{design.contributor.name}</p>
                       </div>
@@ -236,7 +236,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                     <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
                       <div className="flex items-center">
                         <p className="text-gray-700 text-sm">
-                          {t('designsLibrary.designCard.constructionNote')}
+                          {t('designCard.constructionNote')}
                         </p>
                       </div>
                     </div>
@@ -246,7 +246,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                 {activeTab === "details" && (
                   <div>
                     <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-4">
-                      {t('designsLibrary.designCard.designSpecifications')}
+                      {t('designCard.designSpecifications')}
                     </h4>
                     
                     {/* Design file download */}
@@ -259,7 +259,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                           className="block w-full py-3 px-4 bg-black text-center rounded-lg group hover:bg-gray-900 transition-colors"
                         >
                           <span className="inline-flex items-center font-bold bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text text-transparent">
-                            {t('designsLibrary.designCard.previewDesignFile')}
+                            {t('designCard.previewDesignFile')}
                           </span>
                         </a>
                       </div>
@@ -268,14 +268,14 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                     <div className="space-y-4">
                       <div className="flex items-start">
                         <p className="text-gray-900">
-                          {t('designsLibrary.designCard.practicalSolution', { material: design.material.name.toLowerCase() })}
+                          {t('designCard.practicalSolution', { material: design.material.name.toLowerCase() })}
                         </p>
                       </div>
                     </div>
 
                     <div className="mt-8 p-5 bg-gradient-to-r from-gray-50 to-white border border-gray-100 rounded-lg">
                       <p className="text-gray-700 text-sm">
-                        {t('designsLibrary.designCard.optimizationNote')}
+                        {t('designCard.optimizationNote')}
                       </p>
                     </div>
                   </div>
@@ -287,7 +287,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                     onClick={() => setIsOpen(false)}
                     className="py-3 px-6 border border-gray-200 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition-colors"
                   >
-                    {t('designsLibrary.designCard.close')}
+                    {t('designCard.close')}
                   </button>
                   
                   <button
@@ -301,7 +301,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                         : 'bg-gradient-to-r from-lime-500 to-lime-600 hover:from-lime-600 hover:to-lime-700 text-white shadow-sm hover:shadow'
                     }`}
                   >
-                    {isSelected ? t('designsLibrary.designCard.removeFromBooklet') : t('designsLibrary.designCard.addToBooklet')}
+                    {isSelected ? t('designCard.removeFromBooklet') : t('designCard.addToBooklet')}
                   </button>
                 </div>
               </div>
