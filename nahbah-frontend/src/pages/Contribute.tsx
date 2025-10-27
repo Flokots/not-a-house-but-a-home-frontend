@@ -157,12 +157,17 @@ const Contribute: React.FC = () => {
     try {
       setLoading(true);
 
-      // Prepare data with anonymous handling
+      // Determine if it's a custom material
+      const isCustomMaterial = formData.material === "-1";
+
       const submitData = {
         title: formData.title,
         description: formData.description,
-        material: formData.material,
-        customMaterial: formData.customMaterial,
+        // For "Other", send custom_material_name; for standard, send material_id
+        ...(isCustomMaterial
+          ? { custom_material_name: formData.customMaterial }
+          : { material_id: parseInt(formData.material) }
+        ),
         contributor: isAnonymous
           ? {
               name: "Anonymous",
