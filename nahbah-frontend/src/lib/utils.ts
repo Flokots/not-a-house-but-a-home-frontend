@@ -19,5 +19,5 @@ export const getImageUrl = (image: string | null | undefined): string | null => 
   
   // In production, construct Cloudinary URL (fallback if API returns public_id)
   const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
-  return `http://res.cloudinary.com/${cloudName}/image/upload/${image}`;
+  return `http://res.cloudinary.com/${cloudName}/${image}`;
 };
