@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { Dialog } from "@headlessui/react";
 import { useTranslation } from 'react-i18next';
 import { type Design } from "@/types/designs";
+import { getImageUrl } from "@/lib/utils";
 
 interface DesignCardProps {
   design: Design;
@@ -41,7 +42,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
             onClick={openDialog}
           >
             <img
-              src={design.preview_image || '/placeholder-design.jpg'}
+              src={getImageUrl(design.preview_image) || '/placeholder-design.jpg'}
               alt={design.title}
               className="w-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
@@ -153,7 +154,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
               <div className="md:w-3/4 relative">
                 <div className="aspect-[3/4] md:h-full">
                   <img
-                    src={design.preview_image || '/placeholder-design.jpg'}
+                    src={getImageUrl(design.preview_image) || '/placeholder-design.jpg'}
                     alt={design.title}
                     className="w-full h-full object-cover"
                   />

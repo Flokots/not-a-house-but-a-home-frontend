@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import { downloadBooklet } from "@/api/booklet";
 import {type Design } from "@/types/designs";
+import { getImageUrl } from "@/lib/utils";
 
 interface BookletBuilderProps {
   selectedDesigns: number[];
@@ -59,7 +60,7 @@ const BookletBuilder: React.FC<BookletBuilderProps> = ({
                 <div className="flex items-center p-2">
                   <div className="w-8 h-8 rounded overflow-hidden flex-shrink-0">
                     <img 
-                      src={design.design_file || undefined} 
+                      src={getImageUrl(design.design_file) || undefined} 
                       alt={design.title} 
                       className="w-full h-full object-cover"
                     />

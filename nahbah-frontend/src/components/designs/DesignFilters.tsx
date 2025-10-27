@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 import { getMaterials } from "@/api/materials";
+import { getImageUrl } from "@/lib/utils";
 
 interface Material {
   id: number;
@@ -203,7 +204,7 @@ const DesignFilters: React.FC<DesignFiltersProps> = ({ filters, setFilters }) =>
                       {material.material_image ? (
                         <div className="ml-3 w-9 h-9 rounded-md overflow-hidden flex-shrink-0 bg-neutral-100 border border-neutral-200">
                           <img 
-                            src={material.material_image} 
+                            src={getImageUrl(material.material_image) || ''} 
                             alt={material.name} 
                             className="w-full h-full object-cover"
                           />
