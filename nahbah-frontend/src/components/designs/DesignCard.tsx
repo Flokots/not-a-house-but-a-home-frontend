@@ -254,7 +254,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
                     {design.design_file && (
                       <div className="mb-6">
                         <a
-                          href={design.design_file}
+                          href={getImageUrl(design.preview_image) || '#'}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block w-full py-3 px-4 bg-black text-center rounded-lg group hover:bg-gray-900 transition-colors"
