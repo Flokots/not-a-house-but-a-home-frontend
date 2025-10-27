@@ -14,7 +14,7 @@ export const getImageUrl = (image: string | null | undefined): string | null => 
   
   // In development, construct local URL
   if (import.meta.env.DEV) {
-    return `http://127.0.0.1:8000/media/${image}`;
+    return `${image}`;
   }
   
   // In production, construct Cloudinary URL (fallback if API returns public_id)

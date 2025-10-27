@@ -152,7 +152,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ design, isSelected, onToggleSel
             <div className="flex flex-col md:flex-row">
               {/* Design image */}
               <div className="md:w-3/4 relative">
-                <div className="aspect-[3/4] md:h-full">
+                <div className="aspect-[2/5] md:h-full">
                   <img
                     src={getImageUrl(design.preview_image) || '/placeholder-design.jpg'}
                     alt={design.title}
