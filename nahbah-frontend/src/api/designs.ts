@@ -4,8 +4,8 @@ import axios from "axios";
 export interface DesignData {
   title: string;
   description: string;
-  material_id?: number; // Updated: Optional for custom materials
-  custom_material_name?: string; // Updated: For "Other" materials
+  material_id?: number;
+  custom_material_name?: string;
   contributor: { name: string; email: string };
   isAnonymous: boolean;
 }
@@ -16,7 +16,7 @@ export const getDesigns = async () => {
 };
 
 export const submitDesign = async (
-  designData: DesignData, // Updated interface
+  designData: DesignData,
   file: File | null
 ) => {
   const formData = new FormData();
@@ -24,7 +24,7 @@ export const submitDesign = async (
   formData.append('title', designData.title);
   formData.append('description', designData.description);
   
-  // Handle material: Use material_id for standard materials, custom_material_name for "Other"
+  // Handle material
   if (designData.custom_material_name) {
     formData.append('custom_material_name', designData.custom_material_name);
   } else if (designData.material_id !== undefined) {
@@ -35,9 +35,8 @@ export const submitDesign = async (
     formData.append('design_file', file);
   }
   
-  // Always send contributor data (either real or anonymous placeholders)
-  formData.append('contributor_name', designData.contributor.name);
-  formData.append('contributor_email', designData.contributor.email);
+  // Send contributor as nested JSON
+  formData.append('contributor', JSON.stringify(designData.contributor));
   formData.append('is_anonymous', designData.isAnonymous.toString());
 
   try {
