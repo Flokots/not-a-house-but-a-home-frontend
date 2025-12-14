@@ -15,12 +15,12 @@
       "descriptionNamed": "A neved fel lesz tüntetve ezzel a hozzájárulással, hogy segítsd közösségünk építését."
     },
     "name": {
-      "label": "Neved*",
+      "label": "Neved",
       "placeholder": "Neved a hivatkozáshoz",
       "error": "A név megadása kötelező"
     },
     "email": {
-      "label": "Email Cím*",
+      "label": "Email Cím",
       "placeholder": "te@email.com",
       "errorRequired": "Az email megadása kötelező",
       "errorInvalid": "Érvényes email cím szükséges"

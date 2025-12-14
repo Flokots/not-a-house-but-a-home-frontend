@@ -15,12 +15,12 @@
       "descriptionNamed": "Your name will be credited with this contribution to help build our community."
     },
     "name": {
-      "label": "Your Name*",
+      "label": "Your Name",
       "placeholder": "Your name for attribution",
       "error": "Name is required"
     },
     "email": {
-      "label": "Email Address*",
+      "label": "Email Address",
       "placeholder": "your@email.com",
       "errorRequired": "Email is required",
       "errorInvalid": "Valid email is required"

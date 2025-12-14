@@ -218,17 +218,24 @@ const Contribute: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white hero-text">
       <div className="pt-32 px-4 max-w-3xl mx-auto">
-        <div className="absolute top-20 mb-8 text-white/14 font-semibold text-9xl">
+        <div className="absolute top-20 mb-8 text-white/14 font-semibold text-9xl" aria-hidden="true">
           {t('hero.backgroundText')}
         </div>
-        <h1 className="text-5xl mb-20 ml-26 font-semibold">{t('hero.title')}</h1>
+        <h1 className="text-5xl mb-20 ml-26 font-semibold" id="contribute-heading">
+          {t('hero.title')}
+        </h1>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form 
+          onSubmit={handleSubmit} 
+          className="space-y-6"
+          aria-labelledby="contribute-heading"
+          noValidate
+        >
           <div className="space-y-4">
-            {/* Title input */}
+            {/* Title input - REQUIRED */}
             <div>
               <label htmlFor="title" className="block text-lg mb-2">
-                {t('form.designTitle.label')}
+                {t('form.designTitle.label')} <span className="text-white-500" aria-label="required">*</span>
               </label>
               <input
                 type="text"
@@ -241,16 +248,21 @@ const Contribute: React.FC = () => {
                   errors.title ? "border-red-500" : "border-white"
                 } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
                 disabled={loading}
+                aria-invalid={errors.title ? "true" : "false"}
+                aria-describedby={errors.title ? "title-error" : undefined}
               />
               {errors.title && (
-                <p className="mt-1 text-red-500">{errors.title}</p>
+                <p id="title-error" className="mt-1 text-white-500" role="alert">
+                  {errors.title}
+                </p>
               )}
             </div>
 
-            {/* Anonymous Checkbox with dynamic border color */}
-            <div className={`border-b pb-4 mb-6 transition-colors duration-300 ${
+            {/* Anonymous Checkbox */}
+            <fieldset className={`border-b pb-4 mb-6 transition-colors duration-300 ${
               isAnonymous ? 'border-lime-400' : 'border-white'
             }`}>
+              <legend className="sr-only">{t('form.anonymous.label')}</legend>
               <div className="flex items-start">
                 <input
                   type="checkbox"
@@ -258,14 +270,12 @@ const Contribute: React.FC = () => {
                   checked={isAnonymous}
                   onChange={(e) => {
                     setIsAnonymous(e.target.checked);
-                    // Clear name/email when switching to anonymous
                     if (e.target.checked) {
                       setFormData(prev => ({
                         ...prev,
                         name: "",
                         email: ""
                       }));
-                      // Clear any validation errors for name/email
                       setErrors(prev => {
                         const newErrors = { ...prev };
                         delete newErrors.name;
@@ -274,14 +284,15 @@ const Contribute: React.FC = () => {
                       });
                     }
                   }}
-                  className="mt-1 mr-3 accent-lime-400"
+                  className="mt-1 mr-3 accent-lime-400 focus-visible:ring-2 focus-visible:ring-lime-500"
                   disabled={loading}
+                  aria-describedby="anonymous-description"
                 />
                 <div>
                   <label htmlFor="anonymous" className="text-lg font-medium text-white">
                     {t('form.anonymous.label')}
                   </label>
-                  <p className="text-sm text-gray-400 mt-1">
+                  <p id="anonymous-description" className="text-sm text-gray-400 mt-1">
                     {isAnonymous 
                       ? t('form.anonymous.descriptionAnonymous')
                       : t('form.anonymous.descriptionNamed')
@@ -289,14 +300,14 @@ const Contribute: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </fieldset>
 
-            {/* Conditional Name and Email fields - only show if not anonymous */}
+            {/* Conditional Name and Email - ONLY REQUIRED IF NOT ANONYMOUS */}
             {!isAnonymous && (
               <>
                 <div>
                   <label htmlFor="name" className="block text-lg mb-2">
-                    {t('form.name.label')}
+                    {t('form.name.label')} <span className="text-white-500" aria-label="required">*</span>
                   </label>
                   <input
                     type="text"
@@ -309,15 +320,19 @@ const Contribute: React.FC = () => {
                       errors.name ? "border-red-500" : "border-white"
                     } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
                     disabled={loading}
+                    aria-invalid={errors.name ? "true" : "false"}
+                    aria-describedby={errors.name ? "name-error" : undefined}
                   />
                   {errors.name && (
-                    <p className="mt-1 text-red-500">{errors.name}</p>
+                    <p id="name-error" className="mt-1 text-white-500" role="alert">
+                      {errors.name}
+                    </p>
                   )}
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-lg mb-2">
-                    {t('form.email.label')}
+                    {t('form.email.label')} <span className="text-white-500" aria-label="required">*</span>
                   </label>
                   <input
                     type="email"
@@ -330,47 +345,59 @@ const Contribute: React.FC = () => {
                       errors.email ? "border-red-500" : "border-white"
                     } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
                     disabled={loading}
+                    aria-invalid={errors.email ? "true" : "false"}
+                    aria-describedby={errors.email ? "email-error" : undefined}
                   />
                   {errors.email && (
-                    <p className="mt-1 text-red-500">{errors.email}</p>
+                    <p id="email-error" className="mt-1 text-white-500" role="alert">
+                      {errors.email}
+                    </p>
                   )}
                 </div>
               </>
             )}
 
-            {/* Material dropdown */}
+            {/* Material dropdown - REQUIRED */}
             <div>
               <label htmlFor="material" className="block text-lg mb-2">
-                {t('form.material.label')}
+                {t('form.material.label')} <span className="text-white-500" aria-label="required">*</span>
               </label>
               <select
+                id="material"
                 name="material"
                 value={formData.material}
                 onChange={handleInputChange}
                 className={`w-full bg-transparent border-b ${
-                    errors.customMaterial ? "border-red-500" : "border-white"
-                  } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
+                  errors.material ? "border-red-500" : "border-white"
+                } py-2 focus:outline-none focus:border-lime-500 transition-colors text-white`}
+                disabled={loading}
+                aria-invalid={errors.material ? "true" : "false"}
+                aria-describedby={errors.material ? "material-error" : "material-help"}
               >
-                <option value="">{t('form.material.placeholder')}</option>
+                <option value="" className="bg-black">{t('form.material.placeholder')}</option>
                 {materialOptions.map((material) => (
-                  <option key={material.id} value={material.id.toString()}>
+                  <option key={material.id} value={material.id.toString()} className="bg-black">
                     {material.name}
                   </option>
                 ))}
               </select>
               {loading && materialOptions.length === 0 && (
-                <p className="mt-1 text-gray-400">{t('form.material.loading')}</p>
+                <p id="material-help" className="mt-1 text-gray-400" aria-live="polite">
+                  {t('form.material.loading')}
+                </p>
               )}
               {errors.material && (
-                <p className="mt-1 text-red-500">{errors.material}</p>
+                <p id="material-error" className="mt-1 text-white-500" role="alert">
+                  {errors.material}
+                </p>
               )}
             </div>
 
-            {/* Custom material field - only shows when "Other" is selected */}
+            {/* Custom material - ONLY REQUIRED IF material === "-1" */}
             {formData.material === "-1" && (
               <div className="mt-3 pl-4 border-l-2 border-lime-500">
                 <label htmlFor="customMaterial" className="block text-lg mb-2">
-                  {t('form.customMaterial.label')}
+                  {t('form.customMaterial.label')} <span className="text-white-500" aria-label="required">*</span>
                 </label>
                 <input
                   type="text"
@@ -383,20 +410,24 @@ const Contribute: React.FC = () => {
                     errors.customMaterial ? "border-red-500" : "border-white"
                   } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
                   disabled={loading}
+                  aria-invalid={errors.customMaterial ? "true" : "false"}
+                  aria-describedby="custom-material-help custom-material-error"
                 />
-                <p className="mt-1 text-sm text-gray-400">
+                <p id="custom-material-help" className="mt-1 text-sm text-gray-400">
                   {t('form.customMaterial.note')}
                 </p>
                 {errors.customMaterial && (
-                  <p className="mt-1 text-red-500">{errors.customMaterial}</p>
+                  <p id="custom-material-error" className="mt-1 text-white-500" role="alert">
+                    {errors.customMaterial}
+                  </p>
                 )}
               </div>
             )}
 
-            {/* Description textarea */}
+            {/* Description - REQUIRED */}
             <div>
               <label htmlFor="description" className="block text-lg mb-2">
-                {t('form.description.label')}
+                {t('form.description.label')} <span className="text-white-500" aria-label="required">*</span>
               </label>
               <textarea
                 id="description"
@@ -409,68 +440,89 @@ const Contribute: React.FC = () => {
                   errors.description ? "border-red-500" : "border-white"
                 } py-2 focus:outline-none focus:border-lime-500 transition-colors`}
                 disabled={loading}
+                aria-invalid={errors.description ? "true" : "false"}
+                aria-describedby="description-count description-error"
               ></textarea>
-              <p className="text-sm text-gray-400">
+              <p id="description-count" className="text-sm text-gray-400">
                 {t('form.description.characterCount', { count: formData.description.length })}
               </p>
               {errors.description && (
-                <p className="mt-1 text-red-500">{errors.description}</p>
+                <p id="description-error" className="mt-1 text-white-500" role="alert">
+                  {errors.description}
+                </p>
               )}
             </div>
 
-            {/* File upload */}
+            {/* File upload - REQUIRED */}
             <div className="mt-6">
               <input
                 type="file"
                 ref={fileInputRef}
                 onChange={handleFileChange}
                 accept=".pdf,.png,.jpg,.jpeg"
-                className="hidden"
+                className="sr-only"
+                id="file-upload"
+                aria-invalid={errors.file ? "true" : "false"}
+                aria-describedby="file-name file-help file-error"
               />
+              <label htmlFor="file-upload" className="sr-only">
+                {t('form.file.uploadButton')} <span className="text-white-500" aria-label="required">*</span>
+              </label>
               <button
                 type="button"
                 onClick={triggerFileInput}
                 disabled={loading}
-                className={`border px-6 py-3 ${
+                className={`border px-6 py-3 focus-visible:ring-2 focus-visible:ring-lime-500 focus-visible:outline-none ${
                   file ? "bg-lime-800 border-lime-500" : "border-lime-500"
                 } hover:bg-lime-900 transition-colors ${
                   loading ? "opacity-50 cursor-not-allowed" : ""
                 }`}
+                aria-label={file ? t('form.file.selectedButton') : t('form.file.uploadButton')}
               >
                 {file ? t('form.file.selectedButton') : t('form.file.uploadButton')}
               </button>
-              <span className="ml-4 text-gray-400">
+              <span id="file-name" className="ml-4 text-gray-400" aria-live="polite">
                 {file ? file.name : t('form.file.description')}
               </span>
+              <p id="file-help" className="text-sm text-gray-400 mt-2">
+                {t('form.file.description')}
+              </p>
               {errors.file && (
-                <p className="mt-1 text-red-500">{errors.file}</p>
+                <p id="file-error" className="mt-1 text-white-500" role="alert">
+                  {errors.file}
+                </p>
               )}
             </div>
 
-            {/* Checkboxes with clickable GDPR and Terms */}
-            <div className="space-y-3 mt-6">
+            {/* Checkboxes - BOTH REQUIRED */}
+            <fieldset className="space-y-3 mt-6">
+              <legend className="sr-only">Consent and Terms</legend>
+              
               <div className="flex items-start">
                 <input
                   type="checkbox"
                   id="gdpr"
                   checked={acceptGDPR}
                   onChange={() => setAcceptGDPR(!acceptGDPR)}
-                  className="mt-1 accent-lime-400"
+                  className="mt-1 accent-lime-400 focus-visible:ring-2 focus-visible:ring-lime-500"
                   disabled={loading}
+                  aria-invalid={errors.gdpr ? "true" : "false"}
+                  aria-describedby={errors.gdpr ? "gdpr-error" : undefined}
                 />
                 <label htmlFor="gdpr" className="ml-2">
                   {t('form.gdpr.label')}{" "}
                   <button
                     type="button"
                     onClick={() => setShowGDPR(true)}
-                    className="text-lime-400 hover:text-lime-300 underline transition-colors"
+                    className="text-lime-400 hover:text-lime-300 underline transition-colors focus-visible:ring-2 focus-visible:ring-lime-500 focus-visible:outline-none rounded"
                     disabled={loading}
                   >
                     {t('form.gdpr.linkText')}
                   </button>
+                  <span className="text-white-500 ml-1" aria-label="required">*</span>
                 </label>
               </div>
-              {errors.gdpr && <p className="text-red-500 text-sm mt-1">{errors.gdpr}</p>}
+              {errors.gdpr && <p id="gdpr-error" className="text-white-500 text-sm mt-1" role="alert">{errors.gdpr}</p>}
 
               <div className="flex items-start">
                 <input
@@ -478,23 +530,26 @@ const Contribute: React.FC = () => {
                   id="terms"
                   checked={acceptTerms}
                   onChange={() => setAcceptTerms(!acceptTerms)}
-                  className="mt-1 accent-lime-400"
+                  className="mt-1 accent-lime-400 focus-visible:ring-2 focus-visible:ring-lime-500"
                   disabled={loading}
+                  aria-invalid={errors.terms ? "true" : "false"}
+                  aria-describedby={errors.terms ? "terms-error" : undefined}
                 />
                 <label htmlFor="terms" className="ml-2">
                   {t('form.terms.label')}{" "}
                   <button
                     type="button"
                     onClick={() => setShowTerms(true)}
-                    className="text-lime-400 hover:text-lime-300 underline transition-colors"
+                    className="text-lime-400 hover:text-lime-300 underline transition-colors focus-visible:ring-2 focus-visible:ring-lime-500 focus-visible:outline-none rounded"
                     disabled={loading}
                   >
                     {t('form.terms.linkText')}
                   </button>
+                  <span className="text-white-500 ml-1" aria-label="required">*</span>
                 </label>
               </div>
-              {errors.terms && <p className="text-red-500 text-sm mt-1">{errors.terms}</p>}
-            </div>
+              {errors.terms && <p id="terms-error" className="text-white-500 text-sm mt-1" role="alert">{errors.terms}</p>}
+            </fieldset>
           </div>
 
           {/* Submit button */}
@@ -502,28 +557,24 @@ const Contribute: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className={`border border-lime-500 hover:bg-lime-900 px-10 py-3 text-lime-500 font-bold tracking-wider transition-colors uppercase ${
+              className={`border border-lime-500 hover:bg-lime-900 px-10 py-3 text-lime-500 font-bold tracking-wider transition-colors uppercase focus-visible:ring-2 focus-visible:ring-lime-500 focus-visible:outline-none ${
                 loading ? "opacity-50 cursor-not-allowed" : ""
               }`}
+              aria-busy={loading}
             >
               {loading ? t('form.submit.submitting') : t('form.submit.button')}
             </button>
           </div>
 
           {/* Submission note */}
-          <div className="mt-6 mb-2 text-sm text-gray-400 pb-6">
-            <p>
-              {t('messages.reviewNote')}
-            </p>
+          <div className="mt-6 mb-2 text-sm text-gray-400 pb-6" role="status" aria-live="polite">
+            <p>{t('messages.reviewNote')}</p>
             {formData.material === "-1" && (
-              <p className="mt-2">
-                {t('messages.customMaterialNote')}
-              </p>
+              <p className="mt-2">{t('messages.customMaterialNote')}</p>
             )}
           </div>
         </form>
 
-        {/* Make sure these modals are at the bottom of your component */}
         <TermsAndConditions 
           isOpen={showTerms} 
           onClose={() => setShowTerms(false)} 
