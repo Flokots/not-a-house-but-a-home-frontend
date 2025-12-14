@@ -52,44 +52,103 @@ const Footer = () => {
 
   return (
     <>
-      <footer className={`${styles.bg} ${styles.text} py-12 transition-colors duration-500`}>
+      <footer 
+        className={`${styles.bg} ${styles.text} py-12 transition-colors duration-500`}
+        role="contentinfo"
+      >
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             
             {/* Brand Section */}
             <div className="col-span-1 md:col-span-2">
-              <h3 className="font-fjalla text-xl mb-4">
+              <h2 className="font-fjalla text-xl mb-4">
                 <span className={styles.text}>{t('navbar.brand.notAHouse')}</span>
                 <span className="bg-gradient-to-r from-yellow-500 to-lime-600 bg-clip-text text-transparent ml-2">
                   {t('navbar.brand.butAHome')}
                 </span>
-              </h3>
+              </h2>
               <p className={`${styles.secondaryText} text-base leading-relaxed max-w-md`}>
                 {t('footer.description')}
               </p>
             </div>
 
             {/* Quick Links */}
-            <div>
-              <h4 className={`text-lg mb-4 ${styles.text}`}>{t('footer.quickLinks')}</h4>
-              <ul className="space-y-2">
-                <li><Link to="/" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.home')}</Link></li>
-                <li><Link to="/about" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.aboutUs')}</Link></li>
-                <li><Link to="/guide" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.guide')}</Link></li>
-                <li><Link to="/principles" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.principles')}</Link></li>
+            <nav aria-label="Quick links">
+              <h3 className={`text-lg mb-4 ${styles.text}`}>{t('footer.quickLinks')}</h3>
+              <ul className="space-y-2" role="list">
+                <li>
+                  <Link 
+                    to="/" 
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                  >
+                    {t('footer.home')}
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/about-us" 
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                  >
+                    {t('footer.aboutUs')}
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/guide" 
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                  >
+                    {t('footer.guide')}
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/principles" 
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                  >
+                    {t('footer.principles')}
+                  </Link>
+                </li>
               </ul>
-            </div>
+            </nav>
 
             {/* Resources */}
-            <div>
-              <h4 className={`text-lg mb-4 ${styles.text}`}>{t('footer.resources')}</h4>
-              <ul className="space-y-2">
-                <li><a href="/materials" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.materials')}</a></li>
-                <li><Link to="/plans" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.plans')}</Link></li>
-                <li><Link to="/contribute" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.contribute')}</Link></li>
-                <li><a href="mailto:support@nahbah.org" className={`text-base ${styles.linkColor} transition-colors`}>{t('footer.support')}</a></li>
+            <nav aria-label="Resources">
+              <h3 className={`text-lg mb-4 ${styles.text}`}>{t('footer.resources')}</h3>
+              <ul className="space-y-2" role="list">
+                <li>
+                  <Link 
+                    to="/materials" 
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                  >
+                    {t('footer.materials')}
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/plans" 
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                  >
+                    {t('footer.plans')}
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/contribute" 
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                  >
+                    {t('footer.contribute')}
+                  </Link>
+                </li>
+                <li>
+                  <a 
+                    href="mailto:support@nahbah.org" 
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                  >
+                    {t('footer.support')}
+                  </a>
+                </li>
               </ul>
-            </div>
+            </nav>
           </div>
 
           {/* Bottom Section */}
@@ -98,27 +157,35 @@ const Footer = () => {
               <p className={`text-sm ${styles.secondaryText} mb-4 md:mb-0`}>
                 {t('footer.copyright')}
               </p>
-              <div className="flex space-x-6">
-                <button 
-                  onClick={() => setShowTerms(true)}
-                  className={`text-sm ${styles.linkColor} transition-colors hover:underline`}
-                >
-                  {t('footer.terms')}
-                </button>
-                <button 
-                  onClick={() => setShowPrivacy(true)}
-                  className={`text-sm ${styles.linkColor} transition-colors hover:underline`}
-                >
-                  {t('footer.privacy')}
-                </button>
-                <a 
-                  href="mailto:contact@nahbah.org?subject=Not a House But a Home Inquiry"
-                  className={`text-sm ${styles.linkColor} transition-colors hover:underline`}
-                  title="Send us an email"
-                >
-                  {t('footer.contact')}
-                </a>
-              </div>
+              <nav aria-label="Legal">
+                <ul className="flex space-x-6" role="list">
+                  <li>
+                    <button 
+                      onClick={() => setShowTerms(true)}
+                      className={`text-sm ${styles.linkColor} transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                    >
+                      {t('footer.terms')}
+                    </button>
+                  </li>
+                  <li>
+                    <button 
+                      onClick={() => setShowPrivacy(true)}
+                      className={`text-sm ${styles.linkColor} transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                    >
+                      {t('footer.privacy')}
+                    </button>
+                  </li>
+                  <li>
+                    <a 
+                      href="mailto:contact@nahbah.org?subject=Not a House But a Home Inquiry"
+                      className={`text-sm ${styles.linkColor} transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                      title="Send us an email"
+                    >
+                      {t('footer.contact')}
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>

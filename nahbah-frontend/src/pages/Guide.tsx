@@ -12,17 +12,22 @@ const Guide = () => {
   const { t } = useTranslation('guide');
 
   useEffect(() => {
+    document.title = `${t('title')} - Not A House But A Home`;
     setLoaded(true);
-  }, []);
+  }, [t]);
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-black relative overflow-hidden hero-text text-black dark:text-white px-10 transition-colors duration-300">
        
       {/* Hero Section with Background Text and Image */}
-      <div className="max-w-7xl mx-auto px-4 pt-32 pb-20 flex flex-col md:flex-row gap-8 relative top-10">
+      <section 
+        className="max-w-7xl mx-auto px-4 pt-32 pb-20 flex flex-col md:flex-row gap-8 relative top-10"
+        aria-labelledby="guide-heading"
+      >
         {/* Background "Guide" text - matching styling pattern */}
         <div className="absolute top-22 left-0 font-semibold text-9xl 
-                        text-black opacity-10 dark:text-white/14 dark:opacity-100">
+                        text-black opacity-10 dark:text-white/14 dark:opacity-100"
+             aria-hidden="true">
           {t('backgroundText')}
         </div>
 
@@ -32,7 +37,10 @@ const Guide = () => {
             loaded ? "opacity-100" : "opacity-0"
           } relative z-10`}
         >
-          <h1 className="text-4xl font-bold mb-16 mt-0 ml-22 leading-tight tracking-tight text-black dark:text-white">
+          <h1 
+            id="guide-heading"
+            className="text-4xl font-bold mb-16 mt-0 ml-22 leading-tight tracking-tight text-black dark:text-white"
+          >
             {t('title')}
           </h1>
           <p className="text-lg mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -41,7 +49,7 @@ const Guide = () => {
           <p className="text-lg mb-8 text-gray-700 dark:text-gray-300 leading-relaxed">
             {t('description2')}
           </p>
-          <div className="h-1 w-28 bg-gradient-to-r from-yellow-500 to-lime-600 mb-10"></div>
+          <div className="h-1 w-28 bg-gradient-to-r from-yellow-500 to-lime-600 mb-10" aria-hidden="true"></div>
 
           {/* Call to action */}
           <button
@@ -54,7 +62,9 @@ const Guide = () => {
                        hover:bg-zinc-900 dark:hover:bg-gray-800 
                        hover:shadow-xl hover:shadow-yellow-200/10 dark:hover:shadow-lime-400/10 
                        hover:scale-105 cursor-pointer
-                       border border-transparent dark:border-gray-700"
+                       border border-transparent dark:border-gray-700
+                       focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded"
+            aria-label="Explore building guide options"
           >
             <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold uppercase">
               {t('explore')}
@@ -72,19 +82,25 @@ const Guide = () => {
             <div className="overflow-hidden rounded-lg">
               <img
                 src={heroImage}
-                alt="Self-built living space interior"
+                alt="Well-lit interior of self-built sustainable shelter entrance at night"
                 className="w-full h-auto object-cover transform scale-105 hover:scale-100 transition-transform duration-700"
               />
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* User Type Selection */}
-      <div id="path-selection" className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
+      <section 
+        id="path-selection" 
+        className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300"
+        aria-labelledby="path-selection-heading"
+      >
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-6 text-black dark:text-white">{t('chooseSuggestions')}</h2>
+            <h2 id="path-selection-heading" className="text-3xl font-bold mb-6 text-black dark:text-white">
+              {t('chooseSuggestions')}
+            </h2>
             <p className="text-gray-600 dark:text-gray-300 text-lg mx-auto max-w-6xl leading-relaxed">
               {t('suggestionDescription')}
             </p>
@@ -92,18 +108,28 @@ const Guide = () => {
 
           <div className="grid md:grid-cols-3 gap-10">
             {/* First Card - Principles */}
-            <div 
+            <article 
               onClick={() => navigate('/principles')}
               className="bg-slate-50 dark:bg-slate-900 rounded-xl shadow-lg dark:shadow-black/30 
                            hover:shadow-xl dark:hover:shadow-black/50 
                            transition-all duration-300 hover:translate-y-[-5px] group cursor-pointer
-                           border border-gray-200 dark:border-slate-800"
+                           border border-gray-200 dark:border-slate-800
+                           focus-within:ring-2 focus-within:ring-lime-500"
+              role="link"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  navigate('/principles');
+                }
+              }}
+              aria-label={`${t('principles.title')} - ${t('principles.description')}`}
             >
               <div className="p-2">
                 <div className="h-48 rounded-lg overflow-hidden">
                   <img
                     src={safetyImage}
-                    alt="Self-built shelter improvements"
+                    alt="Comfortable lounge area showing well-built shelter improvements"
                     className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -121,23 +147,34 @@ const Guide = () => {
                                hover:text-lime-800 dark:hover:text-lime-300 
                                flex items-center group cursor-pointer">
                   <span>{t('principles.action')}</span>
+                  <span aria-hidden="true" className="ml-2">→</span>
                 </div>
               </div>
-            </div>
+            </article>
 
             {/* Second Card - Materials */}
-            <div 
+            <article 
               onClick={() => navigate('/materials')}
               className="bg-slate-50 dark:bg-slate-900 rounded-xl shadow-lg dark:shadow-black/30 
                            hover:shadow-xl dark:hover:shadow-black/50 
                            transition-all duration-300 hover:translate-y-[-5px] group cursor-pointer
-                           border border-gray-200 dark:border-slate-800"
+                           border border-gray-200 dark:border-slate-800
+                           focus-within:ring-2 focus-within:ring-lime-500"
+              role="link"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  navigate('/materials');
+                }
+              }}
+              aria-label={`${t('materials.title')} - ${t('materials.description')}`}
             >
               <div className="p-2">
                 <div className="h-48 rounded-lg overflow-hidden">
                   <img
                     src={buildingMaterialsImage}
-                    alt="Resource library"
+                    alt="Collection of repurposed building materials ready for shelter construction"
                     className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -155,17 +192,28 @@ const Guide = () => {
                                hover:text-lime-800 dark:hover:text-lime-300 
                                flex items-center group cursor-pointer">
                   <span>{t('materials.action')}</span>
+                  <span aria-hidden="true" className="ml-2">→</span>
                 </div>
               </div>
-            </div>
+            </article>
 
             {/* Third Card - Plans (Featured) */}
-            <div 
+            <article 
               onClick={() => navigate('/plans')}
               className="bg-slate-50 dark:bg-slate-900 rounded-xl shadow-lg dark:shadow-black/30 
                            hover:shadow-xl dark:hover:shadow-black/50 
                            transition-all duration-300 hover:translate-y-[-5px] group cursor-pointer
-                           border-2 border-lime-500/30 dark:border-lime-600/30 relative"
+                           border-2 border-lime-500/30 dark:border-lime-600/30 relative
+                           focus-within:ring-2 focus-within:ring-lime-500"
+              role="link"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  navigate('/plans');
+                }
+              }}
+              aria-label={`${t('plan.title')} - ${t('plan.description')} - ${t('plan.badge')}`}
             >
               {/* "Most Useful" badge */}
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
@@ -178,7 +226,7 @@ const Guide = () => {
                 <div className="h-48 rounded-lg overflow-hidden">
                   <img
                     src={architectImage}
-                    alt="Architectural planning"
+                    alt="Architectural planning workspace with design blueprints for sustainable shelters"
                     className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -196,14 +244,15 @@ const Guide = () => {
                                hover:text-lime-800 dark:hover:text-lime-300 
                                flex items-center group cursor-pointer">
                   <span>{t('plan.action')}</span>
+                  <span aria-hidden="true" className="ml-2">→</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           {/* Contribute Section - Simple and Clean */}
           <div className="mt-24 text-center max-w-4xl mx-auto">
-            <div className="h-1 w-28 bg-gradient-to-r from-yellow-500 to-lime-600 mx-auto mb-8"></div>
+            <div className="h-1 w-28 bg-gradient-to-r from-yellow-500 to-lime-600 mx-auto mb-8" aria-hidden="true"></div>
             <h2 className="text-4xl font-bold mb-6 text-black dark:text-white">
               {t('contribute.title')}
             </h2>
@@ -219,7 +268,9 @@ const Guide = () => {
                          hover:bg-zinc-900 dark:hover:bg-gray-800 
                          hover:shadow-xl hover:shadow-yellow-200/10 dark:hover:shadow-lime-400/10 
                          hover:scale-105 cursor-pointer
-                         border border-transparent dark:border-gray-700"
+                         border border-transparent dark:border-gray-700
+                         focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded"
+              aria-label="Submit your design to contribute"
             >
               <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold uppercase">
                 {t('contribute.action')}
@@ -227,7 +278,7 @@ const Guide = () => {
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

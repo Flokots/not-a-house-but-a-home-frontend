@@ -50,21 +50,30 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ isAlwaysDark = fals
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`font-fjalla text-lg px-2 py-1 rounded transition-colors duration-200 ${textColor} ${hoverColor} focus:outline-none`}
-        aria-label="Change language"
+        className={`font-fjalla text-lg px-2 py-1 rounded transition-colors duration-200 ${textColor} ${hoverColor} focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2`}
+        aria-label={`Current language: ${currentLanguage.fullName}. Click to change language`}
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+        aria-controls="language-menu"
       >
-        {currentLanguage.name} <span className="ml-1">{currentLanguage.flag}</span>
+        {currentLanguage.name} <span aria-hidden="true" className="ml-1">{currentLanguage.flag}</span>
       </button>
       
       {isOpen && (
-        <div className={`absolute right-0 mt-2 w-32 ${dropdownBg} border ${dropdownBorder} rounded-md shadow-lg z-50`}>
+        <div 
+          id="language-menu"
+          role="menu"
+          className={`absolute right-0 mt-2 w-32 ${dropdownBg} border ${dropdownBorder} rounded-md shadow-lg z-50`}
+        >
           {languages.map((language) => (
             <button
               key={language.code}
               onClick={() => changeLanguage(language.code)}
-              className={`block w-full text-left px-4 py-2 text-sm font-fjalla ${textColor} ${dropdownItemHover} transition-colors duration-200 first:rounded-t-md last:rounded-b-md`}
+              role="menuitem"
+              className={`block w-full text-left px-4 py-2 text-sm font-fjalla ${textColor} ${dropdownItemHover} transition-colors duration-200 first:rounded-t-md last:rounded-b-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500`}
+              aria-current={language.code === i18n.language ? 'true' : undefined}
             >
-              {language.fullName} <span className="ml-1">{language.flag}</span>
+              {language.fullName} <span aria-hidden="true" className="ml-1">{language.flag}</span>
             </button>
           ))}
         </div>

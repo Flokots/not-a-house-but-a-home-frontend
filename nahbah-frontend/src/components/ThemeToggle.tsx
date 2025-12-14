@@ -21,7 +21,9 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ lightMode = false }) => {
   return (
     <button
       onClick={toggleTheme}
-      className={linkClass}
+      className={`${linkClass} focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      aria-pressed={isDark}
       title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
     >
       {/* Clean toggle switch with proper proportions */}
@@ -29,7 +31,8 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ lightMode = false }) => {
                       ${isDark 
                         ? 'bg-gray-700 border border-gray-600' 
                         : 'bg-gray-300 border border-gray-400'
-                      }`}>
+                      }`}
+           aria-hidden="true">
         
         {/* Sliding indicator with proper spacing */}
         <div className={`absolute top-1 left-0.5 w-6 h-6 rounded-full transition-all duration-300 ease-out
@@ -43,6 +46,9 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ lightMode = false }) => {
           </div>
         </div>
       </div>
+      <span className="sr-only">
+        {isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      </span>
     </button>
   );
 };

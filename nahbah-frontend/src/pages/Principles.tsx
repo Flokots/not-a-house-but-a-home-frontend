@@ -22,8 +22,9 @@ const Principles = () => {
   const { t } = useTranslation('principles');
 
   useEffect(() => {
+    document.title = `${t('title')} - Not A House But A Home`;
     setLoaded(true);
-  }, []);
+  }, [t]);
 
   const previewImages = {
     stability: stabilityImage,
@@ -38,10 +39,14 @@ const Principles = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <div className="max-w-7xl mx-auto px-4 pt-32 pb-32 flex flex-col md:flex-row gap-8 relative top-10">
+      <section 
+        className="max-w-7xl mx-auto px-4 pt-32 pb-32 flex flex-col md:flex-row gap-8 relative top-10"
+        aria-labelledby="principles-heading"
+      >
         {/* Background text */}
         <div className="absolute top-22 left-0 font-semibold text-9xl 
-                        text-black opacity-10 dark:text-white/14 dark:opacity-100">
+                        text-black opacity-10 dark:text-white/14 dark:opacity-100"
+             aria-hidden="true">
           {t('backgroundText')}
         </div>
 
@@ -51,13 +56,16 @@ const Principles = () => {
             loaded ? "opacity-100" : "opacity-0"
           } relative z-10`}
         >
-          <h1 className="text-4xl font-bold mb-16 mt-0 ml-22 leading-tight tracking-tight text-black dark:text-white">
+          <h1 
+            id="principles-heading"
+            className="text-4xl font-bold mb-16 mt-0 ml-22 leading-tight tracking-tight text-black dark:text-white"
+          >
             {t('title')}
           </h1>
           <p className="text-lg mb-8 text-gray-700 dark:text-gray-300 leading-relaxed">
             {t('description')}
           </p>
-          <div className="h-1 w-28 bg-gradient-to-r from-yellow-500 to-lime-600 mb-10"></div>
+          <div className="h-1 w-28 bg-gradient-to-r from-yellow-500 to-lime-600 mb-10" aria-hidden="true"></div>
 
           <button
             onClick={() => {
@@ -69,7 +77,9 @@ const Principles = () => {
                        hover:bg-zinc-900 dark:hover:bg-gray-800 
                        hover:shadow-xl hover:shadow-yellow-200/10 dark:hover:shadow-lime-400/10 
                        hover:scale-105 cursor-pointer
-                       border border-transparent dark:border-gray-700"
+                       border border-transparent dark:border-gray-700
+                       focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded"
+            aria-label="Explore shelter principles"
           >
             <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold uppercase">
               {t('explore')}
@@ -87,21 +97,21 @@ const Principles = () => {
             <div className="overflow-hidden rounded-lg">
               <img
                 src={heroImage}
-                alt="Shelter principles"
+                alt="Night view of shelter entrance demonstrating proper construction principles"
                 className="w-full h-auto object-cover transform scale-105 hover:scale-100 transition-transform duration-700"
               />
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Section divider with dark mode */}
-      <div className="flex items-center mb-16">
-        <div className="h-px bg-gray-200 dark:bg-gray-500 flex-grow"></div>
+      <div className="flex items-center mb-16" role="separator" aria-label="Section divider">
+        <div className="h-px bg-gray-200 dark:bg-gray-500 flex-grow" aria-hidden="true"></div>
         <div className="px-4 text-4xl font-medium text-gray-600 dark:text-white">
           {t('sectionTitle')}
         </div>
-        <div className="h-px bg-gray-200 dark:bg-gray-500 flex-grow"></div>
+        <div className="h-px bg-gray-200 dark:bg-gray-500 flex-grow" aria-hidden="true"></div>
       </div>
 
       <PrinciplesPreviewSection images={previewImages} />
