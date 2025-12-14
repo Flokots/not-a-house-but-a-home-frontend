@@ -1,4 +1,6 @@
-import { Routes, Route } from 'react-router-dom'; // Keep Routes, Route
+import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import AboutUs from './pages/AboutUs';
@@ -10,6 +12,13 @@ import Contribute from './pages/Contribute';
 import './App.css';
 
 function App() {
+  const { i18n } = useTranslation();
+  
+  useEffect(() => {
+    // Update HTML lang attribute when language changes
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   return (
     <div className="App">
       <Layout>

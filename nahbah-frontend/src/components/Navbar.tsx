@@ -12,8 +12,6 @@ const Navbar = () => {
   const location = useLocation();
   
   const isLightMode = resolvedTheme === 'light';
-  
-  // Pages that always have dark backgrounds and need white text
   const alwaysDarkPages = ['/', '/contribute', '/plans'];
   const isAlwaysDark = alwaysDarkPages.includes(location.pathname);
 
@@ -29,20 +27,25 @@ const Navbar = () => {
   };
 
   const getLinkClass = (isActive: boolean) =>
-    `font-fjalla text-lg relative px-1 py-1 transition-colors duration-200 ${
+    `font-fjalla text-lg relative px-1 py-1 transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded ${
       (isLightMode && !isAlwaysDark) 
         ? `${isActive ? 'text-lime-600' : 'text-black'} hover:text-lime-600`
         : `${isActive ? 'text-lime-400' : 'text-white'} hover:text-lime-400`
     }`;
 
   return (
-    <nav className="absolute left-0 w-full z-20 py-4">
+    <nav 
+      className="absolute left-0 w-full z-20 py-4" 
+      role="navigation" 
+      aria-label="Main navigation"
+    >
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
         <div>
           <NavLink
             to="/"
-            className={`font-fjalla text-lg ${textColor} flex items-center font-bold`}
+            className={`font-fjalla text-lg ${textColor} flex items-center font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
             onClick={handleMobileLinkClick}
+            aria-label={`${t('navbar.brand.notAHouse')} ${t('navbar.brand.butAHome')} - Home`}
           >
             {t('navbar.brand.notAHouse')}{" "}
             <span className={`${gradientClass} ml-2`}>{t('navbar.brand.butAHome')}</span>
@@ -50,94 +53,57 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
-          <NavLink to="/" className={({ isActive }) => getLinkClass(isActive)}>
-            {({ isActive }) => (
-              <>
-                {t('navbar.home')}
-                {isActive && (
-                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
+        <ul className="hidden md:flex items-center space-x-8" role="menubar">
+          {[
+            { to: '/', label: t('navbar.home') },
+            { to: '/about-us', label: t('navbar.aboutUs') },
+            { to: '/guide', label: t('navbar.guide') },
+            { to: '/principles', label: t('navbar.principles') },
+            { to: '/materials', label: t('navbar.materials') },
+            { to: '/plans', label: t('navbar.plans') },
+            { to: '/contribute', label: t('navbar.contribute') },
+          ].map(({ to, label }) => (
+            <li key={to} role="none">
+              <NavLink 
+                to={to} 
+                className={({ isActive }) => getLinkClass(isActive)}
+                role="menuitem"
+              >
+                {({ isActive }) => (
+                  <>
+                    <span aria-current={isActive ? 'page' : undefined}>{label}</span>
+                    {isActive && (
+                      <div 
+                        className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"
+                        aria-hidden="true"
+                      />
+                    )}
+                  </>
                 )}
-              </>
-            )}
-          </NavLink>
-          <NavLink to="/about-us" className={({ isActive }) => getLinkClass(isActive)}>
-            {({ isActive }) => (
-              <>
-                {t('navbar.aboutUs')}
-                {isActive && (
-                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
-                )}
-              </>
-            )}
-          </NavLink>
-          <NavLink to="/guide" className={({ isActive }) => getLinkClass(isActive)}>
-            {({ isActive }) => (
-              <>
-                {t('navbar.guide')}
-                {isActive && (
-                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
-                )}
-              </>
-            )}
-          </NavLink>
-          <NavLink to="/principles" className={({ isActive }) => getLinkClass(isActive)}>
-            {({ isActive }) => (
-              <>
-                {t('navbar.principles')}
-                {isActive && (
-                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
-                )}
-              </>
-            )}
-          </NavLink>
-          <NavLink to="/materials" className={({ isActive }) => getLinkClass(isActive)}>
-            {({ isActive }) => (
-              <>
-                {t('navbar.materials')}
-                {isActive && (
-                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
-                )}
-              </>
-            )}
-          </NavLink>
-          <NavLink to="/plans" className={({ isActive }) => getLinkClass(isActive)}>
-            {({ isActive }) => (
-              <>
-                {t('navbar.plans')}
-                {isActive && (
-                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
-                )}
-              </>
-            )}
-          </NavLink>
-          <NavLink to="/contribute" className={({ isActive }) => getLinkClass(isActive)}>
-            {({ isActive }) => (
-              <>
-                {t('navbar.contribute')}
-                {isActive && (
-                  <div className="absolute bottom-[-4px] left-0 w-full h-0.5 bg-gradient-to-r from-yellow-500 to-lime-600 rounded-full"></div>
-                )}
-              </>
-            )}
-          </NavLink>
+              </NavLink>
+            </li>
+          ))}
           
-          {/* Only show theme toggle on pages that actually support themes */}
-          {!isAlwaysDark && <ThemeToggle />}
-          <LanguageSwitcher isAlwaysDark={isAlwaysDark} />
-        </div>
+          <li role="none">
+            {!isAlwaysDark && <ThemeToggle />}
+          </li>
+          <li role="none">
+            <LanguageSwitcher isAlwaysDark={isAlwaysDark} />
+          </li>
+        </ul>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-4">
-          {/* Only show theme toggle on pages that actually support themes */}
           {!isAlwaysDark && <ThemeToggle />}
           <LanguageSwitcher isAlwaysDark={isAlwaysDark} />
           <button
             onClick={toggleMobileMenu}
-            className={`${textColor} focus:outline-none`}
-            aria-label="Toggle mobile menu"
+            className={`${textColor} focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-500 rounded p-2`}
+            aria-label={isMobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -151,58 +117,33 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-black bg-opacity-95 dark:bg-opacity-95 backdrop-blur-md">
-          <div className="px-4 py-6 space-y-4">
-            <NavLink
-              to="/"
-              className={({ isActive }) => `block ${getLinkClass(isActive)}`}
-              onClick={handleMobileLinkClick}
-            >
-              {t('navbar.home')}
-            </NavLink>
-            <NavLink
-              to="/about-us"
-              className={({ isActive }) => `block ${getLinkClass(isActive)}`}
-              onClick={handleMobileLinkClick}
-            >
-              {t('navbar.aboutUs')}
-            </NavLink>
-            <NavLink
-              to="/guide"
-              className={({ isActive }) => `block ${getLinkClass(isActive)}`}
-              onClick={handleMobileLinkClick}
-            >
-              {t('navbar.guide')}
-            </NavLink>
-            <NavLink
-              to="/principles"
-              className={({ isActive }) => `block ${getLinkClass(isActive)}`}
-              onClick={handleMobileLinkClick}
-            >
-              {t('navbar.principles')}
-            </NavLink>
-            <NavLink
-              to="/materials"
-              className={({ isActive }) => `block ${getLinkClass(isActive)}`}
-              onClick={handleMobileLinkClick}
-            >
-              {t('navbar.materials')}
-            </NavLink>
-            <NavLink
-              to="/plans"
-              className={({ isActive }) => `block ${getLinkClass(isActive)}`}
-              onClick={handleMobileLinkClick}
-            >
-              {t('navbar.plans')}
-            </NavLink>
-            <NavLink
-              to="/contribute"
-              className={({ isActive }) => `block ${getLinkClass(isActive)}`}
-              onClick={handleMobileLinkClick}
-            >
-              {t('navbar.contribute')}
-            </NavLink>
-          </div>
+        <div 
+          id="mobile-menu"
+          className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-black bg-opacity-95 dark:bg-opacity-95 backdrop-blur-md"
+          role="menu"
+        >
+          <ul className="px-4 py-6 space-y-4" role="none">
+            {[
+              { to: '/', label: t('navbar.home') },
+              { to: '/about-us', label: t('navbar.aboutUs') },
+              { to: '/guide', label: t('navbar.guide') },
+              { to: '/principles', label: t('navbar.principles') },
+              { to: '/materials', label: t('navbar.materials') },
+              { to: '/plans', label: t('navbar.plans') },
+              { to: '/contribute', label: t('navbar.contribute') },
+            ].map(({ to, label }) => (
+              <li key={to} role="none">
+                <NavLink
+                  to={to}
+                  className={({ isActive }) => `block ${getLinkClass(isActive)}`}
+                  onClick={handleMobileLinkClick}
+                  role="menuitem"
+                >
+                  {label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </nav>
