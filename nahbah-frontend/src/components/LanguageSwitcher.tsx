@@ -50,7 +50,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ isAlwaysDark = fals
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`font-fjalla text-lg px-2 py-1 rounded transition-colors duration-200 ${textColor} ${hoverColor} focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2`}
+        className={`font-fjalla text-lg px-2 py-1 rounded transition-colors duration-200 ${textColor} ${hoverColor} focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2`}
         aria-label={`Current language: ${currentLanguage.fullName}. Click to change language`}
         aria-expanded={isOpen}
         aria-haspopup="true"
@@ -70,7 +70,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ isAlwaysDark = fals
               key={language.code}
               onClick={() => changeLanguage(language.code)}
               role="menuitem"
-              className={`block w-full text-left px-4 py-2 text-sm font-fjalla ${textColor} ${dropdownItemHover} transition-colors duration-200 first:rounded-t-md last:rounded-b-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500`}
+              className={`block w-full text-left px-4 py-2 text-sm font-fjalla ${textColor} ${dropdownItemHover} transition-colors duration-200 first:rounded-t-md last:rounded-b-md focus-visible:outline-2 focus-visible:outline-lime-500`}
               aria-current={language.code === i18n.language ? 'true' : undefined}
             >
               {language.fullName} <span aria-hidden="true" className="ml-1">{language.flag}</span>

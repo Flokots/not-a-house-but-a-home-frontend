@@ -79,7 +79,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     to="/" 
-                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
                   >
                     {t('footer.home')}
                   </Link>
@@ -87,7 +87,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     to="/about-us" 
-                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
                   >
                     {t('footer.aboutUs')}
                   </Link>
@@ -95,7 +95,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     to="/guide" 
-                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
                   >
                     {t('footer.guide')}
                   </Link>
@@ -103,7 +103,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     to="/principles" 
-                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
                   >
                     {t('footer.principles')}
                   </Link>
@@ -118,7 +118,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     to="/materials" 
-                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
                   >
                     {t('footer.materials')}
                   </Link>
@@ -126,7 +126,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     to="/plans" 
-                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
                   >
                     {t('footer.plans')}
                   </Link>
@@ -134,7 +134,7 @@ const Footer = () => {
                 <li>
                   <Link 
                     to="/contribute" 
-                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
                   >
                     {t('footer.contribute')}
                   </Link>
@@ -142,7 +142,7 @@ const Footer = () => {
                 <li>
                   <a 
                     href="mailto:support@nahbah.org" 
-                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                    className={`text-base ${styles.linkColor} transition-colors focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
                   >
                     {t('footer.support')}
                   </a>
@@ -162,7 +162,7 @@ const Footer = () => {
                   <li>
                     <button 
                       onClick={() => setShowTerms(true)}
-                      className={`text-sm ${styles.linkColor} transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                      className={`text-sm ${styles.linkColor} transition-colors hover:underline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
                     >
                       {t('footer.terms')}
                     </button>
@@ -170,7 +170,7 @@ const Footer = () => {
                   <li>
                     <button 
                       onClick={() => setShowPrivacy(true)}
-                      className={`text-sm ${styles.linkColor} transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                      className={`text-sm ${styles.linkColor} transition-colors hover:underline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
                     >
                       {t('footer.privacy')}
                     </button>
@@ -178,7 +178,7 @@ const Footer = () => {
                   <li>
                     <a 
                       href="mailto:contact@nahbah.org?subject=Not a House But a Home Inquiry"
-                      className={`text-sm ${styles.linkColor} transition-colors hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+                      className={`text-sm ${styles.linkColor} transition-colors hover:underline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
                       title="Send us an email"
                     >
                       {t('footer.contact')}

@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   const getLinkClass = (isActive: boolean) =>
-    `font-fjalla text-lg relative px-1 py-1 transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded ${
+    `font-fjalla text-lg relative px-1 py-1 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded ${
       (isLightMode && !isAlwaysDark) 
         ? `${isActive ? 'text-lime-600' : 'text-black'} hover:text-lime-600`
         : `${isActive ? 'text-lime-400' : 'text-white'} hover:text-lime-400`
@@ -43,7 +43,7 @@ const Navbar = () => {
         <div>
           <NavLink
             to="/"
-            className={`font-fjalla text-lg ${textColor} flex items-center font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
+            className={`font-fjalla text-lg ${textColor} flex items-center font-bold focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded`}
             onClick={handleMobileLinkClick}
             aria-label={`${t('navbar.brand.notAHouse')} ${t('navbar.brand.butAHome')} - Home`}
           >

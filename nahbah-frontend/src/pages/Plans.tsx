@@ -147,7 +147,7 @@ const DesignsLibrary = () => {
             <button 
               onClick={() => window.location.reload()}
               className="px-6 py-2 bg-red-50 hover:bg-red-100 rounded-lg transition-colors text-red-700 font-medium
-                         focus-visible:outline focus-visible:outline-2 focus-visible:outline-red-500 focus-visible:outline-offset-2"
+                         focus-visible:outline-2 focus-visible:outline-red-500 focus-visible:outline-offset-2"
             >
               {t('errors.tryAgain')}
             </button>
@@ -159,7 +159,7 @@ const DesignsLibrary = () => {
               <button
                 onClick={() => setShowMobileFilters(!showMobileFilters)}
                 className="w-full py-3 px-4 bg-gray-100 rounded-lg flex items-center justify-between font-medium text-gray-700
-                           focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2"
+                           focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2"
                 aria-expanded={showMobileFilters}
                 aria-controls="mobile-filters"
               >
@@ -242,7 +242,7 @@ const DesignsLibrary = () => {
                             <button
                               onClick={() => setFilters({ materials: [] })}
                               className="text-sm flex items-center text-gray-500 hover:text-gray-700
-                                         focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded"
+                                         focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded"
                             >
                               <span>{t('content.clearFilters')}</span>
                               <svg className="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -289,7 +289,7 @@ const DesignsLibrary = () => {
                       <button
                         onClick={() => setFilters({ materials: [] })}
                         className="px-8 py-3 bg-gradient-to-r from-lime-500 to-lime-600 hover:from-lime-600 hover:to-lime-700 text-white rounded-lg transition-all duration-300 font-medium shadow-sm hover:shadow
-                                   focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2"
+                                   focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2"
                       >
                         {t('noResults.clearAllFilters')}
                       </button>
@@ -305,7 +305,7 @@ const DesignsLibrary = () => {
                 <button
                   onClick={() => document.getElementById('mobile-booklet')?.classList.toggle('translate-y-full')}
                   className="w-full py-3 px-4 bg-black rounded-lg text-center flex items-center justify-center
-                             focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2"
+                             focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2"
                   aria-label={`View booklet with ${selectedDesigns.length} selected designs`}
                   aria-expanded="false"
                   aria-controls="mobile-booklet"

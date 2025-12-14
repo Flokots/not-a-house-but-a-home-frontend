@@ -344,7 +344,7 @@ const AboutUs = () => {
             className="px-6 sm:px-8 py-3 sm:py-4 bg-black dark:bg-slate-950 inline-block transition-all duration-300 
                        hover:bg-zinc-900 dark:hover:bg-gray-800 hover:shadow-lg hover:shadow-lime-300/20 hover:scale-105 cursor-pointer
                        border border-transparent dark:border-gray-700 text-sm sm:text-base
-                       focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded"
+                       focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded"
             aria-label="Get started with building guide"
           >
             <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold text-base sm:text-lg uppercase">

@@ -63,7 +63,7 @@ const Guide = () => {
                        hover:shadow-xl hover:shadow-yellow-200/10 dark:hover:shadow-lime-400/10 
                        hover:scale-105 cursor-pointer
                        border border-transparent dark:border-gray-700
-                       focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded"
+                       focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded"
             aria-label="Explore building guide options"
           >
             <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold uppercase">
@@ -269,7 +269,7 @@ const Guide = () => {
                          hover:shadow-xl hover:shadow-yellow-200/10 dark:hover:shadow-lime-400/10 
                          hover:scale-105 cursor-pointer
                          border border-transparent dark:border-gray-700
-                         focus-visible:outline focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded"
+                         focus-visible:outline-2 focus-visible:outline-lime-500 focus-visible:outline-offset-2 rounded"
               aria-label="Submit your design to contribute"
             >
               <span className="bg-gradient-to-r from-[#F9D90B] to-[#98F90F] bg-clip-text text-transparent font-bold uppercase">
