@@ -18,43 +18,16 @@ export default defineConfig({
     // Rollup options for code splitting
     rollupOptions: {
       output: {
-        manualChunks: (id) => {
-          // Split node_modules by package
-          if (id.includes('node_modules')) {
-            // React core libraries
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-vendor';
-            }
-            
-            // React Router
-            if (id.includes('react-router')) {
-              return 'router-vendor';
-            }
-            
-            // i18next translation libraries
-            if (id.includes('i18next') || id.includes('react-i18next')) {
-              return 'i18n-vendor';
-            }
-            
-            // All other vendor libraries
-            return 'vendor';
-          }
+        // ✅ SAFER: Use object-based chunking instead of function
+        manualChunks: {
+          // Keep all React-related in one chunk
+          'react-vendor': ['react', 'react-dom', 'react/jsx-runtime'],
           
-          // Split pages into separate chunks
-          if (id.includes('/src/pages/')) {
-            const pageName = id.split('/src/pages/')[1].split('.')[0].toLowerCase();
-            return `page-${pageName}`;
-          }
+          // Router in separate chunk
+          'router-vendor': ['react-router-dom'],
           
-          // Split components
-          if (id.includes('/src/components/')) {
-            return 'components';
-          }
-          
-          // Split API calls
-          if (id.includes('/src/api/')) {
-            return 'api';
-          }
+          // i18n in separate chunk
+          'i18n-vendor': ['react-i18next', 'i18next'],
         },
       },
     },
