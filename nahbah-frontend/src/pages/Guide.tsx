@@ -26,7 +26,7 @@ const Guide = () => {
       >
         {/* Background "Guide" text - matching styling pattern */}
         <div className="absolute top-22 left-0 font-semibold text-9xl 
-                        text-black opacity-10 dark:text-white/14 dark:opacity-100"
+                        text-black opacity-10 dark:text-white/21 dark:opacity-100"
              aria-hidden="true">
           {t('backgroundText')}
         </div>

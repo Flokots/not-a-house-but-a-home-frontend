@@ -218,7 +218,8 @@ const Contribute: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white hero-text">
       <div className="pt-32 px-4 max-w-3xl mx-auto">
-        <div className="absolute top-20 mb-8 text-white/14 font-semibold text-9xl" aria-hidden="true">
+        {/* Decorative background text - low contrast is intentional and exempt per WCAG 2.1 */}
+        <div className="absolute top-20 mb-8 text-white/21 font-semibold text-9xl pointer-events-none" aria-hidden="true">
           {t('hero.backgroundText')}
         </div>
         <h1 className="text-5xl mb-20 ml-26 font-semibold" id="contribute-heading">
@@ -241,6 +242,7 @@ const Contribute: React.FC = () => {
                 type="text"
                 id="title"
                 name="title"
+                autoComplete="off"
                 value={formData.title}
                 onChange={handleInputChange}
                 placeholder={t('form.designTitle.placeholder')}
@@ -267,6 +269,7 @@ const Contribute: React.FC = () => {
                 <input
                   type="checkbox"
                   id="anonymous"
+                  name="anonymous"
                   checked={isAnonymous}
                   onChange={(e) => {
                     setIsAnonymous(e.target.checked);
@@ -313,6 +316,7 @@ const Contribute: React.FC = () => {
                     type="text"
                     id="name"
                     name="name"
+                    autoComplete="name"
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder={t('form.name.placeholder')}
@@ -338,6 +342,7 @@ const Contribute: React.FC = () => {
                     type="email"
                     id="email"
                     name="email"
+                    autoComplete="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder={t('form.email.placeholder')}
@@ -359,12 +364,13 @@ const Contribute: React.FC = () => {
 
             {/* Material dropdown - REQUIRED */}
             <div>
-              <label htmlFor="material" className="block text-lg mb-2">
+              <label htmlFor="material-select" className="block text-lg mb-2">
                 {t('form.material.label')} <span className="text-white-500" aria-label="required">*</span>
               </label>
               <select
-                id="material"
+                id="material-select"
                 name="material"
+                autoComplete="off"
                 value={formData.material}
                 onChange={handleInputChange}
                 className={`w-full bg-transparent border-b ${
@@ -403,6 +409,7 @@ const Contribute: React.FC = () => {
                   type="text"
                   id="customMaterial"
                   name="customMaterial"
+                  autoComplete="off"
                   value={formData.customMaterial}
                   onChange={handleInputChange}
                   placeholder={t('form.customMaterial.placeholder')}
@@ -432,6 +439,7 @@ const Contribute: React.FC = () => {
               <textarea
                 id="description"
                 name="description"
+                autoComplete="off"
                 value={formData.description}
                 onChange={handleInputChange}
                 rows={3}
@@ -502,6 +510,7 @@ const Contribute: React.FC = () => {
                 <input
                   type="checkbox"
                   id="gdpr"
+                  name="gdpr"
                   checked={acceptGDPR}
                   onChange={() => setAcceptGDPR(!acceptGDPR)}
                   className="mt-1 accent-lime-400 focus-visible:ring-2 focus-visible:ring-lime-500"
@@ -528,6 +537,7 @@ const Contribute: React.FC = () => {
                 <input
                   type="checkbox"
                   id="terms"
+                  name="terms"
                   checked={acceptTerms}
                   onChange={() => setAcceptTerms(!acceptTerms)}
                   className="mt-1 accent-lime-400 focus-visible:ring-2 focus-visible:ring-lime-500"

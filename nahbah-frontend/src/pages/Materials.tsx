@@ -36,7 +36,7 @@ const Materials = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 flex flex-col md:flex-row gap-12 relative">
           <div className="absolute top-24 left-0 font-semibold text-9xl 
-                          text-black opacity-10 dark:text-white/14 dark:opacity-100 pointer-events-none select-none"
+                          text-black opacity-10 dark:text-white/21 dark:opacity-100 pointer-events-none select-none"
                aria-hidden="true">
             {t('backgroundText')}
           </div>

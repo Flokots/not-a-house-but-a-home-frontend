@@ -28,7 +28,7 @@ const AboutUs = () => {
         aria-labelledby="about-heading"
       >
         {/* Background "About" text */}
-        <div className="absolute top-12 sm:top-14 md:top-17 left-0 font-semibold text-6xl sm:text-7xl md:text-8xl lg:text-9xl futura-bold text-black opacity-10 dark:text-white/14 dark:opacity-100 pointer-events-none" aria-hidden="true">
+        <div className="absolute top-12 sm:top-14 md:top-17 left-0 font-semibold text-6xl sm:text-7xl md:text-8xl lg:text-9xl futura-bold text-black opacity-10 dark:text-white/21 dark:opacity-100 pointer-events-none" aria-hidden="true">
           {t("hero.backgroundText")}
         </div>
 

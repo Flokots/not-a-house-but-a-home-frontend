@@ -53,7 +53,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center space-x-8" role="menubar">
+        <ul className="hidden md:flex items-center space-x-8">
           {[
             { to: '/', label: t('navbar.home') },
             { to: '/about-us', label: t('navbar.aboutUs') },
@@ -63,11 +63,10 @@ const Navbar = () => {
             { to: '/plans', label: t('navbar.plans') },
             { to: '/contribute', label: t('navbar.contribute') },
           ].map(({ to, label }) => (
-            <li key={to} role="none">
+            <li key={to}>
               <NavLink 
                 to={to} 
                 className={({ isActive }) => getLinkClass(isActive)}
-                role="menuitem"
               >
                 {({ isActive }) => (
                   <>
@@ -84,10 +83,10 @@ const Navbar = () => {
             </li>
           ))}
           
-          <li role="none">
+          <li>
             {!isAlwaysDark && <ThemeToggle />}
           </li>
-          <li role="none">
+          <li>
             <LanguageSwitcher isAlwaysDark={isAlwaysDark} />
           </li>
         </ul>
