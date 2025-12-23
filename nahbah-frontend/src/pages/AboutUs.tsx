@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import aboutUsImage from "@/assets/green_lawn_home.png";
-import ourImpactImage from "@/assets/entrance_night_view.png";
-import ourMissionImage from "@/assets/lounge_area.png";
-import homeInteriorImage from "@/assets/home_interior.png";
-import shelterWithPlasticShutters from "@/assets/shelter-with-plastic-shutters.jpeg";
-import puppyImage from "@/assets/puppy-cannot-go-to-nightshelter.jpeg";
-import rosaryAndKittenImage from "@/assets/rosary-and-kitten-in-homeless-shelter-near-pecs.jpeg";
-import doorPanelsHutWithCarpetInsulation from "@/assets/door-panels-hut-carpet-insulation.jpeg";
-import wellLitInteriorImage from "@/assets/homepage.png";
+import aboutUsImage from "@/assets/green_lawn_home.webp";
+import ourImpactImage from "@/assets/entrance_night_view.webp";
+import ourMissionImage from "@/assets/lounge_area.webp";
+import homeInteriorImage from "@/assets/home_interior.webp";
+import shelterWithPlasticShutters from "@/assets/shelter-with-plastic-shutters.webp";
+import puppyImage from "@/assets/puppy-cannot-go-to-nightshelter.webp";
+import rosaryAndKittenImage from "@/assets/rosary-and-kitten-in-homeless-shelter-near-pecs.webp";
+import doorPanelsHutWithCarpetInsulation from "@/assets/door-panels-hut-carpet-insulation.webp";
+import wellLitInteriorImage from "@/assets/homepage.webp";
 
 const AboutUs = () => {
   const [loaded, setLoaded] = useState(false);
@@ -16,7 +16,7 @@ const AboutUs = () => {
 
   useEffect(() => {
     // Set page title
-    document.title = `${t("hero.title")} - Not A House But A Home`;
+    document.title = `${t("hero.title")}`;
     setLoaded(true);
   }, [t]);
 

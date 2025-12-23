@@ -34,6 +34,10 @@ const Contribute: React.FC = () => {
   const [showGDPR, setShowGDPR] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  useEffect(() => {
+    document.title = t('hero.title');
+  }, [t]);
+
   // Fetch material options from the backend
   useEffect(() => {
     const fetchMaterials = async () => {
@@ -467,7 +471,7 @@ const Contribute: React.FC = () => {
                 type="file"
                 ref={fileInputRef}
                 onChange={handleFileChange}
-                accept=".pdf,.png,.jpg,.jpeg"
+                accept=".pdf,.png,.jpg,.jpeg,.webp"
                 className="sr-only"
                 id="file-upload"
                 aria-invalid={errors.file ? "true" : "false"}

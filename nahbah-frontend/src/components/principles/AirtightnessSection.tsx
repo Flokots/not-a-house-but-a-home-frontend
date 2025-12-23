@@ -2,10 +2,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Import images directly
-import fabric from '@/assets/textiles.png';
-import plasticSheeting from '@/assets/plastic_sheeting.png';
-import sealingTape from '@/assets/sealing_tape.jpg';
-import rope from '@/assets/rope.jpg';
+import fabric from '@/assets/textiles.webp';
+import plasticSheeting from '@/assets/plastic_sheeting.webp';
+import sealingTape from '@/assets/sealing_tape.webp';
+import rope from '@/assets/rope.webp';
 
 
 const AirtightnessSection: React.FC = () => {

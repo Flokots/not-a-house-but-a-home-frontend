@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "@/App.css";
-import homepageImage from "@/assets/homepage.png";
+import homepageImage from "@/assets/homepage.webp";
 
 const HeroSection = () => {
   const { t, ready } = useTranslation('home');

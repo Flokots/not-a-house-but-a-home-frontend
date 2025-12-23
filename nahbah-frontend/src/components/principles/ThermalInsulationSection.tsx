@@ -2,14 +2,14 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Import images directly
-import cardboard from '@/assets/cardboard.png';
-import styrofoam from '@/assets/styrofoam.png';
-import tentFabric from '@/assets/tent-fabric.png';
-import plasticSheeting from '@/assets/plastic_sheeting.png';
-import curtains from '@/assets/curtains.jpg';
-import paper from '@/assets/paper.jpg';
-import blankets from '@/assets/blankets.jpg';
-import fabric from '@/assets/textiles.png';
+import cardboard from '@/assets/cardboard.webp';
+import styrofoam from '@/assets/styrofoam.webp';
+import tentFabric from '@/assets/tent-fabric.webp';
+import plasticSheeting from '@/assets/plastic_sheeting.webp';
+import curtains from '@/assets/curtains.webp';
+import paper from '@/assets/paper.webp';
+import blankets from '@/assets/blankets.webp';
+import fabric from '@/assets/textiles.webp';
 
 
 const ThermalInsulationSection: React.FC = () => {

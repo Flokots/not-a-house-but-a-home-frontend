@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
-import buildingMaterialsImage from "@/assets/buildingmaterials.png";
-import safetyImage from "@/assets/lounge_area.png";
-import architectImage from "@/assets/architect.png";
-import heroImage from "@/assets/entrance_night_view.png";
+import buildingMaterialsImage from "@/assets/buildingmaterials.webp";
+import safetyImage from "@/assets/lounge_area.webp";
+import architectImage from "@/assets/architect.webp";
+import heroImage from "@/assets/entrance_night_view.webp";
 
 const Guide = () => {
   const [loaded, setLoaded] = useState(false);
@@ -12,7 +12,7 @@ const Guide = () => {
   const { t } = useTranslation('guide');
 
   useEffect(() => {
-    document.title = `${t('title')} - Not A House But A Home`;
+    document.title = `${t('title')}`;
     setLoaded(true);
   }, [t]);
 

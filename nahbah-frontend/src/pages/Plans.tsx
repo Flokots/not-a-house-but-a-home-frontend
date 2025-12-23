@@ -5,7 +5,7 @@ import DesignFilters from "@/components/designs/DesignFilters";
 import BookletBuilder from "@/components/designs/BookletBuilder";
 import { getDesigns } from "@/api/designs";
 import { type Design } from "@/types/designs";
-import designLibrary from "@/assets/designLibrary.png"
+import designLibrary from "@/assets/designLibrary.webp"
 
 const DesignsLibrary = () => {
   const { t } = useTranslation('plans');
@@ -26,7 +26,7 @@ const DesignsLibrary = () => {
 
   // Load designs once on component mount
   useEffect(() => {
-    document.title = `${t('hero.titlePart1')} - Not A House But A Home`;
+    document.title = `${t('hero.titlePart1')}`;
     
     const loadDesigns = async () => {
       setIsLoading(true);

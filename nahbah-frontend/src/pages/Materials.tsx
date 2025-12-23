@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
-import doorPanelsWaitingToBeInstalled from '../assets/door-panels-waiting-to-be-installed.jpeg';
-import doorLeavesHouse from '../assets/door_leaves_house.png';
-import cardboardImage from '../assets/cardboard.png';
-import metalCansImage from '../assets/metal_cans.png';
-import fabricImage from '../assets/textiles.png';
-import styrofoamImage from '../assets/styrofoam.png';
-import woodCratesImage from '../assets/wooden_crates.png';
-import doorPanelsHutCarpetInsulation from '../assets/door-panels-hut-carpet-insulation.jpeg';
+import doorPanelsWaitingToBeInstalled from '../assets/door-panels-waiting-to-be-installed.webp';
+import doorLeavesHouse from '../assets/door_leaves_house.webp';
+import cardboardImage from '../assets/cardboard.webp';
+import metalCansImage from '../assets/metal_cans.webp';
+import fabricImage from '../assets/textiles.webp';
+import styrofoamImage from '../assets/styrofoam.webp';
+import woodCratesImage from '../assets/wooden_crates.webp';
+import doorPanelsHutCarpetInsulation from '../assets/door-panels-hut-carpet-insulation.webp';
 import MaterialsSection from "@/components/materials/MaterialsSection";
 
 interface Foundation {
@@ -20,7 +20,7 @@ const Materials = () => {
   const { t } = useTranslation('materials');
 
   useEffect(() => {
-    document.title = `${t('title')} - Not A House But A Home`;
+    document.title = `${t('title')}`;
     setLoaded(true);
   }, [t]);
 

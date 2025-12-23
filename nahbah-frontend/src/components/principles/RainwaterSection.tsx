@@ -2,10 +2,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Import images directly
-import tarpMaterial from '@/assets/tarp_material.png';
-import plasticSheeting from '@/assets/plastic_sheeting.png';
-import metalCans from '@/assets/metal_cans.png';
-import woodenCrates from '@/assets/wooden_crates.png';
+import tarpMaterial from '@/assets/tarp_material.webp';
+import plasticSheeting from '@/assets/plastic_sheeting.webp';
+import metalCans from '@/assets/metal_cans.webp';
+import woodenCrates from '@/assets/wooden_crates.webp';
 
 const RainwaterSection: React.FC = () => {
   const { t } = useTranslation('principles');

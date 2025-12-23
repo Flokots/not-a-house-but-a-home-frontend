@@ -9,12 +9,12 @@ import AirtightnessSection from "@/components/principles/AirtightnessSection";
 import PrinciplesPreviewSection from "@/components/principles/PrinciplesPreviewSection";
 
 // Import images
-import heroImage from "@/assets/entrance_night_view.png";
-import stabilityImage from "@/assets/stability.png";
-import rainwaterImage from "@/assets/staying_dry.png";
-import groundMoistureImage from "@/assets/dryground.png";
-import thermalInsulationImage from "@/assets/warmth.png";
-import airtightnessImage from "@/assets/windproofing.png";
+import heroImage from "@/assets/door-panels-hut-carpet-insulation.webp";
+import stabilityImage from "@/assets/stability.webp";
+import rainwaterImage from "@/assets/staying_dry.webp";
+import groundMoistureImage from "@/assets/dryground.webp";
+import thermalInsulationImage from "@/assets/warmth.webp";
+import airtightnessImage from "@/assets/windproofing.webp";
 
 
 const Principles = () => {
@@ -22,7 +22,7 @@ const Principles = () => {
   const { t } = useTranslation('principles');
 
   useEffect(() => {
-    document.title = `${t('title')} - Not A House But A Home`;
+    document.title = `${t('title')}`;
     setLoaded(true);
   }, [t]);
 

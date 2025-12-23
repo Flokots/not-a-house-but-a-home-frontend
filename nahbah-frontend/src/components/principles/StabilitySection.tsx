@@ -2,10 +2,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Import images directly
-import woodenCrates from '@/assets/wooden_crates.png';
-import concreteBlocks from '@/assets/concrete_blocks.jpeg';
-import metalCans from '@/assets/metal_cans.png';
-import rope from '@/assets/rope.jpg';
+import woodenCrates from '@/assets/wooden_crates.webp';
+import concreteBlocks from '@/assets/concrete_blocks.webp';
+import metalCans from '@/assets/metal_cans.webp';
+import rope from '@/assets/rope.webp';
 
 const StabilitySection: React.FC = () => {
   const { t } = useTranslation('principles');

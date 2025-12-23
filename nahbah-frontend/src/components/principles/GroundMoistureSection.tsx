@@ -2,10 +2,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Import images directly
-import woodenCrates from '@/assets/wooden_crates.png';
-import tarpMaterial from '@/assets/tarp.jpeg';
-import plasticSheeting from '@/assets/plastic_sheeting.png';
-import concreteBlocks from '@/assets/concrete_blocks.jpeg';
+import woodenCrates from '@/assets/wooden_crates.webp';
+import tarpMaterial from '@/assets/tarp.webp';
+import plasticSheeting from '@/assets/plastic_sheeting.webp';
+import concreteBlocks from '@/assets/concrete_blocks.webp';
 
 const GroundMoistureSection: React.FC = () => {
   const { t } = useTranslation('principles');
