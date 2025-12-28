@@ -39,6 +39,8 @@ export const submitDesign = async (
   formData.append('contributor', JSON.stringify(designData.contributor));
   formData.append('is_anonymous', designData.isAnonymous.toString());
 
+  console.log("Submitting design with data:", designData, "and file:", file);
+
   try {
     const response = await API.post("/designs/", formData, {
       headers: {

@@ -95,6 +95,7 @@ const Contribute: React.FC = () => {
     const isValidType =
       fileType === "application/pdf" ||
       fileType === "image/png" ||
+      fileType === "image/webp" ||
       fileType === "image/jpeg";
 
     // Validate file size (5MB = 5 * 1024 * 1024 bytes) - From your Django validator

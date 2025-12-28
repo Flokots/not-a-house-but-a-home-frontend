@@ -18,7 +18,7 @@ export default defineConfig({
     // Rollup options for code splitting
     rollupOptions: {
       output: {
-        // ✅ SAFER: Use object-based chunking instead of function
+        // Use object-based chunking instead of function
         manualChunks: {
           // Keep all React-related in one chunk
           'react-vendor': ['react', 'react-dom', 'react/jsx-runtime'],
